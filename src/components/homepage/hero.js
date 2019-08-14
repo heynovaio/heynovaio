@@ -13,6 +13,7 @@ const Hero = styled.section`
     line-height: 1.04;
     color: #0fa3b1;
     margin: 0 0 25px;
+    font-family: Stolzl;
   }
   p {
     max-width: 556px;
@@ -21,6 +22,7 @@ const Hero = styled.section`
     line-height: 1.64;
     color: #ffffff;
     margin: 25px 0 45px;
+    font-family: Ubuntu;
   }
 `
 const ContentContainer = styled.div`
@@ -42,6 +44,7 @@ const Button = styled.a`
   font-weight: bold;
   text-align: center;
   color: #ffffff;
+  font-family: Stolzl;
 `
 const ImgContainer = styled.div`
   position: absolute;

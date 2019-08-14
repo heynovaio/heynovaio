@@ -11,6 +11,7 @@ const Who = styled.section`
     letter-spacing: -1px;
     text-align: center;
     color: #0a2239;
+    font-family: Stolzl;
   }
   p {
     min-height: 112px;
@@ -18,6 +19,7 @@ const Who = styled.section`
     line-height: 1.4;
     text-align: center;
     color: #405364;
+    font-family: Ubuntu;
   }
   img {
     position: absolute;
@@ -34,6 +36,7 @@ const Content = styled.div`
   margin-left: auto;
   padding: 141.5px 0 20px;
   min-height: 477px;
+  position: relative;
 `
 const ImgCenter = styled.div`
   max-width: 1106px;

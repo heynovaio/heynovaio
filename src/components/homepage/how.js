@@ -21,6 +21,7 @@ const How = styled.section`
     text-align: center;
     color: #0a2239;
     margin: 0 0 5px;
+    font-family: Stolzl;
   }
   p {
     min-height: 38px;
@@ -29,6 +30,7 @@ const How = styled.section`
     text-align: center;
     color: #455868;
     margin: 5px 0 38px;
+    font-family: Ubuntu;
   }
   h3 {
     font-size: 22px;
@@ -36,6 +38,7 @@ const How = styled.section`
     line-height: 1.09;
     color: #ffffff;
     margin: 40px 0 13px;
+    font-family: Stolzl;
   }
 `
 const Flex = styled.div`
@@ -61,6 +64,7 @@ const ListElementStyle = styled.div`
   letter-spacing: -0.36px;
   color: #ffffff;
   position: relative;
+  font-family: Ubuntu;
 `
 const Marker = styled.div`
   height: 10px;

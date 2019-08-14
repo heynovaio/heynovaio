@@ -12,6 +12,7 @@ const Inclusive = styled.div`
     font-weight: normal;
     line-height: 1.2;
     color: #ffffff;
+    font-family: Stolzl;
   }
   p {
     max-width: 398px;
@@ -20,6 +21,7 @@ const Inclusive = styled.div`
     line-height: 1.44;
     color: #ffffff;
     margin: 0;
+    font-family: Ubuntu;
   }
   h3 {
     height: 31px;
@@ -28,6 +30,7 @@ const Inclusive = styled.div`
     line-height: 1.48;
     color: #ffffff;
     margin: 0;
+    font-family: Ubuntu;
   }
 `
 const Center = styled.div`
@@ -48,11 +51,11 @@ const Button = styled.div`
   height: 40px;
   border-radius: 4px;
   background-color: #424b5a;
-  padding: 14px 0 0;
+  padding: 7px 0 0;
   font-size: 12px;
   text-align: center;
   color: #ffffff;
-  line-height: normal;
+  font-family: Ubuntu;
 `
 const List = styled.div`
   position: absolute;
@@ -85,6 +88,7 @@ const Elem = styled.div`
     font-size: 16px;
     line-height: 1.5;
     color: #ffffff;
+    font-family: Ubuntu;
   }
 `
 const Line = styled.div`
