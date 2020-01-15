@@ -22,6 +22,7 @@ const How = styled.section`
     color: #0a2239;
     margin: 0 0 5px;
     font-family: Stolzl;
+    margin-top: 75px;
   }
   p {
     min-height: 38px;
@@ -87,8 +88,8 @@ const Center = styled.div`
 `
 export default () => (
   <How>
-    <h2>How we do it</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed.</p>
+    <h2>Curious about our strategy?</h2>
+    <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
     <Flex>
       <Box>
         <img src={img1}/>

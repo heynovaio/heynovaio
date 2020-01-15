@@ -13,6 +13,7 @@ const Header = styled.header`
   }
   a {
     font-size: 18px;
+    font-family: Stolzl;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
@@ -39,6 +40,8 @@ export default () => (
   <Header>
     <img src={img1}/>
     <BlogLink>Blog</BlogLink>
-    <ContactLink>Contact</ContactLink>
+    <ContactLink><a>Contact</a></ContactLink>
+    <FaceBookLink></FaceBookLink>
+    <InstagramLink></InstagramLink>
   </Header>
 )

@@ -5,8 +5,8 @@ const Who = styled.section`
   padding: 0 20px;
   h2 {
     min-height: 64px;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
     line-height: 1.28;
     letter-spacing: -1px;
     text-align: center;
@@ -48,11 +48,10 @@ export default () => (
     <ImgCenter><img src={img1}/></ImgCenter>
     <ContentCenter>
       <Content>
-        <h2>Who Are We?</h2>
+        <h2>A digital design agency connecting real people to real brands</h2>
         <p>
-          Our methodologies are centered around making websites
-          and applications that are usable for everyone.<br/><br/>
-          Our design is as much based on strategy as it is creativity.
+          Successful products are determined by real individuals, not numbers or stereotypes.
+          Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.
         </p>
       </Content>
     </ContentCenter>

@@ -11,25 +11,24 @@ const Inclusive = styled.div`
     font-size: 50px;
     font-weight: normal;
     line-height: 1.2;
-    color: #ffffff;
+    color: #0a2239;
     font-family: Stolzl;
   }
   p {
     max-width: 398px;
     min-height: 95px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.44;
     color: #ffffff;
     margin: 0;
     font-family: Ubuntu;
   }
   h3 {
-    height: 31px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.48;
-    color: #ffffff;
-    margin: 0;
+    color: #0FA3B1;
+    margin-bottom: 10px;
     font-family: Ubuntu;
   }
 `
@@ -46,23 +45,15 @@ const MainContent = styled.div`
   margin: 0 400px 0 0;
   padding: 143px 0 0;
 `
-const Button = styled.div`
-  max-width: 274px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: #424b5a;
-  padding: 7px 0 0;
-  font-size: 12px;
-  text-align: center;
-  color: #ffffff;
-  font-family: Ubuntu;
-`
 const List = styled.div`
   position: absolute;
   width: 400px;
   right: 0;
   padding: 0;
   top: 49px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 const Index = styled.div`
   width: 48px;
@@ -75,29 +66,24 @@ const Index = styled.div`
   text-align: center;
   padding-top: 8px;
   font-size: 21px;
-   font-weight: 500;
-   line-height: 1.48;
-   color: #ffffff;
+  font-weight: 500;
+  line-height: 1.48;
+  color: #ffffff;
 `
 const Elem = styled.div`
-  min-height: 176px;
-  padding: 31px 0 0 96px;
-  margin-bottom: -40px;
-  position: relative;
+  min-height: 395px;
+  min-width: 331px;
+  border-radius: 8px;
+  margin-bottom: 52px;
+  background-color: #0a2239;
+  padding: 34px 34px;
+  margin-left: 60px;
   p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     color: #ffffff;
     font-family: Ubuntu;
   }
-`
-const Line = styled.div`
-  position: absolute;
-  top: 24px;
-  left: 35px;
-  bottom: 20px;
-  width: 1px;
-  background-color: #ffffff;
 `
 export default () => (
   <Inclusive>
@@ -106,37 +92,30 @@ export default () => (
         <MainContent>
           <h2>Does your website work for everyone?</h2>
           <p>
-            We can help you determine whether your website is inclusive
-            to everyone regardless of gender, race, mental or
-            physical limitation.
+            Our in-depth assessments identify key elements in your website’s code and design to identify your degree of accessibility.  It’s your first step to connecting with the full scope of your clientele.
           </p>
-          <Button>LEARN MORE ABOUT ACCESSIBILITY</Button>
         </MainContent>
         <List>
-          <Line/>
-          <Elem><Index>1</Index>
-            <h3>Consulting</h3>
+          <Elem>
+            <h3>Accessibility testing</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              Our consultations provide you with a step-by-step guide to full accessibility tailored to your brand’s specific needs of you and your users.
             </p>
           </Elem>
-          <Elem><Index>2</Index>
-            <h3>Testing</h3>
+          <Elem>
+            <h3>Accessibility consulting</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              Usability and accessibility are principles that we believe everyone should share.  Our educational modules/ workshops empower you and your staff to maximize accessibility for yourself.
             </p>
           </Elem>
-          <Elem><Index>3</Index>
-            <h3>Training</h3>
+          <Elem>
+            <h3>Accessibility training</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              Whether re-branding or starting from scratch, we build creative, quality and inclusive applications far beyond the standard guidelines based on your unique vison.
             </p>
           </Elem>
-          <Elem><Index>4</Index>
-            <h3>Design & Development</h3>
+          <Elem>
+            <h3>Design & implementation for websites and applications</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna.
