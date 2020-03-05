@@ -25,6 +25,7 @@ const How = styled.section`
     margin-top: 75px;
   }
   p {
+    max-width: 690px;
     min-height: 38px;
     font-size: 20px;
     line-height: 1.55;
@@ -86,55 +87,63 @@ const Center = styled.div`
   max-width: 254px;
   margin-left: auto;
 `
+const ParagraphCentre = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  justify-content: center;
+`
 export default () => (
   <How>
-    <h2>Curious about our strategy?</h2>
-    <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
-    <Flex>
-      <Box>
-        <img src={img1}/>
-        <Center>
-          <h3>Consulting</h3>
-          <Elem>Accessibility Workshops </Elem>
-          <Elem>Training</Elem>
-          <Elem>Mentoring</Elem>
-          <Elem>User Experience Audit</Elem>
-          <Elem>Translating geek speak</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img src={img2}/>
-        <Center>
-          <h3>Strategy</h3>
-          <Elem>User Research</Elem>
-          <Elem>Brand Strategy</Elem>
-          <Elem>Content Strategy</Elem>
-          <Elem>Market Research</Elem>
-          <Elem>Accessibility Research</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img src={img3}/>
-        <Center>
-          <h3>Design</h3>
-          <Elem>Branding</Elem>
-          <Elem>User Interface Design</Elem>
-          <Elem>User Experience</Elem>
-          <Elem>Inclusive Design</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img src={img4}/>
-        <Center>
-          <h3>Implementation</h3>
-          <Elem>Web development</Elem>
-          <Elem>Mobile development</Elem>
-          <Elem>Accessibility Development</Elem>
-          <Elem>SEO optimization</Elem>
-          <Elem>Data & Analytics</Elem>
-          <Elem>Custom CMS themes</Elem>
-        </Center>
-      </Box>
-    </Flex>
+      <h2>Curious about our strategy?</h2>
+      <ParagraphCentre>
+        <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
+      </ParagraphCentre>
+      <Flex>
+        <Box>
+          <img src={img1}/>
+          <Center>
+            <h3>Consulting</h3>
+            <Elem>Accessibility Workshops </Elem>
+            <Elem>Training</Elem>
+            <Elem>Mentoring</Elem>
+            <Elem>User Experience Audit</Elem>
+            <Elem>Translating geek speak</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <img src={img2}/>
+          <Center>
+            <h3>Strategy</h3>
+            <Elem>User Research</Elem>
+            <Elem>Brand Strategy</Elem>
+            <Elem>Content Strategy</Elem>
+            <Elem>Market Research</Elem>
+            <Elem>Accessibility Research</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <img src={img3}/>
+          <Center>
+            <h3>Design</h3>
+            <Elem>Branding</Elem>
+            <Elem>User Interface Design</Elem>
+            <Elem>User Experience</Elem>
+            <Elem>Inclusive Design</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <img src={img4}/>
+          <Center>
+            <h3>Implementation</h3>
+            <Elem>Web development</Elem>
+            <Elem>Mobile development</Elem>
+            <Elem>Accessibility Development</Elem>
+            <Elem>SEO optimization</Elem>
+            <Elem>Data & Analytics</Elem>
+            <Elem>Custom CMS themes</Elem>
+          </Center>
+        </Box>
+      </Flex>
   </How>
 )

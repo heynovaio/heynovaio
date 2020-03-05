@@ -1,12 +1,20 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/group-18.png'
-import img2 from '../../images/group-16.png'
+import img2 from '../../images/spaceship.png'
 
 const What = styled.section`
   padding: 0 20px;
   background-image: url(${img2});
-  margin-top: -266px;
+  margin-top: -360px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  padding-bottom: 30px;
   h2 {
     min-height: 64px;
     font-size: 50px;
@@ -45,9 +53,29 @@ const Content = styled.div`
   text-align: left;
   max-width: 536px;
 `
-const ImgCenter = styled.div`
+const Flex3 = styled.div`
+  align-self: flex-start;
+  text-align: left;
+  max-width: 536px;
+`
+const Flex2 = styled.div`
+  align-self: center;
+  text-align: left;
+  max-width: 536px;
+`
+const Flex1 = styled.div`
+  align-self: flex-end;
+  text-align: left;
+  max-width: 536px;
+`
+const DiagonalContent = styled.div`
+  display: flex;
+  min-height: 700px;
+  margin: -100px 150px 0;
+`
+const ImgPerson = styled.div`
   max-width: 455px;
-  margin: 0 auto;
+  object-fit: contain;
   position: relative;
 `
 const Button = styled.div`
@@ -63,27 +91,29 @@ const Button = styled.div`
 `
 export default () => (
   <What>
-    <h2>What are some of the ways we can help you?</h2>
-    <ImgCenter><img src={img1}/></ImgCenter>
+    <h2>Our approach and methods connect your brand to real users by...</h2>
+    <ImgPerson><img src={img1}/></ImgPerson>
 
-    <Content>
-      <h3>Manifesting your brand</h3>
+    <DiagonalContent>
+      <Flex1>
+      <h3>Propelling your vision forward</h3>
       <p>
-        Whatever your vision or idea, we will get you there.
+        Where innovative ideas meet otherworldly design.  Driven by your unique users and led by the latest research, we will drive your product forward.
       </p>
-    </Content>
-    <Content>
-      <h3>Connect to real users</h3>
-      <p>
-        We strive to understand your unique users.  Our inclusive and innovative approaches ensure your brand is accessible to everyone.
-      </p>
-    </Content>
-    <Content>
-      <h3>Propel your vision</h3>
-      <p>
-        Innovative ideas need otherworldly design.  Driven by your unique users and led by the latest research, we will drive your brand forward.
-      </p>
-    </Content>
+      </Flex1>
+      <Flex2>
+        <h3>Connecting you directly to your user community</h3>
+        <p>
+          We strive to understand your unique users.  Our inclusive and innovative approaches ensure your product is accessible to everyone.
+        </p>
+      </Flex2>
+      <Flex3>
+        <h3>Manifesting your unique identity</h3>
+        <p>
+          Whatever your vision or idea, we will get you there by first building a strong brand foundation
+        </p>
+      </Flex3>
+    </DiagonalContent>
     <Button>Get a Quote</Button>
   </What>
 

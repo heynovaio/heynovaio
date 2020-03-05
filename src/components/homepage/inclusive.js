@@ -1,8 +1,7 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
-const Inclusive = styled.div`
-  background-color: #0c7489;
+const Inclusive = styled.section`
   min-height: 667px;
   padding: 0 20px 20px;
   h2 {
@@ -11,7 +10,6 @@ const Inclusive = styled.div`
     font-size: 50px;
     font-weight: normal;
     line-height: 1.2;
-    color: #0a2239;
     font-family: Stolzl;
   }
   p {
@@ -19,7 +17,7 @@ const Inclusive = styled.div`
     min-height: 95px;
     font-size: 20px;
     line-height: 1.44;
-    color: #ffffff;
+    color: #0a2239;
     margin: 0;
     font-family: Ubuntu;
   }
@@ -33,13 +31,13 @@ const Inclusive = styled.div`
   }
 `
 const Center = styled.div`
-  max-width: 892px;
+  max-width: 1220px;
   margin: auto;
 `
 const Rightify = styled.div`
-  max-width: 867px;
   margin-left: auto;
   position: relative;
+  display: flex;
 `
 const MainContent = styled.div`
   margin: 0 400px 0 0;
@@ -47,7 +45,7 @@ const MainContent = styled.div`
 `
 const List = styled.div`
   position: absolute;
-  width: 400px;
+  max-width: 719px;
   right: 0;
   padding: 0;
   top: 49px;
@@ -77,7 +75,7 @@ const Elem = styled.div`
   margin-bottom: 52px;
   background-color: #0a2239;
   padding: 34px 34px;
-  margin-left: 60px;
+  max-width: 331px;
   p {
     font-size: 20px;
     line-height: 1.5;
@@ -85,43 +83,55 @@ const Elem = styled.div`
     font-family: Ubuntu;
   }
 `
+const MainPara = styled.p`
+  color: #0a2239;
+`
+const Left = styled.div`
+`
+const Right = styled.div`
+`
+
 export default () => (
   <Inclusive>
     <Center>
       <Rightify>
-        <MainContent>
-          <h2>Does your website work for everyone?</h2>
-          <p>
-            Our in-depth assessments identify key elements in your website’s code and design to identify your degree of accessibility.  It’s your first step to connecting with the full scope of your clientele.
-          </p>
-        </MainContent>
-        <List>
-          <Elem>
-            <h3>Accessibility testing</h3>
-            <p>
-              Our consultations provide you with a step-by-step guide to full accessibility tailored to your brand’s specific needs of you and your users.
-            </p>
-          </Elem>
-          <Elem>
-            <h3>Accessibility consulting</h3>
-            <p>
-              Usability and accessibility are principles that we believe everyone should share.  Our educational modules/ workshops empower you and your staff to maximize accessibility for yourself.
-            </p>
-          </Elem>
-          <Elem>
-            <h3>Accessibility training</h3>
-            <p>
-              Whether re-branding or starting from scratch, we build creative, quality and inclusive applications far beyond the standard guidelines based on your unique vison.
-            </p>
-          </Elem>
-          <Elem>
-            <h3>Design & implementation for websites and applications</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </p>
-          </Elem>
-        </List>
+          <Left>
+            <MainContent>
+              <h2>Does your website work for everyone?</h2>
+              <MainPara>
+                The success of your website depends on how accessible it is in meeting the unique needs of your clients. Based on the most innovative research and the highest quality, we provide four primary services catered to your needs, to ensure your success:
+              </MainPara>
+            </MainContent>
+          </Left>
+          <Right>
+            <List>
+              <Elem>
+                <h3>Accessibility testing</h3>
+                <p>
+                Our accessibility audits identify key elements in your website’s code and design helps you understand your current degree of accessibility.  This is your first step to connecting to the full scope and uniqueness of your clientele.
+                </p>
+              </Elem>
+              <Elem>
+                <h3>Accessibility consulting</h3>
+                <p>
+                Together as a team, we will help you actualize your innovations and provide you with a step-by-step guide to full accessibility.  We understand how special your product is to you and your clients.  We take pride in meeting your brand’s specific needs for both you and your users.
+
+                </p>
+              </Elem>
+              <Elem>
+                <h3>Accessibility training</h3>
+                <p>
+                  We emphasize your independence and we want you to be experts in UX.  Usability and accessibility are principles that everyone should share.  We provide immersive educational workshops that empower you and your team to maximize accessibility.  We want everyone to help take a step towards a future with more inclusive technologies for everyone.
+                </p>
+              </Elem>
+              <Elem>
+                <h3>Design & implementation for websites and applications</h3>
+                <p>
+                  Whether you decide to re-brand or start from scratch, we work with you to build creative, quality and inclusive applications beyond standard guidelines.  We will communicate with you throughout to provide full-service design and development that achieves a quality that rises above standard AAA accessibility guidelines.
+                </p>
+              </Elem>
+            </List>
+        </Right>
       </Rightify>
     </Center>
   </Inclusive>

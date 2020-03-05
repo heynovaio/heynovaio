@@ -1,0 +1,106 @@
+import styled from '@emotion/styled'
+import React from 'react'
+import img1 from '../../images/kirsten.jpg'
+import img2 from '../../images/bryony.jpg'
+
+const Contact = styled.section`
+  padding: 0 0 51px;
+  img {
+    display: block;
+    width: 100%;
+  }
+  h2 {
+    min-height: 64px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #0a2239;
+    margin: 0 0 5px;
+    font-family: Stolzl;
+    margin-top: 75px;
+  }
+  p {
+    max-width: 690px;
+    min-height: 38px;
+    font-size: 20px;
+    line-height: 1.55;
+    text-align: center;
+    color: #455868;
+    margin: 5px 0 38px;
+    font-family: Ubuntu;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.09;
+    color: #0fa3b1;
+    font-family: Stolzl;
+  }
+`
+const Flex = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: auto;
+`
+const Box = styled.div`
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #0a2239;
+  padding: 20px;
+  position: relative;
+  margin: 20px 40px;
+  display: flex;
+`
+const Elem = styled.div`
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.56;
+  color: #ffffff;
+  position: relative;
+  font-family: Ubuntu;
+`
+const TextBox = styled.div`
+  margin: 20px;
+`
+const Image = styled.div`
+  max-width: 200px;
+`
+const ParagraphCentre = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 0 10px;
+  justify-content: center;
+`
+export default () => (
+  <Contact>
+      <h2>Reach out to our Co-founders</h2>
+      <ParagraphCentre>
+        <p>As the leaders of this company, we are never too busy for our clients. If you have a question or are looking for a quote, reach out and we will get back to you as soon as possible. We are here to help!
+Not sure who to contact, email info@heynova.io or flip a coin!</p>
+      </ParagraphCentre>
+      <Flex>
+        <Box>
+          <Image>
+            <img src={img1}/>
+          </Image>
+          <TextBox>
+            <h3>Kirsten Dodd</h3>
+            <Elem>kirsten@heynova.io</Elem>
+            <Elem>linkedin</Elem>
+          </TextBox>
+        </Box>
+        <Box>
+          <Image>
+            <img src={img2}/>
+          </Image>
+          <TextBox>
+            <h3>Bryony Anderson</h3>
+            <Elem>bryony@heynova.io</Elem>
+            <Elem>linkedin</Elem>
+          </TextBox>
+        </Box>
+      </Flex>
+  </Contact>
+)

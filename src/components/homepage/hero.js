@@ -59,8 +59,7 @@ export default () => (
     <ContentContainer>
       <h1>Designing Experiences for Everyone</h1>
       <p>
-        Building purposeful designs and technologies for a diverse
-        audience by a diverse team.
+        Connecting real people to real brands through engaging and inclusive design practice
       </p>
       <Button>Contact us</Button>
     </ContentContainer>
