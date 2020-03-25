@@ -38,6 +38,10 @@ const Contact = styled.section`
     color: #0fa3b1;
     font-family: Stolzl;
   }
+  a {
+    font-weight: 500;
+    color: #0fa3b1;
+  }
 `
 const Flex = styled.div`
   display: flex;
@@ -50,10 +54,18 @@ const Box = styled.div`
   background-color: #0a2239;
   padding: 20px;
   position: relative;
-  margin: 20px 40px;
+  margin: 20px 40px 50px;
   display: flex;
 `
 const Elem = styled.div`
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.56;
+  color: #ffffff;
+  position: relative;
+  font-family: Ubuntu;
+`
+const EmailLink = styled.a`
   font-size: 20px;
   font-weight: 300;
   line-height: 1.56;
@@ -77,8 +89,7 @@ export default () => (
   <Contact>
       <h2>Reach out to our Co-founders</h2>
       <ParagraphCentre>
-        <p>As the leaders of this company, we are never too busy for our clients. If you have a question or are looking for a quote, reach out and we will get back to you as soon as possible. We are here to help!
-Not sure who to contact, email info@heynova.io or flip a coin!</p>
+        <p>As the leaders of this company, we are never too busy for our clients. If you have a question or are looking for a quote, reach out and we will get back to you as soon as possible. We are here to help!</p>
       </ParagraphCentre>
       <Flex>
         <Box>
@@ -87,7 +98,7 @@ Not sure who to contact, email info@heynova.io or flip a coin!</p>
           </Image>
           <TextBox>
             <h3>Kirsten Dodd</h3>
-            <Elem>kirsten@heynova.io</Elem>
+            <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
             <Elem>linkedin</Elem>
           </TextBox>
         </Box>
@@ -97,10 +108,11 @@ Not sure who to contact, email info@heynova.io or flip a coin!</p>
           </Image>
           <TextBox>
             <h3>Bryony Anderson</h3>
-            <Elem>bryony@heynova.io</Elem>
+            <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
             <Elem>linkedin</Elem>
           </TextBox>
         </Box>
       </Flex>
+      <ParagraphCentre><p>Not sure who to contact, email <a href="mailto:info@heynova.io">info@heynova.io</a> or flip a coin!</p></ParagraphCentre>
   </Contact>
 )

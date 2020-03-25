@@ -91,7 +91,7 @@ const Button = styled.div`
 `
 export default () => (
   <What>
-    <h2>Our approach and methods connect your brand to real users by...</h2>
+    <h2>Our methods connect your brand to real users by:</h2>
     <ImgPerson><img src={img1}/></ImgPerson>
 
     <DiagonalContent>

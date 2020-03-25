@@ -48,7 +48,7 @@ export default () => (
     <ImgCenter><img src={img1}/></ImgCenter>
     <ContentCenter>
       <Content>
-        <h2>A digital design agency forging a bold path forward along the cutting edge of tech</h2>
+        <h2>A digital design agency forging a bold path forward</h2>
         <p>
           Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.
         </p>

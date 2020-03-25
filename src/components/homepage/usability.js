@@ -94,28 +94,26 @@ export default () => (
   <What>
     <h2>We believe in the Power in knowledge</h2>
     <ParagraphCentre>
-      <HeadingParagraph>So let's look at how usability affects your website and product and why designs are only effective if they reach as many people as possible. Even though it might seem obvious, this a new way of thinking about accessibility, and we bring our expertise to the table.</HeadingParagraph>
+      <HeadingParagraph>So let's look at how usability affects your website and business</HeadingParagraph>
     </ParagraphCentre>
     <ImgSaturn><img src={img2}/></ImgSaturn>
 
     <DiagonalContent>
       <Flex1>
-        <h3>You might be losing a lot of customers if your website is not accessible, as people with disabilities comprise a significant part of the population.</h3>
-        <p>In 2017 it was recorded that Canada has 22% (6.2 million) people that have at least one disability that affects their sight, hearing, or dexterity. These are all limitations that can make using a website without accessibility included in it’s creation, often impossible. This percentage does not even include the many disabilities that are “hidden” or not reported. In fact, it is likely that many of your friends, co-workers, and potential users experience a disability of some kind that might affect their interaction with a website.
-</p>
+        <h3>You might be losing a lot of customers</h3>
+        <p>22% of Canadians have at least one disability that affects their sight, hearing, or dexterity, all limitations that can make using a non-accessible website difficult or even impossible...and that number doesn’t even include the hidden, non reported disabilities, or mental health.
+        </p>
       </Flex1>
       <Flex2>
-        <h3>Better and inclusive user experience is better for all your users, not only people with disabilities.</h3>
+        <h3>An accessible website is better for ALL your users</h3>
         <p>
-        Accessibility is for able-bodied people also.t In Canada, nearly 30% of children between the ages of 11 to 13 are nearsighted needing glasses.  Among adults, 55% of Canadians wear eyeglasses.  An ageing population and the growing presence of chronic health conditions, like arthritis.  Better, more accessible and inclusive UX helps everyone and will be a growing need as the next generation approaches old age after growing accustomed to using digital tools in their everyday lives.
-
+        Accessibility is just the best user experience, making your website better for everyone. Plus, as our generation gets older, we are going to be grateful for any good practices we put in now so that we can still use the web.
         </p>
       </Flex2>
       <Flex3>
-        <h3>So it makes sense that user experiences and accessibility which considers people with disabilities significantly influences business growth.</h3>
+        <h3>Good usability is great for business</h3>
         <p>
-        Conventionally bad UX results in failure in 70% of businesses. Every $1 invested in UX results in a much greater return – between $2 to $100.  These numbers increase if you consider nearly 13% of those disabled are within the technology age of 15 to 24 years.  They account for a huge part of the market.
-
+        Seeing as every $1 invested in user experience results in a return of between $2 to $100, it seems worth every penny, but you could be losing 22% of that profit but not considering everyone in you user experience design.
         </p>
       </Flex3>
     </DiagonalContent>

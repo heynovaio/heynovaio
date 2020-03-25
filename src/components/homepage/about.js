@@ -64,12 +64,9 @@ export default () => (
       <ContentCenter>
         <Content>
           <h2>Stepping boldly into the future of tech</h2>
-          <p>
-          Great design is all about perspective. We are passionate about user experience, and too often, without a diverse set of perspectives around the table, designs fall short of working for everyone. As women in a male-dominated field, we know how important it is to create supportive spaces for learning, exploration, and innovation in the tech. We raise the bar for excellence in our industry by mentoring other women developers, as well as working with those who face barriers to getting started in tech, such as People of Colour and people with disabilities.
-          The future of tech is inclusive. The future of design is accessible and engaging for all. And more and more, the future of business is virtual. We know this future won't be realized without an evolution in how we work, and as women and as entrepreneurs, our team brings a novel perspective to the complexity of these shifting norms
-          Let’s start a conversation about how we can work together to propel your business forward and make UX more accessible.  Or, take one of our workshops or speak at a conference.
-
-          </p>
+          <p>Great user experience is all about perspective and without a diverse set of perspectives around the table, designs fall short of working for everyone.</p>
+          <p>We believe the future of tech is inclusive and accessible for all, but this future won't be realized without an evolution in how we work. This is why, and as women in tech, our team brings a novel perspective to the complexity of these shifting norms and forges the path forward to bring this future into actuality.</p>
+          <p>Let’s start a conversation about how we can work together to propel your business forward and make the digital world more accessible.</p>
           <Button>Reach Out</Button>
         </Content>
       </ContentCenter>

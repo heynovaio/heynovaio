@@ -99,7 +99,10 @@ export default () => (
             <MainContent>
               <h2>Does your website work for everyone?</h2>
               <MainPara>
-                The success of your website depends on how accessible it is in meeting the unique needs of your clients. Based on the most innovative research and the highest quality, we provide four primary services catered to your needs, to ensure your success:
+              It’s okay not to know, that is what we are here for.</MainPara>
+
+              <MainPara>Based on the most innovative research, we can cater our approach to your unique needs and unique users, to ensure your success in reaching full accessibility and providing your users with the best experience possible.
+
               </MainPara>
             </MainContent>
           </Left>
@@ -108,26 +111,25 @@ export default () => (
               <Elem>
                 <h3>Accessibility testing</h3>
                 <p>
-                Our accessibility audits identify key elements in your website’s code and design helps you understand your current degree of accessibility.  This is your first step to connecting to the full scope and uniqueness of your clientele.
+                Our accessibility audits identify key elements in your website’s code and design to help you understand your current degree of accessibility, as your first step to connecting to your clientele and achieving accessibility.
                 </p>
               </Elem>
               <Elem>
                 <h3>Accessibility consulting</h3>
                 <p>
-                Together as a team, we will help you actualize your innovations and provide you with a step-by-step guide to full accessibility.  We understand how special your product is to you and your clients.  We take pride in meeting your brand’s specific needs for both you and your users.
-
+                We will help you actualize your innovations and provide you with a step-by-step guide to full accessibility.  We understand how special your product is to you and your clients.
                 </p>
               </Elem>
               <Elem>
                 <h3>Accessibility training</h3>
                 <p>
-                  We emphasize your independence and we want you to be experts in UX.  Usability and accessibility are principles that everyone should share.  We provide immersive educational workshops that empower you and your team to maximize accessibility.  We want everyone to help take a step towards a future with more inclusive technologies for everyone.
+                  We want everyone to help take a step towards a future with more inclusive technologies for everyone, so we provide immersive educational workshops that empower you and your team to maximize accessibility.
                 </p>
               </Elem>
               <Elem>
                 <h3>Design & implementation for websites and applications</h3>
                 <p>
-                  Whether you decide to re-brand or start from scratch, we work with you to build creative, quality and inclusive applications beyond standard guidelines.  We will communicate with you throughout to provide full-service design and development that achieves a quality that rises above standard AAA accessibility guidelines.
+                  Whether you decide to re-brand or start from scratch, we work with you to build creative, quality and inclusive applications beyond standard guidelines from design to code.
                 </p>
               </Elem>
             </List>
