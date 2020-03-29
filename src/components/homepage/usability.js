@@ -7,29 +7,25 @@ const What = styled.section`
   padding: 0 20px;
   background-color: #0C7489;
   h2 {
-    min-height: 64px;
     font-size: 50px;
     font-weight: 400;
     line-height: 1.28;
     letter-spacing: -1px;
     text-align: center;
-    color: #fff;
+    color: #2BC8D7;
     font-family: Stolzl;
     padding-top: 53px;
+    max-width: 800px;
+    margin: auto;
   }
-  h3 {
-    font-size: 35px;
+  span {
+    font-size: 90px;
     font-weight: 500;
-    letter-spacing: -1px;
-    text-align: left;
-    color: #2CADBB;
-    font-family: Stolzl;
   }
   p {
-    min-height: 112px;
-    font-size: 20px;
-    line-height: 1.4;
-    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
     color: #fff;
     font-family: Ubuntu;
   }
@@ -38,30 +34,39 @@ const What = styled.section`
     width: 100%;
     position: absolute;
   }
+  h3 span {
+    display: block;
+  }
 `
 const HeadingParagraph = styled.p`
-  text-align: center !important;
+  padding-top: 10px;
   max-width: 763px;
   font-size: 24px !important;
+  margin: auto;
 `
-const Flex1 = styled.div`
-  align-self: flex-start;
-  text-align: left;
-  max-width: 536px;
+const BoxHeading = styled.h3`
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #2BC8D7;
+  font-family: Stolzl;
+  display: block;
 `
-const Flex2 = styled.div`
-  align-self: center;
-  text-align: left;
-  max-width: 536px;
+const BigNumbers = styled.div`
+  text-align: center;
+  font-size: 60px;
 `
-const Flex3 = styled.div`
-  align-self: flex-end;
-  text-align: left;
+const FlexBox = styled.div`
   max-width: 536px;
+  margin: 0 15px;
+  z-index: 2;
 `
 const DiagonalContent = styled.div`
+  margin-top: 40px;
   display: flex;
-  min-height: 600px;
+  min-height: 530px;
 `
 const ImgSaturn = styled.div`
   max-width: 442px;
@@ -92,33 +97,43 @@ const ParagraphCentre = styled.div`
 `
 export default () => (
   <What>
-    <h2>We believe in the Power in knowledge</h2>
+    <h2>We believe in the Power of knowledge</h2>
     <ParagraphCentre>
       <HeadingParagraph>So let's look at how usability affects your website and business</HeadingParagraph>
     </ParagraphCentre>
     <ImgSaturn><img src={img2}/></ImgSaturn>
 
     <DiagonalContent>
-      <Flex1>
-        <h3>You might be losing a lot of customers</h3>
-        <p>22% of Canadians have at least one disability that affects their sight, hearing, or dexterity, all limitations that can make using a non-accessible website difficult or even impossible...and that number doesn’t even include the hidden, non reported disabilities, or mental health.
-        </p>
-      </Flex1>
-      <Flex2>
-        <h3>An accessible website is better for ALL your users</h3>
+      <FlexBox>
+        <BoxHeading>
+        <span>22%</span>
+        You might be losing a lot of customers
+        </BoxHeading>
         <p>
-        Accessibility is just the best user experience, making your website better for everyone. Plus, as our generation gets older, we are going to be grateful for any good practices we put in now so that we can still use the web.
+        22% of Canadians have at least one disability that affects their sight, hearing, or dexterity. Limitations like these can make or break your digital experience and this number doesn’t even account for temporary limitations or mental health barriers.
         </p>
-      </Flex2>
-      <Flex3>
-        <h3>Good usability is great for business</h3>
+      </FlexBox>
+      <FlexBox>
+        <BoxHeading>
+        <span>88%</span>
+        An accessible website is better for ALL your users
+        </BoxHeading>
+        <p>
+        Did you know that 88% of online shoppers won’t return to a website after having a bad user experience? When you make your website accessible you give everyone the best user experience - a necessity as our world becomes ever more digital.
+        </p>
+      </FlexBox>
+      <FlexBox>
+        <BoxHeading>
+        <span>1000%</span>
+        Good usability is great for business
+        </BoxHeading>
         <p>
         Seeing as every $1 invested in user experience results in a return of between $2 to $100, it seems worth every penny, but you could be losing 22% of that profit but not considering everyone in you user experience design.
         </p>
-      </Flex3>
+      </FlexBox>
     </DiagonalContent>
     <ImgJupiter><img src={img1}/></ImgJupiter>
-    <Button>Learn More</Button>
+    <Button href="http://heynova.io/blog/accessibility/">Learn More</Button>
   </What>
 
 )

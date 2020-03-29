@@ -46,28 +46,15 @@ const Flex = styled.div`
   margin-right: 0;
   justify-content: space-between;
 `
-const Button = styled.div`
-  background-color: #D5330D;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  text-align: center;
-  color: #fff;
-  font-family: Stolzl;
-  padding: 14px 32px;
-  max-width: 200px;
-  margin-top: 50px;
-`
 export default () => (
   <Who>
     <Flex>
       <ContentCenter>
         <Content>
           <h2>Stepping boldly into the future of tech</h2>
-          <p>Great user experience is all about perspective and without a diverse set of perspectives around the table, designs fall short of working for everyone.</p>
-          <p>We believe the future of tech is inclusive and accessible for all, but this future won't be realized without an evolution in how we work. This is why, and as women in tech, our team brings a novel perspective to the complexity of these shifting norms and forges the path forward to bring this future into actuality.</p>
-          <p>Let’s start a conversation about how we can work together to propel your business forward and make the digital world more accessible.</p>
-          <Button>Reach Out</Button>
+          <p>We believe the future of tech is inclusive and accessible for all, but this future won’t be realized without an evolution in how we work. As women in tech, we want to see the industry become more inclusive as a whole.</p>
+          <p>Our team brings a novel perspective to the table. We are actively shifting industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</p>
+          <p>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</p>
         </Content>
       </ContentCenter>
       <ImgRight><img src={img1}/></ImgRight>

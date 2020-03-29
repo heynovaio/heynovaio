@@ -88,6 +88,7 @@ const Button = styled.div`
   font-family: Stolzl;
   padding: 14px 32px;
   max-width: 200px;
+  text-decoration: none;
 `
 export default () => (
   <What>
@@ -98,7 +99,7 @@ export default () => (
       <Flex1>
       <h3>Propelling your vision forward</h3>
       <p>
-        Where innovative ideas meet otherworldly design.  Driven by your unique users and led by the latest research, we will drive your product forward.
+        Where innovative ideas meet otherworldly designs.  Driven by your unique users and led by the latest research, we will drive your product forward.
       </p>
       </Flex1>
       <Flex2>
@@ -114,7 +115,7 @@ export default () => (
         </p>
       </Flex3>
     </DiagonalContent>
-    <Button>Get a Quote</Button>
+    <Button href="#">Get a Quote</Button>
   </What>
 
 )

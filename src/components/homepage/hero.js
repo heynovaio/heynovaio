@@ -45,6 +45,7 @@ const Button = styled.a`
   text-align: center;
   color: #ffffff;
   font-family: Stolzl;
+  text-decoration: none;
 `
 const ImgContainer = styled.div`
   position: absolute;
@@ -61,7 +62,7 @@ export default () => (
       <p>
         Connecting real people to real brands through engaging and inclusive design practice
       </p>
-      <Button>Contact us</Button>
+      <Button href="#">Contact us</Button>
     </ContentContainer>
   </Hero>
 )

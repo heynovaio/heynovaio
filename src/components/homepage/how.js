@@ -31,7 +31,7 @@ const How = styled.section`
     line-height: 1.55;
     text-align: center;
     color: #455868;
-    margin: 5px 0 38px;
+    margin: auto;
     font-family: Ubuntu;
   }
   h3 {
@@ -88,10 +88,8 @@ const Center = styled.div`
   margin-left: auto;
 `
 const ParagraphCentre = styled.div`
-  display: flex;
   width: 100%;
-  padding: 0 10px;
-  justify-content: center;
+  padding: 20px 10px;
 `
 export default () => (
   <How>
@@ -100,17 +98,6 @@ export default () => (
         <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
       </ParagraphCentre>
       <Flex>
-        <Box>
-          <img src={img1}/>
-          <Center>
-            <h3>Consulting</h3>
-            <Elem>Accessibility Workshops </Elem>
-            <Elem>Training</Elem>
-            <Elem>Mentoring</Elem>
-            <Elem>User Experience Audit</Elem>
-            <Elem>Translating geek speak</Elem>
-          </Center>
-        </Box>
         <Box>
           <img src={img2}/>
           <Center>
@@ -127,9 +114,10 @@ export default () => (
           <Center>
             <h3>Design</h3>
             <Elem>Branding</Elem>
-            <Elem>User Interface Design</Elem>
-            <Elem>User Experience</Elem>
+            <Elem>User Interface/Visual Design</Elem>
+            <Elem>User Experience Design</Elem>
             <Elem>Inclusive Design</Elem>
+            <Elem>Inclusive User Testing</Elem>
           </Center>
         </Box>
         <Box>
@@ -137,11 +125,23 @@ export default () => (
           <Center>
             <h3>Implementation</h3>
             <Elem>Web development</Elem>
-            <Elem>Mobile development</Elem>
-            <Elem>Accessibility Development</Elem>
-            <Elem>SEO optimization</Elem>
+            <Elem>Mobile-first development</Elem>
+            <Elem>Accessibile Development</Elem>
+            <Elem>SEO Optimization</Elem>
             <Elem>Data & Analytics</Elem>
             <Elem>Custom CMS themes</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <img src={img1}/>
+          <Center>
+            <h3>Consulting</h3>
+            <Elem>Workshops & Mentoring</Elem>
+            <Elem>Accessibility Training</Elem>
+            <Elem>Accessibility Audits</Elem>
+            <Elem>Project Consulting</Elem>
+            <Elem>UX Consulting</Elem>
+            <Elem>Translating Geek Speak</Elem>
           </Center>
         </Box>
       </Flex>

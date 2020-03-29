@@ -14,20 +14,19 @@ const Inclusive = styled.section`
   }
   p {
     max-width: 398px;
-    min-height: 95px;
     font-size: 20px;
-    line-height: 1.44;
+    line-height: 1.5;
     color: #0a2239;
     margin: 0;
     font-family: Ubuntu;
   }
   h3 {
-    font-size: 21px;
+    font-size: 25px;
     font-weight: bold;
-    line-height: 1.48;
+    line-height: 1.5;
     color: #0FA3B1;
     margin-bottom: 10px;
-    font-family: Ubuntu;
+    font-family: Stolzl;
   }
 `
 const Center = styled.div`
@@ -77,14 +76,15 @@ const Elem = styled.div`
   padding: 34px 34px;
   max-width: 331px;
   p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
-    color: #ffffff;
+    color: #fff;
     font-family: Ubuntu;
   }
 `
 const MainPara = styled.p`
   color: #0a2239;
+  padding-bottom: 20px;
 `
 const Left = styled.div`
 `
@@ -99,7 +99,7 @@ export default () => (
             <MainContent>
               <h2>Does your website work for everyone?</h2>
               <MainPara>
-              It’s okay not to know, that is what we are here for.</MainPara>
+              We are here to help you find out.</MainPara>
 
               <MainPara>Based on the most innovative research, we can cater our approach to your unique needs and unique users, to ensure your success in reaching full accessibility and providing your users with the best experience possible.
 
@@ -109,27 +109,27 @@ export default () => (
           <Right>
             <List>
               <Elem>
-                <h3>Accessibility testing</h3>
+                <h3>Accessibility Testing</h3>
                 <p>
                 Our accessibility audits identify key elements in your website’s code and design to help you understand your current degree of accessibility, as your first step to connecting to your clientele and achieving accessibility.
                 </p>
               </Elem>
               <Elem>
-                <h3>Accessibility consulting</h3>
+                <h3>Accessibility Consulting</h3>
                 <p>
-                We will help you actualize your innovations and provide you with a step-by-step guide to full accessibility.  We understand how special your product is to you and your clients.
+                We will help you actualize your innovations through a step-by-step guide to full web accessibility.  Working collaboratively with your team, we can take your great ideas and identify the barriers between your products and your customers and provide a better experience for all your users.
                 </p>
               </Elem>
               <Elem>
-                <h3>Accessibility training</h3>
+                <h3>Accessibility Training</h3>
                 <p>
                   We want everyone to help take a step towards a future with more inclusive technologies for everyone, so we provide immersive educational workshops that empower you and your team to maximize accessibility.
                 </p>
               </Elem>
               <Elem>
-                <h3>Design & implementation for websites and applications</h3>
+                <h3>Accessibile Design & Implementation</h3>
                 <p>
-                  Whether you decide to re-brand or start from scratch, we work with you to build creative, quality and inclusive applications beyond standard guidelines from design to code.
+                  Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give your unique users a superior digital experience.
                 </p>
               </Elem>
             </List>

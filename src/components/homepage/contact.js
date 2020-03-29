@@ -10,7 +10,6 @@ const Contact = styled.section`
     width: 100%;
   }
   h2 {
-    min-height: 64px;
     font-size: 50px;
     font-weight: 500;
     line-height: 1.28;
@@ -19,7 +18,7 @@ const Contact = styled.section`
     color: #0a2239;
     margin: 0 0 5px;
     font-family: Stolzl;
-    margin-top: 75px;
+    margin-top: 55px;
   }
   p {
     max-width: 690px;
@@ -28,8 +27,8 @@ const Contact = styled.section`
     line-height: 1.55;
     text-align: center;
     color: #455868;
-    margin: 5px 0 38px;
     font-family: Ubuntu;
+    margin: auto;
   }
   h3 {
     font-size: 28px;
@@ -80,16 +79,14 @@ const Image = styled.div`
   max-width: 200px;
 `
 const ParagraphCentre = styled.div`
-  display: flex;
-  width: 100%;
-  padding: 0 10px;
-  justify-content: center;
+  margin: 10px 0 30px;
 `
 export default () => (
   <Contact>
       <h2>Reach out to our Co-founders</h2>
       <ParagraphCentre>
-        <p>As the leaders of this company, we are never too busy for our clients. If you have a question or are looking for a quote, reach out and we will get back to you as soon as possible. We are here to help!</p>
+        <p>As the leaders of this company, we are never too busy to chat.</p>
+        <p>Even if you just want a chat or are starting out in the tech industry and are looking for some advice. We are here to help!</p>
       </ParagraphCentre>
       <Flex>
         <Box>

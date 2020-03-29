@@ -86,13 +86,13 @@ export default () => (
           <TestimonialQuote>
           <QuoteLeft><img src={img2}/></QuoteLeft>
           <Quote>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Bryony Anderson and Kirsten Dodd, co-founders of Hey Nova and their staff are nothing short of amazing. They're diligent and committed to producing the best possible product. Our finished website was beyond our expectations. I wholeheartedly recommend them to anyone looking for a new website or cloud application.
           </Quote>
           <QuoteRight><img src={img3}/></QuoteRight>
           </TestimonialQuote>
           <TestimonialDetails>
-            <Name>Mark Lise</Name>
-            <JobPosition>Founder of Digital Spaces</JobPosition>
+            <Name>John Baran</Name>
+            <JobPosition>Project Manager, Netterbot Communications</JobPosition>
           </TestimonialDetails>
         </Content>
       </ContentCenter>
