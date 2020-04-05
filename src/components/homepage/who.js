@@ -35,7 +35,6 @@ const ContentCenter = styled.div`
 const Content = styled.div`
   text-align: center;
   max-width: 615px;
-  min-height: 477px;
   position: relative;
   @media (min-width: 960px) {
     padding: 141.5px 0 20px;
