@@ -6,11 +6,13 @@ const Inclusive = styled.section`
   padding: 0 20px 20px;
   h2 {
     max-width: 363px;
-    min-height: 180px;
     font-size: 50px;
     font-weight: normal;
     line-height: 1.2;
     font-family: Stolzl;
+    @media (max-width: 960px) {
+      font-size: 35px;
+    }
   }
   p {
     max-width: 398px;
@@ -37,13 +39,17 @@ const Rightify = styled.div`
   margin-left: auto;
   position: relative;
   display: flex;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const MainContent = styled.div`
-  margin: 0 400px 0 0;
   padding: 143px 0 0;
+  @media (min-width: 960px) {
+    margin: 0 400px 0 0;
+  }
 `
 const List = styled.div`
-  position: absolute;
   max-width: 719px;
   right: 0;
   padding: 0;
@@ -51,6 +57,9 @@ const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (min-width: 960px) {
+    position: absolute;
+  }
 `
 const Index = styled.div`
   width: 48px;
@@ -58,7 +67,6 @@ const Index = styled.div`
   background-color: #0a2239;
   top: 23px;
   left: 11px;
-  position: absolute;
   border-radius: 50%;
   text-align: center;
   padding-top: 8px;
@@ -66,6 +74,9 @@ const Index = styled.div`
   font-weight: 500;
   line-height: 1.48;
   color: #ffffff;
+  @media (min-width: 960px) {
+    position: absolute;
+  }
 `
 const Elem = styled.div`
   min-height: 395px;
@@ -75,10 +86,13 @@ const Elem = styled.div`
   background-color: #0a2239;
   padding: 34px 34px;
   max-width: 331px;
+  @media (max-width: 960px) {
+    margin: 10px auto;
+  }
   p {
     font-size: 18px;
     line-height: 1.5;
-    color: #fff;
+    color: #fff !important;
     font-family: Ubuntu;
   }
 `

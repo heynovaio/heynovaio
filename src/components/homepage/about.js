@@ -2,6 +2,9 @@ import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/group-20.png'
 const Who = styled.section`
+  @media (max-width: 960px) {
+    padding: 20px;
+  }
   h2 {
     min-height: 64px;
     font-size: 40px;
@@ -11,6 +14,9 @@ const Who = styled.section`
     text-align: left;
     color: #0a2239;
     font-family: Stolzl;
+    @media (max-width: 960px) {
+      font-size: 35px;
+    }
   }
   p {
     min-height: 112px;
@@ -30,15 +36,20 @@ const ContentCenter = styled.div`
 const Content = styled.div`
   text-align: left;
   max-width: 615px;
-  margin-left: 200px;
-  padding: 141.5px 0 20px;
-  min-height: 477px;
   position: relative;
+  @media (min-width: 960px) {
+    margin-left: 200px;
+    padding: 141.5px 0 20px;
+    min-height: 477px;
+  }
 `
 const ImgRight = styled.div`
   margin: 0;
   position: relative;
   max-width: 470px;
+  @media (max-width: 960px) {
+    display: none;
+  }
 `
 const Flex = styled.div`
   display: flex;

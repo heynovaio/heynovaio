@@ -19,10 +19,12 @@ const Contact = styled.section`
     margin: 0 0 5px;
     font-family: Stolzl;
     margin-top: 55px;
+    @media (max-width: 960px) {
+      font-size: 35px;
+    }
   }
   p {
     max-width: 690px;
-    min-height: 38px;
     font-size: 20px;
     line-height: 1.55;
     text-align: center;
@@ -36,6 +38,9 @@ const Contact = styled.section`
     line-height: 1.09;
     color: #0fa3b1;
     font-family: Stolzl;
+    @media (max-width: 960px) {
+      font-size: 25px;
+    }
   }
   a {
     font-weight: 500;
@@ -46,6 +51,9 @@ const Flex = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const Box = styled.div`
   padding: 20px;
@@ -55,6 +63,9 @@ const Box = styled.div`
   position: relative;
   margin: 20px 40px 50px;
   display: flex;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const Elem = styled.div`
   font-size: 20px;
@@ -77,6 +88,9 @@ const TextBox = styled.div`
 `
 const Image = styled.div`
   max-width: 200px;
+  @media (max-width: 960px) {
+    margin: 20px auto;
+  }
 `
 const ParagraphCentre = styled.div`
   margin: 10px 0 30px;

@@ -42,6 +42,9 @@ const BlogLink = styled.a`
 const ContactLink = styled.a`
 
 `
+const SocialLink = styled.a`
+
+`
 export default () => (
   <Footer>
   <ImgCenter><img src={img1}/></ImgCenter>
@@ -49,6 +52,11 @@ export default () => (
     <Flex>
       <BlogLink>Blog</BlogLink>
       <ContactLink>Contact</ContactLink>
+      <SocialLink>Placeholder</SocialLink>
+    </Flex>
+    <Flex>
+      <SocialLink>Placeholder</SocialLink>
+      <SocialLink>Placeholder</SocialLink>
     </Flex>
   </Footer>
 )

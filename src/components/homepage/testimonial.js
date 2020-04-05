@@ -6,7 +6,9 @@ import img3 from '../../images/quote-right.png'
 const Testimonial = styled.section`
   padding: 63px 20px 63px;
   background-color: #0a2239;
-  margin-top: 288px;
+  @media (min-width: 960px) {
+    margin-top: 288px;
+  }
   h2 {
     min-height: 64px;
     font-size: 50px;
@@ -32,12 +34,17 @@ const Content = styled.div`
   position: relative;
 `
 const ImgCenter = styled.div`
-  min-width: 407px;
+  @media (min-width: 960px) {
+    min-width: 407px;
+  }
   margin: 0 auto;
 `
 const Flex = styled.div`
   display: flex;
   margin-top: 60px;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const Name = styled.p`
   font-size: 21px;
@@ -59,8 +66,10 @@ const Quote = styled.p`
   line-height: 1.5;
   text-align: left;
   color: #fff;
-  min-width: 552px;
   align-self: center;
+  @media (min-width: 960px) {
+    min-width: 552px;
+  }
 `
 const QuoteLeft = styled.div`
   align-self: flex-start;

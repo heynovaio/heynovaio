@@ -15,6 +15,9 @@ const What = styled.section`
   background-repeat: no-repeat;
   background-position-y: bottom;
   padding-bottom: 30px;
+  @media (max-width: 960px) {
+    padding-bottom: 150px;
+  }
   h2 {
     min-height: 64px;
     font-size: 50px;
@@ -26,14 +29,21 @@ const What = styled.section`
     font-family: Stolzl;
     max-width: 540px;
     padding-top: 410px;
+    @media (max-width: 960px) {
+      font-size: 35px;
+    }
   }
   h3 {
     font-size: 35px;
     font-weight: 500;
     letter-spacing: -1px;
     text-align: left;
+    line-height: 1.5;
     color: #2CADBB;
     font-family: Stolzl;
+    @media (max-width: 960px) {
+      font-size: 25px;
+    }
   }
   p {
     min-height: 112px;
@@ -42,11 +52,17 @@ const What = styled.section`
     text-align: left;
     color: #fff;
     font-family: Ubuntu;
+    @media (max-width: 960px) {
+      font-size: 18px;
+      color: #0a2239;
+    }
   }
   img {
     display: inline-block;
     width: 100%;
-    position: absolute;
+    @media (min-width: 960px) {
+      position: absolute;
+    }
   }
 `
 const Content = styled.div`
@@ -54,29 +70,43 @@ const Content = styled.div`
   max-width: 536px;
 `
 const Flex3 = styled.div`
-  align-self: flex-start;
+  @media (min-width: 960px) {
+    align-self: flex-start;
+  }
   text-align: left;
   max-width: 536px;
 `
 const Flex2 = styled.div`
-  align-self: center;
+  @media (min-width: 960px) {
+    align-self: center;
+  }
   text-align: left;
   max-width: 536px;
 `
 const Flex1 = styled.div`
-  align-self: flex-end;
   text-align: left;
   max-width: 536px;
+  @media (min-width: 960px) {
+    align-self: flex-end;
+  }
 `
 const DiagonalContent = styled.div`
   display: flex;
   min-height: 700px;
-  margin: -100px 150px 0;
+  @media (min-width: 960px) {
+    margin: -100px 150px 0;
+  }
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const ImgPerson = styled.div`
   max-width: 455px;
   object-fit: contain;
   position: relative;
+  @media (max-width: 960px) {
+    max-width: 200px;
+  }
 `
 const Button = styled.div`
   background-color: #D5330D;

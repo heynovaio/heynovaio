@@ -7,17 +7,18 @@ const Hero = styled.section`
   padding: 0 20px 20px;
   h1 {
     max-width: 670px;
-    min-height: 282px;
     font-size: 90px;
     font-weight: 500;
     line-height: 1.04;
     color: #0fa3b1;
     margin: 0 0 25px;
     font-family: Stolzl;
+    @media (max-width: 960px) {
+      font-size: 48px;
+    }
   }
   p {
     max-width: 556px;
-    min-height: 72px;
     font-size: 22px;
     line-height: 1.64;
     color: #ffffff;
@@ -29,8 +30,10 @@ const ContentContainer = styled.div`
   max-width: 1200px;
   padding: 169px 0 0px;
   margin: 0 auto;
-  min-height: 776px;
   position: relative;
+  @media (min-width: 768px) {
+    min-height: 776px;
+  }
 `
 const Button = styled.a`
   width: 197px;

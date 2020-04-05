@@ -22,8 +22,10 @@ const Who = styled.section`
     font-family: Ubuntu;
   }
   img {
-    position: absolute;
     top: 110px;
+    @media (min-width: 960px) {
+      position: absolute;
+    }
   }
 `
 const ContentCenter = styled.div`
@@ -33,15 +35,21 @@ const ContentCenter = styled.div`
 const Content = styled.div`
   text-align: center;
   max-width: 615px;
-  margin-left: auto;
-  padding: 141.5px 0 20px;
   min-height: 477px;
   position: relative;
+  @media (min-width: 960px) {
+    padding: 141.5px 0 20px;
+    margin-left: auto;
+  }
 `
 const ImgCenter = styled.div`
   max-width: 1106px;
   margin: 0 auto;
   position: relative;
+  @media (max-width: 960px) {
+    max-width: 150px;
+    padding-top: 30px;
+  }
 `
 export default () => (
   <Who>

@@ -17,6 +17,9 @@ const What = styled.section`
     padding-top: 53px;
     max-width: 800px;
     margin: auto;
+    @media (max-width: 960px) {
+      font-size: 35px;
+    }
   }
   span {
     font-size: 90px;
@@ -62,21 +65,33 @@ const FlexBox = styled.div`
   max-width: 536px;
   margin: 0 15px;
   z-index: 2;
+  @media (max-width: 960px) {
+    margin: auto;
+  }
 `
 const DiagonalContent = styled.div`
   margin-top: 40px;
   display: flex;
   min-height: 530px;
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+  }
 `
 const ImgSaturn = styled.div`
   max-width: 442px;
   margin: 0 auto;
   position: relative;
+  @media (max-width: 960px) {
+    max-width: 250px;
+  }
 `
 const ImgJupiter = styled.div`
   max-width: 362px;
   position: relative;
   margin-left: -58px;
+  @media (max-width: 960px) {
+    max-width: 180px;
+  }
 `
 const Button = styled.div`
   background-color: #D5330D;

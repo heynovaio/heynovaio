@@ -13,7 +13,6 @@ const How = styled.section`
     display: block;
   }
   h2 {
-    min-height: 64px;
     font-size: 50px;
     font-weight: 500;
     line-height: 1.28;
@@ -23,10 +22,12 @@ const How = styled.section`
     margin: 0 0 5px;
     font-family: Stolzl;
     margin-top: 75px;
+    @media (max-width: 960px) {
+      font-size: 30px;
+    }
   }
   p {
     max-width: 690px;
-    min-height: 38px;
     font-size: 20px;
     line-height: 1.55;
     text-align: center;
@@ -45,6 +46,7 @@ const How = styled.section`
 `
 const Flex = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1349.9px;
   margin: auto;
@@ -57,6 +59,9 @@ const Box = styled.div`
   padding: 58px 10px 10px;
   position: relative;
   margin: 10px;
+  @media (max-width: 960px) {
+    margin: 10px auto;
+  }
 `
 const ListElementStyle = styled.div`
   padding: 0 0 0 25px;
