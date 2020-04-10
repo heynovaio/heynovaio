@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/logo-2-x.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = styled.section`
   padding: 63px 20px 63px;
@@ -20,12 +22,11 @@ const Footer = styled.section`
     display: block;
   }
   a {
-    font-size: 18px;
     font-family: Ubuntu;
     font-weight: 500;
     text-align: center;
     color: #ffffff;
-    padding: 0 10px;
+    padding: 10px 10px;
   }
 `
 const Flex = styled.div`
@@ -37,13 +38,19 @@ const ImgCenter = styled.div`
   margin: auto;
 `
 const BlogLink = styled.a`
-
+  font-size: 22px;
 `
 const ContactLink = styled.a`
-
+  font-size: 22px;
 `
-const SocialLink = styled.a`
-
+const FaceBookLink = styled.a`
+  font-size: 30px;
+`
+const InstagramLink = styled.a`
+  font-size: 30px;
+`
+const LinkedInLink = styled.a`
+  font-size: 30px;
 `
 export default () => (
   <Footer>
@@ -52,11 +59,17 @@ export default () => (
     <Flex>
       <BlogLink>Blog</BlogLink>
       <ContactLink>Contact</ContactLink>
-      <SocialLink>Placeholder</SocialLink>
     </Flex>
     <Flex>
-      <SocialLink>Placeholder</SocialLink>
-      <SocialLink>Placeholder</SocialLink>
+      <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+         <FontAwesomeIcon icon={faLinkedinIn} />
+      </LinkedInLink>
+      <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+         <FontAwesomeIcon icon={faFacebook} />
+      </FaceBookLink>
+      <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+         <FontAwesomeIcon icon={faInstagram} />
+      </InstagramLink>
     </Flex>
   </Footer>
 )

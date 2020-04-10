@@ -85,6 +85,23 @@ const TestimonialQuote = styled.div`
 const TestimonialDetails = styled.div`
   padding-left: 40px;
 `
+const CarouselDotList = styled.ul`
+  display: flex;
+  margin: 0 auto;
+  list-style: none;
+  justify-content: center;
+  margin-top: 20px;
+`
+const DotItem = styled.li`
+  box-shadow: 0 2px 12px 0 #0d1015;
+  border: 1px solid #0FA3B1;
+  background-color: #0D2D4B;
+  width: 16px;
+  height: 16px;
+  margin: 0 7px;
+  cursor: pointer;
+  border-radius: 50%;
+`
 export default () => (
   <Testimonial>
     <h2>What our clients have to say</h2>
@@ -106,5 +123,12 @@ export default () => (
         </Content>
       </ContentCenter>
     </Flex>
+    <CarouselDotList>
+      <DotItem></DotItem>
+      <DotItem></DotItem>
+      <DotItem></DotItem>
+      <DotItem></DotItem>
+      <DotItem></DotItem>
+    </CarouselDotList>
   </Testimonial>
 )

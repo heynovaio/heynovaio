@@ -3,7 +3,7 @@ import React from 'react'
 import img1 from '../../images/group.svg'
 const Hero = styled.section`
   border-style: solid;
-  background-color: black;
+  background-color: #051627;
   padding: 0 20px 20px;
   h1 {
     max-width: 670px;

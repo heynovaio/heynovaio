@@ -23,11 +23,12 @@ const LinkContainer = styled.div`
   display: flex;
   a {
     padding: 20px 12px;
-    font-size: 18px;
-    font-family: Stolzl;
-    font-weight: 500;
-    text-align: center;
-    color: #ffffff;
+  font-size: 23px;
+  font-family: Stolzl;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
   }
 `
 const FaceBookLink = styled.a`
@@ -35,6 +36,7 @@ const FaceBookLink = styled.a`
 `
 const InstagramLink = styled.a`
   color: #d5330d;
+  margin-right: 20px;
 `
 const LinkedInLink = styled.a`
   color: #d5330d;
@@ -46,13 +48,13 @@ export default () => (
     <LinkContainer>
       <Link to="/blog">Blog</Link>
       <Link to="/contact">Contact</Link>
-      <LinkedInLink>
+      <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
       </LinkedInLink>
-      <FaceBookLink>
+      <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
          <FontAwesomeIcon icon={faFacebook} />
       </FaceBookLink>
-      <InstagramLink>
+      <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
          <FontAwesomeIcon icon={faInstagram} />
       </InstagramLink>
     </LinkContainer>

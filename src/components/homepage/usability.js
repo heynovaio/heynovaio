@@ -4,7 +4,7 @@ import img1 from '../../images/planet-1.png'
 import img2 from '../../images/group-17.png'
 
 const What = styled.section`
-  padding: 0 20px;
+  padding: 0 20px 50px;
   background-color: #0C7489;
   h2 {
     font-size: 50px;
@@ -103,6 +103,7 @@ const Button = styled.div`
   font-family: Stolzl;
   padding: 14px 32px;
   max-width: 200px;
+  margin: auto;
 `
 const ParagraphCentre = styled.div`
   display: flex;
@@ -148,7 +149,7 @@ export default () => (
       </FlexBox>
     </DiagonalContent>
     <ImgJupiter><img src={img1}/></ImgJupiter>
-    <Button href="http://heynova.io/blog/accessibility/">Learn More</Button>
+    <Button href="http://heynova.io/blog/accessibility/">Read the Blog</Button>
   </What>
 
 )

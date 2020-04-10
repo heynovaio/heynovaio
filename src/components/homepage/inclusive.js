@@ -80,7 +80,6 @@ const Index = styled.div`
 `
 const Elem = styled.div`
   min-height: 395px;
-  min-width: 331px;
   border-radius: 8px;
   margin-bottom: 52px;
   background-color: #0a2239;

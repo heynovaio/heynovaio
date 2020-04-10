@@ -2,12 +2,16 @@ import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/kirsten.jpg'
 import img2 from '../../images/bryony.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
 const Contact = styled.section`
   padding: 0 0 51px;
   img {
     display: block;
     width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
   }
   h2 {
     font-size: 50px;
@@ -21,6 +25,7 @@ const Contact = styled.section`
     margin-top: 55px;
     @media (max-width: 960px) {
       font-size: 35px;
+      padding: 0 20px;
     }
   }
   p {
@@ -35,16 +40,17 @@ const Contact = styled.section`
   h3 {
     font-size: 28px;
     font-weight: 500;
-    line-height: 1.09;
+    line-height: 1.3;
     color: #0fa3b1;
     font-family: Stolzl;
+    padding-bottom: 11px;
+    border-bottom: solid;
     @media (max-width: 960px) {
       font-size: 25px;
     }
   }
   a {
     font-weight: 500;
-    color: #0fa3b1;
   }
 `
 const Flex = styled.div`
@@ -61,8 +67,9 @@ const Box = styled.div`
   background-color: #0a2239;
   padding: 20px;
   position: relative;
-  margin: 20px 40px 50px;
+  margin: 20px 20px 50px;
   display: flex;
+  max-width: 460px;
   @media (max-width: 960px) {
     flex-wrap: wrap;
   }
@@ -82,6 +89,8 @@ const EmailLink = styled.a`
   color: #ffffff;
   position: relative;
   font-family: Ubuntu;
+  text-decoration: none;
+  margin-bottom: 20px;
 `
 const TextBox = styled.div`
   margin: 20px;
@@ -94,6 +103,17 @@ const Image = styled.div`
 `
 const ParagraphCentre = styled.div`
   margin: 10px 0 30px;
+  @media (max-width: 960px) {
+    padding: 0 20px;
+  }
+`
+const LinkedInLink = styled.a`
+  color: #fff;
+  font-size: 30px;
+`
+const GeneralEmailLink = styled.a`
+  color: #0fa3b1;
+  font-weight: 600;
 `
 export default () => (
   <Contact>
@@ -110,7 +130,9 @@ export default () => (
           <TextBox>
             <h3>Kirsten Dodd</h3>
             <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
-            <Elem>linkedin</Elem>
+            <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+               <FontAwesomeIcon icon={faLinkedinIn} />
+            </LinkedInLink>
           </TextBox>
         </Box>
         <Box>
@@ -120,10 +142,12 @@ export default () => (
           <TextBox>
             <h3>Bryony Anderson</h3>
             <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
-            <Elem>linkedin</Elem>
+            <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
+               <FontAwesomeIcon icon={faLinkedinIn} />
+            </LinkedInLink>
           </TextBox>
         </Box>
       </Flex>
-      <ParagraphCentre><p>Not sure who to contact, email <a href="mailto:info@heynova.io">info@heynova.io</a> or flip a coin!</p></ParagraphCentre>
+      <ParagraphCentre><p>Not sure who to contact, email <GeneralEmailLink href="mailto:info@heynova.io">info@heynova.io</GeneralEmailLink> or flip a coin!</p></ParagraphCentre>
   </Contact>
 )
