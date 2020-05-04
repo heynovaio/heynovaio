@@ -3,7 +3,7 @@ import React from 'react'
 import img1 from '../../images/kirsten.jpg'
 import img2 from '../../images/bryony.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
+import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons"
 
 const Contact = styled.section`
   padding: 0 0 51px;
@@ -40,7 +40,8 @@ const Contact = styled.section`
   h3 {
     font-size: 28px;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1;
+    margin-bottom: 16px;
     color: #0fa3b1;
     font-family: Stolzl;
     padding-bottom: 11px;
@@ -50,6 +51,7 @@ const Contact = styled.section`
     }
   }
   a {
+    margin-top: 5px;
     font-weight: 500;
   }
 `
@@ -90,13 +92,13 @@ const EmailLink = styled.a`
   position: relative;
   font-family: Ubuntu;
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
 const TextBox = styled.div`
   margin: 20px;
 `
 const Image = styled.div`
-  max-width: 200px;
+  max-width: 277px;
   @media (max-width: 960px) {
     margin: 20px auto;
   }
@@ -110,6 +112,7 @@ const ParagraphCentre = styled.div`
 const LinkedInLink = styled.a`
   color: #fff;
   font-size: 30px;
+  display: block;
 `
 const GeneralEmailLink = styled.a`
   color: #0fa3b1;
@@ -125,7 +128,7 @@ export default () => (
       <Flex>
         <Box>
           <Image>
-            <img src={img1}/>
+            <img role="presentation" alt="" src={img1}/>
           </Image>
           <TextBox>
             <h3>Kirsten Dodd</h3>
@@ -137,7 +140,7 @@ export default () => (
         </Box>
         <Box>
           <Image>
-            <img src={img2}/>
+            <img role="presentation" alt="" src={img2}/>
           </Image>
           <TextBox>
             <h3>Bryony Anderson</h3>

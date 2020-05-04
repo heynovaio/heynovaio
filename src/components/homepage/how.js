@@ -32,7 +32,7 @@ const How = styled.section`
     line-height: 1.55;
     text-align: center;
     color: #455868;
-    margin: auto;
+    margin: 0 auto 20px;
     font-family: Ubuntu;
   }
   h3 {
@@ -98,13 +98,13 @@ const ParagraphCentre = styled.div`
 `
 export default () => (
   <How>
-      <h2>Curious about our strategy?</h2>
+      <h2>Curious about our process?</h2>
       <ParagraphCentre>
         <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
       </ParagraphCentre>
       <Flex>
         <Box>
-          <img src={img2}/>
+          <img role="presentation" alt="" src={img2}/>
           <Center>
             <h3>Strategy</h3>
             <Elem>User Research</Elem>
@@ -115,7 +115,7 @@ export default () => (
           </Center>
         </Box>
         <Box>
-          <img src={img3}/>
+          <img role="presentation" alt="" src={img3}/>
           <Center>
             <h3>Design</h3>
             <Elem>Branding</Elem>
@@ -126,7 +126,7 @@ export default () => (
           </Center>
         </Box>
         <Box>
-          <img src={img4}/>
+          <img role="presentation" alt="" src={img4}/>
           <Center>
             <h3>Implementation</h3>
             <Elem>Web development</Elem>
@@ -138,7 +138,7 @@ export default () => (
           </Center>
         </Box>
         <Box>
-          <img src={img1}/>
+          <img role="presentation" alt="" src={img1}/>
           <Center>
             <h3>Consulting</h3>
             <Elem>Workshops & Mentoring</Elem>

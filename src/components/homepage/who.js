@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
+import { keyframes } from '@emotion/core'
 import React from 'react'
 import img1 from '../../images/group-3.svg'
+
 const Who = styled.section`
   padding: 0 20px;
   h2 {
@@ -21,16 +23,11 @@ const Who = styled.section`
     color: #405364;
     font-family: Ubuntu;
   }
-  img {
-    top: 110px;
-    @media (min-width: 960px) {
-      position: absolute;
-    }
-  }
 `
 const ContentCenter = styled.div`
-  max-width: 688px;
+  max-width: 1288px;
   margin: 0 auto;
+  position: relative;
 `
 const Content = styled.div`
   text-align: center;
@@ -38,27 +35,71 @@ const Content = styled.div`
   position: relative;
   @media (min-width: 960px) {
     padding: 141.5px 0 20px;
-    margin-left: auto;
+    margin: 0 auto;
   }
 `
-const ImgCenter = styled.div`
-  max-width: 1106px;
-  margin: 0 auto;
-  position: relative;
-  @media (max-width: 960px) {
-    max-width: 150px;
-    padding-top: 30px;
+const vibrate = keyframes`
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
+  10% {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
+  20% {
+    -webkit-transform: translate(15px, -15px);
+            transform: translate(15px, -15px);
+  }
+  30% {
+    -webkit-transform: translate(-15px, 15px);
+            transform: translate(-15px, 15px);
+  }
+  40% {
+    -webkit-transform: translate(15px, 15px);
+            transform: translate(15px, 15px);
+  }
+  50% {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
+  60% {
+    -webkit-transform: translate(15px, -15px);
+            transform: translate(15px, -15px);
+  }
+  70% {
+    -webkit-transform: translate(-15px, 15px);
+            transform: translate(-15px, 15px);
+  }
+  80% {
+    -webkit-transform: translate(-15px, -15px);
+            transform: translate(-15px, -15px);
+  }
+  90% {
+    -webkit-transform: translate(15px, -15px);
+            transform: translate(15px, -15px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+`
+const ImgContainer = styled.div`
+  position: absolute;
+  left: 0;
+  top: 110px;
+  -webkit-animation: vibrate 22s ease-in-out infinite both;
+  animation: ${vibrate} 22s ease-in-out infinite both;
 `
 export default () => (
   <Who>
-    <ImgCenter><img src={img1}/></ImgCenter>
     <ContentCenter>
+      <ImgContainer>
+        <img role="presentation" alt="" src={img1}/>
+      </ImgContainer>
       <Content>
         <h2>A digital design agency forging a bold path forward</h2>
-        <p>
-          Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.
-        </p>
+        <p>Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.</p>
       </Content>
     </ContentCenter>
   </Who>

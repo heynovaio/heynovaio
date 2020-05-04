@@ -1,10 +1,18 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/group.svg'
-const Hero = styled.section`
+import img1 from '../../images/planet-bg.webp'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { Parallax } from 'react-scroll-parallax';
+
+const HeroSection = styled.section`
   border-style: solid;
   background-color: #051627;
   padding: 0 20px 20px;
+  background-image: url( ${img1} );
+  background-size: 620px 585px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
   h1 {
     max-width: 670px;
     font-size: 90px;
@@ -27,8 +35,8 @@ const Hero = styled.section`
   }
 `
 const ContentContainer = styled.div`
-  max-width: 1200px;
-  padding: 169px 0 0px;
+  max-width: 1288px;
+  padding: 215px 0 0px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -36,15 +44,15 @@ const ContentContainer = styled.div`
   }
 `
 const Button = styled.a`
+  border-radius: 3px;
   width: 197px;
-  height: 59px;
-  margin: 45px 0 0;
-  padding: 12.5px 0 0;
+  padding: 15px 0 18px;
   background-color: #d5330d;
   margin: 45px 0 0;
   display: block;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 0.025em;
   text-align: center;
   color: #ffffff;
   font-family: Stolzl;
@@ -52,20 +60,90 @@ const Button = styled.a`
 `
 const ImgContainer = styled.div`
   position: absolute;
-  top: 148px;
+  bottom: 0;
   right: 0;
 `
-export default () => (
-  <Hero>
-    <ImgContainer>
-      <img src={img1}/>
-    </ImgContainer>
-    <ContentContainer>
-      <h1>Designing Experiences for Everyone</h1>
-      <p>
-        Connecting real people to real brands through engaging and inclusive design practice
-      </p>
-      <Button href="#">Contact us</Button>
-    </ContentContainer>
-  </Hero>
-)
+const Planet1 = styled.div`
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+`
+const Planet2 = styled.div`
+  position: absolute;
+  bottom: 300px;
+  right: 50px;
+`
+const Planet3 = styled.div`
+  position: absolute;
+  bottom: 100px;
+  right: 300px;
+`
+function Hero () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      Planet1: file(relativePath: { eq: "hero-planet1.png" }) {
+        childImageSharp {
+          fixed(width: 192, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      Planet2: file(relativePath: { eq: "hero-planet2.png" }) {
+        childImageSharp {
+          fixed(width: 180, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      Planet3: file(relativePath: { eq: "hero-planet3.png" }) {
+        childImageSharp {
+          fixed(width: 153, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+
+    <HeroSection>
+      <ImgContainer>
+        <Parallax
+          offsetYMax={100}
+          offsetYMin={-100}
+          className="hemi-left"
+          slowerScrollRate
+          tagOuter="figure">
+          <Planet1>
+            <Img alt="Planet" role="presentation" fixed={data.Planet1.childImageSharp.fixed} />
+          </Planet1>
+        </Parallax>
+        <Planet2>
+          <Img alt="Planet 2" role="presentation" fixed={data.Planet2.childImageSharp.fixed} />
+        </Planet2>
+        <Parallax
+          offsetYMax={30}
+          offsetYMin={-30}
+          className="hemi-left"
+          slowerScrollRate
+          tagOuter="figure">
+          <Planet3>
+            <Img alt="Planet 3" role="presentation" fixed={data.Planet3.childImageSharp.fixed} />
+          </Planet3>
+        </Parallax>
+      </ImgContainer>
+      <ContentContainer>
+        <h1>Designing Experiences for Everyone</h1>
+        <p>
+          Connecting real people to real brands through engaging and inclusive design practice
+        </p>
+        <Button href="#">Book a Chat</Button>
+      </ContentContainer>
+    </HeroSection>
+
+  )
+}
+
+export default Hero

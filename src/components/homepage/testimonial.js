@@ -7,7 +7,7 @@ const Testimonial = styled.section`
   padding: 63px 20px 63px;
   background-color: #0a2239;
   @media (min-width: 960px) {
-    margin-top: 288px;
+    margin-top: 50px;
   }
   h2 {
     min-height: 64px;
@@ -106,15 +106,15 @@ export default () => (
   <Testimonial>
     <h2>What our clients have to say</h2>
     <Flex>
-      <ImgCenter><img src={img1}/></ImgCenter>
+      <ImgCenter><img role="presentation" alt="" src={img1}/></ImgCenter>
       <ContentCenter>
         <Content>
           <TestimonialQuote>
-          <QuoteLeft><img src={img2}/></QuoteLeft>
+          <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
           <Quote>
             Bryony Anderson and Kirsten Dodd, co-founders of Hey Nova and their staff are nothing short of amazing. They're diligent and committed to producing the best possible product. Our finished website was beyond our expectations. I wholeheartedly recommend them to anyone looking for a new website or cloud application.
           </Quote>
-          <QuoteRight><img src={img3}/></QuoteRight>
+          <QuoteRight><img role="presentation" alt="" src={img3}/></QuoteRight>
           </TestimonialQuote>
           <TestimonialDetails>
             <Name>John Baran</Name>

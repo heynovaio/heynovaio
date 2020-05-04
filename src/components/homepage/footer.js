@@ -54,7 +54,7 @@ const LinkedInLink = styled.a`
 `
 export default () => (
   <Footer>
-  <ImgCenter><img src={img1}/></ImgCenter>
+  <ImgCenter><img role="presentation" alt="" src={img1}/></ImgCenter>
     <h2>HEY NOVA</h2>
     <Flex>
       <BlogLink>Blog</BlogLink>

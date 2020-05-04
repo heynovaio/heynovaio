@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Header from "../components/header"
+
 import Hero from "../components/homepage/hero"
 import How from "../components/homepage/how"
 import Who from "../components/homepage/who"
@@ -12,6 +12,7 @@ import Testimonial from "../components/homepage/testimonial"
 import About from "../components/homepage/about"
 import Contact from "../components/homepage/contact"
 import Footer from "../components/homepage/footer"
+
 export default () => (
   <Layout>
     <Header/>

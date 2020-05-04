@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/group-20.png'
 const Who = styled.section`
+  position: relative;
   @media (max-width: 960px) {
     padding: 20px;
   }
@@ -32,43 +33,39 @@ const Who = styled.section`
   }
 `
 const ContentCenter = styled.div`
+  max-width: 1288px;
+  margin: 0 auto;
+  position: relative;
 `
 const Content = styled.div`
   text-align: left;
   max-width: 615px;
   position: relative;
   @media (min-width: 960px) {
-    margin-left: 200px;
     padding: 141.5px 0 20px;
     min-height: 477px;
   }
 `
 const ImgRight = styled.div`
   margin: 0;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 30px;
   max-width: 470px;
   @media (max-width: 960px) {
     display: none;
   }
 `
-const Flex = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
-  margin-right: 0;
-  justify-content: space-between;
-`
 export default () => (
   <Who>
-    <Flex>
-      <ContentCenter>
-        <Content>
-          <h2>Stepping boldly into the future of tech</h2>
-          <p>We believe the future of tech is inclusive and accessible for all, but this future won’t be realized without an evolution in how we work. As women in tech, we want to see the industry become more inclusive as a whole.</p>
-          <p>Our team brings a novel perspective to the table. We are actively shifting industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</p>
-          <p>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</p>
-        </Content>
-      </ContentCenter>
-      <ImgRight><img src={img1}/></ImgRight>
-    </Flex>
+    <ContentCenter>
+      <Content>
+        <h2>Stepping boldly into the future of tech</h2>
+        <p>We believe the future of tech is inclusive and accessible for all, but this future won’t be realized without an evolution in how we work. As women in tech, we want to see the industry become more inclusive as a whole.</p>
+        <p>Our team brings a novel perspective to the table. We are actively shifting industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</p>
+        <p>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</p>
+      </Content>
+    </ContentCenter>
+    <ImgRight><img role="presentation" alt="" src={img1}/></ImgRight>
   </Who>
 )
