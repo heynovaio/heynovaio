@@ -48,7 +48,7 @@ const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1349.9px;
+  max-width: 1288px;
   margin: auto;
 `
 const Box = styled.div`
@@ -58,7 +58,6 @@ const Box = styled.div`
   background-color: #0a2239;
   padding: 58px 10px 10px;
   position: relative;
-  margin: 10px;
   @media (max-width: 960px) {
     margin: 10px auto;
   }

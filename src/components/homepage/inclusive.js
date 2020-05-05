@@ -7,7 +7,7 @@ const Inclusive = styled.section`
     max-width: 363px;
     font-size: 50px;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: 1;
     font-family: Stolzl;
     @media (max-width: 960px) {
       font-size: 35px;

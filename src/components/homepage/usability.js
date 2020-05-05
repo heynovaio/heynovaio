@@ -44,6 +44,11 @@ const What = styled.section`
     display: block;
   }
 `
+const Container = styled.div`
+  max-width: 1318px;
+  margin: 0 auto;
+  position: relative;
+`
 const HeadingParagraph = styled.p`
   padding-top: 10px;
   max-width: 763px;
@@ -122,40 +127,42 @@ const ParagraphCentre = styled.div`
 `
 export default () => (
   <What>
-    <h2>We believe in the power of knowledge</h2>
-    <ParagraphCentre>
-      <HeadingParagraph>So let's look at how usability affects your website and business</HeadingParagraph>
-    </ParagraphCentre>
-    <DiagonalContent>
-      <FlexBox>
-        <BoxHeading>
-          <span>22%</span>
-          <Line>You might be losing a lot of customers</Line>
-        </BoxHeading>
-        <p>
-        22% of Canadians have at least one disability that affects their sight, hearing, or dexterity. Limitations like these can make or break your digital experience and this number doesn’t even account for temporary limitations or mental health barriers.
-        </p>
-      </FlexBox>
-      <FlexBox>
-        <BoxHeading>
-        <span>88%</span>
-        <Line>An accessible website is better for ALL your users</Line>
-        </BoxHeading>
-        <p>
-        Did you know that 88% of online shoppers won’t return to a website after having a bad user experience? When you make your website accessible you give everyone the best user experience - a necessity as our world becomes ever more digital.
-        </p>
-      </FlexBox>
-      <FlexBox>
-        <BoxHeading>
-        <span>1000%</span>
-        <Line>Good usability is great for business</Line>
-        </BoxHeading>
-        <p>
-        Seeing as every $1 invested in user experience results in a return of between $2 to $100, it seems worth every penny, but you could be losing 22% of that profit but not considering everyone in you user experience design.
-        </p>
-      </FlexBox>
-    </DiagonalContent>
-    <ImgJupiter><img role="presentation" alt="" src={img1}/></ImgJupiter>
+    <Container>
+      <h2>We believe in the power of knowledge</h2>
+      <ParagraphCentre>
+        <HeadingParagraph>So let's look at how usability affects your website and business</HeadingParagraph>
+      </ParagraphCentre>
+      <DiagonalContent>
+        <FlexBox>
+          <BoxHeading>
+            <span>22%</span>
+            <Line>You might be losing a lot of customers</Line>
+          </BoxHeading>
+          <p>
+          22% of Canadians have at least one disability that affects their sight, hearing, or dexterity. Limitations like these can make or break your digital experience and this number doesn’t even account for temporary limitations or mental health barriers.
+          </p>
+        </FlexBox>
+        <FlexBox>
+          <BoxHeading>
+          <span>88%</span>
+          <Line>An accessible website is better for ALL your users</Line>
+          </BoxHeading>
+          <p>
+          Did you know that 88% of online shoppers won’t return to a website after having a bad user experience? When you make your website accessible you give everyone the best user experience - a necessity as our world becomes ever more digital.
+          </p>
+        </FlexBox>
+        <FlexBox>
+          <BoxHeading>
+          <span>1000%</span>
+          <Line>Good usability is great for business</Line>
+          </BoxHeading>
+          <p>
+          Seeing as every $1 invested in user experience results in a return of between $2 to $100, it seems worth every penny, but you could be losing 22% of that profit but not considering everyone in you user experience design.
+          </p>
+        </FlexBox>
+      </DiagonalContent>
+      <ImgJupiter><img role="presentation" alt="" src={img1}/></ImgJupiter>
+    </Container>
   </What>
 
 )
