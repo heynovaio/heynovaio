@@ -92,8 +92,8 @@ export default () => (
             <MainContent>
               <h2>Does your website work for everyone?</h2>
               <MainPara>
-              We are here to help you find out.</MainPara>
-              <MainPara>Based on the most innovative research, we can cater our approach to your unique needs and unique users, to ensure your success in reaching full accessibility and providing your users with the best experience possible.
+              These are ways we are able to help you find out.</MainPara>
+              <MainPara>Through an empathetic human lens we aim to ensure your success in reaching full accessibility and providing ALL your users with the best experience possible.
               </MainPara>
             </MainContent>
           </Left>
@@ -102,25 +102,25 @@ export default () => (
               <Elem>
                 <h3>Testing</h3>
                 <p>
-                Our accessibility audits identify key elements in your website’s code and design to help you understand your current degree of accessibility, as your first step to connecting to your clientele and achieving accessibility.
+                  Our accessibility testing identifies key elements in your website’s code and design that could be causing your users problems.
                 </p>
               </Elem>
               <Elem>
                 <h3>Consulting</h3>
                 <p>
-                We will help you actualize your innovations through a step-by-step guide to full web accessibility.  Working collaboratively with your team, we can take your great ideas and identify the barriers between your products and your customers and provide a better experience for all your users.
+                  We help you reach your marginalized users through a step-by-step guide of what your digital solution needs. We Work collaboratively with your team, teaching and expanding your accessibility knowledge base.
                 </p>
               </Elem>
               <Elem>
-                <h3>Training/Workshop</h3>
+                <h3>Workshop</h3>
                 <p>
-                  We want everyone to help take a step towards a future with more inclusive technologies for everyone, so we provide immersive educational workshops that empower you and your team to maximize accessibility.
+                  We want to help everyone take a step towards a future with more inclusive technologies, so we provide immersive educational workshops that empower you and your team to maximize accessibility.
                 </p>
               </Elem>
               <Elem>
                 <h3>Design & Implementation</h3>
                 <p>
-                  Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give your unique users a superior digital experience.
+                  Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give ALL your users a superior digital experience.
                 </p>
               </Elem>
             </List>

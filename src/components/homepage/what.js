@@ -25,6 +25,8 @@ const WhatContainer = styled.section`
     font-family: Stolzl;
     max-width: 712px;
     margin-bottom: 5rem;
+    position: sticky;
+    top: 20px;
     @media (max-width: 960px) {
       font-size: 35px;
     }
@@ -68,16 +70,7 @@ const ContentContainer = styled.div`
   position: relative;
 `
 const Flex3 = styled.div`
-  @media (min-width: 960px) {
-    align-self: flex-start;
-  }
-  h3, p {
-    text-align: center;
-  }
   text-align: center;
-  position: absolute;
-  top: 153px;
-  right: 120px;
   max-width: 440px;
 `
 const Flex2 = styled.div`
@@ -86,43 +79,34 @@ const Flex2 = styled.div`
   }
   text-align: left;
   max-width: 440px;
-  position: absolute;
-  bottom: 115px;
-  right: -20px;
-  text-align: center;
-  h3, p {
-    text-align: center;
-  }
 `
 const Flex1 = styled.div`
   text-align: left;
   max-width: 440px;
-  position: absolute;
-  bottom: 31px;
-  left: 69px;
-  h3, p {
-    text-align: center;
-  }
-  @media (min-width: 960px) {
-    align-self: flex-end;
-  }
 `
 const DiagonalContent = styled.div`
-  display: flex;
   min-height: 675px;
-  padding-top: 50px;
+  padding-top: 60px;
   position: relative;
-  @media (min-width: 960px) {
-    margin: 40px 125px 0;
+  max-width: 624px;
+  margin: 0 0 0 auto;
+
+
+  > div {
+    margin-top: 40px;
   }
-  @media (max-width: 960px) {
-    flex-wrap: wrap;
+  h3 {
+    color: #0fa3b1;
+  }
+  p {
+    color: #fff;
   }
 `
 const ImgPerson = styled.div`
   max-width: 455px;
   object-fit: contain;
-  position: absolute;
+  position: sticky;
+  top: 226px;
   @media (max-width: 960px) {
     max-width: 200px;
   }
@@ -132,7 +116,7 @@ const Planet = styled.div`
   top: 40px;
   left: 150px;
 `
-const Button = styled.div`
+const Button = styled.button`
   background-color: #D5330D;
   font-size: 18px;
   font-weight: 600;
@@ -143,9 +127,8 @@ const Button = styled.div`
   padding: 14px 32px;
   max-width: 200px;
   text-decoration: none;
-  position: absolute;
-  right: 0;
-  bottom: 0px;
+  margin-top: 30px;
+  border: none;
 `
 function What () {
   const data = useStaticQuery(graphql`
@@ -178,20 +161,20 @@ function What () {
           </Planet>
         </ImgPerson>
         <DiagonalContent>
-          <Flex1>
-            <h3>Propelling your vision forward</h3>
-            <p>Where innovative ideas meet otherworldly designs.  Driven by your unique users and led by the latest research, we will drive your product forward.</p>
-          </Flex1>
-          <Flex2>
-            <h3>Connecting you directly to your user community</h3>
-            <p>We strive to understand your unique users.  Our inclusive and innovative approaches ensure your product is accessible to everyone.</p>
-          </Flex2>
           <Flex3>
-            <h3>Manifesting your unique identity</h3>
+            <h3>Discovering your identity</h3>
             <p>Whatever your vision or idea, we will get you there by first building a strong brand foundation.</p>
           </Flex3>
+          <Flex1>
+            <h3>Propelling your vision</h3>
+            <p>Where innovative ideas meet otherworldly designs. Driven by your unique users and led by the latest research, we will drive your product forward.</p>
+          </Flex1>
+          <Flex2>
+            <h3>Connecting you to your users</h3>
+            <p>We strive to understand your users. Our inclusive and innovative approaches ensure your product is accessible to everyone.</p>
+          </Flex2>
+          <Button href="#">Get a Quote</Button>
         </DiagonalContent>
-        <Button href="#">Get a Quote</Button>
       </ContentContainer>
     </WhatContainer>
   )

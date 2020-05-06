@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/grapevine_logo_horizontal.svg'
 import img2 from '../../images/quote-left.png'
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -145,22 +144,11 @@ const QuoteLeft = styled.div`
   min-width: 45px;
   margin-left: -18px;
 `
-const QuoteRight = styled.div`
-  align-self: flex-end;
-  min-width: 45px;
-`
 const TestimonialQuote = styled.div`
   display: flex;
 `
 const TestimonialDetails = styled.div`
   padding-left: 40px;
-`
-const CarouselDotList = styled.ul`
-  display: flex;
-  margin: 0 auto;
-  list-style: none;
-  justify-content: center;
-  margin-top: 20px;
 `
 const DotItem = styled.li`
   box-shadow: 0 2px 12px 0 #0d1015;

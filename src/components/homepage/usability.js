@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import img1 from '../../images/planet-1.png'
-import img2 from '../../images/group-17.png'
 
 const What = styled.section`
   padding: 0 20px 50px;
@@ -55,23 +54,6 @@ const HeadingParagraph = styled.p`
   font-size: 20px !important;
   margin: auto;
 `
-const BoxHeading = styled.h3`
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -1px;
-  text-align: center;
-  color: #2BC8D7;
-  font-family: Stolzl;
-  display: block;
-`
-const Line = styled.div`
-  background: #0a2239;
-  color: #fff;
-  display: inline-block;
-  line-height: 1.2;
-  padding: 12px 0 14px;
-`
 const FlexBox = styled.div`
   max-width: 536px;
   margin: 0 15px;
@@ -86,14 +68,6 @@ const DiagonalContent = styled.div`
   min-height: 530px;
   @media (max-width: 960px) {
     flex-wrap: wrap;
-  }
-`
-const ImgSaturn = styled.div`
-  max-width: 442px;
-  margin: 0 auto;
-  position: relative;
-  @media (max-width: 960px) {
-    max-width: 250px;
   }
 `
 const ImgJupiter = styled.div`
@@ -130,34 +104,21 @@ export default () => (
     <Container>
       <h2>We believe in the power of knowledge</h2>
       <ParagraphCentre>
-        <HeadingParagraph>So let's look at how usability affects your website and business</HeadingParagraph>
+        <HeadingParagraph>So let's look at how accessibility affects the digital space</HeadingParagraph>
       </ParagraphCentre>
       <DiagonalContent>
         <FlexBox>
-          <BoxHeading>
-            <span>22%</span>
-            <Line>You might be losing a lot of customers</Line>
-          </BoxHeading>
-          <p>
-          22% of Canadians have at least one disability that affects their sight, hearing, or dexterity. Limitations like these can make or break your digital experience and this number doesn’t even account for temporary limitations or mental health barriers.
+          <p><span>98.1%</span> of 1,000,000 websites tested in February 2020 failed accessibility testing - and that’s just from automated tests!
           </p>
         </FlexBox>
         <FlexBox>
-          <BoxHeading>
-          <span>88%</span>
-          <Line>An accessible website is better for ALL your users</Line>
-          </BoxHeading>
           <p>
-          Did you know that 88% of online shoppers won’t return to a website after having a bad user experience? When you make your website accessible you give everyone the best user experience - a necessity as our world becomes ever more digital.
+            <span>22%</span> of Canadians have at least one disability that affects their sight, hearing, or dexterity. 54% of adults living with a disability currently go online.
           </p>
         </FlexBox>
         <FlexBox>
-          <BoxHeading>
-          <span>1000%</span>
-          <Line>Good usability is great for business</Line>
-          </BoxHeading>
           <p>
-          Seeing as every $1 invested in user experience results in a return of between $2 to $100, it seems worth every penny, but you could be losing 22% of that profit but not considering everyone in you user experience design.
+            <span>88%</span> of online shoppers won’t return to a website after having a bad user experience. When you make your website accessible you give everyone the best user experience.
           </p>
         </FlexBox>
       </DiagonalContent>

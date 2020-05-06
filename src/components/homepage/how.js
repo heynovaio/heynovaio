@@ -111,6 +111,7 @@ export default () => (
             <Elem>Content Strategy</Elem>
             <Elem>Market Research</Elem>
             <Elem>Accessibility Research</Elem>
+            <Elem>User Testing</Elem>
           </Center>
         </Box>
         <Box>
@@ -119,21 +120,22 @@ export default () => (
             <h3>Design</h3>
             <Elem>Branding</Elem>
             <Elem>User Interface/Visual Design</Elem>
-            <Elem>User Experience Design</Elem>
+            <Elem>User Experience</Elem>
             <Elem>Inclusive Design</Elem>
-            <Elem>Inclusive User Testing</Elem>
+            <Elem>Behavioral Science</Elem>
+            <Elem>Gamification</Elem>
           </Center>
         </Box>
         <Box>
           <img role="presentation" alt="" src={img4}/>
           <Center>
             <h3>Implementation</h3>
-            <Elem>Web development</Elem>
-            <Elem>Mobile-first development</Elem>
+            <Elem>Web Development</Elem>
+            <Elem>Mobile-first Development</Elem>
             <Elem>Accessibile Development</Elem>
             <Elem>SEO Optimization</Elem>
             <Elem>Data & Analytics</Elem>
-            <Elem>Custom CMS themes</Elem>
+            <Elem>Custom CMS Themes</Elem>
           </Center>
         </Box>
         <Box>

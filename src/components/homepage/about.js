@@ -61,8 +61,8 @@ export default () => (
     <ContentCenter>
       <Content>
         <h2>Stepping boldly into the future of tech</h2>
-        <p>We believe the future of tech is inclusive and accessible for all, but this future won’t be realized without an evolution in how we work. As women in tech, we want to see the industry become more inclusive as a whole.</p>
-        <p>Our team brings a novel perspective to the table. We are actively shifting industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</p>
+        <p>We believe in a future of tech that is inclusive for all. This future sadly won’t be realized without an evolution in how we work. As being in the only 5% of tech companies founded by women, we are passionate about seeing the industry become more inclusive, diverse, and equitable.</p>
+        <p>Our years and combined experiences means the team brings a novel perspective to the table. We take these perspectives and work to actively shift industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</p>
         <p>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</p>
       </Content>
     </ContentCenter>
