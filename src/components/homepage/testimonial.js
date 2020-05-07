@@ -9,6 +9,7 @@ import Img from 'gatsby-image'
 const TestimonialSection = styled.section`
   padding: 63px 20px 50px;
   background-color: #0a2239;
+  position: relative;
   img {
     width: 100%;
     display: block;

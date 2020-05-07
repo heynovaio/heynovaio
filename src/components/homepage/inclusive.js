@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import React from 'react'
+import Planet from '../../images/planet-1.png'
 
 const Inclusive = styled.section`
   padding: 50px 0 80px;
@@ -39,6 +40,8 @@ const List = styled.div`
   flex-wrap: wrap;
   margin: -185px 0 0 auto;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 `
 const Elem = styled.div`
   border-radius: 8px;
@@ -76,10 +79,23 @@ const MainContent = styled.div`
   top: 10px;
   max-width: 600px;
 `
-
+const ImgContainer = styled.div`
+  max-width: 400px;
+  position: sticky;
+  top: 40px;
+  z-index: 0;
+  margin: 0 0 0 auto;
+  img {
+    position: absolute;
+    right: 0;
+  }
+`
 export default () => (
   <Inclusive>
     <Center>
+      <ImgContainer>
+        <img role="presentation" alt="planet" src={Planet}/>
+      </ImgContainer>
       <MainContent>
         <H2>Does your website work for everyone?</H2>
         <MainParaOne>These are ways we are able to help you find out.</MainParaOne>

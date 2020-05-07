@@ -47,7 +47,7 @@ const FooterLink = styled.a`
 `
 const Icon = styled.a`
   font-size: 70px;
-  margin: 0 14px 50px;
+  margin: 0 14px 30px;
   &:hover {
     color: #d5330d;
   }
