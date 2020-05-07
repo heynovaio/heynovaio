@@ -81,13 +81,17 @@ const ImgCenter = styled.div`
 `
 const SiteLink = styled.a`
   color: #fff;
-  border-bottom: 1px solid #fff;
+  font-size: 22px;
+  border-bottom: 1px solid #d5330d;
   font-family: Stolzl;
   display: inline-block;
   text-decoration: none;
   position: absolute;
   left: 18px;
   bottom: 0;
+  &:hover {
+    color: #d5330d;
+  }
 `
 const Flex = styled.div`
   display: flex;
@@ -185,6 +189,13 @@ function Testimonial () {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
+      },
+      Eco: file(relativePath: { eq: "eco-img.png" }) {
+        childImageSharp {
+          fixed(width: 585, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
       }
     }
   `)
@@ -250,7 +261,31 @@ function Testimonial () {
             </ContentCenter>
           </Flex>
         </div>
-
+        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+          <Flex>
+            <ImgCenter>
+              <Img alt="Eco Anxiety Screenshot" role="presentation" fixed={data.Eco.childImageSharp.fixed} />
+              <SiteLink href="https://www.ecoanxious.ca/" target="_blank">View site</SiteLink>
+            </ImgCenter>
+            <ContentCenter>
+              <Content>
+                <TestimonialQuote>
+                <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                <Quote>
+                  <p>It’s easy to say that our idea would not have come to fruition without Hey Nova. Not only was the final product of the highest quality, but the team helped us to take an idea and shape it through smart design, informed decisions, and technical expertise. We quickly realized that we could trust their guidance fully.</p>
+                  <p>Hey Nova bring a holistic approach to web design. They are incredible designers and developers and are cutting edge with the technologies used and with important aspects such as accessibility and SEO. </p>
+                  <p>It continues to be a pleasure working with these ladies, and we recommend them highly for any technical or design project. </p>
+                </Quote>
+                </TestimonialQuote>
+                <TestimonialDetails>
+                  <Name>Kevin Gatley & Rachel Malena-Chan</Name>
+                  <JobPosition>The Eco-Anxious Stories team</JobPosition>
+                  <Place>Victoria, BC</Place>
+                </TestimonialDetails>
+              </Content>
+            </ContentCenter>
+          </Flex>
+        </div>
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
