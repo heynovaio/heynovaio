@@ -77,7 +77,7 @@ const MainPara = styled.p`
 `
 const MainContent = styled.div`
   position: sticky;
-  top: 10px;
+  top: 160px;
   max-width: 600px;
 `
 const ImgContainer = styled.div`
