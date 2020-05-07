@@ -6,54 +6,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons"
 
 const Contact = styled.section`
-  padding: 0 0 51px;
-  img {
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-    border-radius: 8px;
+  padding: 55px 0 51px;
+  background: #0a2239;
+`
+const H2 = styled.h2`
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 5px;
+  font-family: Stolzl;
+  @media (max-width: 960px) {
+    font-size: 35px;
+    padding: 0 20px;
   }
-  h2 {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 1.28;
-    letter-spacing: -1px;
-    text-align: center;
-    color: #0a2239;
-    margin: 0 0 5px;
-    font-family: Stolzl;
-    margin-top: 55px;
-    @media (max-width: 960px) {
-      font-size: 35px;
-      padding: 0 20px;
-    }
+`
+const H3 = styled.h3`
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 16px;
+  color: #0fa3b1;
+  font-family: Stolzl;
+  padding-bottom: 11px;
+  border-bottom: solid;
+  @media (max-width: 960px) {
+    font-size: 25px;
   }
-  p {
-    max-width: 690px;
-    font-size: 20px;
-    line-height: 1.55;
-    text-align: center;
-    color: #455868;
-    font-family: Ubuntu;
-    margin: auto;
-  }
-  h3 {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1;
-    margin-bottom: 16px;
-    color: #0fa3b1;
-    font-family: Stolzl;
-    padding-bottom: 11px;
-    border-bottom: solid;
-    @media (max-width: 960px) {
-      font-size: 25px;
-    }
-  }
-  a {
-    margin-top: 5px;
-    font-weight: 500;
-  }
+`
+const P = styled.p`
+  max-width: 690px;
+  font-size: 20px;
+  line-height: 1.55;
+  text-align: center;
+  color: #fff;
+  font-family: Ubuntu;
+  margin: auto;
 `
 const Flex = styled.div`
   display: flex;
@@ -93,6 +83,9 @@ const EmailLink = styled.a`
   font-family: Ubuntu;
   text-decoration: none;
   margin-bottom: 10px;
+  &:hover {
+    color: #d5330d;
+  }
 `
 const TextBox = styled.div`
   margin: 20px;
@@ -101,6 +94,12 @@ const Image = styled.div`
   max-width: 277px;
   @media (max-width: 960px) {
     margin: 20px auto;
+  }
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 8px;
   }
 `
 const ParagraphCentre = styled.div`
@@ -113,44 +112,52 @@ const LinkedInLink = styled.a`
   color: #fff;
   font-size: 30px;
   display: block;
+  margin-top: 5px;
+  font-weight: 500;
+  &:hover {
+    color: #d5330d;
+  }
 `
 const GeneralEmailLink = styled.a`
   color: #0fa3b1;
   font-weight: 600;
+  &:hover {
+    color: #d5330d;
+  }
 `
 export default () => (
   <Contact>
-      <h2>Reach out to our Co-founders</h2>
-      <ParagraphCentre>
-        <p>As the leaders of this company, we are never too busy to chat.</p>
-        <p>Even if you just want a chat or are starting out in the tech industry and are looking for some advice. We are here to help!</p>
-      </ParagraphCentre>
-      <Flex>
-        <Box>
-          <Image>
-            <img role="presentation" alt="" src={img1}/>
-          </Image>
-          <TextBox>
-            <h3>Kirsten Dodd</h3>
-            <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
-            <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
-               <FontAwesomeIcon icon={faLinkedinIn} />
-            </LinkedInLink>
-          </TextBox>
-        </Box>
-        <Box>
-          <Image>
-            <img role="presentation" alt="" src={img2}/>
-          </Image>
-          <TextBox>
-            <h3>Bryony Anderson</h3>
-            <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
-            <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
-               <FontAwesomeIcon icon={faLinkedinIn} />
-            </LinkedInLink>
-          </TextBox>
-        </Box>
-      </Flex>
-      <ParagraphCentre><p>Not sure who to contact, email <GeneralEmailLink href="mailto:info@heynova.io">info@heynova.io</GeneralEmailLink> or flip a coin!</p></ParagraphCentre>
+    <H2>Reach out to our Co-founders</H2>
+    <ParagraphCentre>
+      <P>As the leaders of this company, we are never too busy to chat.</P>
+      <P>Even if you just want a chat or are starting out in the tech industry and are looking for some advice. We are here to help!</P>
+    </ParagraphCentre>
+    <Flex>
+      <Box>
+        <Image>
+          <img role="presentation" alt="" src={img1}/>
+        </Image>
+        <TextBox>
+          <H3>Kirsten Dodd</H3>
+          <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
+          <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+             <FontAwesomeIcon icon={faLinkedinIn} />
+          </LinkedInLink>
+        </TextBox>
+      </Box>
+      <Box>
+        <Image>
+          <img role="presentation" alt="" src={img2}/>
+        </Image>
+        <TextBox>
+          <H3>Bryony Anderson</H3>
+          <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
+          <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
+             <FontAwesomeIcon icon={faLinkedinIn} />
+          </LinkedInLink>
+        </TextBox>
+      </Box>
+    </Flex>
+    <ParagraphCentre><P>Not sure which to contact, email <GeneralEmailLink href="mailto:info@heynova.io">info@heynova.io</GeneralEmailLink> or flip a coin!</P></ParagraphCentre>
   </Contact>
 )

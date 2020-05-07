@@ -1,46 +1,22 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/planet-1.png'
+import Bg from '../../images/space-background.jpg'
 
 const What = styled.section`
-  padding: 0 20px 50px;
-  background-color: #0C7489;
-  h2 {
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.28;
-    letter-spacing: -1px;
-    text-align: center;
-    color: #2BC8D7;
-    font-family: Stolzl;
-    padding-top: 53px;
-    max-width: 800px;
-    margin: auto;
-    @media (max-width: 960px) {
-      font-size: 35px;
-    }
-  }
-  span {
-    font-size: 90px;
-    font-weight: 500;
-    -webkit-text-stroke: 3px #0a2239;
-    line-height: 1;
-    margin-bottom: -13px;
-  }
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-    color: #fff;
-    font-family: Ubuntu;
-  }
-  img {
-    display: inline-block;
-    width: 100%;
-    position: absolute;
-  }
-  h3 span {
-    display: block;
+  padding: 75px 20px 0px;
+`
+const H2 = styled.h2`
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #0C7489;
+  font-family: Stolzl;
+  max-width: 800px;
+  margin: 0 auto 15px;
+  @media (max-width: 960px) {
+    font-size: 35px;
   }
 `
 const Container = styled.div`
@@ -49,10 +25,13 @@ const Container = styled.div`
   position: relative;
 `
 const HeadingParagraph = styled.p`
-  padding-top: 10px;
   max-width: 763px;
-  font-size: 20px !important;
-  margin: auto;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: #0a2339;
+  font-family: Ubuntu;
 `
 const FlexBox = styled.div`
   max-width: 536px;
@@ -62,68 +41,58 @@ const FlexBox = styled.div`
     margin: auto;
   }
 `
-const DiagonalContent = styled.div`
-  margin-top: 40px;
+const Flex = styled.div`
   display: flex;
-  min-height: 530px;
   @media (max-width: 960px) {
     flex-wrap: wrap;
   }
 `
-const ImgJupiter = styled.div`
-  max-width: 362px;
-  position: relative;
-  margin-left: -58px;
-  img {
-    bottom: -260px;
-  }
-  @media (max-width: 960px) {
-    max-width: 180px;
-  }
-`
-const Button = styled.div`
-  background-color: #D5330D;
+const P = styled.p`
   font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -1px;
+  line-height: 1.5;
   text-align: center;
-  color: #fff;
-  font-family: Stolzl;
-  padding: 14px 32px;
-  max-width: 200px;
-  margin: auto;
+  color: #0a2339;
+  font-family: Ubuntu;
 `
-const ParagraphCentre = styled.div`
-  display: flex;
-  width: 100%;
-  padding: 0 10px;
-  justify-content: center;
+const Number = styled.span`
+  display: block;
+  font-size: 146px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #fff;
+  line-height: 1;
+  -webkit-letter-spacing: -2px;
+  -moz-letter-spacing: -2px;
+  -ms-letter-spacing: -2px;
+  letter-spacing: -.08em;
+  margin-bottom: 30px;
+  background: url( ${Bg} ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0000;
+  background-attachment: fixed;
+  background-size: cover;
 `
+
 export default () => (
   <What>
     <Container>
-      <h2>We believe in the power of knowledge</h2>
-      <ParagraphCentre>
-        <HeadingParagraph>So let's look at how accessibility affects the digital space</HeadingParagraph>
-      </ParagraphCentre>
-      <DiagonalContent>
+      <H2>We believe in the power of knowledge</H2>
+      <HeadingParagraph>So let's look at how accessibility affects the digital space</HeadingParagraph>
+      <Flex>
         <FlexBox>
-          <p><span>98.1%</span> of 1,000,000 websites tested in February 2020 failed accessibility testing - and that’s just from automated tests!
-          </p>
+          <P><Number>98.1%</Number> of 1,000,000 websites tested in February 2020 failed accessibility testing - and that’s just from automated tests!
+          </P>
         </FlexBox>
         <FlexBox>
-          <p>
-            <span>22%</span> of Canadians have at least one disability that affects their sight, hearing, or dexterity. 54% of adults living with a disability currently go online.
-          </p>
+          <P>
+            <Number>22%</Number> of Canadians have at least one disability that affects their sight, hearing, or dexterity. 54% of adults living with a disability currently go online.
+          </P>
         </FlexBox>
         <FlexBox>
-          <p>
-            <span>88%</span> of online shoppers won’t return to a website after having a bad user experience. When you make your website accessible you give everyone the best user experience.
-          </p>
+          <P>
+            <Number>88%</Number> of online shoppers won’t return to a website after having a bad user experience. When you make your website accessible you give everyone the best user experience.
+          </P>
         </FlexBox>
-      </DiagonalContent>
-      <ImgJupiter><img role="presentation" alt="" src={img1}/></ImgJupiter>
+      </Flex>
     </Container>
   </What>
-
 )

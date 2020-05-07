@@ -1,22 +1,11 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/logo-2-x.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = styled.section`
-  padding: 63px 20px 63px;
+  padding: 0px 20px 15px;
   background-color: #0a2239;
-  h2 {
-    min-height: 64px;
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 1.28;
-    letter-spacing: -1px;
-    font-family: Stolzl;
-    text-align: center;
-    color: #2BC8D7;
-  }
   img {
     width: 100%;
     display: block;
@@ -27,49 +16,55 @@ const Footer = styled.section`
     text-align: center;
     color: #ffffff;
     padding: 10px 10px;
+    &:hover {
+      color: #d5330d;
+    }
   }
 `
-const Flex = styled.div`
+const P = styled.p`
+  font-size: 20px;
+  line-height: 1.28;
+  letter-spacing: -1px;
+  font-family: Stolzl;
+  text-align: center;
+  color: #2BC8D7;
+`
+const Span = styled.span`
+  color: #d5330d;
+  font-weight: 400;
+`
+const Flex = styled.nav`
   display: flex;
   justify-content: center;
 `
-const ImgCenter = styled.div`
-  max-width: 60px;
-  margin: auto;
-`
-const BlogLink = styled.a`
+const FooterLink = styled.a`
   font-size: 22px;
+  margin-bottom: 20px;
+  display: inline-block;
+  &:hover {
+    color: #d5330d;
+  }
 `
-const ContactLink = styled.a`
-  font-size: 22px;
-`
-const FaceBookLink = styled.a`
-  font-size: 30px;
-`
-const InstagramLink = styled.a`
-  font-size: 30px;
-`
-const LinkedInLink = styled.a`
-  font-size: 30px;
+const Icon = styled.a`
+  font-size: 70px;
+  margin: 0 14px 50px;
+  &:hover {
+    color: #d5330d;
+  }
 `
 export default () => (
   <Footer>
-  <ImgCenter><img role="presentation" alt="" src={img1}/></ImgCenter>
-    <h2>HEY NOVA</h2>
     <Flex>
-      <BlogLink>Blog</BlogLink>
-      <ContactLink>Contact</ContactLink>
-    </Flex>
-    <Flex>
-      <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+      <Icon target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
-      </LinkedInLink>
-      <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+      </Icon>
+      <Icon target="blank" href="https://www.facebook.com/heynovaio/">
          <FontAwesomeIcon icon={faFacebook} />
-      </FaceBookLink>
-      <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+      </Icon>
+      <Icon target="blank" href="https://www.instagram.com/heynovaio/">
          <FontAwesomeIcon icon={faInstagram} />
-      </InstagramLink>
+      </Icon>
     </Flex>
+    <P> &copy; 2020 <Span>HEY NOVA</Span></P>
   </Footer>
 )

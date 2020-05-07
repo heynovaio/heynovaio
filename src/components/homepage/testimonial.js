@@ -9,19 +9,6 @@ import Img from 'gatsby-image'
 const TestimonialSection = styled.section`
   padding: 63px 20px 50px;
   background-color: #0a2239;
-  @media (min-width: 960px) {
-    margin-top: 50px;
-  }
-  h2 {
-    min-height: 64px;
-    font-size: 50px;
-    font-weight: 300;
-    line-height: 1.28;
-    letter-spacing: -1px;
-    font-family: Stolzl;
-    text-align: center;
-    color: #0fa3b1;
-  }
   img {
     width: 100%;
     display: block;
@@ -55,17 +42,24 @@ const TestimonialSection = styled.section`
       padding: 4px 20px 6px;
     }
   }
-  .alice-carousel__prev-btn-item:hover,
-  .alice-carousel__next-btn-item:hover {
-    color: #D5330D;
-    span {
-      border-color: #D5330D;
-    }
+  .alice-carousel__prev-btn-item:hover span,
+  .alice-carousel__next-btn-item:hover span {
+    background: #D5330D;
+    color: #fff;
   }
   .alice-carousel__prev-btn,
   .alice-carousel__next-btn {
     padding: 15px 10px;
   }
+`
+const H2 = styled.h2`
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -1px;
+  font-family: Stolzl;
+  text-align: center;
+  color: #0fa3b1;
 `
 const ContentCenter = styled.div`
   max-width: 688px;
@@ -150,16 +144,7 @@ const TestimonialQuote = styled.div`
 const TestimonialDetails = styled.div`
   padding-left: 40px;
 `
-const DotItem = styled.li`
-  box-shadow: 0 2px 12px 0 #0d1015;
-  border: 1px solid #0FA3B1;
-  background-color: #0D2D4B;
-  width: 16px;
-  height: 16px;
-  margin: 0 7px;
-  cursor: pointer;
-  border-radius: 50%;
-`
+
 const handleOnDragStart = e => e.preventDefault()
 
 function Testimonial () {
@@ -207,7 +192,7 @@ function Testimonial () {
   return (
 
     <TestimonialSection>
-      <h2>What our clients have to say</h2>
+      <H2>What our clients have to say</H2>
       <AliceCarousel
         mouseTrackingEnabled={true}
         mouseDragEnabled={true}

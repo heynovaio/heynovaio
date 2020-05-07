@@ -6,43 +6,43 @@ import img3 from '../../images/group-8.svg'
 import img4 from '../../images/group-9.svg'
 
 const How = styled.section`
-  padding: 0 0 51px;
+  padding: 0 0 80px;
   img {
     width: 88px;
     margin: 0 auto 40px;
     display: block;
   }
-  h2 {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 1.28;
-    letter-spacing: -1px;
-    text-align: center;
-    color: #0a2239;
-    margin: 0 0 5px;
-    font-family: Stolzl;
-    margin-top: 75px;
-    @media (max-width: 960px) {
-      font-size: 30px;
-    }
+`
+const H2 = styled.h2`
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #0a2239;
+  margin: 75px 0 15px;
+  font-family: Stolzl;
+  @media (max-width: 960px) {
+    font-size: 30px;
   }
-  p {
-    max-width: 690px;
-    font-size: 20px;
-    line-height: 1.55;
-    text-align: center;
-    color: #455868;
-    margin: 0 auto 20px;
-    font-family: Ubuntu;
-  }
-  h3 {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.09;
-    color: #ffffff;
-    margin: 40px 0 13px;
-    font-family: Stolzl;
-  }
+`
+const H3 = styled.h3`
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.09;
+  color: #ffffff;
+  margin: 40px 0 13px;
+  font-family: Stolzl;
+`
+const P = styled.p`
+  max-width: 690px;
+  font-size: 20px;
+  line-height: 1.55;
+  text-align: center;
+  color: #455868;
+  margin: 0 auto 20px;
+  font-family: Ubuntu;
+  padding: 0 10px 30px;
 `
 const Flex = styled.div`
   display: flex;
@@ -91,21 +91,15 @@ const Center = styled.div`
   max-width: 254px;
   margin-left: auto;
 `
-const ParagraphCentre = styled.div`
-  width: 100%;
-  padding: 20px 10px;
-`
 export default () => (
   <How>
-      <h2>Curious about our process?</h2>
-      <ParagraphCentre>
-        <p>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</p>
-      </ParagraphCentre>
+      <H2>Curious about our process?</H2>
+      <P>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</P>
       <Flex>
         <Box>
           <img role="presentation" alt="" src={img2}/>
           <Center>
-            <h3>Strategy</h3>
+            <H3>Strategy</H3>
             <Elem>User Research</Elem>
             <Elem>Brand Strategy</Elem>
             <Elem>Content Strategy</Elem>
@@ -117,7 +111,7 @@ export default () => (
         <Box>
           <img role="presentation" alt="" src={img3}/>
           <Center>
-            <h3>Design</h3>
+            <H3>Design</H3>
             <Elem>Branding</Elem>
             <Elem>User Interface/Visual Design</Elem>
             <Elem>User Experience</Elem>
@@ -129,7 +123,7 @@ export default () => (
         <Box>
           <img role="presentation" alt="" src={img4}/>
           <Center>
-            <h3>Implementation</h3>
+            <H3>Implementation</H3>
             <Elem>Web Development</Elem>
             <Elem>Mobile-first Development</Elem>
             <Elem>Accessibile Development</Elem>
@@ -141,7 +135,7 @@ export default () => (
         <Box>
           <img role="presentation" alt="" src={img1}/>
           <Center>
-            <h3>Consulting</h3>
+            <H3>Consulting</H3>
             <Elem>Workshops & Mentoring</Elem>
             <Elem>Accessibility Training</Elem>
             <Elem>Accessibility Audits</Elem>
