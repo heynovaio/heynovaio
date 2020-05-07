@@ -58,6 +58,7 @@ const Box = styled.div`
   background-color: #0a2239;
   padding: 58px 10px 10px;
   position: relative;
+  box-shadow: 8px 12px 16px 2px rgba(10, 35, 57, 0.35);
   @media (max-width: 960px) {
     margin: 10px auto;
   }

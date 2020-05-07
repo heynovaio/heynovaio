@@ -49,6 +49,7 @@ const Elem = styled.div`
   background-color: #0a2239;
   padding: 24px 34px 34px;
   max-width: 425px;
+  box-shadow: 8px 12px 16px 2px rgba(10, 35, 57, 0.35);
   @media (max-width: 960px) {
     margin: 10px auto;
   }
