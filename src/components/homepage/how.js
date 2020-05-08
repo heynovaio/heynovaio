@@ -21,6 +21,7 @@ const H2 = styled.h2`
   font-family: Stolzl;
   @media (max-width: 960px) {
     font-size: 30px;
+    margin-top: 20px;
   }
 `
 const H3 = styled.h3`
@@ -62,8 +63,11 @@ const Box = styled.div`
     margin: 0 auto 40px;
     display: block;
   }
+  @media (max-width: 1026px) {
+    margin-bottom: 30px;
+  }
   @media (max-width: 960px) {
-    margin: 10px auto;
+    margin: 10px auto 30px;
   }
 `
 const ListElementStyle = styled.div`
@@ -91,6 +95,12 @@ const ImgContainer = styled.div`
   bottom: -260px;
   z-index: 0;
   left: 0;
+  @media (max-width: 1026px) {
+    bottom: -40px;
+  }
+  @media (max-width: 960px) {
+    bottom: -58px;
+  }
 `
 const Elem = ({children}) => (
   <ListElementStyle>
@@ -101,6 +111,9 @@ const Elem = ({children}) => (
 const Center = styled.div`
   max-width: 254px;
   margin-left: auto;
+  @media (max-width: 780px) {
+    margin-left: 12px;
+  }
 `
 export default () => (
   <How>

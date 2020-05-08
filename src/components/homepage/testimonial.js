@@ -14,8 +14,10 @@ const TestimonialSection = styled.section`
     width: 100%;
     display: block;
   }
-  .alice-carousel__stage-item {
-    vertical-align: middle;
+  @media (min-width: 1026px) {
+    .alice-carousel__stage-item {
+      vertical-align: middle;
+    }
   }
   .alice-carousel__dots-item {
     box-shadow: 0 2px 12px 0 #0d1015;
@@ -61,12 +63,17 @@ const H2 = styled.h2`
   font-family: Stolzl;
   text-align: center;
   color: #0fa3b1;
+  @media (max-width: 1026px) {
+    font-size: 35px;
+    margin-bottom: 0;
+  }
 `
 const ContentCenter = styled.div`
   max-width: 688px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+
 `
 const Content = styled.div`
   max-width: 615px;
@@ -74,8 +81,11 @@ const Content = styled.div`
   position: relative;
 `
 const ImgCenter = styled.div`
-  @media (min-width: 960px) {
-    min-width: 407px;
+  @media (min-width: 1026px) {
+    min-width: 585px;
+  }
+  @media (max-width: 1026px) {
+    margin-bottom: 110px;
   }
   position: relative;
   margin: 0 auto;
@@ -93,12 +103,17 @@ const SiteLink = styled.a`
   &:hover {
     color: #d5330d;
   }
+  @media (max-width: 1026px) {
+    bottom: -28px;
+  }
 `
 const Flex = styled.div`
-  display: flex;
   margin-top: 30px;
-  @media (max-width: 960px) {
+  @media (max-width: 1026px) {
     flex-wrap: wrap;
+  }
+  @media (min-width: 1026px) {
+    display: flex;
   }
 `
 const Name = styled.p`
@@ -133,7 +148,7 @@ const Quote = styled.div`
     line-height: 1.4;
     margin-bottom: 16px;
   }
-  @media (min-width: 960px) {
+  @media (min-width: 1026px) {
     min-width: 552px;
   }
 `
@@ -142,12 +157,20 @@ const QuoteLeft = styled.div`
   margin-right: 15px;
   min-width: 45px;
   margin-left: -18px;
+  @media (max-width: 1026px) {
+    margin-left: 0;
+    position: absolute;
+    max-width: 30px;
+    top: -54px;
+  }
 `
 const TestimonialQuote = styled.div`
   display: flex;
 `
 const TestimonialDetails = styled.div`
-  padding-left: 40px;
+  @media (min-width: 1026px) {
+    padding-left: 40px;
+  }
 `
 
 const handleOnDragStart = e => e.preventDefault()
@@ -158,43 +181,43 @@ function Testimonial () {
     query {
       Kwench: file(relativePath: { eq: "kwench-img2.png" }) {
         childImageSharp {
-          fixed(width: 585, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       P4l: file(relativePath: { eq: "p4l-img.png" }) {
         childImageSharp {
-          fixed(width: 585, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       Brainbox: file(relativePath: { eq: "brainbox-workshop.png" }) {
         childImageSharp {
-          fixed(width: 625, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 625, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       Tipp: file(relativePath: { eq: "tipp-img.png" }) {
         childImageSharp {
-          fixed(width: 585, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       Grapevine: file(relativePath: { eq: "grapevine-img.png" }) {
         childImageSharp {
-          fixed(width: 585, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       Eco: file(relativePath: { eq: "eco-img.png" }) {
         childImageSharp {
-          fixed(width: 585, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -215,7 +238,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" role="presentation" fixed={data.Grapevine.childImageSharp.fixed} />
+              <Img alt="Tipp Consulting Screenshot" role="presentation" fluid={data.Grapevine.childImageSharp.fluid} />
               <SiteLink href="https://grapevinetattoo.com/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
@@ -238,7 +261,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="P4L Website Screenshot" role="presentation" fixed={data.P4l.childImageSharp.fixed} />
+              <Img alt="P4L Website Screenshot" role="presentation" fluid={data.P4l.childImageSharp.fluid} />
               <SiteLink href="https://pharmacyforlife.ca/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
@@ -265,7 +288,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Eco Anxiety Screenshot" role="presentation" fixed={data.Eco.childImageSharp.fixed} />
+              <Img alt="Eco Anxiety Screenshot" role="presentation" fluid={data.Eco.childImageSharp.fluid} />
               <SiteLink href="https://www.ecoanxious.ca/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
@@ -290,7 +313,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Kwench Website Screenshot" role="presentation" fixed={data.Kwench.childImageSharp.fixed} />
+              <Img alt="Kwench Website Screenshot" role="presentation" fluid={data.Kwench.childImageSharp.fluid} />
               <SiteLink href="https://www.clubkwench.com/" target="_blank">View site</SiteLink>
               </ImgCenter>
             <ContentCenter>
@@ -316,7 +339,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Brainbox Accessibility Workshop Screenshot" role="presentation" fixed={data.Brainbox.childImageSharp.fixed} />
+              <Img alt="Brainbox Accessibility Workshop Screenshot" role="presentation" fluid={data.Brainbox.childImageSharp.fluid} />
             </ImgCenter>
             <ContentCenter>
               <Content>
@@ -338,7 +361,7 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" role="presentation" fixed={data.Tipp.childImageSharp.fixed} />
+              <Img alt="Tipp Consulting Screenshot" role="presentation" fluid={data.Tipp.childImageSharp.fluid} />
               <SiteLink href="http://tippconsulting.com/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>

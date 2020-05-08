@@ -26,6 +26,9 @@ const H3 = styled.h3`
   color: #0FA3B1;
   margin-bottom: 10px;
   font-family: Stolzl;
+  @media (max-width: 780px) {
+    font-size: 30px;
+  }
 `
 const Center = styled.div`
   max-width: 1288px;
@@ -33,15 +36,17 @@ const Center = styled.div`
   padding: 0 20px;
 `
 const List = styled.div`
-  max-width: 560px;
+  max-width: 530px;
   right: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: -185px 0 0 auto;
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  @media (min-width: 1026px) {
+    margin: -185px 0 0 auto;
+  }
 `
 const Elem = styled.div`
   border-radius: 8px;
@@ -76,16 +81,29 @@ const MainPara = styled.p`
   font-family: Ubuntu;
 `
 const MainContent = styled.div`
-  position: sticky;
-  top: 160px;
   max-width: 600px;
+  @media (min-width: 1026px) {
+    position: sticky;
+    top: 160px;
+  }
 `
 const ImgContainer = styled.div`
-  max-width: 400px;
-  position: sticky;
-  top: 40px;
+  max-width: 450px;
   z-index: 0;
   margin: 0 0 0 auto;
+
+  @media (max-width: 780px) {
+    display: none;
+  }
+  @media (max-width: 1026px) {
+    width: 355px;
+    position: absolute;
+    right: 20px;
+  }
+  @media (min-width: 1026px) {
+    position: sticky;
+    top: 0;
+  }
   img {
     position: absolute;
     right: 0;

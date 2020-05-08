@@ -6,13 +6,20 @@ import Img from 'gatsby-image'
 import { Parallax } from 'react-scroll-parallax';
 
 const HeroSection = styled.section`
-  border-style: solid;
   background-color: #051627;
   padding: 0 20px 20px;
-  background-image: url( ${img1} );
-  background-size: 620px 585px;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  position: relative;
+  @media (min-width: 960px) {
+    background-image: url( ${img1} );
+    background-size: 620px 585px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 75px;
+    overflow: hidden;
+  }
+
   h1 {
     max-width: 670px;
     font-size: 90px;
@@ -21,7 +28,10 @@ const HeroSection = styled.section`
     color: #0fa3b1;
     margin: 0 0 25px;
     font-family: Stolzl;
-    @media (max-width: 960px) {
+    @media (max-width: 1026px) {
+      font-size: 78px;
+    }
+    @media (max-width: 760px) {
       font-size: 48px;
     }
   }
@@ -41,6 +51,9 @@ const ContentContainer = styled.div`
   position: relative;
   @media (min-width: 768px) {
     min-height: 776px;
+  }
+  @media (max-width: 767px) {
+    padding-top: 265px;
   }
 `
 const Button = styled.a`
@@ -67,16 +80,30 @@ const Planet1 = styled.div`
   position: absolute;
   bottom: -60px;
   right: 0;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 const Planet2 = styled.div`
   position: absolute;
   bottom: 300px;
   right: 50px;
+  @media (max-width: 900px) {
+    bottom: 577px;
+  }
+  @media (max-width: 568px) {
+    bottom: 477px;
+    right: 50px;
+  }
 `
 const Planet3 = styled.div`
   position: absolute;
   bottom: 100px;
   right: 300px;
+  @media (max-width: 768px) {
+    right: 0px;
+    bottom: -7px;
+  }
 `
 function Hero () {
 

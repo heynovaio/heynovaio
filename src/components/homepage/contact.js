@@ -64,6 +64,7 @@ const Box = styled.div`
   max-width: 460px;
   @media (max-width: 960px) {
     flex-wrap: wrap;
+    margin: 0;
   }
 `
 const Elem = styled.div`

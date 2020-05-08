@@ -5,6 +5,9 @@ import img1 from '../../images/group-3.svg'
 
 const Who = styled.section`
   padding: 0 20px;
+  @media (max-width: 768px) {
+    padding: 75px 20px;
+  }
 `
 const ContentCenter = styled.div`
   max-width: 1288px;
@@ -15,9 +18,12 @@ const Content = styled.div`
   text-align: center;
   max-width: 650px;
   position: relative;
+  margin: 0 auto;
   @media (min-width: 960px) {
     padding: 141.5px 0 20px;
-    margin: 0 auto;
+  }
+  @media (max-width: 1024px) {
+    max-width: 550px;
   }
 `
 const H2 = styled.h2`
@@ -28,6 +34,11 @@ const H2 = styled.h2`
   text-align: center;
   color: #0a2239;
   font-family: Stolzl;
+  @media (max-width: 780px) {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
 `
 const P = styled.p`
   min-height: 112px;
@@ -90,6 +101,13 @@ const ImgContainer = styled.div`
   top: 110px;
   -webkit-animation: vibrate 22s ease-in-out infinite both;
   animation: ${vibrate} 22s ease-in-out infinite both;
+  bottom: -250px;
+  @media (max-width: 960px) {
+    max-width: 100px;
+  }
+  @media (max-width: 560px) {
+    display: none;
+  }
 `
 export default () => (
   <Who>

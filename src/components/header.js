@@ -124,6 +124,14 @@ const Menu = styled.div `
     font-family: Stolzl;
     position: relative;
     transition: all .5s;
+    @media (max-width: 960px) {
+      font-size: 64px;
+      -webkit-text-stroke: 2px #0a2239;
+    }
+    @media (max-width: 780px) {
+      font-size: 50px;
+      -webkit-text-stroke: 2px #0a2239;
+    }
     &:hover {
       background-image: -webkit-linear-gradient(#0a2239 0,#0fa3b1 76%);
       background-size: 100% 60px;

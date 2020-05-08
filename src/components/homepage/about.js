@@ -5,7 +5,7 @@ const Who = styled.section`
   padding: 60px 0 40px;
   position: relative;
   @media (max-width: 960px) {
-    padding: 20px;
+    padding: 30px 0;
   }
 `
 const H2 = styled.h2`
@@ -38,6 +38,9 @@ const Content = styled.div`
   text-align: left;
   max-width: 615px;
   position: relative;
+  @media (max-width: 1026px) {
+    max-width: 515px;
+  }
 `
 const ImgRight = styled.div`
   margin: 0 0 -7px;
@@ -49,6 +52,9 @@ const ImgRight = styled.div`
     margin-bottom: 0;
     display: inline-block;
     width: 100%;
+  }
+  @media (max-width: 1026px) {
+    max-width: 370px;
   }
   @media (max-width: 960px) {
     display: none;

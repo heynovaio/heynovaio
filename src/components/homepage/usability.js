@@ -58,7 +58,6 @@ const Number = styled.span`
   display: block;
   font-size: 146px;
   font-weight: 900;
-  -webkit-text-stroke: 1px #fff;
   line-height: 1;
   -webkit-letter-spacing: -2px;
   -moz-letter-spacing: -2px;
@@ -70,6 +69,9 @@ const Number = styled.span`
   -webkit-text-fill-color: #0000;
   background-attachment: fixed;
   background-size: cover;
+  @media (max-width: 1026px) {
+    font-size: 96px;
+  }
 `
 
 export default () => (

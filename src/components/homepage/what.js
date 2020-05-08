@@ -12,8 +12,8 @@ const WhatContainer = styled.section`
   background-repeat: no-repeat;
   background-position: right bottom;
   padding-bottom: 30px;
-  @media (max-width: 960px) {
-    padding-bottom: 150px;
+  @media (max-width: 1026px) {
+    background: none;
   }
 `
 const ContentContainer = styled.div`
@@ -21,6 +21,12 @@ const ContentContainer = styled.div`
   padding: 150px 0 0px;
   margin: 0 auto;
   position: relative;
+  @media (max-width: 1026px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 526px) {
+    padding-top: 130px;
+  }
 `
 const H2 = styled.h2`
   font-size: 52px;
@@ -32,10 +38,17 @@ const H2 = styled.h2`
   font-family: Stolzl;
   max-width: 549px;
   margin-bottom: 5rem;
-  position: sticky;
-  top: 20px;
+  @media (max-width: 1026px) {
+    max-width: 426px;
+    font-size: 40px;
+  }
   @media (max-width: 960px) {
     font-size: 35px;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 1026px) {
+    position: sticky;
+    top: 20px;
   }
 `
 const H3 = styled.h3`
@@ -56,9 +69,11 @@ const P = styled.p`
   line-height: 1.4;
   text-align: left;
   font-family: Ubuntu;
-  color: #fff;
-  @media (max-width: 960px) {
-    font-size: 18px;
+  color: #0fa3b1;
+  @media (max-width: 1270px) {
+    color: #0fa3b1;
+  }
+  @media (max-width: 1026px) {
     color: #0a2239;
   }
 `
@@ -72,14 +87,31 @@ const Content = styled.div`
   position: relative;
   max-width: 624px;
   margin: -150px 0 40px auto;
+  @media (max-width: 1026px) {
+    max-width: 474px;
+  }
+  @media (max-width: 780px) {
+    margin-top: 0;
+    padding-top: 0px;
+  }
 `
 const ImgPerson = styled.div`
   max-width: 455px;
-  object-fit: contain;
-  position: sticky;
-  top: 180px;
+  position: relative;
+  @media (max-width: 1026px) {
+    position: absolute;
+    width: 455px;
+  }
   @media (max-width: 960px) {
-    max-width: 200px;
+    max-width: 250px;
+  }
+  @media (min-width: 1026px) {
+    object-fit: contain;
+    position: sticky;
+    top: 180px;
+  }
+  @media (max-width: 560px) {
+    top: -67px;
   }
   img {
     display: inline-block;
@@ -93,6 +125,12 @@ const Planet = styled.div`
   position: absolute;
   top: 40px;
   left: 150px;
+  width: 75px;
+  @media (max-width: 960px) {
+    top: 24px;
+    left: 76px;
+    width: 40px;
+  }
 `
 const Button = styled.button`
   background-color: #D5330D;
@@ -113,15 +151,15 @@ function What () {
     query {
       Girl: file(relativePath: { eq: "girl.png" }) {
         childImageSharp {
-          fixed(width: 465, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 465, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       },
       Planet: file(relativePath: { eq: "planet.png" }) {
         childImageSharp {
-          fixed(width: 75, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fluid(maxWidth: 75, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -132,9 +170,9 @@ function What () {
       <ContentContainer>
         <H2>Our methods connect your brand to real users by:</H2>
         <ImgPerson>
-          <Img alt="Girl" role="presentation" fixed={data.Girl.childImageSharp.fixed} />
+          <Img alt="Girl" role="presentation" fluid={data.Girl.childImageSharp.fluid} />
           <Planet>
-            <Img alt="Planet" role="presentation" fixed={data.Planet.childImageSharp.fixed} />
+            <Img alt="Planet" role="presentation" fluid={data.Planet.childImageSharp.fluid} />
           </Planet>
         </ImgPerson>
         <Content>
