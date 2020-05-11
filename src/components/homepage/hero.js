@@ -3,7 +3,6 @@ import React from 'react'
 import img1 from '../../images/planet-bg.webp'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Parallax } from 'react-scroll-parallax';
 
 const HeroSection = styled.section`
   background-color: #051627;
@@ -46,11 +45,11 @@ const HeroSection = styled.section`
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 215px 0 0px;
+  padding: 215px 0 20px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
-    min-height: 776px;
+    min-height: 778px;
   }
   @media (max-width: 767px) {
     padding-top: 265px;
@@ -137,29 +136,15 @@ function Hero () {
 
     <HeroSection>
       <ImgContainer>
-        <Parallax
-          offsetYMax={100}
-          offsetYMin={-100}
-          className="hemi-left"
-          slowerScrollRate
-          tagOuter="figure">
-          <Planet1>
-            <Img alt="Planet" role="presentation" fixed={data.Planet1.childImageSharp.fixed} />
-          </Planet1>
-        </Parallax>
+        <Planet1>
+          <Img alt="Planet" role="presentation" fixed={data.Planet1.childImageSharp.fixed} />
+        </Planet1>
         <Planet2>
           <Img alt="Planet 2" role="presentation" fixed={data.Planet2.childImageSharp.fixed} />
         </Planet2>
-        <Parallax
-          offsetYMax={30}
-          offsetYMin={-30}
-          className="hemi-left"
-          slowerScrollRate
-          tagOuter="figure">
-          <Planet3>
-            <Img alt="Planet 3" role="presentation" fixed={data.Planet3.childImageSharp.fixed} />
-          </Planet3>
-        </Parallax>
+        <Planet3>
+          <Img alt="Planet 3" role="presentation" fixed={data.Planet3.childImageSharp.fixed} />
+        </Planet3>
       </ImgContainer>
       <ContentContainer>
         <h1>Designing Experiences for Everyone</h1>

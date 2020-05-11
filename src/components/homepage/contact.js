@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons"
 
 const Contact = styled.section`
-  padding: 55px 0 51px;
+  padding: 55px 0 21px;
   background: #0a2239;
 `
 const H2 = styled.h2`

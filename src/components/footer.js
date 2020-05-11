@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = styled.section`
-  padding: 0px 20px 15px;
+  padding: 30px 20px 15px;
   background-color: #0a2239;
   img {
     width: 100%;

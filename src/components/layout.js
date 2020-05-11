@@ -7,15 +7,23 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { ParallaxProvider } from 'react-scroll-parallax';
+import Header from "./header"
+import Footer from "./footer"
+import styled from '@emotion/styled'
 
 import "./layout.css"
 
+const Main = styled.main`
+  position: relative;
+`
+
 const Layout = ({ children }) => {
   return (
-    <ParallaxProvider>
-      <main>{children}</main>
-    </ParallaxProvider>
+    <>
+      <Header></Header>
+      <Main>{children}</Main>
+      <Footer></Footer>
+    </>
   )
 }
 

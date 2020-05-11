@@ -12,14 +12,19 @@ const Header = styled.header`
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+  background: #051628;
   img {
-    max-width: 56px;
-    margin-top:17px;
-    margin-left: 15px;
-    position: absolute;
-    left: 0;
+    display: block;
   }
+`
+const ImgContainer = styled(Link)`
+  max-width: 56px;
+  padding-top:16px;
+  padding-left: 15px;
+  position: absolute;
+  left: 0;
+  display: block;
 `
 const LinkContainer = styled.div`
   display: flex;
@@ -91,26 +96,7 @@ const HamburgerStyle = styled.div`
     }
   }
 `
-
-const Menu = styled.div `
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 0;
-  text-align: center;
-  background: #0fa3b1;
-  z-index: 3;
-  opacity: 0;
-  transition: .25s all;
-  visibility: hidden;
-  &.open {
-    display: block;
-    height: 100vh;
-    opacity: 1;
-    padding-top: 200px;
-    visibility: visible;
-  }
+const Nav = styled.nav `
   a {
     text-decoration: none;
     padding: 10px 10px 10px;
@@ -140,10 +126,50 @@ const Menu = styled.div `
     }
   }
 `
-
+const Menu = styled.div `
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 0;
+  text-align: center;
+  background: #0fa3b1;
+  z-index: 3;
+  opacity: 0;
+  transition: .25s all;
+  visibility: hidden;
+  &.open {
+    display: block;
+    height: 100vh;
+    opacity: 1;
+    padding-top: 200px;
+    visibility: visible;
+  }
+`
+const LinkContainerMenu = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+  a {
+    padding: 23px 18px 20px;
+    font-size: 80px;
+    font-family: Stolzl;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: #0a2239;
+    letter-spacing: 0.025em;
+    &:hover {
+      color: #fff;
+    }
+  }
+`
 export default () => (
   <Header>
-    <img role="presentation" alt="Hey Nova Logo" src={img1}/>
+    <ImgContainer to="/">
+      <img role="presentation" alt="Hey Nova Logo" src={img1}/>
+    </ImgContainer>
     <LinkContainer>
       <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
@@ -157,11 +183,21 @@ export default () => (
     </LinkContainer>
     <Hamburger/>
     <Menu id="drop">{/*whole drop down*/}
-      <div>
+      <Nav>
         <div><Link onClick={showDrop} to="/">Home</Link></div>
-        <div><Link onClick={showDrop} to="/work/">Our Work</Link></div>
-        <div><a onClick={showDrop} href="#footer">Get in Touch</a></div>
-      </div>
+        <div><Link onClick={showDrop} to="/contact/">Get in Touch</Link></div>
+      </Nav>
+      <LinkContainerMenu>
+        <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+           <FontAwesomeIcon icon={faLinkedinIn} />
+        </LinkedInLink>
+        <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+           <FontAwesomeIcon icon={faFacebook} />
+        </FaceBookLink>
+        <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+           <FontAwesomeIcon icon={faInstagram} />
+        </InstagramLink>
+      </LinkContainerMenu>
     </Menu>
   </Header>
 )

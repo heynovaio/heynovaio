@@ -69,7 +69,7 @@ const P = styled.p`
   line-height: 1.4;
   text-align: left;
   font-family: Ubuntu;
-  color: #0fa3b1;
+  color: #fff;
   @media (max-width: 1270px) {
     color: #0fa3b1;
   }
