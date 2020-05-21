@@ -5,7 +5,7 @@ import img1 from '../images/landing-bg.jpg'
 import { PopupText } from 'react-calendly'
 
 const HeroSection = styled.section`
-  background-color: #051627;
+  background-color: #051628;
   padding: 0 20px 20px;
   position: relative;
   margin-top: 50px;
@@ -14,7 +14,7 @@ const HeroSection = styled.section`
     background-size: cover;
   }
   @media (max-width: 960px) {
-    background: #fff;
+    color: #fff;
   }
   @media (max-width: 768px) {
     padding-bottom: 75px;
@@ -57,6 +57,9 @@ const P = styled.p`
   color: #0a2239;
   margin: 20px 0 20px;
   font-family: Ubuntu;
+  @media (max-width:960px) {
+    color: #fff;
+  }
 `
 const Button = styled.div`
   a {
