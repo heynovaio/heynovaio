@@ -30,7 +30,7 @@ const P = styled.p`
   color: #2BC8D7;
 `
 const Span = styled.span`
-  color: #d5330d;
+  color: #e43c15;
   font-weight: 400;
 `
 const Flex = styled.nav`
@@ -47,13 +47,13 @@ const Icon = styled.a`
 export default () => (
   <Footer>
     <Flex>
-      <Icon target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+      <Icon aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
       </Icon>
-      <Icon target="blank" href="https://www.facebook.com/heynovaio/">
+      <Icon aria-label="Facebook" target="blank" href="https://www.facebook.com/heynovaio/">
          <FontAwesomeIcon icon={faFacebook} />
       </Icon>
-      <Icon target="blank" href="https://www.instagram.com/heynovaio/">
+      <Icon aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
          <FontAwesomeIcon icon={faInstagram} />
       </Icon>
     </Flex>

@@ -178,17 +178,17 @@ const LinkContainerMenu = styled.div`
 `
 export default () => (
   <Header>
-    <ImgContainer to="/">
+    <ImgContainer to="/" title="Hey Nova Homepage">
       <img role="presentation" alt="Hey Nova Logo" src={img1}/>
     </ImgContainer>
     <LinkContainer tabindex="-1">
-      <LinkedInLink tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+      <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
       </LinkedInLink>
-      <FaceBookLink tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
+      <FaceBookLink aria-label="Facebook" tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
          <FontAwesomeIcon icon={faFacebook} />
       </FaceBookLink>
-      <InstagramLink tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
+      <InstagramLink aria-label="Instagram" tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
          <FontAwesomeIcon icon={faInstagram} />
       </InstagramLink>
     </LinkContainer>
@@ -200,13 +200,13 @@ export default () => (
           <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
         </ul>
         <LinkContainerMenu>
-          <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+          <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
              <FontAwesomeIcon icon={faLinkedinIn} />
           </LinkedInLink>
-          <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+          <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
              <FontAwesomeIcon icon={faFacebook} />
           </FaceBookLink>
-          <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+          <InstagramLink aria-label=Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
              <FontAwesomeIcon icon={faInstagram} />
           </InstagramLink>
         </LinkContainerMenu>
