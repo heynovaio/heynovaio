@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import Footer from "./footer"
 import styled from '@emotion/styled'
-import SEO from "../seo"
+import SEO from "./seo"
 import "./layout.css"
 
 const Main = styled.main`
