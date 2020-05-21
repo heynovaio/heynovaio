@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/kirsten.jpg'
-import img2 from '../../images/bryony.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons"
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-const Contact = styled.section`
+const ContactSection = styled.section`
   padding: 55px 0 21px;
-  background: #0a2239;
+  background: #051628;
 `
 const H2 = styled.h2`
   font-size: 50px;
@@ -126,39 +126,62 @@ const GeneralEmailLink = styled.a`
     color: #d5330d;
   }
 `
-export default () => (
-  <Contact>
-    <H2>Reach out to our Co-founders</H2>
-    <ParagraphCentre>
-      <P>As the leaders of this company, we are never too busy to chat.</P>
-      <P>Even if you just want a chat or are starting out in the tech industry and are looking for some advice. We are here to help!</P>
-    </ParagraphCentre>
-    <Flex>
-      <Box>
-        <Image>
-          <img role="presentation" alt="" src={img1}/>
-        </Image>
-        <TextBox>
-          <H3>Kirsten Dodd</H3>
-          <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
-          <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
-             <FontAwesomeIcon icon={faLinkedinIn} />
-          </LinkedInLink>
-        </TextBox>
-      </Box>
-      <Box>
-        <Image>
-          <img role="presentation" alt="" src={img2}/>
-        </Image>
-        <TextBox>
-          <H3>Bryony Anderson</H3>
-          <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
-          <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
-             <FontAwesomeIcon icon={faLinkedinIn} />
-          </LinkedInLink>
-        </TextBox>
-      </Box>
-    </Flex>
-    <ParagraphCentre><P>Not sure which to contact, email <GeneralEmailLink href="mailto:info@heynova.io">info@heynova.io</GeneralEmailLink> or flip a coin!</P></ParagraphCentre>
-  </Contact>
-)
+
+function Contact () {
+  const data = useStaticQuery(graphql`
+    query {
+      kirsten: file(relativePath: { eq: "kirsten.jpg" }) {
+        childImageSharp {
+          fixed(width: 200, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      bryony: file(relativePath: { eq: "bryony.jpg" }) {
+        childImageSharp {
+          fixed(width: 200, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <ContactSection>
+      <H2>Reach out to our Co-founders</H2>
+      <ParagraphCentre>
+        <P>As the leaders of this company, we are never too busy to chat.</P>
+        <P>Even if you just want a chat or are starting out in the tech industry and are looking for some advice. We are here to help!</P>
+      </ParagraphCentre>
+      <Flex>
+        <Box>
+          <Image>
+            <Img alt="Photo of Kirsten" role="presentation" fadeIn={false} fixed={data.kirsten.childImageSharp.fixed} />
+          </Image>
+          <TextBox>
+            <H3>Kirsten Dodd</H3>
+            <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
+            <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+               <FontAwesomeIcon icon={faLinkedinIn} />
+            </LinkedInLink>
+          </TextBox>
+        </Box>
+        <Box>
+          <Image>
+            <Img alt="Photo of Bryony" role="presentation" fadeIn={false} fixed={data.bryony.childImageSharp.fixed} />
+          </Image>
+          <TextBox>
+            <H3>Bryony Anderson</H3>
+            <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
+            <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
+               <FontAwesomeIcon icon={faLinkedinIn} />
+            </LinkedInLink>
+          </TextBox>
+        </Box>
+      </Flex>
+      <ParagraphCentre><P>Not sure which to contact, email <GeneralEmailLink href="mailto:info@heynova.io">info@heynova.io</GeneralEmailLink> or flip a coin!</P></ParagraphCentre>
+    </ContactSection>
+  )
+}
+export default Contact

@@ -1,12 +1,10 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/icon.svg'
-import img2 from '../../images/group-7.svg'
-import img3 from '../../images/group-8.svg'
-import img4 from '../../images/group-9.svg'
-import Planet from '../../images/group-17.png'
 
-const How = styled.section`
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+const HowSection = styled.section`
   padding: 0 0 80px;
   position: relative;
 `
@@ -63,6 +61,10 @@ const Box = styled.div`
     margin: 0 auto 40px;
     display: block;
   }
+  .gatsby-image-wrapper {
+    left: 50%;
+    transform: translate(-50%);
+  }
   @media (max-width: 1026px) {
     margin-bottom: 30px;
   }
@@ -115,62 +117,109 @@ const Center = styled.div`
     margin-left: 12px;
   }
 `
-export default () => (
-  <How>
-    <H2>Curious about our process?</H2>
-    <P>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</P>
-    <Flex>
-      <Box>
-        <img role="presentation" alt="" src={img2}/>
-        <Center>
-          <H3>Strategy</H3>
-          <Elem>User Research</Elem>
-          <Elem>Brand Strategy</Elem>
-          <Elem>Content Strategy</Elem>
-          <Elem>Market Research</Elem>
-          <Elem>Accessibility Research</Elem>
-          <Elem>User Testing</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img role="presentation" alt="" src={img3}/>
-        <Center>
-          <H3>Design</H3>
-          <Elem>Branding</Elem>
-          <Elem>User Interface/Visual Design</Elem>
-          <Elem>User Experience</Elem>
-          <Elem>Inclusive Design</Elem>
-          <Elem>Behavioral Science</Elem>
-          <Elem>Gamification</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img role="presentation" alt="" src={img4}/>
-        <Center>
-          <H3>Implementation</H3>
-          <Elem>Web Development</Elem>
-          <Elem>Mobile-first Development</Elem>
-          <Elem>Accessibile Development</Elem>
-          <Elem>SEO Optimization</Elem>
-          <Elem>Data & Analytics</Elem>
-          <Elem>Custom CMS Themes</Elem>
-        </Center>
-      </Box>
-      <Box>
-        <img role="presentation" alt="" src={img1}/>
-        <Center>
-          <H3>Consulting</H3>
-          <Elem>Workshops & Mentoring</Elem>
-          <Elem>Accessibility Training</Elem>
-          <Elem>Accessibility Audits</Elem>
-          <Elem>Project Consulting</Elem>
-          <Elem>UX Consulting</Elem>
-          <Elem>Translating Geek Speak</Elem>
-        </Center>
-      </Box>
-    </Flex>
-    <ImgContainer>
-      <img role="presentation" alt="planet" src={Planet}/>
-    </ImgContainer>
-  </How>
-)
+
+function How () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      consult: file(relativePath: { eq: "consulting-icon@2x.png" }) {
+        childImageSharp {
+          fixed(width: 88, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      dev: file(relativePath: { eq: "dev-icon@2x.png" }) {
+        childImageSharp {
+          fixed(width: 88 quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      design: file(relativePath: { eq: "design-icon@2x.png" }) {
+        childImageSharp {
+          fixed(width: 88, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      strategy: file(relativePath: { eq: "strategy-icon@2x.png" }) {
+        childImageSharp {
+          fixed(width: 88, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      },
+      planet: file(relativePath: { eq: "group-17.png" }) {
+        childImageSharp {
+          fixed(width: 400, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+
+    <HowSection>
+      <H2>Curious about our process?</H2>
+      <P>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</P>
+      <Flex>
+        <Box>
+          <Img alt="Strategy Icon" role="presentation" fadeIn={false} fixed={data.strategy.childImageSharp.fixed} />
+          <Center>
+            <H3>Strategy</H3>
+            <Elem>User Research</Elem>
+            <Elem>Brand Strategy</Elem>
+            <Elem>Content Strategy</Elem>
+            <Elem>Market Research</Elem>
+            <Elem>Accessibility Research</Elem>
+            <Elem>User Testing</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <Img alt="Design Icon" role="presentation" fadeIn={false} fixed={data.design.childImageSharp.fixed} />
+          <Center>
+            <H3>Design</H3>
+            <Elem>Branding</Elem>
+            <Elem>User Interface/Visual Design</Elem>
+            <Elem>User Experience</Elem>
+            <Elem>Inclusive Design</Elem>
+            <Elem>Behavioral Science</Elem>
+            <Elem>Gamification</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <Img alt="Dev Icon" role="presentation" fadeIn={false} fixed={data.dev.childImageSharp.fixed} />
+          <Center>
+            <H3>Implementation</H3>
+            <Elem>Web Development</Elem>
+            <Elem>Mobile-first Development</Elem>
+            <Elem>Accessibile Development</Elem>
+            <Elem>SEO Optimization</Elem>
+            <Elem>Data & Analytics</Elem>
+            <Elem>Custom CMS Themes</Elem>
+          </Center>
+        </Box>
+        <Box>
+          <Img alt="Consulting Icon" role="presentation" fadeIn={false} fixed={data.consult.childImageSharp.fixed} />
+          <Center>
+            <H3>Consulting</H3>
+            <Elem>Workshops & Mentoring</Elem>
+            <Elem>Accessibility Training</Elem>
+            <Elem>Accessibility Audits</Elem>
+            <Elem>Project Consulting</Elem>
+            <Elem>UX Consulting</Elem>
+            <Elem>Translating Geek Speak</Elem>
+          </Center>
+        </Box>
+      </Flex>
+      <ImgContainer>
+        <Img alt="Planet" role="presentation" fadeIn={false} fixed={data.planet.childImageSharp.fixed} />
+      </ImgContainer>
+    </HowSection>
+  )
+}
+
+export default How

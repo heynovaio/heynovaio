@@ -1,8 +1,10 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import Planet from '../../images/planet-1.png'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { PopupText } from 'react-calendly'
 
-const Inclusive = styled.section`
+const InclusiveSection = styled.section`
   padding: 50px 0 80px;
 `
 const H2 = styled.h2`
@@ -75,7 +77,7 @@ const MainParaOne = styled.p`
 `
 const MainPara = styled.p`
   color: #0a2239;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   font-size: 18px;
   line-height: 1.5;
   font-family: Ubuntu;
@@ -87,10 +89,11 @@ const MainContent = styled.div`
     top: 160px;
   }
 `
-const ImgContainer = styled.div`
+const Sticky = styled.div`
   max-width: 450px;
   z-index: 0;
-  margin: 0 0 0 auto;
+  margin: -1px 0 0 auto;
+  right: 0;
 
   @media (max-width: 780px) {
     display: none;
@@ -102,42 +105,84 @@ const ImgContainer = styled.div`
   }
   @media (min-width: 1026px) {
     position: sticky;
-    top: 0;
-  }
-  img {
-    position: absolute;
-    right: 0;
+    top: 100px;
   }
 `
-export default () => (
-  <Inclusive>
-    <Center>
-      <ImgContainer>
-        <img role="presentation" alt="planet" src={Planet}/>
-      </ImgContainer>
-      <MainContent>
-        <H2>Does your website work for everyone?</H2>
-        <MainParaOne>These are ways we are able to help you find out.</MainParaOne>
-        <MainPara>Through an empathetic human lens we aim to ensure your success in reaching full accessibility and providing ALL your users with the best experience possible.</MainPara>
-      </MainContent>
-      <List>
-        <Elem>
-          <H3>Testing</H3>
-          <P>Our accessibility testing identifies key elements in your website’s code and design that could be causing your users problems.</P>
-        </Elem>
-        <Elem>
-          <H3>Consulting</H3>
-          <P>We help you reach your marginalized users through a step-by-step guide of what your digital solution needs. We Work collaboratively with your team, teaching and expanding your accessibility knowledge base.</P>
-        </Elem>
-        <Elem>
-          <H3>Workshop</H3>
-          <P>We want to help everyone take a step towards a future with more inclusive technologies, so we provide immersive educational workshops that empower you and your team to maximize accessibility.</P>
-        </Elem>
-        <Elem>
-          <H3>Design & Implementation</H3>
-          <P>Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give ALL your users a superior digital experience.</P>
-        </Elem>
-      </List>
-    </Center>
-  </Inclusive>
-)
+const ImgContainer = styled.div`
+  position: absolute;
+`
+const Button = styled.div`
+  a {
+    background-color: #D5330D;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff;
+    font-family: Stolzl;
+    padding: 14px 32px;
+    max-width: 200px;
+    text-decoration: none;
+    margin-top: 20px;
+    border: none;
+    display: inline-block;
+  }
+`
+function Inclusive () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      planet: file(relativePath: { eq: "planet-1.png" }) {
+        childImageSharp {
+          fixed(width: 450, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+
+    <InclusiveSection>
+      <Center>
+        <Sticky>
+          <ImgContainer>
+            <Img alt="planet" role="presentation" fadeIn={false} fixed={data.planet.childImageSharp.fixed} />
+          </ImgContainer>
+        </Sticky>
+        <MainContent>
+          <H2>Does your website work for everyone?</H2>
+          <MainParaOne>These are ways we are able to help you find out.</MainParaOne>
+          <MainPara>Through an empathetic human lens we aim to ensure your success in reaching full accessibility and providing ALL your users with the best experience possible.</MainPara>
+          <Button>
+            <PopupText
+              text="Get a Quote"
+              url="https://calendly.com/hey-nova/free-consultation"
+            />
+          </Button>
+        </MainContent>
+        <List>
+          <Elem>
+            <H3>Testing</H3>
+            <P>Our accessibility testing identifies key elements in your website’s code and design that could be causing your users problems.</P>
+          </Elem>
+          <Elem>
+            <H3>Consulting</H3>
+            <P>We help you reach your marginalized users through a step-by-step guide of what your digital solution needs. We Work collaboratively with your team, teaching and expanding your accessibility knowledge base.</P>
+          </Elem>
+          <Elem>
+            <H3>Workshop</H3>
+            <P>We want to help everyone take a step towards a future with more inclusive technologies, so we provide immersive educational workshops that empower you and your team to maximize accessibility.</P>
+          </Elem>
+          <Elem>
+            <H3>Design & Implementation</H3>
+            <P>Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give ALL your users a superior digital experience.</P>
+          </Elem>
+        </List>
+      </Center>
+    </InclusiveSection>
+  )
+}
+
+export default Inclusive

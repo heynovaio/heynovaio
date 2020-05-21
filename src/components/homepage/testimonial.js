@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img2 from '../../images/quote-left.png'
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { useStaticQuery, graphql } from 'gatsby'
@@ -8,7 +7,7 @@ import Img from 'gatsby-image'
 
 const TestimonialSection = styled.section`
   padding: 63px 20px 50px;
-  background-color: #0a2239;
+  background-color: #051628;
   position: relative;
   img {
     width: 100%;
@@ -220,6 +219,13 @@ function Testimonial () {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
+      },
+      quote: file(relativePath: { eq: "quote-left.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 66, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
       }
     }
   `)
@@ -238,13 +244,15 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" role="presentation" fluid={data.Grapevine.childImageSharp.fluid} />
+              <Img alt="Tipp Consulting Screenshot" fadeIn={false} role="presentation" fluid={data.Grapevine.childImageSharp.fluid} />
               <SiteLink href="https://grapevinetattoo.com/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                  <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                  <QuoteLeft>
+                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                  </QuoteLeft>
                   <Quote>
                     <p>Bryony Anderson and Kirsten Dodd, co-founders of Hey Nova and their staff are nothing short of amazing. They're diligent and committed to producing the best possible product. Our finished website was beyond our expectations. I wholeheartedly recommend them to anyone looking for a new website or cloud application.</p>
                   </Quote>
@@ -261,13 +269,15 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="P4L Website Screenshot" role="presentation" fluid={data.P4l.childImageSharp.fluid} />
+              <Img alt="P4L Website Screenshot" fadeIn={false} role="presentation" fluid={data.P4l.childImageSharp.fluid} />
               <SiteLink href="https://pharmacyforlife.ca/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                  <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                  <QuoteLeft>
+                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                  </QuoteLeft>
                   <Quote>
                     <p>What can I say… they had me at “Hey”.</p>
                     <p>The Hey Nova team has been instrumental in helping us set up our e-commerce website. From the planning stages to building the format and content to preparing for launch, Hey Nova is with you every step.</p>
@@ -288,13 +298,15 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Eco Anxiety Screenshot" role="presentation" fluid={data.Eco.childImageSharp.fluid} />
+              <Img alt="Eco Anxiety Screenshot" fadeIn={false} role="presentation" fluid={data.Eco.childImageSharp.fluid} />
               <SiteLink href="https://www.ecoanxious.ca/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                <QuoteLeft>
+                  <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                </QuoteLeft>
                 <Quote>
                   <p>It’s easy to say that our idea would not have come to fruition without Hey Nova. Not only was the final product of the highest quality, but the team helped us to take an idea and shape it through smart design, informed decisions, and technical expertise. We quickly realized that we could trust their guidance fully.</p>
                   <p>Hey Nova bring a holistic approach to web design. They are incredible designers and developers and are cutting edge with the technologies used and with important aspects such as accessibility and SEO. </p>
@@ -313,13 +325,15 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Kwench Website Screenshot" role="presentation" fluid={data.Kwench.childImageSharp.fluid} />
+              <Img alt="Kwench Website Screenshot" fadeIn={false} role="presentation" fluid={data.Kwench.childImageSharp.fluid} />
               <SiteLink href="https://www.clubkwench.com/" target="_blank">View site</SiteLink>
               </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                  <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                  <QuoteLeft>
+                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                  </QuoteLeft>
                   <Quote>
                     <p>
                       With their competent and calm approach, Hey Nova has been an integral part of our technology team.  They are professional, accountable, and realistic regarding the scope of a project. I recommend them to anyone I meet.
@@ -339,12 +353,14 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Brainbox Accessibility Workshop Screenshot" role="presentation" fluid={data.Brainbox.childImageSharp.fluid} />
+              <Img alt="Brainbox Accessibility Workshop Screenshot" fadeIn={false} role="presentation" fluid={data.Brainbox.childImageSharp.fluid} />
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                  <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                  <QuoteLeft>
+                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                  </QuoteLeft>
                   <Quote>
                     <p>Our overall experience with Hey Nova was, in short, easy. They worked closely with us on large and small projects, while providing valuable insight to better our understanding of accessibility. They delivered all feedback in one go, which allowed us to be more efficient for faster client turnaround times. The owners, Kirsten and Bryony, really care about accessibility. Not only do they care about being compliant, but they care about the human aspect of accessibility and how it feels to someone with accessibility needs.</p>
                   </Quote>
@@ -361,13 +377,15 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" role="presentation" fluid={data.Tipp.childImageSharp.fluid} />
+              <Img alt="Tipp Consulting Screenshot" role="presentation" fadeIn={false} fluid={data.Tipp.childImageSharp.fluid} />
               <SiteLink href="http://tippconsulting.com/" target="_blank">View site</SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                <QuoteLeft><img role="presentation" alt="" src={img2}/></QuoteLeft>
+                <QuoteLeft>
+                  <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                </QuoteLeft>
                 <Quote>
                   <p>I am very pleased with my new website. Hey Nova was lovely to work with.
                   The project was completed within reasonable budget and timeline.

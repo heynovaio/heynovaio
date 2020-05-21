@@ -1,8 +1,10 @@
 import styled from '@emotion/styled'
 import React from 'react'
-import img1 from '../../images/group-20.png'
-const Who = styled.section`
-  padding: 60px 0 40px;
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+const AboutSection = styled.section`
+  padding: 70px 0 40px;
   position: relative;
   @media (max-width: 960px) {
     padding: 30px 0;
@@ -60,16 +62,35 @@ const ImgRight = styled.div`
     display: none;
   }
 `
-export default () => (
-  <Who>
-    <ContentCenter>
-      <Content>
-        <H2>Stepping boldly into the future of tech</H2>
-        <P>We believe in a future of tech that is inclusive for all. This future sadly won’t be realized without an evolution in how we work. As being in the only 5% of tech companies founded by women, we are passionate about seeing the industry become more inclusive, diverse, and equitable.</P>
-        <P>Our years and combined experiences means the team brings a novel perspective to the table. We take these perspectives and work to actively shift industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</P>
-        <P>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</P>
-      </Content>
-    </ContentCenter>
-    <ImgRight><img role="presentation" alt="" src={img1}/></ImgRight>
-  </Who>
-)
+
+function About () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      woman: file(relativePath: { eq: "group-20.png" }) {
+        childImageSharp {
+          fixed(width: 470, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <AboutSection>
+      <ContentCenter>
+        <Content>
+          <H2>Stepping boldly into the future of tech</H2>
+          <P>We believe in a future of tech that is inclusive for all. This future sadly won’t be realized without an evolution in how we work. As being in the only 5% of tech companies founded by women, we are passionate about seeing the industry become more inclusive, diverse, and equitable.</P>
+          <P>Our years and combined experiences means the team brings a novel perspective to the table. We take these perspectives and work to actively shift industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</P>
+          <P>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</P>
+        </Content>
+      </ContentCenter>
+      <ImgRight>
+        <Img alt="Woman graphic with space scene in hair" role="presentation" fadeIn={false} fixed={data.woman.childImageSharp.fixed} />
+      </ImgRight>
+    </AboutSection>
+  )
+}
+export default About

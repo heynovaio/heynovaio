@@ -3,6 +3,7 @@ import React from 'react'
 import img1 from '../../images/planet-bg.webp'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { Link } from "gatsby"
 
 const HeroSection = styled.section`
   background-color: #051627;
@@ -55,7 +56,7 @@ const ContentContainer = styled.div`
     padding-top: 265px;
   }
 `
-const Button = styled.a`
+const Button = styled(Link)`
   border-radius: 3px;
   width: 197px;
   padding: 15px 0 18px;
@@ -69,6 +70,9 @@ const Button = styled.a`
   color: #ffffff;
   font-family: Stolzl;
   text-decoration: none;
+  &:hover {
+    background: #ae2a09;
+  }
 `
 const ImgContainer = styled.div`
   position: absolute;
@@ -125,7 +129,7 @@ function Hero () {
       Planet3: file(relativePath: { eq: "hero-planet3.png" }) {
         childImageSharp {
           fixed(width: 153, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }
@@ -137,13 +141,13 @@ function Hero () {
     <HeroSection>
       <ImgContainer>
         <Planet1>
-          <Img alt="Planet" role="presentation" fixed={data.Planet1.childImageSharp.fixed} />
+          <Img alt="Planet" role="presentation" fadeIn={false} fixed={data.Planet1.childImageSharp.fixed} />
         </Planet1>
         <Planet2>
-          <Img alt="Planet 2" role="presentation" fixed={data.Planet2.childImageSharp.fixed} />
+          <Img alt="Planet 2" role="presentation" fadeIn={false} fixed={data.Planet2.childImageSharp.fixed} />
         </Planet2>
         <Planet3>
-          <Img alt="Planet 3" role="presentation" fixed={data.Planet3.childImageSharp.fixed} />
+          <Img alt="Planet 3" role="presentation" fadeIn={false} fixed={data.Planet3.childImageSharp.fixed} />
         </Planet3>
       </ImgContainer>
       <ContentContainer>
@@ -151,7 +155,7 @@ function Hero () {
         <p>
           Connecting real people to real brands through engaging and inclusive design practice
         </p>
-        <Button href="#">Book a Chat</Button>
+        <Button to="/contact">Let's Chat</Button>
       </ContentContainer>
     </HeroSection>
 

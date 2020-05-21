@@ -5,7 +5,7 @@ import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-sv
 
 const Footer = styled.section`
   padding: 30px 20px 15px;
-  background-color: #0a2239;
+  background-color: #051628;
   img {
     width: 100%;
     display: block;
@@ -36,14 +36,6 @@ const Span = styled.span`
 const Flex = styled.nav`
   display: flex;
   justify-content: center;
-`
-const FooterLink = styled.a`
-  font-size: 22px;
-  margin-bottom: 20px;
-  display: inline-block;
-  &:hover {
-    color: #d5330d;
-  }
 `
 const Icon = styled.a`
   font-size: 70px;

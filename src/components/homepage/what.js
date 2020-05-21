@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
 import img2 from '../../images/spaceship.png'
+import { PopupText } from 'react-calendly'
 
 const WhatContainer = styled.section`
   padding: 0 20px;
@@ -132,19 +132,22 @@ const Planet = styled.div`
     width: 40px;
   }
 `
-const Button = styled.button`
-  background-color: #D5330D;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -1px;
-  text-align: center;
-  color: #fff;
-  font-family: Stolzl;
-  padding: 14px 32px;
-  max-width: 200px;
-  text-decoration: none;
-  margin-top: 20px;
-  border: none;
+const Button = styled.div`
+  a {
+    background-color: #D5330D;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #fff;
+    font-family: Stolzl;
+    padding: 14px 32px;
+    max-width: 200px;
+    text-decoration: none;
+    margin-top: 20px;
+    border: none;
+    display: inline-block;
+  }
 `
 function What () {
   const data = useStaticQuery(graphql`
@@ -170,9 +173,9 @@ function What () {
       <ContentContainer>
         <H2>Our methods connect your brand to real users by:</H2>
         <ImgPerson>
-          <Img alt="Girl" role="presentation" fluid={data.Girl.childImageSharp.fluid} />
+          <Img alt="Girl" role="presentation" fadeIn={false} fluid={data.Girl.childImageSharp.fluid} />
           <Planet>
-            <Img alt="Planet" role="presentation" fluid={data.Planet.childImageSharp.fluid} />
+            <Img alt="Planet" role="presentation" fadeIn={false} fluid={data.Planet.childImageSharp.fluid} />
           </Planet>
         </ImgPerson>
         <Content>
@@ -188,7 +191,12 @@ function What () {
             <H3>Connecting you to your users</H3>
             <P>We strive to understand your users. Our inclusive and innovative approaches ensure your product is accessible to everyone.</P>
           </Text>
-          <Button href="#">Get a Quote</Button>
+          <Button>
+            <PopupText
+              text="Get a Quote"
+              url="https://calendly.com/hey-nova/free-consultation"
+            />
+          </Button>
         </Content>
       </ContentContainer>
     </WhatContainer>

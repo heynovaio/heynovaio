@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/core'
 import React from 'react'
-import img1 from '../../images/group-3.svg'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-const Who = styled.section`
+const WhoSection = styled.section`
   padding: 0 20px;
   @media (max-width: 768px) {
     padding: 75px 20px;
@@ -109,16 +110,33 @@ const ImgContainer = styled.div`
     display: none;
   }
 `
-export default () => (
-  <Who>
-    <ContentCenter>
-      <ImgContainer>
-        <img role="presentation" alt="" src={img1}/>
-      </ImgContainer>
-      <Content>
-        <H2>A digital design agency forging a bold path forward</H2>
-        <P>Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.</P>
-      </Content>
-    </ContentCenter>
-  </Who>
-)
+function Who () {
+
+  const data = useStaticQuery(graphql`
+    query {
+      astro: file(relativePath: { eq: "astronaut.png" }) {
+        childImageSharp {
+          fixed(width: 255, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <WhoSection>
+      <ContentCenter>
+        <ImgContainer>
+          <Img alt="Astronaut" role="presentation" fadeIn={false} fixed={data.astro.childImageSharp.fixed} />
+        </ImgContainer>
+        <Content>
+          <H2>A digital design agency forging a bold path forward</H2>
+          <P>Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.</P>
+        </Content>
+      </ContentCenter>
+    </WhoSection>
+  )
+}
+
+export default Who

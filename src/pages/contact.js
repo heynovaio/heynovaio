@@ -2,6 +2,7 @@ import React from "react"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import Contact from "../components/homepage/contact"
+import { PopupText } from 'react-calendly'
 
 const H1 = styled.h1`
   font-size: 110px;
@@ -26,7 +27,7 @@ const P = styled.p`
 `
 const Container = styled.div`
   max-width: 1288px;
-  padding: 215px 0 215px;
+  padding: 145px 0 145px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -43,12 +44,32 @@ const ActionContainer = styled.div`
   font-size: 20px;
   vertical-align: middle;
   text-align: center;
+  padding-bottom: 40px;
   @media (max-width: 767px) {
     padding: 0 5px;
   }
   @media (min-width: 767px) {
     display: flex;
     justify-content: space-between;
+  }
+`
+const Button = styled.div`
+  a {
+    background: #d5330d;
+    color: #fff;
+    padding: 18px 25px 22px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 250px;
+    text-align: center;
+    font-family: Ubuntu;
+    display: inline-block;
+    @media (max-width: 767px) {
+      width: 300px;
+    }
+    &:hover {
+      background: #b33113;
+    }
   }
 `
 const A = styled.a`
@@ -75,6 +96,92 @@ const Span = styled.span`
     display: block;
   }
 `
+const Form = styled.form`
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  border: 1px solid #051628;
+  padding: 24px;
+  margin-top: 50px;
+  h2 {
+    line-height: 1.2;
+    font-size: 34px;
+    margin: 0px 0 0;
+    font-weight: 700;
+    color: #051628;
+    line-height: 2;
+    font-family: Stolzl;
+    text-align: center;
+  }
+  p {
+    color: #051628;
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-family: Ubuntu;
+    text-align: center;
+  }
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    margin-bottom: 15px;
+    color: #051628;
+    font-family: Ubuntu;
+  }
+  textarea,
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    margin-bottom: 25px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #051628;
+    font-size: 18px;
+    font-weight: 300;
+    color: #051628;
+    line-height: 1.5;
+    height: 38px;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: Ubuntu;
+    &:focus {
+      border-bottom: 2px solid #d5330d;
+    }
+  }
+  textarea {
+    border: 2px solid #051628;
+    height: 200px;
+    padding: 15px;
+    font-family: Ubuntu;
+    &:focus {
+      border-color: #d5330d;
+    }
+  }
+  input[type="submit"] {
+    outline: none;
+    -webkit-appearance: none;
+    margin-top: 12px;
+    font-family: Ubuntu;
+    background: #d5330d;
+    color: #fff;
+    padding: 18px 25px 22px;
+    font-size: 20px;
+    text-decoration: none;
+    width: 250px;
+    text-align: center;
+    font-family: Ubuntu;
+    display: inline-block;
+    @media (max-width: 767px) {
+      width: 300px;
+    }
+    &:hover {
+      background: #b33113;
+    }
+  }
+`
 export default () => (
   <Layout>
     <Main>
@@ -82,10 +189,34 @@ export default () => (
         <H1>Hey There</H1>
         <P>How can we help you?</P>
         <ActionContainer>
-          <A href="#">Book a Chat</A>
+          <Button>
+            <PopupText
+              text="Book a Chat"
+              url="https://calendly.com/hey-nova/free-consultation"
+            />
+          </Button>
           <Span>or</Span>
           <A href="mailto:info@heynova.io">Email us a Question</A>
         </ActionContainer>
+        <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
+          <h2>Leave us a Message</h2>
+          <p>We will get back to you shortly!</p>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <label for="cf-FNAME">Name </label>
+              <input type="text" required name="FNAME" class="" id="cf-FNAME"/>
+            </div>
+            <div class="mc-field-group">
+              <label for="cf-EMAIL">Email </label>
+              <input type="email" name="EMAIL" required class="required email" id="cf-EMAIL"/>
+            </div>
+            <div class="mc-field-group">
+              <label for="cf-MSG">Type Your Message </label>
+              <textarea name="MSG" class="required msg" id="cf-MSG"></textarea>
+            </div>
+            <input type="submit" value="I Want to Chat" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>
+          </div>
+        </Form>
       </Container>
     </Main>
     <Contact/>

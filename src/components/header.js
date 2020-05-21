@@ -20,7 +20,7 @@ const Header = styled.header`
 `
 const ImgContainer = styled(Link)`
   max-width: 56px;
-  padding-top:16px;
+  padding-top: 14px;
   padding-left: 15px;
   position: absolute;
   left: 0;
@@ -28,9 +28,9 @@ const ImgContainer = styled(Link)`
 `
 const LinkContainer = styled.div`
   display: flex;
-  margin-right: 70px;
+  margin-right: 56px;
   a {
-    padding: 23px 12px 20px;
+    padding: 16px 12px 20px;
     font-size: 20px;
     font-family: Stolzl;
     font-weight: 400;
@@ -58,19 +58,23 @@ const showDrop = () => {
   document.getElementById("burger").classList.toggle("open");
 }
 const Hamburger = () => (
-  <HamburgerStyle id="burger" onClick={showDrop}>
+  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false">
     <div/><div/><div/>
   </HamburgerStyle>
 )
 
-const HamburgerStyle = styled.div`
-  width: 45px;
-  height: 32px;
+const HamburgerStyle = styled.button`
+  width: 68px;
+  height: 58px;
   position: fixed;
   z-index: 4;
   cursor: pointer;
-  right: 20px;
-  top: 20px;
+  right: 0px;
+  top: 0px;
+  padding: 15px;
+  background: #041729;
+  border: none;
+
   div {
     position: absolute;
     background-color: #d5330d;
@@ -78,17 +82,17 @@ const HamburgerStyle = styled.div`
   div:first-of-type {
     width: 38px;
     height: 4px;
-    top: 0;
+    top: 14px;
   }
   div:nth-of-type(2) {
     width: 38px;
     height: 4px;
-    top: 12px;
+    top: 26px;
   }
   div:last-of-type {
     width: 38px;
     height: 4px;
-    top: 24px;
+    top: 38px;
   }
   &.open {
     div {
@@ -170,34 +174,36 @@ export default () => (
     <ImgContainer to="/">
       <img role="presentation" alt="Hey Nova Logo" src={img1}/>
     </ImgContainer>
-    <LinkContainer>
-      <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+    <LinkContainer tabindex="-1">
+      <LinkedInLink tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
       </LinkedInLink>
-      <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+      <FaceBookLink tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
          <FontAwesomeIcon icon={faFacebook} />
       </FaceBookLink>
-      <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+      <InstagramLink tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
          <FontAwesomeIcon icon={faInstagram} />
       </InstagramLink>
     </LinkContainer>
-    <Hamburger/>
-    <Menu id="drop">{/*whole drop down*/}
-      <Nav>
-        <div><Link onClick={showDrop} to="/">Home</Link></div>
-        <div><Link onClick={showDrop} to="/contact/">Get in Touch</Link></div>
-      </Nav>
-      <LinkContainerMenu>
-        <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
-           <FontAwesomeIcon icon={faLinkedinIn} />
-        </LinkedInLink>
-        <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
-           <FontAwesomeIcon icon={faFacebook} />
-        </FaceBookLink>
-        <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
-           <FontAwesomeIcon icon={faInstagram} />
-        </InstagramLink>
-      </LinkContainerMenu>
-    </Menu>
+    <Nav role="navigation">
+      <Hamburger/>
+      <Menu id="drop">{/*whole drop down*/}
+        <ul>
+          <li><Link onClick={showDrop} to="/">Home</Link></li>
+          <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
+        </ul>
+        <LinkContainerMenu>
+          <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+             <FontAwesomeIcon icon={faLinkedinIn} />
+          </LinkedInLink>
+          <FaceBookLink target="blank" href="https://www.facebook.com/heynovaio/">
+             <FontAwesomeIcon icon={faFacebook} />
+          </FaceBookLink>
+          <InstagramLink target="blank" href="https://www.instagram.com/heynovaio/">
+             <FontAwesomeIcon icon={faInstagram} />
+          </InstagramLink>
+        </LinkContainerMenu>
+      </Menu>
+    </Nav>
   </Header>
 )
