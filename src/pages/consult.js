@@ -84,7 +84,7 @@ export default () => (
           <H1>Life is currently unknown</H1>
           <P>How we do business is changing. If you are thinking of how you might be able to digitize your business to adapt to the new norms, we can help you with the information you need to get that journey started.
           </P>
-          <P>Book your free one-on-one session now, to start learning how to digitize your business,</P>
+          <P>Book your free one-on-one session now, to start learning how to digitize your business.</P>
           <Button>
             <PopupText
               text="Schedule Now"

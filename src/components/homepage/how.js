@@ -7,6 +7,9 @@ import Img from 'gatsby-image'
 const HowSection = styled.section`
   padding: 0 0 80px;
   position: relative;
+  @media (max-width: 780px) {
+    padding-bottom: 0;
+  }
 `
 const H2 = styled.h2`
   font-size: 50px;
@@ -100,8 +103,8 @@ const ImgContainer = styled.div`
   @media (max-width: 1026px) {
     bottom: -40px;
   }
-  @media (max-width: 960px) {
-    bottom: -58px;
+  @media (max-width: 780px) {
+    display: none;
   }
 `
 const Elem = ({children}) => (

@@ -112,6 +112,7 @@ const ImgContainer = styled.div`
   position: absolute;
 `
 const Button = styled.div`
+  margin-bottom: 30px;
   a {
     background-color: #D5330D;
     font-size: 18px;

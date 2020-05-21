@@ -3,6 +3,10 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+body,
+html {
+  height: auto !important; /* reset default to allow scroll navigation */
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -187,7 +191,6 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 * {
   box-sizing: inherit;

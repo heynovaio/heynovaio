@@ -108,7 +108,7 @@ const ImgPerson = styled.div`
   @media (min-width: 1026px) {
     object-fit: contain;
     position: sticky;
-    top: 180px;
+    top: 190px;
   }
   @media (max-width: 560px) {
     top: -67px;

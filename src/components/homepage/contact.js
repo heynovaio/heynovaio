@@ -66,6 +66,9 @@ const Box = styled.div`
     flex-wrap: wrap;
     margin: 0;
   }
+  @media (max-width: 780px) {
+    background: none;
+  }
 `
 const Elem = styled.div`
   font-size: 20px;
@@ -90,11 +93,15 @@ const EmailLink = styled.a`
 `
 const TextBox = styled.div`
   margin: 20px;
+  @media (max-width: 780px) {
+    margin: 20px auto;
+    text-align: center;
+  }
 `
 const Image = styled.div`
   max-width: 277px;
   @media (max-width: 960px) {
-    margin: 20px auto;
+    margin: 20px auto 0px;
   }
   img {
     display: block;

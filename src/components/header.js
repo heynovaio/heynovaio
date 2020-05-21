@@ -142,6 +142,13 @@ const Menu = styled.div `
   opacity: 0;
   transition: .25s all;
   visibility: hidden;
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  li {
+    list-style: none;
+  }
   &.open {
     display: block;
     height: 100vh;
