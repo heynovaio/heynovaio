@@ -206,7 +206,7 @@ export default () => (
           <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
              <FontAwesomeIcon icon={faFacebook} />
           </FaceBookLink>
-          <InstagramLink aria-label=Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
+          <InstagramLink aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
              <FontAwesomeIcon icon={faInstagram} />
           </InstagramLink>
         </LinkContainerMenu>
