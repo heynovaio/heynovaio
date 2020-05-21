@@ -169,7 +169,7 @@ function Contact () {
           <TextBox>
             <H3>Kirsten Dodd</H3>
             <Elem><EmailLink href="mailto:kirsten@heynova.io">kirsten@heynova.io</EmailLink></Elem>
-            <LinkedInLink target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+            <LinkedInLink aria-label="Kirsten's LinkedIn"  target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
                <FontAwesomeIcon icon={faLinkedinIn} />
             </LinkedInLink>
           </TextBox>
@@ -181,7 +181,7 @@ function Contact () {
           <TextBox>
             <H3>Bryony Anderson</H3>
             <Elem><EmailLink href="mailto:bryony@heynova.io">bryony@heynova.io</EmailLink></Elem>
-            <LinkedInLink target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
+            <LinkedInLink aria-label="Bryony's LinkedIn"  target="blank" href="https://www.linkedin.com/in/bryony-anderson-266943160/">
                <FontAwesomeIcon icon={faLinkedinIn} />
             </LinkedInLink>
           </TextBox>

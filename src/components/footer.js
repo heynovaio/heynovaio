@@ -3,7 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
-const Footer = styled.section`
+const Footer = styled.footer`
   padding: 30px 20px 15px;
   background-color: #051628;
   img {
@@ -30,7 +30,7 @@ const P = styled.p`
   color: #2BC8D7;
 `
 const Span = styled.span`
-  color: #e43c15;
+  color: #fff;
   font-weight: 400;
 `
 const Flex = styled.nav`
