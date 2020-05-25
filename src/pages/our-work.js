@@ -16,15 +16,6 @@ const H1 = styled.h1`
 const Main = styled.div`
 
 `
-const P = styled.p`
-  color: #0a2239;
-  max-width: 556px;
-  font-size: 26px;
-  line-height: 1.64;
-  margin: 35px auto 55px;
-  font-family: Ubuntu;
-  text-align: center;
-`
 const Container = styled.div`
   max-width: 1288px;
   padding: 145px 0 145px;

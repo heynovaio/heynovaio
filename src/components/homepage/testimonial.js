@@ -247,7 +247,6 @@ function Testimonial () {
         disableAutoPlayOnAction={true}
         autoPlay={true}
         autoPlayInterval={5000}>
-
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
@@ -296,7 +295,6 @@ function Testimonial () {
                   <Name>Luke Leslie</Name>
                   <JobPosition>Owner/Operator, Pharmacy For Life </JobPosition>
                   <Place>Hartland, NB</Place>
-
                 </TestimonialDetails>
               </Content>
             </ContentCenter>
@@ -322,7 +320,6 @@ function Testimonial () {
                   <Name>Connor R. Embleton</Name>
                   <JobPosition>BC Land Surveyor, E.I.T., Partner</JobPosition>
                   <Place>Vancouver, BC</Place>
-
                 </TestimonialDetails>
               </Content>
             </ContentCenter>
