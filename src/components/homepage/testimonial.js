@@ -220,6 +220,13 @@ function Testimonial () {
           }
         }
       },
+      wb: file(relativePath: { eq: "watson-img.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 585, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      },
       quote: file(relativePath: { eq: "quote-left.png" }) {
         childImageSharp {
           fluid(maxWidth: 66, quality: 100) {
@@ -289,6 +296,32 @@ function Testimonial () {
                   <Name>Luke Leslie</Name>
                   <JobPosition>Owner/Operator, Pharmacy For Life </JobPosition>
                   <Place>Hartland, NB</Place>
+
+                </TestimonialDetails>
+              </Content>
+            </ContentCenter>
+          </Flex>
+        </div>
+        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+          <Flex>
+            <ImgCenter>
+              <Img alt="Watson and Barnard Website Screenshot" fadeIn={false} role="presentation" fluid={data.wb.childImageSharp.fluid} />
+              <SiteLink href="http://www.wbsurveys.bc.ca/" target="_blank">View site</SiteLink>
+            </ImgCenter>
+            <ContentCenter>
+              <Content>
+                <TestimonialQuote>
+                  <QuoteLeft>
+                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                  </QuoteLeft>
+                  <Quote>
+                    <p>We hired Hey Nova to create a website that would attract new clients and advertise our accomplishments within our community. Kirsten and Bryony were eager to meet with us and understand our business and needs. They helped expand our online presence and reinvent our brand. Once the new website launched, we started receiving new clients within days.</p>
+                  </Quote>
+                </TestimonialQuote>
+                <TestimonialDetails>
+                  <Name>Connor R. Embleton</Name>
+                  <JobPosition>BC Land Surveyor, E.I.T., Partner</JobPosition>
+                  <Place>Vancouver, BC</Place>
 
                 </TestimonialDetails>
               </Content>
