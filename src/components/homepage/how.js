@@ -199,7 +199,7 @@ function How () {
             <H3>Implementation</H3>
             <Elem>Web Development</Elem>
             <Elem>Mobile-first Development</Elem>
-            <Elem>Accessibile Development</Elem>
+            <Elem>Accessible Development</Elem>
             <Elem>SEO Optimization</Elem>
             <Elem>Data & Analytics</Elem>
             <Elem>Custom CMS Themes</Elem>
