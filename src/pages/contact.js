@@ -191,7 +191,7 @@ export default () => (
         <ActionContainer>
           <Button>
             <PopupText
-              text="Book a Chat"
+              text="Book a Meeting"
               url="https://calendly.com/hey-nova/free-consultation"
             />
           </Button>

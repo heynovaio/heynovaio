@@ -155,7 +155,7 @@ function Hero () {
         <p>
           Connecting real people to real brands through engaging and inclusive design practice
         </p>
-        <Button to="/contact">Let's Chat</Button>
+        <Button to="/contact">Free Consult</Button>
       </ContentContainer>
     </HeroSection>
 
