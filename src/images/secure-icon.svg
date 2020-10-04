@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="66" viewBox="0 0 77 66">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g stroke="#0FA3B1" stroke-width="2">
+                        <path d="M6 56h58.095C65.693 56 67 54.72 67 53.143V21.714C67 18.56 64.386 16 61.19 16H17.62c-3.195 0-5.81 2.56-5.81 5.714V47.43" transform="translate(-557 -2648) translate(558 2651) translate(0 6)"/>
+                        <path d="M11.619 24v26.667c0 2.944-2.614 5.333-5.81 5.333C2.615 56 0 53.61 0 50.667v-48C0 1.195 1.307 0 2.905 0h12.142c1.22 0 2.294.69 2.73 1.73l1.86 4.54c.406 1.04 1.51 1.73 2.7 1.73H55.19C58.386 8 61 10.39 61 13.333v5.334H17.429c-3.196 0-5.81 2.389-5.81 5.333z" transform="translate(-557 -2648) translate(558 2651) translate(0 6)"/>
+                    </g>
+                    <path fill="#0A2239" stroke="#0A2239" stroke-width="5" d="M73 27.5C73 33.851 67.858 39 61.5 39S50 33.851 50 27.5 55.142 16 61.5 16 73 21.149 73 27.5z" transform="translate(-557 -2648) translate(558 2651)"/>
+                    <path stroke="#0A2239" stroke-width="5" d="M54 19V8.55C54 3.83 57.584 0 62 0c2.208 0 4.208.958 5.664 2.497C69.104 4.053 70 6.19 70 8.55V19" transform="translate(-557 -2648) translate(558 2651)"/>
+                    <path fill="#0A2239" stroke="#0C7489" stroke-width="2" d="M73 27.5C73 33.851 67.858 39 61.5 39S50 33.851 50 27.5 55.142 16 61.5 16 73 21.149 73 27.5z" transform="translate(-557 -2648) translate(558 2651)"/>
+                    <path stroke="#0C7489" stroke-width="2" d="M54 19V8.55C54 3.83 57.584 0 62 0c2.208 0 4.208.958 5.664 2.497C69.104 4.053 70 6.19 70 8.55V19" transform="translate(-557 -2648) translate(558 2651)"/>
+                    <path fill="#D5330D" fill-rule="nonzero" d="M64 26c0 1.105-1.117 2-2.5 2s-2.5-.895-2.5-2 1.117-2 2.5-2 2.5.895 2.5 2z" transform="translate(-557 -2648) translate(558 2651)"/>
+                </g>
+                <path stroke="#D5330D" stroke-width="2" d="M61.5 27L61.5 30" transform="translate(-557 -2648) translate(558 2651)"/>
+            </g>
+        </g>
+    </g>
+</svg>

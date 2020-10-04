@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="69" viewBox="0 0 67 69">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g stroke-width="2">
+                            <path stroke="#0FA3B1" d="M12.161 23.679C12.161 24.96 11.11 26 9.823 26c-1.287 0-2.34-1.04-2.34-2.321 0-1.282 1.053-2.322 2.34-2.322 1.286 0 2.338 1.04 2.338 2.322z" transform="translate(-59 -2856) translate(0 2193) translate(60 663) translate(35 2)"/>
+                            <path stroke="#D5330D" d="M26.194 23.679c0 1.281-1.053 2.321-2.34 2.321-1.285 0-2.338-1.04-2.338-2.321 0-1.282 1.053-2.322 2.339-2.322s2.339 1.04 2.339 2.322zM0 0h2.782c.56 0 1.06.378 1.21.919l4.24 15.815c.3 1.083 1.285 1.837 2.42 1.837h15.542" transform="translate(-59 -2856) translate(0 2193) translate(60 663) translate(35 2)"/>
+                            <path fill="#0A2239" stroke="#D5330D" d="M8.42 14.857h17.05c.599 0 1.11-.415 1.222-.986L29 2.786H4.677" transform="translate(-59 -2856) translate(0 2193) translate(60 663) translate(35 2)"/>
+                        </g>
+                        <path fill="#0A2239" d="M13.59 56.489s-1.074-5.718-3.221-8.584C5.436 41.333 0 33.273 0 24.8 0 11.103 10.952 0 24.462 0s24.461 11.103 24.461 24.8L53 37.2h-6.795v8.267c0 3.043-2.434 5.51-5.436 5.51h-2.256c-1.87 0-3.5 1.29-3.954 3.128-.384 1.583-.58 3.206-.585 4.836V62H13.59" transform="translate(-59 -2856) translate(0 2193) translate(60 663)"/>
+                        <path fill="#0A2239" stroke="#0FA3B1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.82 55.844s-1.012-5.348-3.038-8.03C5.128 41.668 0 34.128 0 26.2 0 13.387 10.332 3 23.077 3c12.745 0 23.077 10.387 23.077 23.2L50 37.8h-6.41v7.733c0 2.848-2.296 5.156-5.128 5.156h-2.129c-1.763 0-3.301 1.206-3.73 2.926h0c-.363 1.48-.548 2.999-.552 4.524V61h-19.23" transform="translate(-59 -2856) translate(0 2193) translate(60 663)"/>
+                        <path fill="#0A2239" d="M7 55H23V65H7z" transform="translate(-59 -2856) translate(0 2193) translate(60 663)"/>
+                        <path fill="#0A2239" stroke="#0C7489" stroke-width="2" d="M9 58H13V68H9zM0 52H4V68H0zM17 47H21V68H17z" transform="translate(-59 -2856) translate(0 2193) translate(60 663)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
