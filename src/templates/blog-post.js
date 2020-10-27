@@ -78,7 +78,8 @@ const TitleBox = styled.div`
     margin: 40px -20px 1.5rem;
     width: 100vw;
     position: relative;
-    transform: translateY(0);
+    transform: inherit;
+    top: 0;
     h1{
       font-size: 40px;
     }
@@ -125,10 +126,13 @@ const BlogDate = styled.small`
     margin-right: .75rem;
     transform: translateY(-.25rem);
   }
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `
 const BlogTag = styled.small`
   font-family: Ubuntu;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 0.23px;
   color: #d5330d;
   font-weight: 700;
@@ -283,6 +287,7 @@ const SocialButtons = styled.div`
   @media (min-width: 1068px) {
     position: sticky;
     top: 20px;
+    z-index: 20;
   }
   @media (max-width: 1068px) {
     margin-top: 60px;
@@ -437,7 +442,7 @@ export default function BlogPost({ data }) {
           <BlogDate>{post.frontmatter.date}</BlogDate> 
         </TitleBox>
         <ImageBox>
-          <Img fluid={featuredImgFluid}/>
+          <Img alt="featured blog image" role="presentation" fluid={featuredImgFluid}/>
         </ImageBox>
       </HeaderContainer>
       <ContentContainer>
@@ -449,8 +454,8 @@ export default function BlogPost({ data }) {
                 <Img fluid={bioImgFluid}/>
               </BioImageBox>
               <BioTextBox>
-                <h4 class="BioH4">Written by </h4>
-                <h3 class="BioH3">{post.frontmatter.author}</h3>
+                <h2 class="BioH4">Written by </h2>
+                <span class="BioH3">{post.frontmatter.author}</span>
                 <p class="BioP">{post.frontmatter.bio}</p>
               </BioTextBox>
             </BioBox>

@@ -5,7 +5,7 @@ category: accessibility
 featuredImage: ../images/student-on-laptop.jpg
 
 author: Bryony Anderson
-bio: Let’s begin with the most obvious one. It is the right thing to do. When you say that web accessibility is not important, you are saying that people with disabilities are not important. 
+bio: British tea drinker, dog lover, whiskey enthusiastic, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
 bioImage: ../images/bryony.jpg
 
 rightQuote: "And that’s still not all. Web accessibility helps people with all sorts of limitations."
