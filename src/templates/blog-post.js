@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import { Link } from "gatsby"
+import SEO from "../components/seo"
 
 import {
   FacebookShareButton,
@@ -407,6 +408,12 @@ const Button = styled(Link)`
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
+
+  const siteTitle = post.frontmatter.title
+  const image = post.frontmatter.featuredImage
+    ? post.frontmatter.featuredImage.childImageSharp.resize
+    : null
+
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   const bioImgFluid = post.frontmatter.bioImage.childImageSharp.fluid
 
@@ -417,7 +424,12 @@ export default function BlogPost({ data }) {
   const tags = post.frontmatter.category;
 
   return (
-    <Layout>
+    <Layout title={siteTitle}>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+        image={image}
+      />
       <HeaderContainer>
         <TitleBox>
           <BlogTag>{post.frontmatter.category}</BlogTag>

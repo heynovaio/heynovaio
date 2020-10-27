@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Hey Nova`,
     description: `Connecting real people to real brands through engaging and inclusive design practice.`,
-    author: `@gatsbyjs`,
+    author: `@heynovaio`,
     siteUrl: `http://heynova.io/`,
   },
   plugins: [
