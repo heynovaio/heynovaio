@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -129,6 +130,11 @@ export default function Blog({ data }) {
 
   return (
     <Layout>
+      <SEO
+        title="Hey Nova | Blog | Branding, Designing, Developing"
+        description="Evolving the way companies communicate to their audience by creating cohesive brands, user-centred design, and inclusive code."
+        keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
+      />
       <ContentContainer>
         <h1>Hey, Take a Gander</h1>
         <BlogPreview>

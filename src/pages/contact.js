@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import Contact from "../components/homepage/contact"
 import { PopupText } from 'react-calendly'
+import SEO from "../components/seo"
 
 const H1 = styled.h1`
   font-size: 110px;
@@ -187,6 +188,11 @@ const Form = styled.form`
 `
 export default () => (
   <Layout>
+    <SEO
+      title="Hey Nova | Contact | Branding, Designing, Developing"
+      description="Evolving the way companies communicate to their audience by creating cohesive brands, user-centred design, and inclusive code."
+      keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
+    />
     <Main>
       <Container>
         <H1>Hey There</H1>
