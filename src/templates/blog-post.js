@@ -1,13 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { PopupText } from 'react-calendly'
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
+import { Link } from "gatsby"
+
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+  LinkedinShareButton,
+  RedditIcon,
+  RedditShareButton,
+  TwitterIcon,
+  TwitterShareButton
+} from "react-share";
 
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 100px 20px 20px;
+  padding: 20px 20px 20px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -17,32 +28,37 @@ const ContentContainer = styled.div`
     padding-top: 10px;
   }
 `
-
 const HeaderContainer = styled.div`
   over-flow: auto;
   white-space: nowrap;
   height: fit-content;
   display: block;
   position: relative;
-  margin-bottom: 4rem;
-
+  margin: 0 auto 1rem;
+  max-width: 1400px;
+  padding: 100px 20px 20px;
+  @media (min-width: 768px) {
+    min-height: 778px;
+  }
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     white-space:wrap;
-    overflow: 
+    padding-top: 10px;
  }
 `
 const TitleBox = styled.div`
   display: inline-block;
   background-color: #051628;
-  width: 55%;
-  padding: 3.25rem 2.5rem;
+  width: 60%;
+  padding: 3rem 2.5rem 4rem;
+  margin-left: -4%;
   white-space: pre-line;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   word-wrap: break-word;
+  box-shadow: 20px 14px 22px 10px rgb(5 23 40 / 52%);
   h1{
     font-family: Stolzl;
     font-size: 60px;
@@ -53,6 +69,9 @@ const TitleBox = styled.div`
     font-weight: 400; 
     padding: 1rem 0;
     text-transform: Capitalize;
+  }
+  @media (max-width: 1400px) {
+    margin-left: 0;
   }
   @media (max-width: 768px) {
     margin: 40px -20px 1.5rem;
@@ -73,6 +92,18 @@ const ImageBox = styled.div`
   Img{
     max-width: 100%;
     height: auto;
+    position: absolute;
+    display: block;
+    filter: contrast(1.25);
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(5,22,40,0.2679446778711485) 0%, rgba(43,200,215,0.3519782913165266) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -98,23 +129,42 @@ const BlogTag = styled.small`
   font-family: Ubuntu;
   font-size: 18px;
   letter-spacing: 0.23px;
-  color: #ffffff;
+  color: #d5330d;
+  font-weight: 700;
   text-transform: uppercase;
 `
 
 const BlogBox = styled.div`
-  display: flex-box;
-  justify-content: center;
+  @media (min-width: 1068px) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    grid-column-gap: 40px;
+  }
+  @media (max-width: 1068px) {
+    margin-top: 40px;
+  }
 `
 const LeftSide = styled.div`
-  width: 56%;
+  max-width: 760px;
+  &:before {
+    width: 125px;
+    height: 125px;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    border-top: 5px solid #d53410;
+    border-left: 5px solid #d53410;
+    top: -20px;
+    left: -32px;
+  }
   h2{
     font-family: Stolzl;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 0.38px;
     color: #051628;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1rem;
   }
   p{
     font-family: Ubuntu;
@@ -147,6 +197,21 @@ const LeftSide = styled.div`
     color: #051628;
     list-style: disc;
     margin: 2rem 0;
+    padding-left: 34px;
+    list-style: none;
+    li {
+      position: relative;
+      &:before {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #0d7489;
+        content: '';
+        position: absolute;
+        left: -21px;
+        top: 12px;
+      }
+    }
   }
   ol{
     font-family: Ubuntu;
@@ -154,23 +219,115 @@ const LeftSide = styled.div`
     line-height: 1.75;
     letter-spacing: 0.25px;
     color: #051628;
-    list-style: decimal;
-    margin: 2rem 0;
+    margin: 2rem 0 2rem .75rem;
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    list-style-position: outside;
+    border-left: 4px solid #041829;
+    padding-left: 20px;
+    li{
+      padding-left: 0;
+      counter-increment: my-awesome-counter;
+      line-height: 1.5;
+      &:before{
+        content: counter(my-awesome-counter) ". ";
+        color: #d53410;
+        font-weight: bold;
+        left: 0;
+        font-size: 1.4rem;
+        margin-right: .25rem;
+      }
+    }
   }
   li{
 
   }
+  blockquote {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+    color: #0fa3b1;
+    max-width: 600px;
+    margin: 45px 0 60px 40px;
+    p {
+      color: #0fa3b1;
+      font-size: 28px;
+    }
+    a {
+      color: #051628;
+    }
+  }
+  .bluebox {
+    background: #0d7489;
+    padding: 1rem 2rem;
+    margin: 2rem 0 2rem -3rem;
+    color: #fff;
+    h2 {
+      margin-bottom: 0;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+    }
+    @media (max-width: 1068px) {
+      margin-left: 0;
+    }
+  }
 
 `
 const RightSide = styled.div`
-  width: 44%;
-  
+  position: relative;
+`
+const SocialButtons = styled.div`
+  @media (min-width: 1068px) {
+    position: sticky;
+    top: 20px;
+  }
+  @media (max-width: 1068px) {
+    margin-top: 60px;
+  }
+  text-align: center;
+  h2 {
+    font-family: Stolzl;
+    font-size: 26px;
+    font-weight: bold;
+    color: #051628;
+  }
+  button {
+    display: block;
+    margin: 10px auto;
+    @media (max-width: 1068px) {
+      display: inline-block;
+      margin: 0 8px;
+    }
+  }
+`
+const Quote = styled.blockquote`
+  font-family: Stolzl;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0.31px;
+  color: #0fa3b1;
+  position: sticky;
+  top: 0px;
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 500px;
+
+  @media (min-width: 1068px) {
+    padding-top: 430px;
+  }
+`
+const QuoteContainer = styled.div`
+  position: relative;
+  height: 100%;
 `
 const BioBox = styled.div`
   background-color: #051628;
   padding: 1.5rem;
   display: flex;
   justify-content: right;
+  margin-top: 4em;
   @media (max-width: 768px) {
     display: block;
  }
@@ -223,7 +380,7 @@ const ConsultBox = styled.div`
   max-width: 625px;
   text-align: center;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 8rem 0 7rem;
   p{
     font-family: Ubuntu;
     font-size: 25px;
@@ -233,20 +390,19 @@ const ConsultBox = styled.div`
   }
 `
 
-const Button = styled.div`
-  a {
-    background-color: #D5330D;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    font-family: Stolzl;
-    padding: 14px 24px;
-    text-decoration: none;
-    margin-top: 14px;
-    border: none;
-    display: inline-block;
-  }
+const Button = styled(Link)`
+  background-color: #D5330D;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  font-family: Stolzl;
+  padding: 14px 24px;
+  text-decoration: none;
+  margin-top: 14px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
 `
 
 export default function BlogPost({ data }) {
@@ -254,19 +410,25 @@ export default function BlogPost({ data }) {
   const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   const bioImgFluid = post.frontmatter.bioImage.childImageSharp.fluid
 
+  //For the social share buttons
+  const title = `Read ${post.frontmatter.title} `;
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+  const twitterHandle = "heynovaio";
+  const tags = post.frontmatter.category;
+
   return (
     <Layout>
+      <HeaderContainer>
+        <TitleBox>
+          <BlogTag>{post.frontmatter.category}</BlogTag>
+          <h1>{post.frontmatter.title}</h1>
+          <BlogDate>{post.frontmatter.date}</BlogDate> 
+        </TitleBox>
+        <ImageBox>
+          <Img fluid={featuredImgFluid}/>
+        </ImageBox>
+      </HeaderContainer>
       <ContentContainer>
-        <HeaderContainer>
-          <TitleBox>
-            <BlogTag>{post.frontmatter.category}</BlogTag>
-            <h1>{post.frontmatter.title}</h1>
-            <BlogDate>{post.frontmatter.date}</BlogDate> 
-          </TitleBox>
-          <ImageBox>
-            <Img fluid={featuredImgFluid}/>
-          </ImageBox>
-        </HeaderContainer>
         <BlogBox>
           <LeftSide>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -282,16 +444,32 @@ export default function BlogPost({ data }) {
             </BioBox>
           </LeftSide>
           <RightSide>
+            <SocialButtons>
+              <h2>Share it</h2>
+              <FacebookShareButton url={url} >
+                <FacebookIcon  size={60} round={true}/>
+              </FacebookShareButton>
+
+              <TwitterShareButton url={url} title={title} via={twitterHandle} hashtags={tags}>
+                <TwitterIcon  size={60} round={true} />
+              </TwitterShareButton>
+
+              <LinkedinShareButton url={url} >
+                <LinkedinIcon  size={60} round={true}/>
+              </LinkedinShareButton>
+
+              <RedditShareButton url={url} title={title} >
+                <RedditIcon  size={60} round={true} />
+              </RedditShareButton>
+            </SocialButtons>
+            <QuoteContainer>
+              <Quote>{post.frontmatter.rightQuote}</Quote>
+            </QuoteContainer>
           </RightSide>
         </BlogBox>
         <ConsultBox>
           <p>Interested to learn more about what we do at Hey Nova?  Book a free consult or send us an email!</p>
-          <Button>
-            <PopupText
-              text="Book a Free Consult"
-              url="https://calendly.com/hey-nova/free-consultation"
-            />
-          </Button>
+          <Button to="/contact">Get in Touch</Button>
         </ConsultBox>
       </ContentContainer>
     </Layout>
@@ -308,6 +486,7 @@ export const query = graphql`
         category
         author
         bio
+        rightQuote
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 800) {
@@ -322,6 +501,9 @@ export const query = graphql`
             }
           }
         }
+      }
+      fields {
+        slug
       }
     }
   }

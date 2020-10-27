@@ -1,13 +1,23 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Hey Nova`,
+    description: `Connecting real people to real brands through engaging and inclusive design practice.`,
     author: `@gatsbyjs`,
     siteUrl: `http://heynova.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: [{ regex: "^/blog" }],
+        excludePaths: ["/blog"],
+        height: 10,
+        color: `#d5330d;`,
+        footerHeight: 500,
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,7 +50,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
+              maxWidth: 760,
             },
           },
         ],

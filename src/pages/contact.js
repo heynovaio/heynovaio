@@ -12,6 +12,9 @@ const H1 = styled.h1`
   margin: 0 0 25px;
   font-family: Stolzl;
   text-align: center;
+  @media (max-width: 767px) {
+    font-size: 68px;
+  }
 `
 const Main = styled.div`
 
@@ -203,15 +206,15 @@ export default () => (
           <p>We will get back to you shortly!</p>
           <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
-              <label for="cf-FNAME">Name </label>
+              <label htmlFor="cf-FNAME">Name </label>
               <input type="text" required name="FNAME" class="" id="cf-FNAME"/>
             </div>
             <div class="mc-field-group">
-              <label for="cf-EMAIL">Email </label>
+              <label htmlFor="cf-EMAIL">Email </label>
               <input type="email" name="EMAIL" required class="required email" id="cf-EMAIL"/>
             </div>
             <div class="mc-field-group">
-              <label for="cf-MSG">Type Your Message </label>
+              <label htmlFor="cf-MSG">Type Your Message </label>
               <textarea name="MSG" class="required msg" id="cf-MSG"></textarea>
             </div>
             <input type="submit" value="I Want to Chat" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>

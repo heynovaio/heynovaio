@@ -4,22 +4,25 @@ import Img from "gatsby-image"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
 
-
 const ContentContainer = styled.div`
   max-width: 1288px;
   padding: 100px 20px 20px;
   margin: 0 auto;
   position: relative;
   h1{
-    font-family: Ubuntu;
-    font-size: 65px;
+    font-size: 110px;
     font-weight: 500;
-    line-height: 0.83;
-    letter-spacing: -0.19px;
+    line-height: 1.04;
+    color: #0a2239;
+    margin: 0 0 25px;
+    font-family: Stolzl;
     text-align: center;
-    color: #051628;
-    margin: 0;
     padding: 4rem 0;
+    @media (max-width: 767px) {
+      font-size: 68px;
+      padding-top: 4.5rem;
+      padding-bottom: 1rem;
+    }
   }
   @media (min-width: 768px) {
     min-height: 778px;
@@ -30,6 +33,7 @@ const ContentContainer = styled.div`
 `
 
 const BlogPreview = styled.div`
+  padding-bottom: 160px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 520px);
   grid-column-gap: 6rem;
@@ -74,9 +78,20 @@ const ImageBox = styled.div`
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: .5rem;
+  margin-bottom: .85rem;
   Img{
     position: absolute;
+    display: block;
+    filter: contrast(1.25);
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(5,22,40,0.2679446778711485) 0%, rgba(43,200,215,0.3519782913165266) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   @media (max-width: 768px) {
     width: 320px;
@@ -115,7 +130,7 @@ export default function Blog({ data }) {
   return (
     <Layout>
       <ContentContainer>
-        <h1>Hey, Read Our Blog</h1>
+        <h1>Hey, Take a Gander</h1>
         <BlogPreview>
           {posts.map(post => (
             <article key={post.id}>
@@ -137,7 +152,9 @@ export default function Blog({ data }) {
 
 export const pageQuery = graphql`
   query MyQuery {
-    blog: allMarkdownRemark {
+    blog: allMarkdownRemark (
+      sort: { order: DESC, fields: [frontmatter___date] }
+    )  {
       posts: nodes {
         fields{
           slug

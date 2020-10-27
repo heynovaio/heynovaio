@@ -2,10 +2,10 @@
 date: 2020-10-24
 author: Stephen Belyea
 title: How anyone can start testing for web accessibility
+featuredImage: ../images/woman-in-wheelchair.jpeg
+category: accessibility
 bio: Husband, father, habitual dork, front end developer + accessibility instigator, attempted writer, ex-pat Maritimer. 
 bioImage: ../images/stephen.jpeg
-featuredImage: ../images/kirsten.jpg
-category: accessibility
 ---
 
 _**Before we start, let’s set expectations**: the tips and testing methods ahead are for anyone to use. You don’t need to be a web designer or developer, and you don’t need specific product experience._
@@ -31,11 +31,7 @@ Fortunately, there are a few initial steps that _anyone_ in an organization can 
 
 ## <u>Test #1</u>: Use a keyboard
 
-<!-- 
-  Adobe stock image source: 
-  https://stock.adobe.com/ca/images/close-up-of-female-hands-typing-on-keyboard/107155766?prev_url=detail 
--->
-![hands poised at the keys of a mechanical style keyboard](https://as2.ftcdn.net/jpg/01/07/15/57/500_F_107155766_OWfm9pfbU8xCEFDkhbXYjNAQomqddULr.jpg)
+![hands poised at the keys of a mechanical style keyboard](../images/hands-on-mechanical-keyboard.jpeg)
 
 It is flabbergasting to see, time and time again, how infrequently design and development teams seem to test their products with a keyboard! This isn’t limited to small companies and startups, either. This extends to [the highest levels of the tech industry](https://www.cnet.com/news/for-people-with-disabilities-accessibility-techs-still-not-all-it-could-be/).
 
@@ -58,11 +54,7 @@ Keyboards are also helpful for temporary situations, such as someone eating lunc
 
 ## <u>Test #2</u>: Use a screen reader
 
-<!-- 
-  Adobe stock image source: 
-  https://stock.adobe.com/ca/images/disability-young-blind-person-happy-woman-in-headphone-typing-on-computer-keyboard-working-in-creative-workplace-office/371528441?prev_url=detail
--->
-![young woman in a cubicle wearing headphones smiles with her hands on a keyboard](https://as1.ftcdn.net/jpg/03/71/52/84/500_F_371528441_nbtJWH0l7MXU08jvAO9wT5MGIRbvQmo3.jpg)
+![young woman in a cubicle wearing headphones smiles with her hands on a keyboard](../images/woman-wearing-headphones.jpeg)
 
 Once you’ve tested the usability of your company’s website via keyboard, a helpful next step is to explore it using a screen reader. This can be a confusing experience if you’ve never used one before -- and that’s ok! This test method involves a bit more effort than the keyboard; but it can still be done for free and with no previous testing experience.
 
@@ -91,11 +83,7 @@ As with a keyboard, screen readers (especially on a phone or tablet) are helpful
 
 ## <u>Test #3</u>: Use an auditing tool
 
-<!-- 
-  Adobe stock image source: 
-  https://stock.adobe.com/ca/images/female-freelance-programmer-in-modern-headphones-sitting-in-wheelchair-and-using-computers-while-coding-web-game-at-home/353491288?prev_url=detail
--->
-![woman seated in wheelchair with headphones at a desk and two monitors both showing code onscreen](https://as1.ftcdn.net/jpg/03/53/49/12/500_F_353491288_In0MRccyDkyCrQVeSOpVp14qbPRBoZqx.jpg)
+![woman seated in wheelchair with headphones at a desk and two monitors both showing code onscreen](../images/woman-in-wheelchair.jpeg)
 
 Keyboard and screen reader testing is focused on the user’s experience of navigating your company’s website. This is a vital place to start, as it helps identify some of the largest barriers between your customer and their success! This next test, on the other hand, is more focused on the details of design and development compliance with established guidelines (generally based on [WCAG standards](https://www.w3.org/WAI/standards-guidelines/wcag/)).
 
