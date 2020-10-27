@@ -148,16 +148,6 @@ const ListBox = styled.div`
     letter-spacing: 0.25px;
   }
 `
-const P = styled.p`
-  font-size: 18px;
-  line-height: 1.7;
-  color: #0a2239;
-  margin: 20px 0 20px;
-  font-family: Ubuntu;
-  @media (max-width:960px) {
-    color: #fff;
-  }
-`
 const RowContainer = styled.div`
   position: relative;
   display: flex;
