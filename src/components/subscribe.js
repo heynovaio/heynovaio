@@ -40,13 +40,7 @@ const SubmitBox = styled.div`
     padding: 0 175px 22.5px 0;
   }
   h4{
-    font-family: Ubuntu;
-    font-size: 25px;
-    letter-spacing: 0.31px;
-    color: #0a2239;
-    font-weight: normal;
-    margin: 0;
-    padding: 6px 0;
+    
   }
   p{
     font-family: Ubuntu;
@@ -61,11 +55,24 @@ const SubmitBox = styled.div`
     display: flex;
   }
 `
+const EmailLabel = styled.label`
+  font-family: Ubuntu;
+  font-size: 25px;
+  letter-spacing: 0.31px;
+  color: #0a2239;
+  font-weight: normal;
+  margin: 0;
+  display: block;
+  padding-bottom: 8px;
+`
+
 const EmailInput = styled.input`
   border: solid 3px #0a2239;
   height: 54px;
   font-size: 22px;
   width: 65%;
+  padding-left: 10px;
+  font-family: Ubuntu;
 `
 const ButtonInput = styled.input`
   background-color: #D5330D;
@@ -116,9 +123,9 @@ render() {
           <SubmitBox>
             <h3>Stay in the loop</h3>
             <p>Leave your email to get updated about new articles</p>
-            <h4>Email</h4>
+            <EmailLabel for="email">Email</EmailLabel>
             <form onSubmit={this._handleSubmit}>
-              <EmailInput type="email"/>
+              <EmailInput type="email" id="email"/>
               <ButtonInput type="submit" value="Submit"/>
             </form>
           </SubmitBox>
