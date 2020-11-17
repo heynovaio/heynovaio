@@ -11,6 +11,7 @@ import Inclusive from "../components/homepage/inclusive"
 import Testimonial from "../components/homepage/testimonial"
 import About from "../components/homepage/about"
 import Contact from "../components/homepage/contact"
+import Subscribe from "../components/subscribe"
 
 export default () => (
   <Layout>
@@ -29,5 +30,6 @@ export default () => (
     <Testimonial/>
     <About/>
     <Contact/>
+    <Subscribe/>
   </Layout>
 )

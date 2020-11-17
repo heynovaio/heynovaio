@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
+import Subscribe from "../components/subscribe"
 
 import {
   FacebookShareButton,
@@ -489,6 +490,7 @@ export default function BlogPost({ data }) {
           <Button to="/contact">Get in Touch</Button>
         </ConsultBox>
       </ContentContainer>
+      <Subscribe/>
     </Layout>
   )
 }
