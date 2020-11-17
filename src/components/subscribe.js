@@ -97,9 +97,16 @@ export default class Subscribe extends React.Component {
   _handleSubmit = async e => {
     e.preventDefault()
     const result = await addToMailchimp(this.state.email)
+    .then((data) => {
+        alert(data.result);
+      })
+      .catch((error) => {
+        // Errors in here are client side
+        // Mailchimp always returns a 200
+      })
     this.setState({result: result})
   }
-handleChange = event => {
+  handleChange = event => {
     this.setState({ email: event.target.value })
   }
 render() {

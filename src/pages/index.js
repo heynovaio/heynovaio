@@ -29,7 +29,7 @@ export default () => (
     <Inclusive/>
     <Testimonial/>
     <About/>
-    <Contact/>
     <Subscribe/>
+    <Contact/>
   </Layout>
 )
