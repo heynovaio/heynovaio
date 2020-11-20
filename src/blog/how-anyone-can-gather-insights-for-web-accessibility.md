@@ -32,6 +32,13 @@ Combine your hunches with the results you found in testing using a keyboard, scr
 
 Last month’s testing methods were wide-open for anyone with a computer and access to their company’s online material. This time, gathering insights requires one new factor: a support team.
 
+<!--
+    Source on Adobe stock:
+    https://stock.adobe.com/ca/images/female-supervisor-working-with-team-in-call-center/288102065?prev_url=detail
+  -->
+
+![customer support manager stands by an agent's chair, pointing to something on her screen while other agents are on headsets around them](https://as1.ftcdn.net/jpg/02/88/10/20/500_F_288102065_89dXQRZLT8UJBm9G4iGxpP93VZbWfhVe.jpg)
+
 For many tech companies, including business-to-business (B2B) platforms, mobile applications, subscription products, or more complex workflow services, customer support is very likely to be a part of the team. This can range from developers taking turns on tech support tickets, to contracted call-centre agents, to a full-service internal customer support, implementations, and white-glove account management team. For brick-and-mortar or other service companies without a complex online presence, your customer support team could be as simple as someone answering a phone at the front desk or (especially during COVID), having calls and emails forwarded to their home.
 
 If you have any size or configuration of support team and are able to speak with them, do it! People on your team who take calls or emails from customers spend all day listening to the issues those customers face. They will know what comes up frequently, what are the biggest blockers, and what causes the most frustration.
@@ -44,14 +51,21 @@ The most important factor in asking for help from your support team is to listen
 
 All of the manual testing, automated auditing, and speaking with your support team will get you close to simulating an assumed experience by your customers. But, it will still fall short of the real thing. That’s where talking directly with your users comes in!
 
-First, let’s acknowledge that not every product, team, or company has the ability to speak directly to the people consuming their goods or services. There are tools to help bridge this gap, including feedback surveys and user testing services, but these won’t work for everyone. To keep this piece focused, however, let’s stick with the assumption that you will have some form of access to your end users.
+<!--
+    Source on Adobe stock:
+    https://stock.adobe.com/ca/images/man-holding-credit-card-while-working-on-laptop-outdoors/393436857?prev_url=detail
+  -->
+
+![young man sitting outside on a laptop holding a credit card](https://as1.ftcdn.net/jpg/03/93/43/68/500_F_393436857_vTqvAbcIA6rCXVGpAjH7ExhWFq91NAH8.jpg)
+
+First, let’s acknowledge that not every product, team, or company has the ability to speak directly to the people consuming their goods or services. There are tools to help bridge this gap, including feedback surveys and user testing services, but these won’t work for everyone.
 
 If you do have access to your users (whether in person, over the phone, or in the form of online survey tools) and your company does not currently solicit accessibility feedback, you are about to become a hero within your organization!
 
 Speaking with users can result in a lot of feedback to comb through. Not all of it will be immediately helpful, but there will always be gems (or insights!) buried within. Start with a basic survey, including one or two simple questions:
 
-1. "How would you rate your overall experience (from 1 to 5)?"
-2. "What could we do to improve your experience?"
+1. _"How would you rate your overall experience (from 1 to 5)?"_
+2. _"What could we do to improve your experience?"_
 
 From there, you can iterate and improve your questions to target more meaningful feedback. Remember to pay attention not just to the obvious responses (eg. _“I couldn’t use your website with a screen reader”_), but also to read between the lines. For example, _“I had trouble knowing which button to click”_ could mean an issue with contrast, colour choice, label text, iconography, user experience design, cognitive load -- really, any number of issues that could be addressed.
 
