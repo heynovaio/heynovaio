@@ -2,7 +2,7 @@
 date: 2020-11-21
 author: Stephen Belyea
 title: How anyone can gather insights for web accessibility
-featuredImage: ../images/woman-in-wheelchair.jpeg
+featuredImage: ../images/woman-advising.jpeg
 category: accessibility
 bio: Husband, father, habitual dork, front end developer + accessibility instigator, attempted writer, ex-pat Maritimer.
 bioImage: ../images/stephen.jpeg
@@ -32,12 +32,7 @@ Combine your hunches with the results you found in testing using a keyboard, scr
 
 Last month’s testing methods were wide-open for anyone with a computer and access to their company’s online material. This time, gathering insights requires one new factor: a support team.
 
-<!--
-    Source on Adobe stock:
-    https://stock.adobe.com/ca/images/female-supervisor-working-with-team-in-call-center/288102065?prev_url=detail
-  -->
-
-![customer support manager stands by an agent's chair, pointing to something on her screen while other agents are on headsets around them](https://as1.ftcdn.net/jpg/02/88/10/20/500_F_288102065_89dXQRZLT8UJBm9G4iGxpP93VZbWfhVe.jpg)
+![customer support manager stands by an agent's chair, pointing to something on her screen while other agents are on headsets around them](../images/woman-advising.jpeg)
 
 For many tech companies, including business-to-business (B2B) platforms, mobile applications, subscription products, or more complex workflow services, customer support is very likely to be a part of the team. This can range from developers taking turns on tech support tickets, to contracted call-centre agents, to a full-service internal customer support, implementations, and white-glove account management team. For brick-and-mortar or other service companies without a complex online presence, your customer support team could be as simple as someone answering a phone at the front desk or (especially during COVID), having calls and emails forwarded to their home.
 
@@ -51,12 +46,7 @@ The most important factor in asking for help from your support team is to listen
 
 All of the manual testing, automated auditing, and speaking with your support team will get you close to simulating an assumed experience by your customers. But, it will still fall short of the real thing. That’s where talking directly with your users comes in!
 
-<!--
-    Source on Adobe stock:
-    https://stock.adobe.com/ca/images/man-holding-credit-card-while-working-on-laptop-outdoors/393436857?prev_url=detail
-  -->
-
-![young man sitting outside on a laptop holding a credit card](https://as1.ftcdn.net/jpg/03/93/43/68/500_F_393436857_vTqvAbcIA6rCXVGpAjH7ExhWFq91NAH8.jpg)
+![young man in wheelchair sits at table with a woman holding pape](../images/man-in-wheelchair-speaking.jpeg)
 
 First, let’s acknowledge that not every product, team, or company has the ability to speak directly to the people consuming their goods or services. There are tools to help bridge this gap, including feedback surveys and user testing services, but these won’t work for everyone.
 

@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Subscribe from "../components/subscribe"
 
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -152,6 +153,7 @@ export default function Blog({ data }) {
           ))}
         </BlogPreview>
     </ContentContainer>
+    <Subscribe/>
   </Layout>
   )
 }
