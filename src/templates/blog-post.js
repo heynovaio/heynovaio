@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Subscribe from "../components/subscribe"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 
 import {
   FacebookShareButton,
@@ -30,6 +32,18 @@ const ContentContainer = styled.div`
     padding-top: 10px;
   }
 `
+const Back = styled(Link)`
+  position: absolute;
+  color: #0d7489;
+  text-decoration: none;
+  font-family: 'ubuntu';
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const HeaderContainer = styled.div`
   over-flow: auto;
   white-space: nowrap;
@@ -437,6 +451,7 @@ export default function BlogPost({ data }) {
         image={image}
       />
       <HeaderContainer>
+        <Back to="/blog"><FontAwesomeIcon icon={faChevronLeft} /> Back to all Blogs</Back>
         <TitleBox>
           <BlogTag>{post.frontmatter.category}</BlogTag>
           <h1>{post.frontmatter.title}</h1>
