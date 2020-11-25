@@ -39,6 +39,7 @@ const Back = styled(Link)`
   font-family: 'ubuntu';
   font-weight: 600;
   letter-spacing: -0.025em;
+  left: 0;
   &:hover {
     text-decoration: underline;
   }
