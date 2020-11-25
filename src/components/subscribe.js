@@ -126,7 +126,7 @@ function Subscribe() {
   const handleChange = event => setEmail(event.target.value);
 
   return (
-    <SubSect>
+    <SubSect id="subscribe">
       <ContentContainer>
         <PhotoBox>
           <img src={AstroRead} alt="AstroRead" role="presentation" class="AstroRead"/>
