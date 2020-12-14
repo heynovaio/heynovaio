@@ -29,6 +29,10 @@ const SubmitBox = styled.div`
   display: inline-block;
   vertical-align: top;
   margin-top: 70px;
+  @media (max-width: 767px) {
+    padding: 30px 20px 0px;
+    margin: 10px 10px 40px;
+  }
   h3{
     font-family: Stolzl;
     font-size: 60px;
@@ -38,10 +42,17 @@ const SubmitBox = styled.div`
     color: #0a2239;
     margin: 0;
     padding: 0 175px 10px 0;
+    @media (max-width: 767px) {
+      padding-right: 0;
+      font-size: 35px;
+    }
   }
 `
 const Grid = styled.div`
   display: flex;
+  @media (max-width: 767px) {
+    display: block;
+  }
 `
 const EmailLabel = styled.label`
   font-family: Ubuntu;
@@ -61,6 +72,9 @@ const EmailInput = styled.input`
   width: 65%;
   padding-left: 10px;
   font-family: Ubuntu;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `
 const ButtonInput = styled.button`
   background-color: #D5330D;
@@ -76,6 +90,11 @@ const ButtonInput = styled.button`
   padding: 14px 70px 15px 71px;
   transform: translateY(-2px);
   cursor: pointer;
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
   &:focus {
     outline: #000 auto 1px;
   }

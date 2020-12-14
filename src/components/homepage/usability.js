@@ -56,9 +56,10 @@ const P = styled.p`
 `
 const Number = styled.span`
   display: block;
-  font-size: 146px;
   font-weight: 900;
   line-height: 1;
+  font-size: 140px;
+  padding: 0 6px;
   -webkit-letter-spacing: -2px;
   -moz-letter-spacing: -2px;
   -ms-letter-spacing: -2px;

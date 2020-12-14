@@ -459,7 +459,7 @@ export default function BlogPost({ data }) {
           <BlogDate>{post.frontmatter.date}</BlogDate> 
         </TitleBox>
         <ImageBox>
-          <Img alt="featured blog image" role="presentation" fluid={featuredImgFluid}/>
+          <Img alt="" role="presentation" fluid={featuredImgFluid}/>
         </ImageBox>
       </HeaderContainer>
       <ContentContainer>
