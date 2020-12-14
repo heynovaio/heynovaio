@@ -2,7 +2,7 @@
 date: 2020-12-14
 author: Stephen Belyea
 title: Four ways to improve your customers' online shopping experience
-featuredImage: ../images/woman-advising.jpeg
+featuredImage: ../images/elderly-man-with-card-shopping-online.jpeg
 category: accessibility, ecommerce
 bio: Husband, father, habitual dork, front end developer + accessibility instigator, attempted writer, ex-pat Maritimer.
 bioImage: ../images/stephen.jpeg
@@ -18,7 +18,7 @@ With this spike in traffic comes an [increased rate of first-time online shopper
   https://stock.adobe.com/ca/images/asian-senior-man-looking-confuse-when-using-credit-card-for-online-shopping/280246296?prev_url=detail
   -->
 
-![Grey-haired man rubs his temple while holding a credit card and staring down at his laptop](https://as1.ftcdn.net/jpg/02/80/24/62/500_F_280246296_y2b4bbzQ98Xr5S5KyBDDLIYrHGwBbiOQ.jpg)
+![Grey-haired man rubs his temple while holding a credit card and staring down at his laptop](../images/elderly-man-with-card-shopping-online.jpeg)
 
 What can you, as a business owner, someone running an online store, or someone looking for ecommerce platform options, do to help out? Whether you are trying out a new service or you are embedded in an existing platform, here are some tips to keep your customers’ online experience accessible, inclusive, and successful!
 
