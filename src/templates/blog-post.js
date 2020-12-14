@@ -118,7 +118,7 @@ const ImageBox = styled.div`
     content: '';
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(5,22,40,0.2679446778711485) 0%, rgba(43,200,215,0.3519782913165266) 100%);
+    background: linear-gradient(90deg, rgba(5,22,40,0.26) 0%, rgba(43,200,215,0.68) 100%);
     position: absolute;
     top: 0;
     left: 0;

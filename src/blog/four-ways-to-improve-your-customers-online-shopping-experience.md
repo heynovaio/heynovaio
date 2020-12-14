@@ -2,7 +2,7 @@
 date: 2020-12-14
 author: Stephen Belyea
 title: Four ways to improve your customers' online shopping experience
-featuredImage: ../images/elderly-man-with-card-shopping-online.jpeg
+featuredImage: ../images/laptop-w-mini-cart.jpeg
 category: accessibility, ecommerce
 bio: Husband, father, habitual dork, front end developer + accessibility instigator, attempted writer, ex-pat Maritimer.
 bioImage: ../images/stephen.jpeg
