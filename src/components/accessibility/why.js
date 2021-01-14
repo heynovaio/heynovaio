@@ -118,6 +118,9 @@ const Quote = styled.p `
     font-size: 20px;
     margin-top: 10px;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 const Percent = styled.span`
   width: 100%;
