@@ -4,6 +4,7 @@ import Planet from '../../images/planet-rocket.svg'
 
 const TestimonialSection = styled.section`
   background: linear-gradient(180deg, #2BC8D7 0%, #0C7489 100%);
+  
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -13,15 +14,14 @@ const ContentContainer = styled.div`
   @media (min-width: 768px) {
     min-height: 778px;
   }
-  @media (max-width: 768px) {
-    padding-top: 115px;
-
+  @media (max-width: 1026px) {
+    padding: 40px 10px 0 10px;
   }
   h2{
     font-family: Stolzl;
     font-weight: 500;
     font-size: 60px;
-    line-height: 30px;
+    line-height: 60px;
     letter-spacing: -1px;
     color: #0A2239;
     padding-bottom: 100px;
@@ -33,12 +33,19 @@ const ContentContainer = styled.div`
       transform: translate(-300px, -20px);
       font-size: 350px;
       text-shadow: 5px 5px #ffffff;
+      @media (max-width: 1026px) {
+        font-size: 150px;
+        transform: translate(-90px,-90px);
+      }
+    }
+    @media (max-width: 1026px) {
+      padding: 60px 0;
     }
   }
   
 `
 const QuoteBox = styled.div`
-  width: 75%;
+  max-width: 75%;
   background: #0A2239;
   border-radius: 4px;
   padding: 30px 45px 0 40px;
@@ -61,11 +68,15 @@ const QuoteBox = styled.div`
     font-weight: 400;
     margin: 0;
   }
+  @media (max-width: 1026px) {
+    max-width: 100%;
+    padding: 30px 35px 0 35px;
+  }
 `
 const SigBox = styled.div`
   h4{
     padding: 5px 0 30px 40px;
-    width: 27.5%;
+    max-width: 27.5%;
     background: #0A2239;
     margin: 0;
     border-radius: 4px;
@@ -75,7 +86,7 @@ const SigBox = styled.div`
   }
   h5{
     padding: 5px 0 30px 40px;
-    width: 15%;
+    max-width: 15%;
     background: #0A2239;
     margin: 0;
     border-radius: 4px;
@@ -83,14 +94,26 @@ const SigBox = styled.div`
     color: #ffffff;
     font-weight: 400;
   }
+  @media (max-width: 1026px) {
+    h4{
+      max-width: 100%;
+    }
+    h5{
+      max-width: 100%;
+    }
+  }
 `
 const ImageBox = styled.div`
   overflow: hidden;
   img{
     z-index: 1;
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: 43%;
+  }
+  
+  @media (max-width: 1026px) {
+    visibility: hidden;
   }
 `
 
