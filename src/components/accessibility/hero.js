@@ -1,16 +1,27 @@
 import React from "react"
 import styled from '@emotion/styled'
-import img1 from '../../images/landing-bg.jpg'
+import img1 from '../../images/accessibility-fold-bg@2x.jpg'
 import { PopupText } from 'react-calendly'
+
+
 
 const HeroSection = styled.section`
   background-color: #051628;
-  padding: 210px 0px 20px 0px;
+  padding: 80px 0px 20px 0px;
   position: relative;
-  margin-top: 50px;
+  margin-top: 0;
+
   @media (min-width: 960px) {
-    background-image: url( ${img1} );
-    background-size: cover;
+    background: url( ${img1} ), #ffffff;
+    background-position: right 60px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+  @media (min-width: 1880px) {
+    background: url( ${img1} ), #ffffff;
+    background-position: right 60px;
+    background-repeat: no-repeat;
+    background-size: 920px;
   }
   @media (max-width: 960px) {
     color: #fff;
@@ -21,6 +32,12 @@ const HeroSection = styled.section`
   }
   p{
     max-width: 556px;
+  }
+  h1 {
+    line-height: 1.1;
+    @media (max-width: 960px) {
+      color: #fff;
+    }
   }
 `
 const ContentContainer = styled.div`
@@ -42,13 +59,15 @@ const ContentContainer = styled.div`
 
 const H1 = styled.h1`
   max-width: 670px;
-  font-size: 76px;
-  font-weight: 500;
-  line-height: 1.04;
-  color: #0fa3b1;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 90px;
+  letter-spacing: -0.224359px;
+  color: #0D2C4C;
   margin: 30px 0 20px;
   font-family: Stolzl;
-  letter-spacing: -0.035em;
+
   @media (max-width: 1026px) {
     font-size: 78px;
   }
@@ -86,8 +105,8 @@ function Hero () {
   return(
   	<HeroSection>
   	  <ContentContainer>
-  	    <H1 id="main">E-Commerce Services</H1>
-  	    <P>Making your mark in today's most important industry by building superior shopping experiences
+  	    <H1 id="main">Making the digital world more inclusive</H1>
+  	    <P>Bake accessibility into your tech team's process so you can not only create products that are useable to a wider audience but also comply with WCAG 2.1 guidelines.
   	    </P>
   	    <Button>
   	      <PopupText

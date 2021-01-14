@@ -42,8 +42,9 @@ const BlogPreview = styled.div`
   grid-row-gap: 6rem;
   justify-content: center;
   article{
-    a{
+    > a{
       text-decoration: none;
+      display: block;
     }
     h2{
       font-family: Stolzl;
@@ -137,11 +138,11 @@ export default function Blog({ data }) {
         keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
       />
       <ContentContainer>
-        <h1>Hey, Take a Gander</h1>
+        <h1 id ="main">Hey, Read Our Blogs</h1>
         <BlogPreview>
           {posts.map(post => (
             <article key={post.id}>
-              <a href={post.fields.slug}>
+              <a href={post.fields.slug} aria-label={post.frontmatter.title}>
                 <ImageBox>
                   <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
                 </ImageBox>

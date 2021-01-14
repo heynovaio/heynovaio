@@ -108,7 +108,6 @@ const QuoteBox = styled.div`
     content: close-quote;
     position: absolute;
     transform: translate(490px, -30px);
-
   }
   p{
     font-size: 20px;

@@ -91,7 +91,7 @@ export default () => (
   <Layout>
     <Main>
       <Container>
-        <H1>Our Work</H1>
+        <H1 id="main">Our Work</H1>
         <ActionContainer>
           <Button>
             <PopupText

@@ -9,7 +9,7 @@ const HeroSection = styled.section`
   background-color: #051627;
   padding: 0 20px 20px;
   position: relative;
-  @media (min-width: 960px) {
+  @media (min-width: 1026px) {
     background-image: url( ${img1} );
     background-size: 620px 585px;
     background-position: right bottom;
@@ -78,6 +78,9 @@ const ImgContainer = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
+  @media (max-width: 1026px) {
+    display: none;
+  }
 `
 const Planet1 = styled.div`
   position: absolute;
@@ -108,6 +111,7 @@ const Planet3 = styled.div`
     bottom: -7px;
   }
 `
+
 function Hero () {
 
   const data = useStaticQuery(graphql`
@@ -141,17 +145,17 @@ function Hero () {
     <HeroSection>
       <ImgContainer>
         <Planet1>
-          <Img alt="Planet" role="presentation" fadeIn={false} fixed={data.Planet1.childImageSharp.fixed} />
+          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet1.childImageSharp.fixed} />
         </Planet1>
         <Planet2>
-          <Img alt="Planet 2" role="presentation" fadeIn={false} fixed={data.Planet2.childImageSharp.fixed} />
+          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet2.childImageSharp.fixed} />
         </Planet2>
         <Planet3>
-          <Img alt="Planet 3" role="presentation" fadeIn={false} fixed={data.Planet3.childImageSharp.fixed} />
+          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet3.childImageSharp.fixed} />
         </Planet3>
       </ImgContainer>
       <ContentContainer>
-        <h1>Designing Experiences for Everyone</h1>
+        <h1 id = "main">Designing Experiences for Everyone</h1>
         <p>
           Connecting real people to real brands through engaging and inclusive design practice
         </p>

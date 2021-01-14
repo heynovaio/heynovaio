@@ -53,12 +53,35 @@ const InstagramLink = styled.a`
 const LinkedInLink = styled.a`
   color: #d5330d;
 `
+const SkipButton = styled.a`
+  border-radius: 3px;
+  width: 150px;
+  padding: 8px;
+  background-color: #d5330d;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  text-align: center;
+  color: #ffffff;
+  font-family: Stolzl;
+  text-decoration: none;
+
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+
+  &:focus{
+    transform: translateY(0%);
+  }
+`
 const showDrop = () => {
   document.getElementById("drop").classList.toggle("open");
   document.getElementById("burger").classList.toggle("open");
 }
+
 const Hamburger = () => (
-  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false">
+  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false"  aria-modal="true"  aria-controls="menu">
     <div/><div/><div/>
   </HamburgerStyle>
 )
@@ -75,9 +98,27 @@ const HamburgerStyle = styled.button`
   background: #041729;
   border: none;
 
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
   div {
     position: absolute;
     background-color: #d5330d;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
   }
   div:first-of-type {
     width: 38px;
@@ -97,6 +138,24 @@ const HamburgerStyle = styled.button`
   &.open {
     div {
       background: #fff;
+    }
+    div:first-of-type {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    div:nth-of-type(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    div:last-of-type {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 50%;
     }
   }
 `
@@ -176,8 +235,13 @@ const LinkContainerMenu = styled.div`
     }
   }
 `
+
+
 export default () => (
   <Header>
+    <SkipButton href="#main">   
+        Skip to Content
+    </SkipButton>
     <ImgContainer to="/" title="Hey Nova Homepage">
       <img role="presentation" alt="Hey Nova Logo" src={img1}/>
     </ImgContainer>
@@ -192,8 +256,8 @@ export default () => (
          <FontAwesomeIcon icon={faInstagram} />
       </InstagramLink>
     </LinkContainer>
-    <Nav role="navigation">
-      <Hamburger/>
+    <Nav role="navigation" aria-hidden="true" aria-labelledby="menu-toggle">
+      <Hamburger  />
       <Menu id="drop">{/*whole drop down*/}
         <ul>
           <li><Link onClick={showDrop} to="/">Home</Link></li>
