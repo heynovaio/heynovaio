@@ -1,14 +1,15 @@
 import React from "react"
 import styled from '@emotion/styled'
 
-import GIcon1 from '../../images/page-speed-icon.svg'
-import GIcon2 from '../../images/seo-icon.svg'
-import GIcon3 from '../../images/mobile-friendly.svg'
-import GIcon4 from '../../images/superior-design-icon.svg'
-import GIcon5 from '../../images/secure-icon.svg'
-import GIcon6 from '../../images/user-friendly.svg'
-import GIcon7 from '../../images/accessible-icon.svg'
-import GIcon8 from '../../images/conversions-icon.svg'
+import GIcon1 from '../../images/group113.svg'
+import GIcon2 from '../../images/group119.svg'
+import GIcon3 from '../../images/group112.svg'
+import GIcon4 from '../../images/group118.svg'
+import GIcon5 from '../../images/group120.svg'
+import GIcon6 from '../../images/group121.svg'
+import GIcon7 from '../../images/group117.svg'
+import GIcon8 from '../../images/group110.svg'
+import GIcon9 from '../../images/group111.svg'
 
 const FeatureSection = styled.section`
   background-color: #0a2239;
@@ -36,6 +37,10 @@ const GridBox = styled.div`
   grid-row-gap: 30px;
   padding: 4rem 0;
   justify-content: center;
+  @media (max-width: 868px) {
+    grid-template-columns: repeat(auto-fill, 160px);
+    grid-column-gap: 15px;
+  }
 `
 const GridItem = styled.div`
   color: #ffffff;
@@ -47,6 +52,9 @@ const GridItem = styled.div`
     font-weight: 300;
     letter-spacing: -0.68px;
     line-height: 25px;
+    @media (max-width: 868px) {
+      font-size: 18px;
+    }
   }
 `
 const IconBox = styled.div`
@@ -56,6 +64,10 @@ const IconBox = styled.div`
     height: 70px;
     margin: 0 auto;
     position: relative;
+    @media (max-width: 868px) {
+      width: 50px;
+      height: 50px;
+    }
   }
 `
 const H2 = styled.h2`
@@ -125,7 +137,7 @@ function Feature () {
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon5} alt="Icon5" role="presentation"/>
+              <img src={GIcon9} alt="Icon9" role="presentation"/>
             </IconBox>
             <h3>Proper use of Colour and Contrast Ratio</h3>
           </GridItem>

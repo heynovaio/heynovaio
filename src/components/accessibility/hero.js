@@ -10,11 +10,18 @@ const HeroSection = styled.section`
   padding: 80px 0px 20px 0px;
   position: relative;
   margin-top: 0;
+
   @media (min-width: 960px) {
     background: url( ${img1} ), #ffffff;
-    background-position: right 62px;
+    background-position: right 60px;
     background-repeat: no-repeat;
-    background-size: 806px;
+    background-size: 50%;
+  }
+  @media (min-width: 1880px) {
+    background: url( ${img1} ), #ffffff;
+    background-position: right 60px;
+    background-repeat: no-repeat;
+    background-size: 920px;
   }
   @media (max-width: 960px) {
     color: #fff;
