@@ -267,7 +267,7 @@ function Service () {
             </PhotoBox>
           </NonStickyBox>
           <FlexBox>
-            <P>We find the best way to kick off our accessibility training is by starting with a comprehensive overview. This zoom based workshop gets your team 
+            <P>We find the best way to kick off our accessibility training is to start with a comprehensive overview. This zoom based workshop gets your team 
             looking at accessibility through an empathetic lens by expressing the impact of an inaccessible digital world. The WCAG 2.1 guidelines can be overwhelming, 
             so we break it down into people-friendly terms based on the stages in your build process so each team member knows their role in achieving accessibility. </P>
             <h3>They will learn:</h3>

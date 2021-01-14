@@ -24,7 +24,7 @@ const RowContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   flex-wrap: wrap;
 `
 const StickyBox = styled.div`
@@ -298,11 +298,11 @@ function Why () {
             <p>When you put your users first, they put you first!</p>
           </StickyBox>
           <FlexBox>
-            <Quote>Companies must remind themselves that people with disabilities are also important customers</Quote>
+            <Quote>Companies must remind themselves that people with disabilities are also important customers.</Quote>
             <Sub>
               <P>
               <Percent>306%</Percent>
-              higher lifetime brand value with an emotional connection</P>
+              increase in financial value when a user is loyal to your brand</P>
             </Sub>
             <P>According to Paul Smyth, the Head of Digital Accessibility at Barclays, many organizations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, improving customer experience and colleague productivity, not to mention that accessibility strengthens brand presence. With so many companies out there competing for customers’ attention, it is increasingly important to build authentic brands that connect to your audience and keeps their engagement. In Canada and the US combined there are approximately 67.2 million people living with a disability, all with family members and friends who care equally about accessibility and are much more likely to be loyal to companies that align with those values.</P>
             <P>Adopting accessibility into your business shows your customers, clients, and users that you care and gives 
