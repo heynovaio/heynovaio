@@ -1,6 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
-import img1 from '../../images/accessibility-bg.png'
+import img1 from '../../images/accessibility-fold-bg@2x.jpg'
 import { PopupText } from 'react-calendly'
 
 
@@ -12,11 +12,10 @@ const HeroSection = styled.section`
   margin-top: 0;
   @media (min-width: 960px) {
     background: url( ${img1} ), #ffffff;
-    background-position: right;
+    background-position: right 62px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 806px;
   }
-
   @media (max-width: 960px) {
     color: #fff;
   }
@@ -26,6 +25,12 @@ const HeroSection = styled.section`
   }
   p{
     max-width: 556px;
+  }
+  h1 {
+    line-height: 1.1;
+    @media (max-width: 960px) {
+      color: #fff;
+    }
   }
 `
 const ContentContainer = styled.div`
@@ -93,8 +98,8 @@ function Hero () {
   return(
   	<HeroSection>
   	  <ContentContainer>
-  	    <H1 id="main">Digital Accessibility</H1>
-  	    <P>Educate your teams so they can make inclusivity and web accessibility a daily practice in their work
+  	    <H1 id="main">Making the digital world more inclusive</H1>
+  	    <P>Bake accessibility into your tech team's process so you can not only create products that are useable to a wider audience but also comply with WCAG 2.1 guidelines.
   	    </P>
   	    <Button>
   	      <PopupText

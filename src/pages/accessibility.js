@@ -10,9 +10,9 @@ import Testimonial from '../components/accessibility/testimonial'
 export default () => (
   <Layout>
     <Hero/>
-    <Why/>
-    <Feature/>
     <Service/>
+    <Feature/>
+    <Why/>
     <Testimonial/>
   </Layout>
 )

@@ -5,7 +5,8 @@ import LaptopPlanet from '../../images/laptop-planets.svg'
 import AstroClipboard from '../../images/astro-clipboard.svg'
 import Astros from '../../images/two-astronauts.svg'
 import AstroSpace from '../../images/astro-space.svg'
-
+import ProcessGraphic from '../../images/process-consulting.svg'
+import { Link } from "gatsby"
 
 const ServiceSection = styled.section`
   color: #0a2239;
@@ -13,7 +14,7 @@ const ServiceSection = styled.section`
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 100px 20px;
+  padding: 0px 20px 100px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -21,7 +22,6 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 115px;
-
   }
   h1{
     max-width: 600px;
@@ -32,10 +32,9 @@ const RowContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 4rem;
+  padding-bottom: 10rem;
   flex-wrap: wrap;
 `
-
 const NonStickyBox = styled.div`
   position: relative;
   padding-right: 46px;
@@ -62,6 +61,7 @@ const NonStickyBox = styled.div`
     font-weight: 300;
     line-height: 1.36;
     letter-spacing: -0.78px;
+    margin-bottom: 40px;
   }
   @media (max-width: 768px) {
     max-width: 100%;
@@ -78,39 +78,31 @@ const PhotoBox = styled.div`
     display: block;
     margin: auto;
   }
-
-
 `
-
-const BookLink = styled.div`
+const BookLink = styled(Link)`
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  h5{
-    max-width: fit-content;
-    font-family: Ubuntu;
-    font-size: 20px;
-    font-weight: 600;
-    width: 100%;
-    padding-top: 2rem;
-    letter-spacing: 0.1px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  padding-top: 2rem;
+  letter-spacing: 0.1px;
+  &:hover {
+    text-decoration: underline;
   }
   @media (max-width: 768px) {
-    h5{
-      font-size: 17px;
-    }
+    font-size: 17px;
   }
 `
-const Line = styled.div`
-    position:relative;
-    content:'';
-    background: #d5330d;
-    height: 1.5px;
-    width: 35px;
-    margin: 0 10px;
-    transform: translate(8px, 46px);
-
-  ::after{
+const Line = styled.span`
+  content:'';
+  background: #d5330d;
+  height: 1.5px;
+  width: 35px;
+  margin: 0px 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+  &::after{
     transform: translate(30px,-3px);
     position: absolute;
     content: '';
@@ -119,9 +111,6 @@ const Line = styled.div`
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     border-left: 8px solid #d5330d;
-  }
-  @media (max-width: 768px) {
-    transform: translate(8px, 42px);
   }
 `
 const ListBox = styled.div`
@@ -132,7 +121,7 @@ const ListBox = styled.div`
   ul{
     list-style: none;
     margin: 0;
-    padding-left: 3.5rem;
+    padding-left: .5rem;
   }
   li {
     position: relative;
@@ -167,13 +156,14 @@ const ServiceHeader = styled.div`
     letter-spacing: -1px;
     margin-bottom: .75rem;
     color: #0c7489;
-    font-weight: 400;
+    font-weight: 500;
   }
   .Subheader{
-    font-family: Stolzl;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.33;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #0a2239;
+    margin: 20px 0 20px;
+    font-family: Ubuntu;
   }
 `
 const ServiceFooter = styled.div`
@@ -259,7 +249,7 @@ function Service () {
 	  <ServiceSection>
       <ContentContainer>
         <ServiceHeader>
-          <h2>Our Approach</h2>
+          <h2>Our Services</h2>
           <p class='Subheader'>Our general approach has produced resounding success; however, we don’t believe one size fits all so we 
           tailor our services to meet your needs based on the requirements and size of your team.</p>
         </ServiceHeader>
@@ -272,56 +262,72 @@ function Service () {
             </PhotoBox>
           </NonStickyBox>
           <FlexBox>
-            <P>We find the best way to start is our training program is by diving straight in headfirst with a comprehensive workshop on 
-            accessibility. This online workshop gives your design and development teams a complete overview to get them started in the 
-            journey and a great foundation for all their future learning.</P>
+            <P>We find the best way to kick off our accessibility training is by starting with a comprehensive overview. This zoom based workshop gets your team 
+            looking at accessibility through an empathetic lens by expressing the impact of an inaccessible digial world. The WCAG 2.1 guidelines can be overwhelming, 
+            so we break it down into people-friendly terms based on the stages in your build process so each team member knows their role in achieving accessibility. </P>
             <P>They will learn:</P>
             <ListBox>
               <ul>
-                <li><p>Who accessibility affects and why</p></li>
-                <li><p>The WCAG 2.0 Accessibility Guidelines and what is needed to meet them</p></li>
-                <li><p>What tools and resources are needed to test for accessibility</p></li>
-                <li><p>The types of tests needed to check for accessibility</p></li>
+                <li><p>Who accessibility impacts</p></li>
+                <li><p>The WCAG 2.1 Accessibility Guidelines and what is needed to meet them</p></li>
                 <li><p>Best practices for building with accessibility in mind</p></li>
-                <li><p>Other tips and tricks that will help them along their way</p></li>
+                <li><p>What tools and resources are needed to test for accessibility</p></li>
+                <li><p>Other tips and tricks that will help along the way</p></li>
               </ul>
-              <a href ="../contact">
-                <BookLink>
-                  <h5>Book a free consult to learn more</h5>
-                  <Line/>
-                </BookLink>  
-              </a>
+              <BookLink to="/contact" aria-label="Book a consult to learn more about our webinars">
+                Book a free consult to learn more
+                <Line role="presentation" />
+              </BookLink>
             </ListBox>
           </FlexBox>          
         </RowContainer>
 
         <RowContainer>
           <NonStickyBox>
-            <h3>ACCESSIBILITY AUDITS & REPORTS</h3>
-            <p>We run the tests for you to give an evaluation of your current accessibility score</p>
+            <h3>Process & Strategy</h3>
+            <p>Hollistically weave accessibility into your overall process</p>
             <PhotoBox>
-              <img src={AstroClipboard} alt="Astro Clipboard" role="presentation" class="Single"/>
+              <img src={ProcessGraphic} alt="" role="presentation" class="Single"/>
             </PhotoBox>
           </NonStickyBox>
           <FlexBox>
-            <P>Our audits will pin point all the accessibly errors on your product that need to be fixed to meet WCAG 2.1 Guidelines for AODA 
-            and ADA compliancy. We believe that accessibility goes above and beyond a checklist, so we also highlight other problem areas, 
-            some that may not fail according to these guidelines but that could still affect someone with a disability, to ensure you have a 
-            full picture and can produce the most accessible product possible.</P>
-            <P>They will learn:</P>
+            <P>Weaving Accessibility into your current build process is key as waiting till the end of a project 
+            to instigate it can be time-consuming and costly. Luckily, with our help, accessibility will be a practice 
+            so baked into your process that it becomes second nature to include. We teach your team how to involve it at 
+            every stage of the project process, from strategic planning, through all the UX, design, & development stages. </P>
+            <ListBox>
+              <BookLink to="/contact" aria-label="Book a consult to learn more about our auditing services">
+                Book a free consult to learn more
+                <Line role="presentation" />
+              </BookLink>
+            </ListBox>
+          </FlexBox>
+        </RowContainer>
+
+        <RowContainer>
+          <NonStickyBox>
+            <h3>AUDITS & REPORTS</h3>
+            <p>We give you an evaluation of your current level of accessibility</p>
+            <PhotoBox>
+              <img src={AstroClipboard} alt="" role="presentation" class="Single"/>
+            </PhotoBox>
+          </NonStickyBox>
+          <FlexBox>
+            <P>Our audits map out all the accessibly errors on your product/application that need to be fixed to meet WCAG 2.1 Guidelines for legal AODA 
+            and ADA compliancy. However, we believe that accessibility is best achieved when it goes beyond a compliancy checklist, so we include recommendations 
+            that may not necessarily fit into a specific WCAG list item. This leaves you with suggestions that improve not only accessibility but overall usability.</P>
+            <P>You gain:</P>
             <ListBox>
               <ul>
-                <li><p>A deeper understanding of what issues to to look for throughout the test</p></li>
-                <li><p>How to fix these issues and general accessibility best practices that can be adopted right from the planning stage of a project</p></li>
-                <li><p>A deeper understanding of how each thing affects certain people, from an empathetic lens</p></li>
-                <li><p>How to create their own report</p></li>
+                <li><p>An overall summary of the numbers or errors we discovered by category</p></li>
+                <li><p>Extensive test results based on manual code review, contrast, keyboard, and screen-reader testing</p></li>
+                <li><p>How each issue can affect users</p></li>
+                <li><p>How to fix the issues</p></li>
               </ul>
-              <a href ="../contact">
-                <BookLink>
-                  <h5>Book a free consult to learn more</h5>
-                  <Line/>
-                </BookLink>
-              </a>  
+              <BookLink to="/contact" aria-label="Book a consult to learn more about our auditing services">
+                Book a free consult to learn more
+                <Line role="presentation" />
+              </BookLink>
             </ListBox>
           </FlexBox>
         </RowContainer>
@@ -331,7 +337,7 @@ function Service () {
             <h3>MENTORSHIP & EDUCATION</h3>
             <p>We will be right by your side (virtually) as you and your team learn and grow</p>
             <PhotoBox>
-              <img src={Astros} alt="Astros" role="presentation" class="Single"/>
+              <img src={Astros} alt="" role="presentation" class="Single"/>
             </PhotoBox>
           </NonStickyBox>
           <FlexBox>
@@ -340,12 +346,10 @@ function Service () {
             accessible design and development in the formats that best suit them.  Whether this is regular meetings or detailed documentation, 
             your team will complete their time with us fueled with both knowlegde and compassion for accessibility, making it a daily practice 
             in their work.</P>
-            <a href ="../contact">
-              <BookLink>
-                <h5>Book a free consult to learn more</h5>
-                <Line/>
-              </BookLink>
-            </a>  
+            <BookLink to="/contact" aria-label="Book a consult to learn more about our educational services">
+              Book a free consult to learn more
+              <Line role="presentation" />
+            </BookLink>
           </FlexBox>
         </RowContainer>
 
@@ -358,16 +362,14 @@ function Service () {
             </PhotoBox>
           </NonStickyBox>
           <FlexBox>
-            <P>Real growth is never over. After your team is ready to tackle accessibility alone, we will always remain 
+            <P>Real growth is never over. After your team is ready to start tackling accessibility internally, we will always remain 
             a quick message away to answer any questions that come up during new projects. We know our training will have 
-            you feeling so confident, you will rarely need this, but as the technology field is always evolving and changing, 
+            you feeling so confident you will rarely need this, but as the technology field is always evolving and changing 
             it is nice to know we are here if you need us.</P>
-            <a href ="../contact">
-              <BookLink>
-                <h5>Book a free consult to learn more</h5>
-                <Line/>
-              </BookLink> 
-            </a>
+            <BookLink to="/contact" aria-label="Book a consult to learn more about our accessibility support">
+              Book a free consult to learn more
+              <Line role="presentation" />
+            </BookLink>
           </FlexBox>
         </RowContainer>
 

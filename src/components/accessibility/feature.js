@@ -85,19 +85,19 @@ function Feature () {
             <IconBox>
               <img src={GIcon2} alt="Icon2" role="presentation"/>
             </IconBox>
-            <h3>Various Ways for the User to Recieve Information</h3>
+            <h3>Multiple Ways for the User to Recieve Information</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon3} alt="Icon3" role="presentation"/>
             </IconBox>
-            <h3>Viewable on All Screen Sizes & Devise</h3>
+            <h3>Viewable on All Screen Sizes & Devices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon4} alt="Icon4" role="presentation"/>
             </IconBox>
-            <h3>Easily Readable Copy & Easy to Understand</h3>
+            <h3>Copy that is Easy to Read and Understand</h3>
           </GridItem>
           <GridItem>
             <IconBox>
@@ -109,25 +109,25 @@ function Feature () {
             <IconBox>
               <img src={GIcon6} alt="Icon6" role="presentation"/>
             </IconBox>
-            <h3>Full Control for the User of Interactive Elements</h3>
+            <h3>Funtional Control of the Interactive Elements</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon7} alt="Icon7" role="presentation"/>
             </IconBox>
-            <h3>Usable with all assistive technology</h3>
+            <h3>Usable with Assistive Technologies</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon8} alt="Icon8" role="presentation"/>
             </IconBox>
-            <h3>User Research & an Epathatetic Approach to Consider All Their Needs</h3>
+            <h3>User Research & an Empathetic Approach</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon5} alt="Icon5" role="presentation"/>
             </IconBox>
-            <h3>Strong Colour Contrast</h3>
+            <h3>Proper use of Colour and Contrast Ratio</h3>
           </GridItem>
         </GridBox>
       </ContentContainer>
