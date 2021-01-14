@@ -153,6 +153,7 @@ const Form = styled.form`
     font-family: Ubuntu;
     &:focus {
       border-bottom: 2px solid #d5330d;
+      box-shadow: 0 0 0 1px #d5330d;
     }
   }
   textarea {

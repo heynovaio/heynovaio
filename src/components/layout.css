@@ -147,6 +147,10 @@ button::-moz-focus-inner {
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #0031ff;
+}
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
