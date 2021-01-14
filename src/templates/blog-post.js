@@ -189,7 +189,7 @@ const LeftSide = styled.div`
   }
   p{
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.75;
     letter-spacing: 0.25px;
     color: #051628;
@@ -453,7 +453,7 @@ export default function BlogPost({ data }) {
       />
       <HeaderContainer>
         <Back to="/blog"><FontAwesomeIcon icon={faChevronLeft} /> Back to all Blogs</Back>
-        <TitleBox>
+        <TitleBox id ="main">
           <BlogTag>{post.frontmatter.category}</BlogTag>
           <h1>{post.frontmatter.title}</h1>
           <BlogDate>{post.frontmatter.date}</BlogDate> 
@@ -468,7 +468,7 @@ export default function BlogPost({ data }) {
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <BioBox>
               <BioImageBox>
-                <Img fluid={bioImgFluid}/>
+                <Img role="presentation" fluid={bioImgFluid}/>
               </BioImageBox>
               <BioTextBox>
                 <h2 class="BioH4">Written by </h2>

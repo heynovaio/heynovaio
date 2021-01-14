@@ -100,8 +100,8 @@ const ImgContainer = styled.div`
   position: absolute;
   left: 0;
   top: 110px;
-  -webkit-animation: vibrate 22s ease-in-out infinite both;
-  animation: ${vibrate} 22s ease-in-out infinite both;
+  -webkit-animation: vibrate 22s ease-in-out 0.3 both;
+  animation: ${vibrate} 22s ease-in-out 0.3 both;
   bottom: -250px;
   @media (max-width: 960px) {
     max-width: 100px;

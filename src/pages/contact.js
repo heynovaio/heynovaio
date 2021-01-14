@@ -195,7 +195,7 @@ export default () => (
     />
     <Main>
       <Container>
-        <H1>Hey There</H1>
+        <H1 id="main">Hey There</H1>
         <P>How can we help you?</P>
         <ActionContainer>
           <Button>
