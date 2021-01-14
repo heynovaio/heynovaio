@@ -1,7 +1,7 @@
 import React from "react"
 import styled from '@emotion/styled'
 import Bg from '../../images/space-background.jpg'
-
+import { Link } from "gatsby"
 
 
 const WhySection = styled.section`
@@ -18,9 +18,6 @@ const ContentContainer = styled.div`
   @media (max-width: 768px) {
     padding-top: 115px;
 
-  }
-  h1{
-    max-width: 600px;
   }
 `
 const RowContainer = styled.div`
@@ -40,7 +37,7 @@ const StickyBox = styled.div`
   max-width: 494px;
   overflow-y: auto;
   height: auto;
-  h3::before{
+  h2::before{
     display: inline-block;
     content: "";
     border-top: .28rem solid #d5330d;
@@ -48,11 +45,12 @@ const StickyBox = styled.div`
     margin-right: .75rem;
     transform: translateY(-.25rem);
   }
-  h3{
+  h2{
     font-family: Stolzl;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.44px;
+    text-transform: uppercase;
   }
   p{
     font-family: Stolzl;
@@ -73,33 +71,6 @@ const FlexBox = styled.div`
   justify-content: space-between;
   max-width: 677px;
   padding-top: 0;
-  h4{
-    width: 52.5%;
-    font-family: Ubuntu;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.5;
-    letter-spacing: 0.38px;
-    span{
-      display: block;
-      font-weight: 600;
-      font-size: 20px;
-      margin-top: 10px;
-    }
-  }
-  p{
-    font-weight: 400;
-    line-height: 1.5;
-    margin-top: 0;
-    font-family: Ubuntu;
-    font-size: 20px;
-    line-height: 1.75;
-    letter-spacing: 0.25px;
-  }
-  .temp{
-    width: 100%;
-    font-weight: 600;
-  }
   .subHeader{
     color: #0FA3B1; 
     margin: .5rem 0 0;
@@ -128,26 +99,49 @@ const FlexBox = styled.div`
     }
  }
 `
-const Sub = styled.div`
-  max-width: 40%;
-  text-align: left; 
-  margin: auto 0;
-  h1{
-    width: 100%;
-    font-family: Stolzl;
-    font-size: 85px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    display: inline-block;
-    line-height: 1;
-    background: url( ${Bg} ) no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #0000;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  p{
+const Quote = styled.p `
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 0;
+  font-family: Ubuntu;
+  font-size: 20px;
+  line-height: 1.75;
+  letter-spacing: 0.25px;
+  width: 52.5%;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.38px;
+  span{
+    display: block;
     font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+`
+const Percent = styled.span`
+  width: 100%;
+  font-family: Stolzl;
+  font-size: 85px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+  margin-top: -50px;
+  line-height: 1.5;
+  background: url( ${Bg} ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0000;
+  background-attachment: fixed;
+  background-size: cover;
+`
+const Sub = styled.div`
+  max-width: 264px;
+  text-align: left; 
+  margin: 0 auto 50px;
+
+  p{
+    font-weight: 500;
     line-height: 23px;
     font-size: 18px;
   }
@@ -157,23 +151,11 @@ const Sub = styled.div`
     text-align: center;
  }
 `
-const BookLink = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  h5{
-    font-family: Ubuntu;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    padding-top: 2rem;
-    letter-spacing: 0.1px;
-  }
-`
+
 const QuoteBox = styled.div`
   background-color: #0A2239;
-  padding: 30px 35px;
-  h4{
+  padding: 30px 35px 45px;
+  h3{
     font-family: Stolzl;
     font-weight: 400;
     font-size: 30px;
@@ -201,7 +183,7 @@ const QuoteBox = styled.div`
       font-family: Georgina;
     }
   }
-  h5{
+  span{
     font-family: Ubuntu;
     font-weight: 500;
     font-size: 18px;
@@ -212,17 +194,16 @@ const QuoteBox = styled.div`
   }
 `
 
-const Line = styled.div`
-  position:relative;
+const Line = styled.span`
   content:'';
   background: #d5330d;
   height: 1.5px;
   width: 35px;
-  margin: 0 10px;
-  transform: translate(8px, 46px);
-
-  ::after{
-    transform: translate(33px,-3px);
+  margin: 0px 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+  &::after{
+    transform: translate(30px,-3px);
     position: absolute;
     content: '';
     width: 0;
@@ -230,17 +211,35 @@ const Line = styled.div`
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     border-left: 8px solid #d5330d;
-  }
-  @media (max-width: 768px) {
-    transform: translate(8px, 42px);
-  }
 `
+
 const P = styled.p`
   font-size: 18px;
   line-height: 1.7;
   color: #0a2239;
   margin: 20px 0 20px;
   font-family: Ubuntu;
+`
+const Temp = styled(P)`
+  font-weight: 400;
+  font-size: 24px;
+  font-family: Stolzl;
+`
+const BookLink = styled(Link)`
+  width: 100%;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  padding-top: 2rem;
+  letter-spacing: 0.1px;
+  margin-bottom: 50px;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
 `
 
 function Why () {
@@ -249,17 +248,18 @@ function Why () {
       <ContentContainer> 
         <RowContainer>
           <StickyBox>
-            <h3>WHY INCLUDE ACCESSIBILITY?</h3>
-            <p>Accessibility is a neccessary practice to stay current & competetive</p>
+            <h2>Why Include Accessibility</h2>
+            <p>Accessibility is a necessary practice to stay current & competetive</p>
           </StickyBox>
           <FlexBox>
-            <h4>Designing inclusive software results in improved usability and customer satisfaction.
-            <span>-Microsoft's app developer guide</span></h4>
+            <Quote>Designing inclusive software results in improved usability and customer satisfaction.
+            <span>-Microsoft's app developer guide</span></Quote>
             <Sub>
-              <h1>67%</h1>
-              <P>of consumers will pay more for a great experience</P>
+              <P>
+              <Percent>67%</Percent>
+              of consumers will pay more for a great experience</P>
             </Sub>
-            <h4 class="subHeader">For Users</h4>
+            <h3 class="subHeader">For Users</h3>
             <P>Good user experience can not be achieved without considering all needs and circumstances of your users, 
             especially when considering that persons living with disabilities and impairments take up around 15% of the 
             world’s population. Yet it goes beyond that 15%. Accessible design and development leads to huge improvements 
@@ -267,11 +267,11 @@ function Why () {
             <P>As the digital world becomes even more influential in people's daily lives, many apps and websites will be 
             made redundant when they fail to accommodate their users. Just consider, 79% of those who dislike a website 
             will leave to find a competitor who serves their needs.</P>
-            <h4 class="subHeader">For Business</h4>
+            <h3 class="subHeader">For Business</h3>
             <P>As businesses continue to learn to grasp the financial value in having great user experience, the push for 
             design and development teams that offer this service is increasing. I mean, who can argue with a potential 
             rise in the company’s KPIs up to 83% in conversion lift?</P>
-            <h4 class="subHeader">For the Future</h4>
+            <h3 class="subHeader">For the Future</h3>
             <P>Many provinces in Canada are progressing towards adopting similar accessibility laws to The Accessibility 
             for Ontarians with Disabilities Act (AODA), making it a legal requirement for businesses to have accessible 
             websites. When these laws are passed, any team not prepared will scramble to not get left behind.</P>
@@ -280,46 +280,40 @@ function Why () {
             still do not which is the cause of major lawsuits and financial loss for those businesses. In 2019, web 
             accessibility federal lawsuits hit record numbers, with 11,053 suits filed in federal court, an 8.8% increase 
             from 2018.</P>
-            <a href ="../contact">
-              <BookLink>
-                <h5>Book a free consult</h5>
-                <Line/>
-              </BookLink> 
-            </a>
+
+            <BookLink to="/contact" aria-label="Contact us to learn more about why accessibility is important">
+              Contact us to learn more
+              <Line role="presentation" />
+            </BookLink>
             <QuoteBox>
-              <h4>The future is accessible</h4>
-              <p>The accessibility problems of today are the mainstream breakthroughs of tomorrow.</p>
-              <h5 class="author">Eve Andersson, Director of Accessibility Engineering at Google</h5>
+              <h3>The future is accessible</h3>
+              <P>The accessibility problems of today are the mainstream breakthroughs of tomorrow.</P>
+              <span class="author">Eve Andersson, Director of Accessibility Engineering at Google</span>
             </QuoteBox>
           </FlexBox>
         </RowContainer>
 
         <RowContainer>
           <StickyBox>
-            <h3>HOW IT IMPORVES CUSTOMER LOYALTY</h3>
-            <p>Whether for your own business or for your clients’, brand loyalty matters, and accessibility is key!</p>
+            <h2>How it improves brand loyalty</h2>
+            <p>When you put your users first, they put you first!</p>
           </StickyBox>
           <FlexBox>
-            <h4>Consumers who have an emotional connection with a brand have a 306% higher lifetime value</h4>
+            <Quote>Companies must remind themselves that people with disabilities are also important customers</Quote>
             <Sub>
-              <h1>306%</h1>
-              <P>higher lifetime value of customers with emotional connection to your brand</P>
+              <P>
+              <Percent>306%</Percent>
+              higher lifetime brand value with an emotional connection</P>
             </Sub>
-            <P>According to Paul Smyth, the Head of Digital Accessibility at Barclays, many organizations are waking up to 
-            the fact that embracing accessibility leads to multiple benefits – reducing legal risks,  improving customer 
-            experience and colleague productivity. Accessibility also overall strengthens brand presence. With so many 
-            companies out there competing for customers’ attention, it is increasingly important to build authentic brands 
-            that connect to your audience and keeps their engagement.</P>
+            <P>According to Paul Smyth, the Head of Digital Accessibility at Barclays, many organizations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, improving customer experience and colleague productivity, not to mention that accessibility strengthens brand presence. With so many companies out there competing for customers’ attention, it is increasingly important to build authentic brands that connect to your audience and keeps their engagement. In Canada and the US combined there are approximately 67.2 million people living with a disability, all with family members and friends who care equally about accessibility and are much more likely to be loyal to companies that align with those values.</P>
             <P>Adopting accessibility into your business shows your customers, clients, and users that you care and gives 
             them a reason to care about your success too.</P>
-            <h4 class="temp">Simply put, when accessibility is part of strategic planning, businesses are better equipped 
-            for success in our connected world of commerce, academia, and civic engagement.</h4>
-            <a href ="../contact">
-              <BookLink>
-                <h5>Book a free consult</h5>
-                <Line/>
-              </BookLink> 
-            </a>
+            <Temp>Simply put, when accessibility is part of strategic planning, businesses are better equipped 
+            for success in our connected world of commerce, academia, and civic engagement.</Temp>
+            <BookLink to="/contact" aria-label="Contact us to learn more about brand loyalty">
+              Contact us to learn more
+              <Line role="presentation" />
+            </BookLink>
           </FlexBox>
         </RowContainer>
       </ContentContainer> 

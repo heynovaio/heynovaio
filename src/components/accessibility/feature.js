@@ -79,55 +79,55 @@ function Feature () {
             <IconBox>
               <img src={GIcon1} alt="Icon1" role="presentation"/>
             </IconBox>
-            <h3>Semantic Code & Added Accessibility Best Practices</h3>
+            <h3>Semantic code & added accessibility best practices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon2} alt="Icon2" role="presentation"/>
             </IconBox>
-            <h3>Multiple Ways for the User to Recieve Information</h3>
+            <h3>Multiple ways for the user to receive information</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon3} alt="Icon3" role="presentation"/>
             </IconBox>
-            <h3>Viewable on All Screen Sizes & Devices</h3>
+            <h3>Viewable on all screen sizes & devices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon4} alt="Icon4" role="presentation"/>
             </IconBox>
-            <h3>Copy that is Easy to Read and Understand</h3>
+            <h3>Content that is easy to read and understand</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon5} alt="Icon5" role="presentation"/>
             </IconBox>
-            <h3>Intuitive User-Flow & Easy to Interact With</h3>
+            <h3>Intuitive user-flow & easy to interact with</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon6} alt="Icon6" role="presentation"/>
             </IconBox>
-            <h3>Funtional Control of the Interactive Elements</h3>
+            <h3>Functional control of the interactive elements</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon7} alt="Icon7" role="presentation"/>
             </IconBox>
-            <h3>Usable with Assistive Technologies</h3>
+            <h3>Usable with assistive technologies</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon8} alt="Icon8" role="presentation"/>
             </IconBox>
-            <h3>User Research & an Empathetic Approach</h3>
+            <h3>User research & an empathetic approach</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon5} alt="Icon5" role="presentation"/>
             </IconBox>
-            <h3>Proper use of Colour and Contrast Ratio</h3>
+            <h3>Proper use of colour and contrast ratio</h3>
           </GridItem>
         </GridBox>
       </ContentContainer>
