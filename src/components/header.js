@@ -261,7 +261,8 @@ export default () => (
       <Menu id="drop">{/*whole drop down*/}
         <ul>
           <li><Link onClick={showDrop} to="/">Home</Link></li>
-          <li><Link onClick={showDrop} to="/blog/">Blog</Link></li>
+          <li><Link onClick={showDrop} to="/blog/">Our Blog</Link></li>
+          <li><Link onClick={showDrop} to="/blog/">Accessibility</Link></li>
           <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
         </ul>
         <LinkContainerMenu>
