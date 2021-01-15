@@ -2,7 +2,8 @@ import styled from '@emotion/styled'
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { PopupText } from 'react-calendly'
+import { Link } from "gatsby"
+
 
 const InclusiveSection = styled.section`
   padding: 50px 0 80px;
@@ -111,23 +112,19 @@ const Sticky = styled.div`
 const ImgContainer = styled.div`
   position: absolute;
 `
-const Button = styled.div`
+const Button = styled(Link)`
   margin-bottom: 30px;
-  a {
-    background-color: #D5330D;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    text-align: center;
-    color: #fff;
-    font-family: Stolzl;
-    padding: 14px 32px;
-    max-width: 200px;
-    text-decoration: none;
-    margin-top: 20px;
-    border: none;
-    display: inline-block;
-  }
+  background-color: #D5330D;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  font-family: Stolzl;
+  padding: 14px 32px;
+  max-width: 300px;
+  text-decoration: none;
+  margin-top: 20px;
+  border: none;
+  display: inline-block;
 `
 function Inclusive () {
 
@@ -156,11 +153,8 @@ function Inclusive () {
           <H2>Does your website work for everyone?</H2>
           <MainParaOne>These are ways we are able to help you find out.</MainParaOne>
           <MainPara>Through an empathetic human lens we aim to ensure your success in reaching full accessibility and providing ALL your users with the best experience possible.</MainPara>
-          <Button>
-            <PopupText
-              text="Get a Quote"
-              url="https://calendly.com/hey-nova/free-consultation"
-            />
+          <Button to="/accessibility">
+            Accessibility Services
           </Button>
         </MainContent>
         <List>
