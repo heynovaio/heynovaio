@@ -75,13 +75,45 @@ const SkipButton = styled.a`
     transform: translateY(0%);
   }
 `
+
 const showDrop = () => {
-  document.getElementById("drop").classList.toggle("open");
-  document.getElementById("burger").classList.toggle("open");
+
+  var button = document.getElementById("burger");
+  var menu = document.getElementById("drop");
+
+  menu.classList.toggle("open");
+  button.classList.toggle("open");
+
+  var expanded = button.getAttribute('aria-expanded');
+
+    if (expanded === 'false') {
+      button.setAttribute('aria-expanded', 'true')
+      menu.setAttribute('aria-hidden', 'false')
+
+    } else {
+      button.setAttribute('aria-expanded', 'false')
+      menu.setAttribute('aria-hidden', 'true')
+    }
 }
 
+window.onkeydown = function( event ) {
+  if ( event.keyCode == 27 ) {
+  
+    var button = document.getElementById("burger");
+    var menu = document.getElementById("drop");
+    var expanded = button.getAttribute('aria-expanded');
+    
+    if (expanded === 'true') {
+      menu.classList.toggle("open");
+      button.classList.toggle("open");
+      button.setAttribute('aria-expanded', 'false')
+      menu.setAttribute('aria-hidden', 'true')
+    }
+  }
+};
+
 const Hamburger = () => (
-  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false"  aria-modal="true"  aria-controls="menu">
+  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false" aria-controls="menu">
     <div/><div/><div/>
   </HamburgerStyle>
 )
@@ -159,7 +191,7 @@ const HamburgerStyle = styled.button`
     }
   }
 `
-const Nav = styled.nav `
+const NavContainer = styled.div `
   a {
     text-decoration: none;
     padding: 10px 10px 10px;
@@ -189,7 +221,7 @@ const Nav = styled.nav `
     }
   }
 `
-const Menu = styled.div `
+const Menu = styled.nav `
   position: fixed;
   top: 0;
   right: 0;
@@ -256,9 +288,9 @@ export default () => (
          <FontAwesomeIcon icon={faInstagram} />
       </InstagramLink>
     </LinkContainer>
-    <Nav role="navigation" aria-hidden="true" aria-labelledby="menu-toggle">
+    <NavContainer>
       <Hamburger  />
-      <Menu id="drop">{/*whole drop down*/}
+      <Menu aria-hidden="true" aria-labelledby="burger" id="drop">{/*whole drop down*/}
         <ul>
           <li><Link onClick={showDrop} to="/">Home</Link></li>
           <li><Link onClick={showDrop} to="/blog/">Our Blog</Link></li>
@@ -277,6 +309,6 @@ export default () => (
           </InstagramLink>
         </LinkContainerMenu>
       </Menu>
-    </Nav>
+    </NavContainer>
   </Header>
 )
