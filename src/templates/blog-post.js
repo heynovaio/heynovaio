@@ -294,7 +294,15 @@ const LeftSide = styled.div`
       margin-left: 0;
     }
   }
-
+  p sup {
+    color: #0d7489;
+    font-weight: bold;
+  }
+  small.footnote {
+    font-style: italic;
+    display: inline-block;
+    line-height: 1.65;
+  }
 `
 const RightSide = styled.div`
   position: relative;
