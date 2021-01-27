@@ -47,7 +47,7 @@ const Icon = styled.a`
 export default () => (
   <Footer>
     <Flex>
-      <Icon aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+      <Icon aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/company/hey-nova/">
          <FontAwesomeIcon icon={faLinkedinIn} />
       </Icon>
       <Icon aria-label="Facebook" target="blank" href="https://www.facebook.com/heynovaio/">

@@ -285,7 +285,7 @@ class Header extends React.Component {
           <img role="presentation" alt="Hey Nova Logo" src={img1}/>
         </ImgContainer>
         <LinkContainer tabindex="-1">
-          <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+          <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/company/hey-nova/">
              <FontAwesomeIcon icon={faLinkedinIn} />
           </LinkedInLink>
           <FaceBookLink aria-label="Facebook" tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
@@ -305,7 +305,7 @@ class Header extends React.Component {
               <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
             </ul>
             <LinkContainerMenu>
-              <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+              <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/company/hey-nova/">
                  <FontAwesomeIcon icon={faLinkedinIn} />
               </LinkedInLink>
               <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
