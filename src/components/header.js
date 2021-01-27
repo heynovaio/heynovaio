@@ -254,69 +254,72 @@ const LinkContainerMenu = styled.div`
 `
 
 
-const Header = () => {
+class Header extends React.Component {
 
+  var button = document.getElementById("burger");
+  var menu = document.getElementById("drop");
+  var expanded = button.getAttribute('aria-expanded');
 
-  window.onkeydown = function( event ) {
-    if ( event.keyCode === 27 ) {
-    
-      var button = document.getElementById("burger");
-      var menu = document.getElementById("drop");
-      var expanded = button.getAttribute('aria-expanded');
-      
-      if (expanded === 'true') {
-        menu.classList.toggle("open");
-        button.classList.toggle("open");
-        button.setAttribute('aria-expanded', 'false')
-        menu.setAttribute('aria-hidden', 'true')
+  componentDidMount() {
+    window.onkeydown = function( event ) {
+      if ( event.keyCode === 27 ) {
+        
+        if (expanded === 'true') {
+          menu.classList.toggle("open");
+          button.classList.toggle("open");
+          button.setAttribute('aria-expanded', 'false')
+          menu.setAttribute('aria-hidden', 'true')
+        }
       }
     }
   }
-  
-  return (
 
-    <HeaderStyle>
-      <SkipButton href="#main">   
-          Skip to Content
-      </SkipButton>
-      <ImgContainer to="/" title="Hey Nova Homepage">
-        <img role="presentation" alt="Hey Nova Logo" src={img1}/>
-      </ImgContainer>
-      <LinkContainer tabindex="-1">
-        <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
-           <FontAwesomeIcon icon={faLinkedinIn} />
-        </LinkedInLink>
-        <FaceBookLink aria-label="Facebook" tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
-           <FontAwesomeIcon icon={faFacebook} />
-        </FaceBookLink>
-        <InstagramLink aria-label="Instagram" tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
-           <FontAwesomeIcon icon={faInstagram} />
-        </InstagramLink>
-      </LinkContainer>
-      <NavContainer>
-        <Hamburger  />
-        <Menu aria-hidden="true" aria-labelledby="burger" id="drop">{/*whole drop down*/}
-          <ul>
-            <li><Link onClick={showDrop} to="/">Home</Link></li>
-            <li><Link onClick={showDrop} to="/blog/">Our Blog</Link></li>
-            <li><Link onClick={showDrop} to="/accessibility/">Accessibility</Link></li>
-            <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
-          </ul>
-          <LinkContainerMenu>
-            <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
-               <FontAwesomeIcon icon={faLinkedinIn} />
-            </LinkedInLink>
-            <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
-               <FontAwesomeIcon icon={faFacebook} />
-            </FaceBookLink>
-            <InstagramLink aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
-               <FontAwesomeIcon icon={faInstagram} />
-            </InstagramLink>
-          </LinkContainerMenu>
-        </Menu>
-      </NavContainer>
-    </HeaderStyle>
-  )
+  render () {
+    return (
+
+      <HeaderStyle>
+        <SkipButton href="#main">   
+            Skip to Content
+        </SkipButton>
+        <ImgContainer to="/" title="Hey Nova Homepage">
+          <img role="presentation" alt="Hey Nova Logo" src={img1}/>
+        </ImgContainer>
+        <LinkContainer tabindex="-1">
+          <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+             <FontAwesomeIcon icon={faLinkedinIn} />
+          </LinkedInLink>
+          <FaceBookLink aria-label="Facebook" tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
+             <FontAwesomeIcon icon={faFacebook} />
+          </FaceBookLink>
+          <InstagramLink aria-label="Instagram" tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
+             <FontAwesomeIcon icon={faInstagram} />
+          </InstagramLink>
+        </LinkContainer>
+        <NavContainer>
+          <Hamburger  />
+          <Menu aria-hidden="true" aria-labelledby="burger" id="drop">{/*whole drop down*/}
+            <ul>
+              <li><Link onClick={showDrop} to="/">Home</Link></li>
+              <li><Link onClick={showDrop} to="/blog/">Our Blog</Link></li>
+              <li><Link onClick={showDrop} to="/accessibility/">Accessibility</Link></li>
+              <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
+            </ul>
+            <LinkContainerMenu>
+              <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/in/kirsten-dodd-heynova/">
+                 <FontAwesomeIcon icon={faLinkedinIn} />
+              </LinkedInLink>
+              <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
+                 <FontAwesomeIcon icon={faFacebook} />
+              </FaceBookLink>
+              <InstagramLink aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
+                 <FontAwesomeIcon icon={faInstagram} />
+              </InstagramLink>
+            </LinkContainerMenu>
+          </Menu>
+        </NavContainer>
+      </HeaderStyle>
+    )
+  }
 }
 
 export default Header
