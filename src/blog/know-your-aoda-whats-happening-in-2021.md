@@ -2,7 +2,7 @@
 date: 2021-01-27
 author: Stephen Belyea
 title: Know your AODA - What's happening in 2021?
-featuredImage: ../images/jan-2021-cover-placeholder.jpg
+featuredImage: ../images/tele-health-sign-language.jpeg
 category: accessibility
 bio: Husband, father, habitual dork, a11y instigator + recovering front-end dev, taking a side-door into design, attempted writer, ex-pat Maritimer. He/him.
 bioImage: ../images/stephen.jpeg
@@ -10,12 +10,7 @@ bioImage: ../images/stephen.jpeg
 
 Much of the world has had their eyes on 2021 as a big year for many, many reasons. Assuming you’re already inundated by the headlines, we don’t need to touch on the tidal wave of updates. Instead, let’s look at one major piece of legislation which will continue to make a difference for [at least 15% of Ontarians](https://accessibilityconsultants.ca/resources/legislation#:~:text=Disability%20impacts%20the%20lives%20of,That's%20one%20in%20seven%20people.). That’s nearly two million people in Ontario alone, not to mention the [roughly 20% across Canada](https://www150.statcan.gc.ca/n1/pub/89-654-x/89-654-x2018002-eng.htm#a4) who likely benefit in some way.
 
-<!--
-  Source on Adobe Stock:
-  https://stock.adobe.com/ca/images/handicapped-young-couple-in-wheelchairs-in-autumn-park/122058638
-  -->
-
-![Young couple in wheelchairs, enjoying a sunset view on the bank of a pond](https://as1.ftcdn.net/jpg/01/22/05/86/500_F_122058638_wBmj9bhHmQmBYnfDfoTMaz0Ga7NcXXwJ.jpg)
+![Young couple in wheelchairs, enjoying a sunset view on the bank of a pond](../images/wheelchairs.jpeg)
 
 ## AODA has entered the chat
 
@@ -25,12 +20,7 @@ The AODA was initially passed in 2005. This was a long-fought expansion of the p
 
 This has been a welcomed change for everyone across Ontario who can finally enter many stores, restaurants, and public spaces without assistance.
 
-<!--
-  Source on Adobe Stock:
-  https://stock.adobe.com/ca/images/hand-touch-on-braille-text-panel/169887573
-  -->
-
-![Hand reading braille kiosk signage](https://as2.ftcdn.net/jpg/01/69/88/75/500_F_169887573_dWfol9SB98IWZjtaVC96bfJCYz81Kt2n.jpg)
+![Hand reading braille kiosk signage](../images/braile.jpeg)
 
 For Ontarians who have been able to apply, interview, and get hired for a much wider range of jobs without being turned away because of [accommodation requests](https://www.aoda.ca/individual-accommodation-plans-in-ontario-workplaces/), this has been a life-changing improvement.
 
@@ -60,13 +50,7 @@ As with many other elements of the AODA, the compliance report is a mechanism to
 
 One final note on meeting the AODA’s requirements: think of this as a spectrum of experience for your users. Like any legal requirements, courtrooms around the world are still deciding precisely what every letter of the WCAG means and how to interpret the grey areas. This means there is not and will likely never be a clear “100% complete” point when it comes to accessibility. Providing an accessible experience is all about embracing and thinking about human beings - not just ticking checkboxes.
 
-<!--
-  Use this as the cover image!
-  Source on Adobe Stock:
-  https://stock.adobe.com/ca/images/deaf-mute-patient-use-video-conference-make-online-consultation-by-sign-language-with-doctor-on-tablet-application-about-illness-medicine-via-vdo-call-telehealth-telemedicine-online-hospital/357776001
-  -->
-
-![Doctor and patient using sign language over a video call on a tablet device](https://as1.ftcdn.net/jpg/03/57/77/60/500_F_357776001_jg6FcSI7GKkqW0qUcnSwQkLAwwyOL0Ju.jpg)
+![Doctor and patient using sign language over a video call on a tablet device](../images/tele-health-sign-language.jpeg)
 
 With this in mind, consider what your company can do to enhance your audience’s experience. If you know you have gaps in your WCAG 2.0 **Level AA** compliance, take extra care to solicit feedback and treat any of it with the appropriate weight. The entire reporting, judgement, and fine system through the _Accessibility for Ontarians with Disabilities Act_ is intended to [encourage cooperation, rather than punish noncompliance](https://www.ontario.ca/page/accessibility-compliance-and-enforcement-report). This is exactly why the [decade-long deadline structure](https://www.ontario.ca/page/accessibility-rules-businesses-and-non-profits#section-3) started with [availability of information](https://www.ontario.ca/page/how-make-information-accessible), moved through internal training, building multi-year plans, and setting up [public feedback channels](https://www.ontario.ca/page/how-make-information-accessible#:~:text=2.%20Feedback%20processes%20for%20employees%20and%20the%20public).
 

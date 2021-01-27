@@ -256,13 +256,13 @@ const LinkContainerMenu = styled.div`
 
 class Header extends React.Component {
 
-  var button = document.getElementById("burger");
-  var menu = document.getElementById("drop");
-  var expanded = button.getAttribute('aria-expanded');
-
   componentDidMount() {
     window.onkeydown = function( event ) {
       if ( event.keyCode === 27 ) {
+
+        var button = document.getElementById("burger");
+        var menu = document.getElementById("drop");
+        var expanded = button.getAttribute('aria-expanded');
         
         if (expanded === 'true') {
           menu.classList.toggle("open");
