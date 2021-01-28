@@ -190,9 +190,9 @@ const Form = styled.form`
 export default () => (
   <Layout>
     <SEO
-      title="Hey Nova | Contact | Branding, Designing, Developing"
-      description="Evolving the way companies communicate to their audience by creating cohesive brands, user-centred design, and inclusive code."
-      keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
+      title="Contact us"
+      description="Get in touch so we can help you with your next accessibile digital solution."
+      keywords={[ `Web Design`, `Accessibility`, `Web Development`, `Victoria`, `Halifax`,`Toronto`, `Marketing`, `User Experience`, `Branding` ]}
     />
     <Main>
       <Container>

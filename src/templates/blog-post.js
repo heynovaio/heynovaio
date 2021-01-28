@@ -455,9 +455,9 @@ export default function BlogPost({ data }) {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        image={image}
+        title="Accessibility | Blog "
+        description={post.frontmatter.title}
+        image={post.frontmatter.featuredImage}
       />
       <HeaderContainer>
         <Back to="/blog"><FontAwesomeIcon icon={faChevronLeft} /> Back to all Blogs</Back>

@@ -16,9 +16,9 @@ import Subscribe from "../components/subscribe"
 export default () => (
   <Layout>
      <SEO
-        title="Hey Nova | Branding, Designing, Developing"
-        description="Evolving the way companies communicate to their audience by creating cohesive brands, user-centred design, and inclusive code."
-        keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
+        title="Designing Inclusive & Accessible Solutions"
+        description="Evolving the way companies communicate to their inclusive audience by creating cohesive brands, user-centred design, and accessible code."
+        keywords={[ `Web Design`, `Accessibility`, `Web Development`, `Victoria`, `Halifax`,`Toronto`, `Marketing`, `User Experience`, `Branding` ]}
         image="https://heynova.io/static/5a425dc5ea1fa50ee84c4e50acbbafc1/88523/group-20.webp"
     />
     <Hero/>

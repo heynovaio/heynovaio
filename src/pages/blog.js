@@ -19,11 +19,10 @@ const ContentContainer = styled.div`
     margin: 0 0 25px;
     font-family: Stolzl;
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 0 .5rem;
     @media (max-width: 767px) {
       font-size: 68px;
       padding-top: 4.5rem;
-      padding-bottom: 1rem;
     }
   }
   @media (min-width: 768px) {
@@ -127,18 +126,30 @@ const BlogDate = styled.small`
   color: #0c7489;
 `
 
+const P = styled.p`
+  color: #0a2239;
+  max-width: 756px;
+  font-size: 26px;
+  line-height: 1.64;
+  margin: 0px auto 4rem;
+  font-family: Ubuntu;
+  text-align: center;
+
+`
+
 export default function Blog({ data }) {
   const { posts } = data.blog
 
   return (
     <Layout>
       <SEO
-        title="Hey Nova | Blog | Branding, Designing, Developing"
-        description="Evolving the way companies communicate to their audience by creating cohesive brands, user-centred design, and inclusive code."
-        keywords={[ `Web Design`, `Web Development`, `Victoria`, `British Columbia`, `Marketing`, `User Experience`, `Branding` ]}
+        title="Our Blog | Accessibility"
+        description="Read our blogs to learn more about digital accessibility and the consulting work we do."
+        keywords={[ `Web Design`, `Accessibility`, `Web Development`, `Victoria`, `Halifax`,`Toronto`, `Marketing`, `User Experience`, `Branding` ]}
       />
       <ContentContainer>
-        <h1 id ="main">Hey, Read Our Blogs</h1>
+        <h1 id ="main">Hey, take a read</h1>
+        <P>We publish monthly accessibility blogs that we hope will help empower and inspire your digital accessibility journey.</P>
         <BlogPreview>
           {posts.map(post => (
             <article key={post.id}>
