@@ -1,14 +1,14 @@
 ---
 date: 2020-08-19
 author: Dr. Kristen Liesch, in collaboration with Hey Nova
-title: Is your digital space invisible or impossible?
+title: How lack of accessibility undermines impact
 featuredImage: ../images/frustration.jpeg
 category: accessibility
 bio: Named in Forbes’ “10 Diversity and Inclusion Trailblazers You Need to Get Familiar With,” Dr. Kristen Liesch is co-CEO and co-founder of Tidal Equality, a strategy firm at the intersection of social change and diversity and inclusion based in Canada. She is co-creator of the Equity Sequence™️ practice, a system for interrupting bias and increasing equity in work and decision-making. An educational designer and strategist, she is obsessed with co-designing a more equal world through curricula, candid conversations, and equitable organizational change.
 bioImage: ../images/kristen-bio.png
 ---
 
-##  How lack of accessibility undermines impact
+##  Is your digital space invisible or impossible?
 
 By [Dr. Kristen Liesch](https://www.linkedin.com/in/kristenliesch/) from [Tidal Equality](https://www.tidalequality.com/), in collaboration with Kirsten Dodd and Bryony Anderson of Hey Nova
 
