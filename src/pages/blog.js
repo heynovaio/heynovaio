@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Subscribe from "../components/subscribe"
 
 const ContentContainer = styled.div`
-  max-width: 1288px;
+  max-width: 1460px;
   padding: 100px 20px 20px;
   margin: 0 auto;
   position: relative;
@@ -36,18 +36,24 @@ const ContentContainer = styled.div`
 const BlogPreview = styled.div`
   padding-bottom: 160px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 520px);
-  grid-column-gap: 6rem;
-  grid-row-gap: 6rem;
+  grid-template-columns: repeat(auto-fill,575px);
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
   justify-content: center;
   article{
+    position: relative;
     > a{
       text-decoration: none;
       display: block;
+      &:hover {
+        h2 {
+          text-decoration: underline;
+        }
+      }
     }
     h2{
       font-family: Stolzl;
-      font-size: 40px;
+      font-size: 36px;
       line-height: 1.25;
       letter-spacing: -0.13px;
       color: #051628;
@@ -75,7 +81,6 @@ const BlogPreview = styled.div`
  }
 `
 const ImageBox = styled.div`
-  width: 520px;
   height: 350px;
   position: relative;
   overflow: hidden;
@@ -122,8 +127,15 @@ const BlogAuth = styled.small`
     transform: translateY(-.2rem);
   }
 `
-const BlogDate = styled.small`
-  color: #0c7489;
+const BlogDate = styled.span`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 1;
+  font-family: 'stolzl';
+  padding: 0 0 3px 8px;
+  font-weight: 600;
 `
 
 const P = styled.p`
@@ -154,12 +166,13 @@ export default function Blog({ data }) {
           {posts.map(post => (
             <article key={post.id}>
               <a href={post.fields.slug} aria-label={post.frontmatter.title}>
+                <BlogDate>{post.frontmatter.date}</BlogDate>
                 <ImageBox>
                   <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
                 </ImageBox>
                 <BlogTag>{post.frontmatter.category}</BlogTag>
                 <h2>{post.frontmatter.title}</h2>
-                <div><BlogAuth>{post.frontmatter.author}</BlogAuth> <span>&#8226;</span> <BlogDate>{post.frontmatter.date}</BlogDate></div>
+                <div><BlogAuth>{post.frontmatter.author}</BlogAuth></div>
               </a>
             </article>
           ))}

@@ -290,6 +290,10 @@ const LeftSide = styled.div`
     p {
       color: #fff;
     }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
     @media (max-width: 1068px) {
       margin-left: 0;
     }
