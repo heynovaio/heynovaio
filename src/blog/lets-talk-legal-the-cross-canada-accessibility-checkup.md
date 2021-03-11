@@ -2,7 +2,7 @@
 date: 2021-03-10
 author: Stephen Belyea
 title: Let's Talk Legal - The Cross Canada Accessibility Checkup
-featuredImage: ../images/northern-lights.jpeg
+featuredImage: ../images/nwt.jpeg
 category: accessibility
 bio: Husband, father, habitual dork, a11y instigator + front-end dev, taking a side-door into design, attempted writer, ex-pat Maritimer. He/him.
 bioImage: ../images/stephen.jpeg
@@ -19,7 +19,7 @@ When speaking or [writing about accessibility legislation](https://heynova.io/bl
   https://stock.adobe.com/ca/images/couple-friends-canoeing-on-a-wooden-canoe-during-a-colorful-sunny-sunset-cloudy-sky-composite-taken-in-harrison-river-east-of-vancouver-british-columbia-canada/340463975?prev_url=detail
 -->
 
-![couple in a canoe, paddling up a mountain and tree lined river into the sunset](https://as2.ftcdn.net/jpg/03/40/46/39/500_F_340463975_2MCr2Xg0hxcABfzqQN5mhAsvtmyI6pQz.jpg)
+![couple in a canoe, paddling up a mountain and tree lined river into the sunset](../images/bc.jpeg)
 
 ## British Columbia
 
@@ -52,7 +52,7 @@ The act draws five key elements for setting accessibility standards, including c
   https://stock.adobe.com/ca/images/toronto-city-hall-skating-ring-and-its-colorful-lights-are-a-popular-winter-attraction/129629121?prev_url=detail
 -->
 
-![crowd skating at toronto city hall with lights and holiday decorations lit up](https://as2.ftcdn.net/jpg/01/29/62/91/500_F_129629121_EDkdvHQaSFyU3yxezR5mtwaSzAO7UjLZ.jpg)
+![crowd skating at toronto city hall with lights and holiday decorations lit up](../images/to.jpeg)
 
 ## Ontario
 
@@ -79,7 +79,7 @@ Continuing Eastward, we enter the loyalist province, which has no active or publ
   https://stock.adobe.com/ca/images/view-of-the-famous-harbor-front-of-lunenburg-nova-scotia-canada/225586362?prev_url=detail
 -->
 
-![brightly painted seaside buildings are lit up at dusk in lunenberg](https://as2.ftcdn.net/jpg/02/25/58/63/500_F_225586362_J2E46ofeshTrHOEx1dtYVDIqgOB114bA.jpg)
+![brightly painted seaside buildings are lit up at dusk in lunenberg](../images/ns.jpeg)
 
 ## Nova Scotia
 
@@ -108,7 +108,7 @@ Heading North West, let's touch on Canada’s Arctic. Currently, none of the thr
   https://stock.adobe.com/ca/images/colorful-aurora-borealis-display/236671571?prev_url=detail
 -->
 
-![snowy trees at night with green and purple northern lights in the sky](https://as2.ftcdn.net/jpg/02/36/67/15/500_F_236671571_586sKuUd67hDdUvUBJiTRYUS5bg4KkGG.jpg)
+![snowy trees at night with green and purple northern lights in the sky](../images/nwt.jpeg)
 
 ## Honourable mention: Federal legislation
 
