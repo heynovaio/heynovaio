@@ -13,13 +13,13 @@ const HeroSection = styled.section`
 
   @media (min-width: 960px) {
     background: url( ${img1} ), #ffffff;
-    background-position: right 60px;
+    background-position: right top;
     background-repeat: no-repeat;
     background-size: 50%;
   }
   @media (min-width: 1880px) {
     background: url( ${img1} ), #ffffff;
-    background-position: right 60px;
+    background-position: right top;
     background-repeat: no-repeat;
     background-size: 920px;
   }

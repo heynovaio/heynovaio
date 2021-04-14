@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from '@emotion/styled'
 
-import img1 from '../images/logo-2-x.png'
+import img1 from '../images/heynova-logo-new.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
 
@@ -13,15 +13,14 @@ const HeaderStyle = styled.header`
   top: 0;
   width: 100%;
   z-index: 3;
-  background: #051628;
   img {
     display: block;
   }
 `
 const ImgContainer = styled(Link)`
-  max-width: 56px;
-  padding-top: 14px;
-  padding-left: 15px;
+  max-width: 90px;
+  padding-top: 11px;
+  padding-left: 11px;
   position: absolute;
   left: 0;
   display: block;
@@ -29,18 +28,22 @@ const ImgContainer = styled(Link)`
 const LinkContainer = styled.div`
   display: flex;
   margin-right: 56px;
+  background: #051727;
+  padding-left: 20px;
   a {
-    padding: 16px 12px 20px;
+    padding: 14px 12px 18px;
     font-size: 20px;
     font-family: Stolzl;
     font-weight: 400;
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
     letter-spacing: 0.025em;
     &:hover {
-      color: #ca1f0e;
+      color: #fff;
     }
+  }
+  @media (max-width: 780px) {
+    display: none;
   }
 `
 const FaceBookLink = styled.a`

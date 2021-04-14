@@ -7,7 +7,7 @@ const HeroSection = styled.section`
   background-color: #051628;
   padding: 210px 0px 20px 0px;
   position: relative;
-  margin-top: 50px;
+  padding-top: 50px;
   @media (min-width: 960px) {
     background-image: url( ${img1} );
     background-size: cover;

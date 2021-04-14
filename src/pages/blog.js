@@ -21,8 +21,8 @@ const ContentContainer = styled.div`
     text-align: center;
     padding: 4rem 0 .5rem;
     @media (max-width: 767px) {
-      font-size: 68px;
-      padding-top: 4.5rem;
+      font-size: 48px;
+      padding-top: 105px;
     }
   }
   @media (min-width: 768px) {
@@ -30,6 +30,9 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 767px) {
     padding-top: 10px;
+    p {
+      font-size: 22px;
+    }
   }
 `
 
@@ -75,7 +78,7 @@ const BlogPreview = styled.div`
     grid-row-gap: 4rem;
     article{
       h2{
-        font-size: 34px;
+        font-size: 22px;
       }
     }
  }

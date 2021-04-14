@@ -99,7 +99,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        icon: `src/images/fv.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-red.png`, // This path is relative to the root of the site.
       },
     },
 

@@ -29,7 +29,7 @@ const ContentContainer = styled.div`
     min-height: 778px;
   }
   @media (max-width: 767px) {
-    padding-top: 10px;
+    padding-top: 0px;
   }
 `
 const Back = styled(Link)`
@@ -61,7 +61,7 @@ const HeaderContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     white-space:wrap;
-    padding-top: 10px;
+    padding-top: 0px;
  }
 `
 const TitleBox = styled.div`
@@ -91,13 +91,14 @@ const TitleBox = styled.div`
     margin-left: 0;
   }
   @media (max-width: 768px) {
-    margin: 40px -20px 1.5rem;
+    margin: 0px -20px 1.5rem;
     width: 100vw;
     position: relative;
     transform: inherit;
     top: 0;
+    padding: 120px 1rem 4rem;
     h1{
-      font-size: 40px;
+      font-size: 32px;
     }
  }
 `
@@ -143,7 +144,7 @@ const BlogDate = styled.small`
     transform: translateY(-.25rem);
   }
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 `
 const BlogTag = styled.small`

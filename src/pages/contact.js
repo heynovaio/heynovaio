@@ -14,7 +14,7 @@ const H1 = styled.h1`
   font-family: Stolzl;
   text-align: center;
   @media (max-width: 767px) {
-    font-size: 68px;
+    font-size: 48px;
   }
 `
 const Main = styled.div`
@@ -38,7 +38,7 @@ const Container = styled.div`
     min-height: 678px;
   }
   @media (max-width: 767px) {
-    padding: 175px 0 155px;
+    padding: 115px 0 155px;
   }
 `
 const ActionContainer = styled.div`
