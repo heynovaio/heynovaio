@@ -18,9 +18,9 @@ const HeaderStyle = styled.header`
   }
 `
 const ImgContainer = styled(Link)`
-  max-width: 90px;
-  padding-top: 11px;
-  padding-left: 11px;
+  max-width: 111px;
+  padding-top: 12px;
+  padding-left: 14px;
   position: absolute;
   left: 0;
   display: block;
