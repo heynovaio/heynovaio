@@ -304,9 +304,29 @@ const LeftSide = styled.div`
     font-weight: bold;
   }
   small.footnote {
-    font-style: italic;
     display: inline-block;
     line-height: 1.65;
+    font-size: 16px;
+    p {
+      font-size: 16px;
+    }
+  }
+  .footnotes {
+    display: inline-block;
+    line-height: 1.65;
+    font-size: 14px;
+    p {
+      font-size: 16px; 
+      display: inline-block;
+    }
+    li {
+      font-size: 16px;
+    }
+    ol li:before {
+      font-size: 16px;
+      display: inline-block;
+    }
+
   }
 `
 const RightSide = styled.div`

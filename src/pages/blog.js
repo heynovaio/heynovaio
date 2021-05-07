@@ -89,6 +89,9 @@ const ImageBox = styled.div`
   overflow: hidden;
   margin: 0 auto;
   margin-bottom: .85rem;
+  .gatsby-image-wrapper {
+    height: 100%;
+  }
   Img{
     position: absolute;
     display: block;
