@@ -16,7 +16,7 @@ So, let us look at some of the biggest myths about web accessibility.
 Although screen readers may be the first thing that comes to mind when some people hear “web accessibility,” there are many other factors that need to be considered when designing an accessible website. Screen readers are great for those who are blind, vision-impaired, or illiterate, however, people with other disabilities such as colour blindness, cognitive disabilities, physical disabilities, and hearing impairments depend on website accessibility as well, all which require different considerations that may have nothing to do with a screen reader. 
 
 ## 2. Web accessibility does not affect the majority of users, so why bother with it
-Fifteen percent may seem like a small number to some, but with the world’s population currently at ~7.8 Billion people, that means 1.1 Billion[^1] people live with a disability, which is no small number.  If everyone’s needs are not considered when designing a website, even simple everyday tasks can become very frustrating and even impossible.  Imagine not being able to buy your grocery online and check the news or weather. With the recent events, full cities on lockdown and the majority of services moving increasingly online, it is paramount to have an accessible website for risk of shutting those 1.1 Billion people out of the world entirely.
+Fifteen percent may seem like a small number to some, but with the world’s population currently at [~7.8 Billion people, that means 1.1 Billion](https://www.worldometers.info/world-population/) people live with a disability, which is no small number.  If everyone’s needs are not considered when designing a website, even simple everyday tasks can become very frustrating and even impossible.  Imagine not being able to buy your grocery online and check the news or weather. With the recent events, full cities on lockdown and the majority of services moving increasingly online, it is paramount to have an accessible website for risk of shutting those 1.1 Billion people out of the world entirely.
 
 
 ![World Map that says 15%
@@ -24,7 +24,7 @@ of the world’s population lives with a disability.](../images/world-map.jpg)
 
 
 ## 3. I can just use an app on my website to make it accessible
-While various apps are now available that offer simple plugins to “make your website more accessible”, it does not cover every issue. Accessibility widgets only catch about ~30% of website issues.[^2] That means there are roughly ~70% of issues not being addressed. Some of these issues include text in an image, keyboard traps, mislabeled form fields, and missing links, just to name a few. 
+While various apps are now available that offer simple plugins to “make your website more accessible”, it does not cover every issue. [Accessibility widgets only catch about ~30% of website issues.](https://www.essentialaccessibility.com/blog/the-many-pitfalls-of-accessibility-overlays) That means there are roughly ~70% of issues not being addressed. Some of these issues include text in an image, keyboard traps, mislabeled form fields, and missing links, just to name a few. 
 
 ## 4. Accessible websites have to be ugly
 Websites DO NOT have to be ugly to be accessible. A simple color contrast or text size can make a difference in being accessible and not accessible. Technology has come a long way since the start of the internet, and websites do not have to be plain text on a screen in order to fit accessibility guidelines. You can create beautiful, engaging, and creative websites and still take everyone’s needs into consideration.
@@ -46,8 +46,10 @@ If you have taken all the steps to make your website accessible, we are thrilled
 <h2>Notes</h2>
 <small class="footnote">
 
-[^1]: [Current World Population](www.worldometers.info/world-population/)
+[^1]:
+     [Current World Population](https://www.worldometers.info/world-population/)
 
-[^2]: [The Many Pitfalls of Accessibility Overlays](www.essentialaccessibility.com/blog/the-many-pitfalls-of-accessibility-overlays)
+[^2]:
+     [The Many Pitfalls of Accessibility Overlays](https://www.essentialaccessibility.com/blog/the-many-pitfalls-of-accessibility-overlays/)
 
 </small>
