@@ -198,6 +198,23 @@ const LeftSide = styled.div`
   img{
     width: 100%;
   }
+  figure {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+
+    figcaption {
+      margin-top: 0.75rem;
+      text-align: center;
+      font-style: italic;
+      padding: 0.25rem 2.75rem;
+  
+      p {
+        line-height: 1.65;
+        font-size: 0.95rem;
+        margin-bottom: 0;
+      }
+    }
+  }
   @media (max-width: 768px) {
     width: 100%;
   }
