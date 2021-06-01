@@ -86,6 +86,9 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 760,
+              showCaptions: true,
+              markdownCaptions: true,
+              showCaptions: ["title"],
             },
           },
         ],
