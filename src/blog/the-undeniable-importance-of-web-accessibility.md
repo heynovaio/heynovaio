@@ -8,7 +8,7 @@ author: Bryony Anderson
 bio: British tea drinker, dog lover, whiskey enthusiastic, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
 bioImage: ../images/bryony.jpg
 
-rightQuote: "And that’s still not all. Web accessibility helps people with all sorts of limitations."
+rightQuote: "And that’s still not all. Web accessibility helps people with all sorts of barriers."
 ---
 
 Before we start discussing why web accessibility is so important for your business, let’s dive into what it really is. 
@@ -28,13 +28,13 @@ It gives access to people with a range of disabilities and impairments. For inst
 
 ## Did you know?
 
-For example, it makes it far easier for any person trying to view a website on smaller devices, including someone with large thumbs that struggles to press the buttons on a website. Then there are people with temporary limitations such as a broken arm. 
+For example, it makes it far easier for any person trying to view a website on smaller devices, including someone with large thumbs that struggles to press the buttons on a website. Then there are people with temporary limitations such as a broken arm, or even just someone who has lost their glasses. 
 
 </div>
 
-For example, it makes it far easier for any person trying to view a website on smaller devices, including someone with large thumbs that struggles to press the buttons on a website. Then there are people with temporary limitations such as a broken arm, or even just someone who has lost their glasses. There is an extensive list of people that web accessibility makes your site usable for, that extends far past the normal understanding of its purpose. 
+There is an extensive list of people that web accessibility improves usability for, that extends far past the typical understanding of its purpose. 
 
-So, while persons living with disabilities and impairments take up around 15% of the world's population, they are not the only clients you are likely losing by not building your website to meet accessibility standards. 
+So, while persons living with disabilities and impairments account for 15% of the world's population, they are not the only clients you are likely losing by not building your website to meet accessibility standards. 
 
 Which moves us onto our second point. 
 
@@ -42,10 +42,12 @@ Which moves us onto our second point.
 
 ## Why is web accessibility so important?
 
-###1. It’s the right thing to do… for your bottom line
+###1. It’s the right thing to do… also for your bottom line
 
 Let’s begin with the most obvious one. It is the right thing to do. When you say that web accessibility is not important, you are saying that people with disabilities are not important. But in case that still isn’t enough to convince everyone, let’s take a different approach. When you say that web accessibility is not important, you are saying that their business is not important, and lost business is lost money. 
 
 ###2. Many Provinces in Canada are passing laws to make it mandatory
 
-If your business is located in British Columbia, Canada, you might be interested to know that the government is taking steps towards making it [law]() for all websites in the province to meet accessibility standards.  And other provinces and territories, including Saskatchewan and Yukon, will likely be following suit. Meanwhile, Ontario is way ahead of the curb in technology and inclusivity, making it law in 2005 through the [Accessibility for Ontarians with Disabilities Act (AODA)](). 
+If your business is located in British Columbia, Canada, you might be interested to know that the government is taking steps towards making it [law](https://www.leg.bc.ca/parliamentary-business/legislation-debates-proceedings/42nd-parliament/2nd-session/bills/first-reading/gov06-1) for all websites in the province to meet accessibility standards.  And other provinces and territories, including Saskatchewan and Yukon, will likely be following suit. Meanwhile, Ontario is way ahead of the curb in technology and inclusivity, making it law in 2005 through the [Accessibility for Ontarians with Disabilities Act (AODA)](https://heynova.io/blog/know-your-aoda-whats-happening-in-2021/). 
+
+You can learn more by reading our article ["Let's Talk Legal - The Cross Canada Accessibility Checkup](https://heynova.io/blog/lets-talk-legal-the-cross-canada-accessibility-checkup/)
