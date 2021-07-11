@@ -2,7 +2,7 @@
 date: 2021-07-12
 author: Stephen Belyea
 title: "Click Here to Read More: Words Matter More Than You Think"
-featuredImage: ../images/baby-shark-book.jpg
+featuredImage: ../images/see-more-example.png
 category: accessibility
 bio: Husband, father, habitual dork, a11y instigator + front-end dev, attempted writer, aspiring runner, ex-pat Maritimer. He/him.
 bioImage: ../images/stephen.jpeg
@@ -28,7 +28,7 @@ There is another branch of web content, however, which is much more frequently o
 
 These tiny words can help your visitors and customers navigate through your website, sign up for a service, troubleshoot an error, and even get a sense of your brand - whether playful and light, or serious and straight-to-the-point.
 
-[example image of copy tone]
+![Voice and tone examples from Mailchimp's detailed content style guide](../images/content-style-guide.png "Voice and tone examples from Mailchimp's detailed content style guide")
 
 ## Little words with a large job
 
@@ -62,7 +62,7 @@ As a bonus, we’re also providing some expectations for what will happen when t
 
 Adding to our last point about setting user expectations, our link and button microcopy has another important job when it comes to accessibility. [**WCAG 2.4.4 - Link Purpose (In Context)** (Level A)](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html) gives a lot of detail for a simple concept: tell your visitors where a link is taking them.
 
-[example image]
+![Three call to action cards with 'shop now' and 'see more' link text below thumbnail images](../images/see-more-example.png "Even the world's largest online retailer could stand to improve their link text")
 
 Take a look around at any number of news publications, blogs, or social media sites and watch for the proliferation of “read more”, “click here”, and “show all”. If you don’t already, try using your Tab key to navigate through one of these pages and guess each link’s destination based on its label text alone. If you navigate by screen reader, this is a constant experience.
 
