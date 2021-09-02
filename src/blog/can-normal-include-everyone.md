@@ -22,10 +22,6 @@ For many people who had attempted to secure remote work accommodation prior to t
 
 With COVID-19 rampaging around the globe, “no” was no longer an option. Seemingly overnight, longstanding attitudes toward at-home productivity were forced to sit back and embrace the circumstances. This went for similar previous assumptions as well, such as [video games and screen time for children](https://www.unicef.org/globalinsight/stories/rethinking-screen-time-time-covid-19).
 
-<!--
-  Available on Adobe stock here:
-  https://stock.adobe.com/ca/images/young-deaf-woman-having-a-non-verbal-conversation-in-online-video-call/423628922?prev_url=detail
--->
 
 ![Young woman signing while on a video call at her laptop](../images/sign-language-laptop.jpg)
 
@@ -51,10 +47,6 @@ Many restaurants, packed with high-touch surfaces, jumped to [smartphone-friendl
 
 For business owners, leadership teams, and managers, consider the positives that have come for your staff, if they’ve been working from home. The flexibility of hours, stress-reduction from no commute, cost-savings from coffee and food at home, increased time for friends, family, and hobbies is a plus many people would be hesitant to give up. Add to that the reduction in stress and struggle for employees (current or prospective) with physical disabilities, mental illness, appointments with care providers and specialists, children or other dependents at home, and your company has the potential to be a more diverse, inclusive, and successful workplace.
 
-<!--
-  Adobe stock image available here:
-  https://stock.adobe.com/ca/images/latin-man-in-wheelchair-using-laptop-at-home/439152629?prev_url=detail
--->
 
 ![Man sitting in a wheelchair uses a mouse and laptop at a desk setup in a home office](../images/home-office.jpg)
 
