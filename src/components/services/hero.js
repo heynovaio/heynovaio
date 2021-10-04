@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from '@emotion/styled'
 import img1 from '../../images/shopify-bg.png'
 import planet from '../../images/hero-planet2.png'
+import animation from '../../images/above-fold-animation.mp4'
 import { PopupText } from 'react-calendly'
 
 const HeroSection = styled.section`
@@ -26,13 +27,14 @@ const HeroSection = styled.section`
   img{
     width:395px;
     position:absolute;
-    left:-200px;
-    top:100px;
+    left:-165px;
+    top: 150px;
+    z-index: 2;
   }
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 100px 20px 0px;
+  padding: 130px 20px 0px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -42,15 +44,23 @@ const ContentContainer = styled.div`
     padding-top: 115px;
   }
 `
+const VideoContainer = styled.div`
+  position: absolute;
+  left: 150px;
+  top: 60px;
+  @media (max-width: 1080px) {
+    display: none;
+  }
+`
 const Wrapper = styled.div`
-  max-width: 500px;
+  max-width: 595px;
   width:100%;
   
   @media (min-width: 768px) {
     float:right;
   }
 `
-const SubTitle = styled.h4`
+const SubTitle = styled.span`
   color: #051627;
   font-family: Stolzl;
   font-weight: bold;
@@ -65,11 +75,11 @@ const SubTitle = styled.h4`
 `
 const H1 = styled.h1`
   
-  font-size: 57px;
+  font-size: 70px;
   font-weight: 500;
   line-height: 1.09;
   color: #051627;
-  margin: 30px 0 20px;
+  margin: 20px 0 20px;
   font-family: Stolzl;
   letter-spacing: -0.035em;
   @media (max-width: 760px) {
@@ -84,35 +94,35 @@ const P = styled.p`
   font-family: Ubuntu;
   padding-right:20px;
 `
-const Button = styled.div`
-  a {
-    background-color: #D5330D;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    font-family: Stolzl;
-    padding: 14px 24px;
-    text-decoration: none;
-    margin-top: 20px;
-    border: none;
-    display: inline-block;
-  }
+const Button = styled.a`
+  background-color: #D5330D;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  font-family: Stolzl;
+  padding: 14px 24px;
+  text-decoration: none;
+  margin-top: 20px;
+  border: none;
+  display: inline-block;
 `
 
 function Hero () {
   return(
   	<HeroSection>
       <img src={planet} alt=""/>
+      <VideoContainer>
+        <video width="500" autoPlay={true}>
+          <source src={animation} type="video/mp4"/>
+        </video>
+      </VideoContainer>
   	  <ContentContainer>
         <Wrapper>
           <SubTitle>SHOPIFY MADE EASY</SubTitle>
     	    <H1 id="main">Launch your business around the world</H1>
-    	    <P>Make connections like never before. Leave an impression like no other. Build a superior shopping experience for all.
-    	    </P>
-    	    <Button>
-            <Link>Learn More</Link>
-    	    </Button>
+    	    <P>Connect. Impress. Build a better shopping experience for all.</P>
+          <Button to="/contact">Free Consult</Button>
         </Wrapper>
   	  </ContentContainer>
   	</HeroSection>

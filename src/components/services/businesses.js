@@ -12,7 +12,7 @@ const BusSection = styled.section`
   position: relative;
 `
 const ContentContainer = styled.div`
-  max-width: 1288px;
+  max-width: 1488px;
   padding: 0 20px 100px;
   margin: 0 auto;
   position: relative;
@@ -30,7 +30,7 @@ const TopWrapper = styled.div`
   text-align:center;
   margin:0 auto 80px;
 `
-const H1 = styled.h1`
+const H1 = styled.h2`
   font-size: 53px;
   font-weight: 500;
   line-height: 1.09;
@@ -62,28 +62,28 @@ const Card = styled.div`
   background: #0FA3B1;
   border-radius: 8px;
   display:flex;
-  max-width:678px;
-  height:519px;
-  width:100%;
-  justify-content:center;
-  align-items:center;
-  margin-left:112px;
+  max-width: 1100px;
+  height: 519px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 112px;
   img{
     width:100%;
     margin:0;
   }
-  h4{
+  h3{
     font-family: Stolzl;
     font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 35px;
+    line-height: 1;
     color: #091F31;
-    margin-bottom:20px;
+    margin-bottom: 35px;
   }
   ul{
     font-family: Ubuntu;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 150%;
     color: #091F31;
   }
@@ -100,21 +100,22 @@ const Card = styled.div`
 `
 const Card2 = styled(Card)`
   background: #0C7489;
-  margin:0 112px 0 auto;
-  justify-content:end;
-  h4,ul{
+  margin: 0 112px 0 auto;
+  justify-content: end;
+  h3, ul{
     color:#fff;
   }
 
 `
 const Copy = styled.div` 
   @media (min-width: 958px){
-    max-width:335px;
-    width:100%;
+    max-width: 554px;
+    width: 100%;
+    padding: 0 45px;
   }
 `
 const ImgBox = styled.div`
-  max-width:410px;
+  max-width: 660px;
   width:100%;
   
   @media (min-width: 958px){
@@ -142,30 +143,29 @@ function Businesses () {
   	  <ContentContainer>
         <TopWrapper>
           <H1>Businesses we work with</H1>
-          <P>Our services vary depending on the the businesses we work with but all our work makes accessibility a priority, so every user can access your website.</P>
+          <P>We make accessibility a priority. Our services vary depending on the needs of your business, but we ensure every user can access your website.</P>
         </TopWrapper>
         <BottomWrapper>
           <Card>
             <ImgBox><img src={joni} alt="Joni"/></ImgBox>
             <Copy>
-              <h4>New Ventures</h4>
+              <h3>New Ventures</h3>
               <ul>
                 <li>Design a brand that speaks to your target customers</li>
-                <li>Provide content strategy & planning so you know what information your website should provide</li>
-                <li>Design a beautiful custom website </li>
+                <li>Provide a content strategy to plan what information your website includes</li>
+                <li>Design a beautiful custom, fast & accessible website </li>
                 <li>Provide guidance on setting up and using Shopify</li>
-                <li>Build your website to the highest performance & accessibility standards</li>
               </ul>
             </Copy>
           </Card>
           <Card2>
             <Copy>
-              <h4>Established Companies</h4>
+              <h3>Established Companies</h3>
               <ul>
                 <li>Modernize your look with a brand refresh</li>
-                <li>Provide Shopify support and optimizations that suit your business goals</li>
-                <li>Revitalize website with a fresh design working within the current website structure</li>
-                <li>Conduct an accessibility audit on current website and recommend/make fixes as needed</li>
+                <li>Provide Shopify optimizations to meet your business goals</li>
+                <li>A fresh website design working within the current structure</li>
+                <li>Conduct an accessibility audit & make fixes as needed</li>
               </ul>
             </Copy>
             <ImgBox2><img src={fatso} alt="Fatso"/></ImgBox2>   
@@ -173,22 +173,22 @@ function Businesses () {
           <Card>
             <ImgBox><img src={ch} alt="Community Haul"/></ImgBox>
             <Copy>
-              <h4>Growing Organizations</h4>
+              <h3>Growing Organizations</h3>
               <ul>
-                <li>Design & Build Easily scalable Shopify themes</li>
-                <li>Provide Reusable themes for franchises with ability to edit colours and make variations as needed</li>
-                <li>Build a streamlined processes for setting up each new location’s website</li>
+                <li>Design and build accessible & scalable Shopify themes</li>
+                <li>Provide Reusable themes for franchisees with the ability to edit colours & make variations</li>
+                <li>Build a streamlined process for setting up each new location’s website</li>
               </ul>
             </Copy>
           </Card>
           <Card2>
             <Copy>
-              <h4>Adapting Businesses</h4>
+              <h3>Adapting Businesses</h3>
               <ul>
-                <li>Provide support setting up on digital platforms</li>
-                <li>Assist in transitioning physical store to online seamlessly</li>
-                <li>Shift POS to online so it can be managed in one place</li>
-                <li>Provide a custom built website that matches the brand and feel of physical store</li>
+                <li>Provide support setting up digital platforms</li>
+                <li>Seamlessly transition physical store to online</li>
+                <li>Shift point-of-sale online</li>
+                <li>Deliver a custom website to match your physical store</li>
               </ul>
             </Copy>
             <ImgBox2><img src={pfl} alt="Pharmacy For Life"/></ImgBox2>    

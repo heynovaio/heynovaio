@@ -123,6 +123,8 @@ const Space = styled.img`
 const Button = styled.div`
   display:flex;
   justify-content:center;
+  position: relative;
+  z-index: 2;
   a {
     background-color: #D5330D;
     font-size: 18px;
@@ -160,15 +162,15 @@ function Ecommerce () {
           <ul>
             <li>
               <h3>Web Design & Brand Strategy</h3>
-              <p>We design stunning websites that speak to your target audience by starting with your initial branding and content plan. We build your site using accessibility and user experience best practices.</p>
+              <p>We design stunning websites with purposeful branding that captures your target audience, baking in accessibility and user experience best practices throughout the process because we know maintaining that audience is equally important.</p>
             </li>
             <li>
-              <h3>Shopify Store Development</h3>
-              <p>We offer a full website build from start to finish. We can create the Shopify theme of your dreams or customize the theme you have been using for years, all while ensuring top quality performance.</p>
+              <h3>Shopify Theme Development</h3>
+              <p>We offer a complete website build from start to finish. We can create the Shopify theme of your dreams from scratch or customize the theme you have been using for years while ensuring top-quality performance.</p>
             </li>
             <li>
               <h3>Shopify Consulting & Support</h3>
-              <p>We work alongside you and your team to make your website engaging. We help you navigate the Shopify setup process, choose apps and offer design tips to ensure your site looks its best.</p>
+              <p>We work alongside you and your team. We help you navigate the Shopify setup process, choose apps and offer general tips to translate the geek speak.</p>
             </li>
           </ul>
           <ImgWrapper>
@@ -180,7 +182,7 @@ function Ecommerce () {
         </BottomWrapper>
         <Button>
           <PopupText
-            text="Book a Free Consult"
+            text="Book a Meeting"
             url="https://calendly.com/hey-nova/free-consultation"
           />
         </Button>

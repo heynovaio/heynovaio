@@ -17,7 +17,7 @@ const FeatureSection = styled.section`
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 100px 20px;
+  padding: 100px 20px 60px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -35,10 +35,14 @@ const ImgBox = styled.div`
   position:absolute;
   left:-100px;
   top:-100px;
-  width:237px;
+  width:337px;
   img{
     width:100%;
   }
+   @media (max-width: 768px) {
+      width: 220px;
+      left:-30px;
+   }
 `
 const GridBox = styled.div`
   display: grid;
@@ -74,15 +78,14 @@ const GridItem = styled.div`
 `
 const IconBox = styled.div`
   padding-right:10px;
+  flex: 0 0 80px;
+  @media (max-width: 868px) {
+    flex: 0 0 50px;
+  }
   img{
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
+    display: block;
+    width: 100%;
     position: relative;
-    @media (max-width: 868px) {
-      width: 50px;
-      height: 50px;
-    }
   }
 `
 const H2 = styled.h2`
@@ -93,7 +96,7 @@ const H2 = styled.h2`
   text-align: center;
   color: #ffffff;
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto 25px;
 `
 const P = styled.p`
   font-family:'Ubuntu';
@@ -116,31 +119,25 @@ function Components () {
           <img src={planet} alt=""/>
         </ImgBox>
         <H2>Important Components for Success</H2>
-        <P>Simply having a website is not enough to meet your goals and grow your business. With our skills we find engaging ways to retain customers and attract new ones by providing them with quality user experience.</P>
+        <P>Simply having a website is not enough to meet your goals and grow your business. With our skills we find engaging ways to retain customers and attract new ones by providing them with a quality digital experience.</P>
         <GridBox>
+          <GridItem>
+            <IconBox>
+              <img src={GIcon4} alt="Icon4" role="presentation"/>
+            </IconBox>
+            <h3>Unique & Memorable Design</h3>
+          </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon1} alt="Icon1" role="presentation"/>
             </IconBox>
-            <h3>Exceptional Performance</h3>
+            <h3>Fast Page-Loading Speeds</h3>
           </GridItem>
           <GridItem>
             <IconBox>
               <img src={GIcon2} alt="Icon2" role="presentation"/>
             </IconBox>
-            <h3>Search Engine Optimization</h3>
-          </GridItem>
-          <GridItem>
-            <IconBox>
-              <img src={GIcon3} alt="Icon3" role="presentation"/>
-            </IconBox>
-            <h3>Optimized for Moble</h3>
-          </GridItem>
-          <GridItem>
-            <IconBox>
-              <img src={GIcon4} alt="Icon4" role="presentation"/>
-            </IconBox>
-            <h3>Unique & Superior Design</h3>
+            <h3>Easy to Search for</h3>
           </GridItem>
           <GridItem>
             <IconBox>
@@ -152,7 +149,13 @@ function Components () {
             <IconBox>
               <img src={GIcon6} alt="Icon6" role="presentation"/>
             </IconBox>
-            <h3>User-friendly Experience</h3>
+            <h3>Easy to Use</h3>
+          </GridItem>
+          <GridItem>
+            <IconBox>
+              <img src={GIcon3} alt="Icon3" role="presentation"/>
+            </IconBox>
+            <h3>Optimized across Devices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
@@ -164,7 +167,7 @@ function Components () {
             <IconBox>
               <img src={GIcon8} alt="Icon8" role="presentation"/>
             </IconBox>
-            <h3>Increased Sales</h3>
+            <h3>Layout for Conversions</h3>
           </GridItem>
         </GridBox>
       </ContentContainer>

@@ -12,13 +12,13 @@ import fatso from '../../images/fatso.png'
 import cHaul from '../../images/communityHall.png'
 
 const ProjSection = styled.section`
-  padding: 200px 0px 100px 0px;
+  padding: 0px 0px 100px 0px;
   position: relative;
   overflow:hidden;
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 0 20px 100px;
+  padding: 150px 20px 100px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -28,8 +28,8 @@ const ContentContainer = styled.div`
     padding-top: 115px;
   }
 `
-const H1 = styled.h1`
-  font-size: 53px;
+const H1 = styled.h2`
+  font-size: 66px;
   font-weight: 500;
   line-height: 1.09;
   color: #051627;
@@ -82,6 +82,13 @@ const Brand = styled.div`
   img{
     margin:0;
     width:100%;
+    transition: all .25s;
+  }
+  a:hover {
+    img {
+      transform: scale(1.1);
+      filter: drop-shadow(4px 6px 12px #999);
+    }
   }
 `
 const Content = styled.div`
@@ -159,22 +166,30 @@ function Projects () {
         <Wrapper>
           <FlexL>
             <Copy>
-              <H1>Our Shopify projects</H1>
-              <P>We’re the digital team you want to work with! Our website building process is so seamless and easy our clients keep coming back for support and guidance.</P>
+              <H1>Examples of Our Work</H1>
+              <P>We’re the digital team you want to work with! We know our websites are stunning, but it’s also our approachable style and hard work that makes our clients keep coming back for new projects, extra pages, or general support.</P>
             </Copy>
             <Brand>
-              <img src={joni} alt="Joni"/>
+              <a href="https://getjoni.com/" target="_blank">
+                <img src={joni} alt="Joni Website"/>
+              </a>
             </Brand>
             <Brand>
-              <img src={pharm} alt="Pharmacy for Life"/>
+              <a href="https://pharmacyforlife.ca/" target="_blank">
+                <img src={pharm} alt="Pharmacy for Life Website"/>
+              </a>  
             </Brand>
           </FlexL>
           <FlexR>
             <Brand>
-              <img src={fatso} alt="Fatso"/>
+              <a href="https://eatfatso.com/" target="_blank">
+                <img src={fatso} alt="Fatso Peanut Butter Website"/>
+              </a>  
             </Brand>
             <Brand>
-              <img src={cHaul} alt="Community Haul"/>
+              <a href="https://hhcommunityhaul.ca/" target="_blank">
+                <img src={cHaul} alt="Community Haul"/>
+              </a>  
             </Brand>
           </FlexR>     
         </Wrapper>
@@ -188,7 +203,7 @@ function Projects () {
         </OuterBox>
         <Content>
           <H1>What's the next step?</H1>
-          <P>It’s hard to tell what is the right solution for your business with so many options for e-commerce, it’s hard to even figure out what your needs are. We should talk and find out exactly how you can take your business to the next level.</P>
+          <P>We know it can be hard to tell what the right solution is for your business or where to get started, which is why we offer a free consult. During this time we help you determine the right options to take your business to the next level.</P>
           <Button>
             <PopupText
               text="Book a Free Consult"
