@@ -94,7 +94,7 @@ const P = styled.p`
   font-family: Ubuntu;
   padding-right:20px;
 `
-const Button = styled.a`
+const Button = styled(Link)`
   background-color: #D5330D;
   font-size: 18px;
   font-weight: 400;
