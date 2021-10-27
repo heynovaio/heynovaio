@@ -70,12 +70,6 @@ const P = styled.p`
   text-align: left;
   font-family: Ubuntu;
   color: #0a2239;
-  @media (max-width: 1270px) {
-    color: #0fa3b1;
-  }
-  @media (max-width: 1026px) {
-    color: #0a2239;
-  }
 `
 const Text = styled.div`
   text-align: left;
