@@ -59,7 +59,7 @@ const H3 = styled.h3`
   line-height: 1.15;
   font-family: Stolzl;
   margin-bottom: 10px;
-  color: #0fa3b1;
+  color: #0a2239;
   @media (max-width: 960px) {
     font-size: 25px;
   }
@@ -69,7 +69,7 @@ const P = styled.p`
   line-height: 1.4;
   text-align: left;
   font-family: Ubuntu;
-  color: #fff;
+  color: #0a2239;
   @media (max-width: 1270px) {
     color: #0fa3b1;
   }
@@ -79,14 +79,18 @@ const P = styled.p`
 `
 const Text = styled.div`
   text-align: left;
-  max-width: 440px;
+  background: #2ac4d2;
+  padding: 17px 19px 4px 20px;
+  border-radius: 8px;
+  box-shadow: 8px 12px 16px 2px rgb(6 20 34 / 35%);
+  max-width: 425px;
   margin-top: 40px;
 `
 const Content = styled.div`
   padding-top: 60px;
   position: relative;
   max-width: 624px;
-  margin: -150px 0 40px auto;
+  margin: -138px 0 14px auto;
   @media (max-width: 1026px) {
     max-width: 474px;
   }
