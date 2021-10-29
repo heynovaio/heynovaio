@@ -167,7 +167,7 @@ export default function Blog({ data }) {
       />
       <ContentContainer>
         <h1 id ="main">Hey, take a read</h1>
-        <P>We publish monthly accessibility blogs that we hope will help empower and inspire your digital accessibility journey.</P>
+        <P>We publish monthly blogs that we hope will help empower and inspire your digital journey.</P>
         <BlogPreview>
           {posts.map(post => (
             <article key={post.id}>
