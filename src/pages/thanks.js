@@ -1,5 +1,4 @@
 import React from "react"
-
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
 import { PopupText } from 'react-calendly'
@@ -100,16 +99,17 @@ const Span = styled.span`
     display: block;
   }
 `
-
-const NotFoundPage = () => (
+export default () => (
   <Layout>
     <SEO
-      title="404: Not found"
-     />
+      title="Thank you"
+      description="Thank you for getting in touch so we can help you with your next accessibile digital solution."
+      keywords={[ `Web Design`, `Accessibility`, `Web Development`, `Victoria`, `Halifax`,`Toronto`, `Marketing`, `User Experience`, `Branding` ]}
+    />
     <Main>
       <Container>
-        <H1 id="main">Oops, this page doesn't exist!</H1>
-        <P>If you need help finding what you're looking for feel free to reach out!</P>
+        <H1 id="main">Thanks for your message!</H1>
+        <P>The form was submitted successfully, we will be in touch soon.</P>
         <ActionContainer>
           <Button>
             <PopupText
@@ -124,5 +124,3 @@ const NotFoundPage = () => (
     </Main>
   </Layout>
 )
-
-export default NotFoundPage
