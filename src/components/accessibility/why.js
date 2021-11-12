@@ -251,7 +251,7 @@ function Why () {
         <RowContainer>
           <StickyBox>
             <h2>Why Include Accessibility</h2>
-            <p>Accessibility is a necessary practice to stay current & competetive</p>
+            <p>Accessibility is a necessary practice to stay current & competitive</p>
           </StickyBox>
           <FlexBox>
             <Quote>Designing inclusive software results in improved usability and customer satisfaction.
