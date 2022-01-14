@@ -57,6 +57,6 @@ export default () => (
          <FontAwesomeIcon icon={faInstagram} />
       </Icon>
     </Flex>
-    <P> &copy; 2020 <Span>HEY NOVA</Span></P>
+    <P> &copy; 2022 <Span>HEY NOVA</Span></P>
   </Footer>
 )
