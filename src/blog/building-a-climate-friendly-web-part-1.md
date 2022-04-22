@@ -3,7 +3,7 @@ date: 2021-10-27
 author: Stephen Belyea
 title: "Building a Climate-Friendly Web: Part 1"
 featuredImage: ../images/eco-anxious-globe.png
-category: accessibility
+category: climate
 bio: Husband, father, habitual dork, a11y instigator + front-end dev, attempted writer, aspiring runner, ex-pat Maritimer. He/him.
 bioImage: ../images/stephen.jpeg
 ---
@@ -68,7 +68,7 @@ Don’t be afraid to get creative either. Your team is likely filled to the brim
 
 ## Lost in the details
 
-While customers, clients, and leadership can have a massive impact on delivering climate-conscious online experiences, the people planning, designing, building, testing, and hosting the end product have an even larger footprint over the lifetime of online content. Check in next month when we look closer at the choices you can make as an individual or team working to create products for the web.
+While customers, clients, and leadership can have a massive impact on delivering climate-conscious online experiences, the people planning, designing, building, testing, and hosting the end product have an even larger footprint over the lifetime of online content. Check in next time when we look closer at the choices you can make as an individual or team working to create products for the web.
 
 ![line drawing of the earth with coloured shapes floating around it](../images/eco-anxious-globe.png)
 
