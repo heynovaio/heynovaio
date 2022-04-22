@@ -59,7 +59,7 @@ You don’t have to avoid all the fun visual and content elements entirely! Like
   https://stock.adobe.com/ca/images/website-designer-planning-application-development-draft-template-layout-framework-and-coding-program-on-paper-and-computer/264179865?prev_url=detail
   -->
 
-![people gathered around a desk covered in drawings of a phone screen with various interface elements arranged on them](../images/mockup-user-testing.jpeg "Low-fidelity testing with tactile mockups may seem wasteful, but the energy and time savings in reducing costly development and release cycles is often worth it")
+![people gathered around a desk covered in drawings of a phone screen with various interface elements arranged on them](../images/user-testing.jpeg "Low-fidelity testing with tactile mockups may seem wasteful, but the energy and time savings in reducing costly development and release cycles is often worth it")
 
 When it comes to crafting an easy-to-understand user experience and clear, helpful content, the same focus on your audience will help:
 
