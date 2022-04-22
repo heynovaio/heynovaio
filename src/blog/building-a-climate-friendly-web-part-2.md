@@ -3,6 +3,7 @@ date: 2022-04-22
 author: Stephen Belyea
 title: "Building a Climate-Friendly Web: Part 2"
 featuredImage: ../images/climate-activists.jpeg
+metaImage: "src/images/climate-activists.jpeg"
 category: climate
 bio: Husband, father, habitual dork, a11y instigator + front-end dev, attempted writer, aspiring runner, ex-pat Maritimer. He/him.
 bioImage: ../images/stephen.jpeg

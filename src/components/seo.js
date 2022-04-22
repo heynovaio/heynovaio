@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
+function SEO({ description, lang, meta, image, title, pathname }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             description
             author
             siteUrl
+            image
           }
         }
       }
@@ -27,10 +28,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
+  const metaImage = image || `${site.siteMetadata.siteUrl}/${site.siteMetadata.image}`
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null    
 
   return (
@@ -54,6 +52,10 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `image`,
+          content: metaImage,
         },
         {
           property: `og:title`,
@@ -89,15 +91,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
             ? [
                 {
                   property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height,
+                  content: metaImage,
                 },
                 {
                   name: "twitter:card",
@@ -119,7 +113,9 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: null,
+  image: null,
+  article: false,
 }
 
 SEO.propTypes = {
@@ -127,11 +123,8 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  image: PropTypes.string,
+  article: PropTypes.bool,
   pathname: PropTypes.string,
 }
 

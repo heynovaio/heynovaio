@@ -4,6 +4,7 @@ module.exports = {
     description: `Connecting real people to real brands through engaging and inclusive design practice.`,
     author: `@heynovaio`,
     siteUrl: `http://heynova.io/`,
+    image: `src/images/social-share.jpg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
