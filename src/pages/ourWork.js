@@ -15,6 +15,6 @@ export default () => (
     />
     <Hero/>
     <PastDesigns/>
-    <Contact/>
+    {/* <Contact/> */}
   </Layout>
 )

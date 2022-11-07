@@ -37,7 +37,8 @@ const Content = styled.div`
 const H1 = styled.h1`
   font-size: 90px;
   line-height: 94px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Stolzl;
 `
 const P = styled.p`
 
@@ -82,10 +83,10 @@ function Hero () {
       <Space>
         <Img alt="" role="presentation" fadeIn={false} fluid={data.space.childImageSharp.fluid} />
       </Space>
-  	  <ContentContainer>
+  	  <ContentContainer> 
         <Content>
           <H1>Our Work</H1>
-          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.</P>
+          <P>We love our clients and having the priviledge to work on inspiring projects.</P>
           <Button to="/contact">Contact Us</Button>
         </Content>
   	  </ContentContainer>

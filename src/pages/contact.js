@@ -208,7 +208,8 @@ export default () => (
           <Span>or</Span>
           <A href="mailto:info@heynova.io">Email us a Question</A>
         </ActionContainer>
-        <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
+        
+        {/* <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
           <h2>Leave us a Message</h2>
           <p>We will get back to you shortly!</p>
           <div id="mc_embed_signup_scroll">
@@ -226,7 +227,8 @@ export default () => (
             </div>
             <input type="submit" value="I Want to Chat" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>
           </div>
-        </Form>
+        </Form> */}
+
       </Container>
     </Main>
     <Contact/>

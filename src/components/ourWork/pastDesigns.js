@@ -10,7 +10,7 @@ const DesignsSection = styled.section`
 
 const ContentContainer = styled.div`
   max-width: 1288px;
-  padding: 100px 20px;
+  padding: 0px 20px 100px;
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
@@ -71,12 +71,12 @@ const WorkBox = styled.div`
       transition: 650ms;
       height: 100%;
       width: 100%;
-      & > div{
+      & > a{
         opacity: 1;
         transition-property: opacity;
-        transition-duration: 650ms;
+        transition-duration: 250ms;
         transition-timing-function: linear;
-        transition-delay: 550ms;
+        transition-delay: 150ms;
       }
     }
   }
@@ -87,11 +87,15 @@ const WorkBox = styled.div`
   }  
 `
 
-const Content = styled.div`
+const Content = styled.a`
   width: 100%;
   height: 100%;
   padding: 80px; 
   opacity: 0;
+  display: block;
+`
+const SiteLink = styled.span`
+  color: #fff;
 `
 const WorkBoxSm = styled(WorkBox)`
   height: 448px;
@@ -302,11 +306,11 @@ function PastDesigns () {
         <WorkGrid>
           <OneBox>
             <WorkBoxLg tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.soc.childImageSharp.fluid} />
-              <HB1>
+              <Img alt="" role="presentation" fadeIn={false} fluid={data.passiv.childImageSharp.fluid} />
+              <HB7>
                 <Content>
                   <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.socLogo.childImageSharp.fluid} />
+                    <Img alt="" role="presentation" fadeIn={false} fluid={data.passivLogo.childImageSharp.fluid} />
                   </PhotoBox>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
                   lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
@@ -314,49 +318,22 @@ function PastDesigns () {
                   </p>
                   <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
                 </Content>
-              </HB1>
+              </HB7>
             </WorkBoxLg>
           </OneBox>
           <TwoBox>
-            <WorkBoxSm tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.joni.childImageSharp.fluid} />
-              <HB2>
-                <Content>
-                  <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.joniLogo.childImageSharp.fluid} />
-                  </PhotoBox>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-                  lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
-                  purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                  </p>
-                  <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
-                </Content>
-              </HB2>
-            </WorkBoxSm>
-            <WorkBoxSm tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.ch.childImageSharp.fluid} />
-              <HB3>
-                <Content>
-                  <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.chLogo.childImageSharp.fluid} />
-                  </PhotoBox>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-                  lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
-                  purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                  </p>
-                  <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
-                </Content>
-              </HB3>
-            </WorkBoxSm>
+
+            
           </TwoBox>
+          
 
           <TwoBox>
             <WorkBoxSm tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.fatso.childImageSharp.fluid} />
-              <HB4>
+              <Img alt="" role="presentation" fadeIn={false} fluid={data.wab.childImageSharp.fluid} />
+              <HB8>
                 <Content>
                   <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.fatsoLogo.childImageSharp.fluid} />
+                    <Img alt="" role="presentation" fadeIn={false} fluid={data.wabLogo.childImageSharp.fluid} />
                   </PhotoBox>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
                   lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
@@ -364,7 +341,7 @@ function PastDesigns () {
                   </p>
                   <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
                 </Content>
-              </HB4>
+              </HB8>
             </WorkBoxSm>
             <WorkBoxSm tabIndex="0">
               <Img alt="" role="presentation" fadeIn={false} fluid={data.gv.childImageSharp.fluid} />
@@ -401,51 +378,39 @@ function PastDesigns () {
           </OneBox>
           <OneBox>
             <WorkBoxLg tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.passiv.childImageSharp.fluid} />
-              <HB7>
-                <Content>
+              <Img alt="" role="presentation" fadeIn={false} fluid={data.soc.childImageSharp.fluid} />
+              <HB1>
+                <Content href="https://streamofconsciousness.ca/" target="_blank">
                   <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.passivLogo.childImageSharp.fluid} />
+                    <Img alt="" role="presentation" fadeIn={false} fluid={data.socLogo.childImageSharp.fluid} />
                   </PhotoBox>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-                  lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
-                  purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                  </p>
-                  <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
+                  <SiteLink>View Stream of Consciousness Website</SiteLink>
                 </Content>
-              </HB7>
+              </HB1>
             </WorkBoxLg>
           </OneBox>
           <TwoBox>
             <WorkBoxSm tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.wab.childImageSharp.fluid} />
-              <HB8>
+              <Img alt="" role="presentation" fadeIn={false} fluid={data.joni.childImageSharp.fluid} />
+              <HB2>
                 <Content>
                   <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.wabLogo.childImageSharp.fluid} />
+                    <Img alt="" role="presentation" fadeIn={false} fluid={data.joniLogo.childImageSharp.fluid} />
                   </PhotoBox>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-                  lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
-                  purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                  </p>
-                  <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
+                  <SiteLink>View Joni Website</SiteLink>
                 </Content>
-              </HB8>
+              </HB2>
             </WorkBoxSm>
             <WorkBoxSm tabIndex="0">
-              <Img alt="" role="presentation" fadeIn={false} fluid={data.eco.childImageSharp.fluid} />
-              <HB9>
+              <Img alt="" role="presentation" fadeIn={false} fluid={data.ch.childImageSharp.fluid} />
+              <HB3>
                 <Content>
                   <PhotoBox>
-                    <Img alt="" role="presentation" fadeIn={false} fluid={data.ecoLogo.childImageSharp.fluid} />
+                    <Img alt="" role="presentation" fadeIn={false} fluid={data.chLogo.childImageSharp.fluid} />
                   </PhotoBox>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, 
-                  lectus magna fringilla urna, porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, 
-                  purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
-                  </p>
-                  <p>Lorem, ipsum, dolor sit, amet, consectetur, adipiscing</p>
+                  <SiteLink>View Community Haul Website</SiteLink>
                 </Content>
-              </HB9>
+              </HB3>
             </WorkBoxSm>
           </TwoBox>
         </WorkGrid>
