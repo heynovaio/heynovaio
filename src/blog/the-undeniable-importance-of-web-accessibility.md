@@ -5,7 +5,7 @@ category: accessibility
 featuredImage: ../images/student-on-laptop.jpg
 
 author: Bryony Anderson
-bio: British tea drinker, dog lover, whiskey enthusiastic, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
+bio: British tea drinker, dog lover, whiskey enthusiast, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
 bioImage: ../images/bryony.jpg
 
 rightQuote: "And that’s still not all. Web accessibility helps people with all sorts of barriers."

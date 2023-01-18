@@ -4,7 +4,7 @@ title: How good alt text can improve SEO and make your image content accessible 
 featuredImage: ../images/alt_text_blog_cover_2.jpg
 category: accessibility
 author: Bryony Anderson
-bio: British tea drinker, dog lover, whiskey enthusiastic, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
+bio: British tea drinker, dog lover, whiskey enthusiast, fiction writer hobbiest, web accessibility specialist and inclusive design advocate
 bioImage: ../images/bryony.jpg
 ---
 
