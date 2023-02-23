@@ -1,5 +1,5 @@
 ---
-date: 2023-02-16
+date: 2023-02-23
 author: Stephen Belyea
 title: "Getting Started with Digital Accessibility"
 featuredImage: ../images/women-packing-parcel.jpg
