@@ -152,7 +152,7 @@ function Subscribe() {
         </PhotoBox>
         <SubmitBox>
           <h3>Stay in the loop</h3>
-          <Desc>Leave your email to get updated on our monthly blog posts</Desc>
+          <Desc>Leave your email to get updated on the happenings at HEY NOVA</Desc>
           
           <form id="contactForm">
             <EmailLabel htmlFor="emailInput">Email:</EmailLabel>

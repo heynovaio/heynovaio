@@ -1,5 +1,5 @@
 ---
-date: 2023-02-23
+date: 2023-02-28
 author: Stephen Belyea
 title: "Getting Started with Digital Accessibility"
 featuredImage: ../images/women-packing-parcel.jpg
@@ -27,11 +27,6 @@ Choosing the right language can sometimes mean avoiding the wrong stuff. [Ableis
 
 Try focusing on some [key phrases or expressions](https://wid.org/ableist-language-phrases-that-you-may-unknowingly-use/) to replace in your own common usage to get the ball rolling.
 
-<!--
-  Find this image on Adobe Stock:
-  https://stock.adobe.com/ca/images/two-young-intercultural-female-warehouse-workers-checking-client-address-while-one-of-them-writing-it-down-on-top-of-packed-parcel/502240613?prev_url=detail&asset_id=502240237
-  -->
-
 ![woman with prosthetic arm holds a tablet while speaking with a woman writing on a package](../images/women-packing-parcel.jpg)
 
 ### Opening up the discussion
@@ -52,37 +47,29 @@ Choosing less complex language will also force you to clearly understand the con
 
 Many leaders expect that anyone with a question should also have a solution, but this approach all but guarantees that the tough questions are left unsaid. It is important to ask the questions which prompt consideration and discussion.
 
-<!--
-  Find this image on Adobe Stock:
-  https://stock.adobe.com/ca/images/applause-audience-and-business-people-in-a-meeting-or-presentation-for-finance-growth-profit-and-goal-achievement-in-a-creative-office-men-and-women-happy-and-excited-to-celebrate-news-or-speech/567838977?prev_url=detail
-  -->
 
 ![five people around a table with papers spread out, focusing on one woman speaking while gesturing](../images/group-at-table-discussion.jpg)
 
 When it comes to accessibility questions for your client or within your company, consider some of these:
 
-- _“What are we doing to improve our hiring process for candidates with disabilities?”_
-- _“How are we testing this release with accessibility in mind?”_
-- _“What are the accessibility requirements for this client’s province, state, or country?”_
-- _“How are we keeping ourselves accountable to our accessibility requirements?”_
+- “What are we doing to improve our hiring process for candidates with disabilities?”
+- “How are we testing this release with accessibility in mind?”
+- “What are the accessibility requirements for this client’s province, state, or country?”
+- “How are we keeping ourselves accountable to our accessibility requirements?”
 
 If you aren’t in a position to be asking the big questions, stick to the smaller ones - they are important too! Smaller or more frequent discussions could be a great place for something like these:
 
-- _“If that opens on hover, how does it work with a keyboard?”_
-- _“How can we break up this page to make it easier for everyone to read?”_
-- _“What happens if someone isn’t able to complete this form in one sitting?”_
-- _“How would that look if it was on a phone screen or zoomed in 200%?”_
-- _“What can we do to make this available to someone who can’t see the slides?”_
-- _“What other option can we provide someone who can't swipe?”_
+- “If that opens on hover, how does it work with a keyboard?”
+- “How can we break up this page to make it easier for everyone to read?”
+- “What happens if someone isn’t able to complete this form in one sitting?”
+- “How would that look if it was on a phone screen or zoomed in 200%?”
+- “What can we do to make this available to someone who can’t see the slides?”
+- “What other option can we provide someone who can't swipe?”
 
 Asking questions is the key to ensuring everyone builds a shared understanding of the work at hand. Whenever _“any questions?”_ is met with a silent room, you can be sure that someone will be left out of accessing the end result.
 
 There are no bad questions - except maybe _“why should we care about people with disabilities?”_. That one just hurts!
 
-<!--
-  Find this image on Adobe Stock:
-  https://stock.adobe.com/ca/images/horizontal-image-of-a-disabled-gay-latino-man-in-an-electric-wheelchair-using-his-cell-phone-to-sell-his-costume-jewelry-products-online/549840171?prev_url=detail
-  -->
 
 ![man in a powered wheelchair and limited dexerity uses a cell phone on his knee with one hand](../images/man-in-wheelchair-with-phone.jpg "Multi-finger gestures can be a barrier for people with limited dexterity.")
 
