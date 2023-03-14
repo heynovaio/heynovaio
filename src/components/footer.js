@@ -57,6 +57,6 @@ export default () => (
          <FontAwesomeIcon icon={faInstagram} />
       </Icon>
     </Flex>
-    <P> &copy; 2022 <Span>HEY NOVA</Span></P>
+    <P> &copy; {new Date().getFullYear()} <Span>HEY NOVA</Span></P>
   </Footer>
 )

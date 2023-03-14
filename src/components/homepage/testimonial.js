@@ -328,33 +328,6 @@ function Testimonial () {
         <div role="presentation" onDragStart={handleOnDragStart} className="item">
           <Flex>
             <ImgCenter>
-              <Img alt="Eco Anxiety Screenshot" fadeIn={false} role="presentation" fluid={data.Eco.childImageSharp.fluid} />
-              <SiteLink href="https://www.ecoanxious.ca/" target="_blank">View site</SiteLink>
-            </ImgCenter>
-            <ContentCenter>
-              <Content>
-                <TestimonialQuote>
-                <QuoteLeft>
-                  <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
-                </QuoteLeft>
-                <Quote>
-                  <p>It’s easy to say that our idea would not have come to fruition without Hey Nova. Not only was the final product of the highest quality, but the team helped us to take an idea and shape it through smart design, informed decisions, and technical expertise. We quickly realized that we could trust their guidance fully.</p>
-                  <p>Hey Nova bring a holistic approach to web design. They are incredible designers and developers and are cutting edge with the technologies used and with important aspects such as accessibility and SEO. </p>
-                  <p>It continues to be a pleasure working with these ladies, and we recommend them highly for any technical or design project. </p>
-                </Quote>
-                </TestimonialQuote>
-                <TestimonialDetails>
-                  <Name>Kevin Gatley & Rachel Malena-Chan</Name>
-                  <JobPosition>The Eco-Anxious Stories team</JobPosition>
-                  <Place>Victoria, BC</Place>
-                </TestimonialDetails>
-              </Content>
-            </ContentCenter>
-          </Flex>
-        </div>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
-          <Flex>
-            <ImgCenter>
               <Img alt="Kwench Website Screenshot" fadeIn={false} role="presentation" fluid={data.Kwench.childImageSharp.fluid} />
               <SiteLink href="https://www.clubkwench.com/" target="_blank">View site</SiteLink>
               </ImgCenter>
