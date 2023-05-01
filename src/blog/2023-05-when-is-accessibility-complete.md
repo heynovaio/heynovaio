@@ -1,5 +1,5 @@
 ---
-date: 2023-05-03
+date: 2023-05-02
 author: Stephen Belyea
 title: "When is Accessibility Complete?"
 featuredImage: ../images/woman-using-braille-keyboard.jpeg
