@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import img1 from '../../images/planet-bg.webp'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import React from "react"
+import img1 from "../../images/planet-bg.webp"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const HeroSection = styled.section`
@@ -10,7 +10,7 @@ const HeroSection = styled.section`
   padding: 0 20px 20px;
   position: relative;
   @media (min-width: 1026px) {
-    background-image: url( ${img1} );
+    background-image: url(${img1});
     background-size: 620px 585px;
     background-position: right bottom;
     background-repeat: no-repeat;
@@ -112,8 +112,7 @@ const Planet3 = styled.div`
   }
 `
 
-function Hero () {
-
+function Hero() {
   const data = useStaticQuery(graphql`
     query {
       Planet1: file(relativePath: { eq: "hero-planet1.png" }) {
@@ -122,14 +121,14 @@ function Hero () {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       Planet2: file(relativePath: { eq: "hero-planet2.png" }) {
         childImageSharp {
           fixed(width: 180, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       Planet3: file(relativePath: { eq: "hero-planet3.png" }) {
         childImageSharp {
           fixed(width: 153, quality: 100) {
@@ -141,28 +140,42 @@ function Hero () {
   `)
 
   return (
-
     <HeroSection>
       <ImgContainer>
         <Planet1>
-          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet1.childImageSharp.fixed} />
+          <Img
+            alt=""
+            role="presentation"
+            fadeIn={false}
+            fixed={data.Planet1.childImageSharp.fixed}
+          />
         </Planet1>
         <Planet2>
-          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet2.childImageSharp.fixed} />
+          <Img
+            alt=""
+            role="presentation"
+            fadeIn={false}
+            fixed={data.Planet2.childImageSharp.fixed}
+          />
         </Planet2>
         <Planet3>
-          <Img alt="" role="presentation" fadeIn={false} fixed={data.Planet3.childImageSharp.fixed} />
+          <Img
+            alt=""
+            role="presentation"
+            fadeIn={false}
+            fixed={data.Planet3.childImageSharp.fixed}
+          />
         </Planet3>
       </ImgContainer>
       <ContentContainer>
-        <h1 id = "main">Designing Experiences for Everyone</h1>
+        <h1 id="main">Designing Experiences for Everyone</h1>
         <p>
-          Connecting real people to real brands through engaging and inclusive design practice
+          Connecting real people to real brands through engaging and inclusive
+          design practice
         </p>
         <Button to="/contact">Free Consult</Button>
       </ContentContainer>
     </HeroSection>
-
   )
 }
 

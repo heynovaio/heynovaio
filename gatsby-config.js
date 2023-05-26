@@ -4,7 +4,7 @@ module.exports = {
     description: `Connecting real people to real brands through engaging and inclusive design practice.`,
     author: `@heynovaio`,
     siteUrl: `http://heynova.io/`,
-    image: `src/images/social-share.jpg`
+    image: `src/images/social-share.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,14 @@ module.exports = {
         height: 10,
         color: `#d5330d;`,
         footerHeight: 500,
-      }
+      },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-          endpoint: 'https://heynova.us2.list-manage.com/subscribe/post?u=8ee5619b8ee91b0ddf0ee8e84&amp;id=bc04ac6cf0',
-          timeout: 3500,
+        endpoint:
+          "https://heynova.us2.list-manage.com/subscribe/post?u=8ee5619b8ee91b0ddf0ee8e84&amp;id=bc04ac6cf0",
+        timeout: 3500,
       },
     },
     {
@@ -44,8 +45,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-118969711-1"
-      }
+        trackingId: "UA-118969711-1",
+      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -110,9 +111,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '1314022115610310',
+        pixelId: "1314022115610310",
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,33 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from '@emotion/styled'
-import img1 from '../../images/shopify-bg.png'
-import planet from '../../images/hero-planet2.png'
-import animation from '../../images/above-fold-animation.mp4'
-import { PopupText } from 'react-calendly'
+import styled from "@emotion/styled"
+import img1 from "../../images/shopify-bg.png"
+import planet from "../../images/hero-planet2.png"
+import animation from "../../images/above-fold-animation.mp4"
+import { PopupText } from "react-calendly"
 
 const HeroSection = styled.section`
- 
   padding: 210px 0px 20px 0px;
   position: relative;
   padding-top: 50px;
   @media (min-width: 1080px) {
-    background-image: url( ${img1} );
+    background-image: url(${img1});
     background-size: auto 100%;
-    background-repeat:no-repeat;
-    background-position:left -10px;
+    background-repeat: no-repeat;
+    background-position: left -10px;
   }
   @media (max-width: 768px) {
     padding-bottom: 75px;
     overflow: hidden;
-    img{
-      visibility:hidden;
-    }   
+    img {
+      visibility: hidden;
+    }
   }
-  img{
-    width:395px;
-    position:absolute;
-    left:-165px;
+  img {
+    width: 395px;
+    position: absolute;
+    left: -165px;
     top: 150px;
     z-index: 2;
   }
@@ -54,10 +53,10 @@ const VideoContainer = styled.div`
 `
 const Wrapper = styled.div`
   max-width: 595px;
-  width:100%;
-  
+  width: 100%;
+
   @media (min-width: 768px) {
-    float:right;
+    float: right;
   }
 `
 const SubTitle = styled.span`
@@ -68,13 +67,11 @@ const SubTitle = styled.span`
   line-height: 18px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  max-width:445px;
-  width:100%;
-  margin:0 auto;
-
+  max-width: 445px;
+  width: 100%;
+  margin: 0 auto;
 `
 const H1 = styled.h1`
-  
   font-size: 70px;
   font-weight: 500;
   line-height: 1.09;
@@ -92,10 +89,10 @@ const P = styled.p`
   color: #0a2239;
   margin: 20px 0 20px;
   font-family: Ubuntu;
-  padding-right:20px;
+  padding-right: 20px;
 `
 const Button = styled(Link)`
-  background-color: #D5330D;
+  background-color: #d5330d;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -108,24 +105,24 @@ const Button = styled(Link)`
   display: inline-block;
 `
 
-function Hero () {
-  return(
-  	<HeroSection>
-      <img src={planet} alt=""/>
+function Hero() {
+  return (
+    <HeroSection>
+      <img src={planet} alt="" />
       <VideoContainer>
         <video width="500" autoPlay={true}>
-          <source src={animation} type="video/mp4"/>
+          <source src={animation} type="video/mp4" />
         </video>
       </VideoContainer>
-  	  <ContentContainer>
+      <ContentContainer>
         <Wrapper>
           <SubTitle>SHOPIFY MADE EASY</SubTitle>
-    	    <H1 id="main">Launch your business around the world</H1>
-    	    <P>Connect. Impress. Build a better shopping experience for all.</P>
+          <H1 id="main">Launch your business around the world</H1>
+          <P>Connect. Impress. Build a better shopping experience for all.</P>
           <Button to="/contact">Free Consult</Button>
         </Wrapper>
-  	  </ContentContainer>
-  	</HeroSection>
+      </ContentContainer>
+    </HeroSection>
   )
 }
 export default Hero

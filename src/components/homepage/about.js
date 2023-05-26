@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const AboutSection = styled.section`
   padding: 70px 0 40px;
@@ -63,8 +63,7 @@ const ImgRight = styled.div`
   }
 `
 
-function About () {
-
+function About() {
   const data = useStaticQuery(graphql`
     query {
       woman: file(relativePath: { eq: "group-20.png" }) {
@@ -82,13 +81,34 @@ function About () {
       <ContentCenter>
         <Content>
           <H2>Stepping boldly into the future of tech</H2>
-          <P>We believe in a future of tech that is inclusive for all. This future sadly won’t be realized without an evolution in how we work. As being in the only 5% of tech companies founded by women, we are passionate about seeing the industry become more inclusive, diverse, and equitable.</P>
-          <P>Our years and combined experiences means the team brings a novel perspective to the table. We take these perspectives and work to actively shift industry norms every day through the products we build, by advocating for inclusion, and by mentoring others as they navigate barriers in tech.</P>
-          <P>Ask more about how you can be a part of this exciting change, whether you're propelling your business forward or learning more about how to make the digital world more inclusive.</P>
+          <P>
+            We believe in a future of tech that is inclusive for all. This
+            future sadly won’t be realized without an evolution in how we work.
+            As being in the only 5% of tech companies founded by women, we are
+            passionate about seeing the industry become more inclusive, diverse,
+            and equitable.
+          </P>
+          <P>
+            Our years and combined experiences means the team brings a novel
+            perspective to the table. We take these perspectives and work to
+            actively shift industry norms every day through the products we
+            build, by advocating for inclusion, and by mentoring others as they
+            navigate barriers in tech.
+          </P>
+          <P>
+            Ask more about how you can be a part of this exciting change,
+            whether you're propelling your business forward or learning more
+            about how to make the digital world more inclusive.
+          </P>
         </Content>
       </ContentCenter>
       <ImgRight>
-        <Img alt="Woman graphic with space scene in hair" role="presentation" fadeIn={false} fixed={data.woman.childImageSharp.fixed} />
+        <Img
+          alt="Woman graphic with space scene in hair"
+          role="presentation"
+          fadeIn={false}
+          fixed={data.woman.childImageSharp.fixed}
+        />
       </ImgRight>
     </AboutSection>
   )

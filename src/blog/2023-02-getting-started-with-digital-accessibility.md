@@ -47,7 +47,6 @@ Choosing less complex language will also force you to clearly understand the con
 
 Many leaders expect that anyone with a question should also have a solution, but this approach all but guarantees that the tough questions are left unsaid. It is important to ask the questions which prompt consideration and discussion.
 
-
 ![five people around a table with papers spread out, focusing on one woman speaking while gesturing](../images/group-at-table-discussion.jpg)
 
 When it comes to accessibility questions for your client or within your company, consider some of these:
@@ -69,7 +68,6 @@ If you aren’t in a position to be asking the big questions, stick to the small
 Asking questions is the key to ensuring everyone builds a shared understanding of the work at hand. Whenever _“any questions?”_ is met with a silent room, you can be sure that someone will be left out of accessing the end result.
 
 There are no bad questions - except maybe _“why should we care about people with disabilities?”_. That one just hurts!
-
 
 ![man in a powered wheelchair and limited dexerity uses a cell phone on his knee with one hand](../images/man-in-wheelchair-with-phone.jpg "Multi-finger gestures can be a barrier for people with limited dexterity.")
 

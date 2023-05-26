@@ -1,9 +1,9 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import img2 from '../../images/spaceship.png'
-import { PopupText } from 'react-calendly'
+import styled from "@emotion/styled"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import img2 from "../../images/spaceship.png"
+import { PopupText } from "react-calendly"
 
 const WhatContainer = styled.section`
   padding: 0 20px;
@@ -132,7 +132,7 @@ const Planet = styled.div`
 `
 const Button = styled.div`
   a {
-    background-color: #D5330D;
+    background-color: #d5330d;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -1px;
@@ -147,7 +147,7 @@ const Button = styled.div`
     display: inline-block;
   }
 `
-function What () {
+function What() {
   const data = useStaticQuery(graphql`
     query {
       Girl: file(relativePath: { eq: "girl.png" }) {
@@ -156,7 +156,7 @@ function What () {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       Planet: file(relativePath: { eq: "planet.png" }) {
         childImageSharp {
           fluid(maxWidth: 75, quality: 100) {
@@ -171,23 +171,43 @@ function What () {
       <ContentContainer>
         <H2>Our methods connect your brand to real users by:</H2>
         <ImgPerson>
-          <Img alt="Girl" role="presentation" fadeIn={false} fluid={data.Girl.childImageSharp.fluid} />
+          <Img
+            alt="Girl"
+            role="presentation"
+            fadeIn={false}
+            fluid={data.Girl.childImageSharp.fluid}
+          />
           <Planet>
-            <Img alt="Planet" role="presentation" fadeIn={false} fluid={data.Planet.childImageSharp.fluid} />
+            <Img
+              alt="Planet"
+              role="presentation"
+              fadeIn={false}
+              fluid={data.Planet.childImageSharp.fluid}
+            />
           </Planet>
         </ImgPerson>
         <Content>
           <Text>
             <H3>Discovering your identity</H3>
-            <P>Whatever your vision or idea, we will get you there by first building a strong brand foundation.</P>
+            <P>
+              Whatever your vision or idea, we will get you there by first
+              building a strong brand foundation.
+            </P>
           </Text>
           <Text>
             <H3>Propelling your vision</H3>
-            <P>Where innovative ideas meet otherworldly designs. Driven by your unique users and led by the latest research, we will drive your product forward.</P>
+            <P>
+              Where innovative ideas meet otherworldly designs. Driven by your
+              unique users and led by the latest research, we will drive your
+              product forward.
+            </P>
           </Text>
           <Text>
             <H3>Connecting you to your users</H3>
-            <P>We strive to understand your users. Our inclusive and innovative approaches ensure your product is accessible to everyone.</P>
+            <P>
+              We strive to understand your users. Our inclusive and innovative
+              approaches ensure your product is accessible to everyone.
+            </P>
           </Text>
           <Button>
             <PopupText

@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Subscribe from "../components/subscribe"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -17,8 +17,8 @@ import {
   RedditIcon,
   RedditShareButton,
   TwitterIcon,
-  TwitterShareButton
-} from "react-share";
+  TwitterShareButton,
+} from "react-share"
 
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -36,7 +36,7 @@ const Back = styled(Link)`
   position: absolute;
   color: #0d7489;
   text-decoration: none;
-  font-family: 'ubuntu';
+  font-family: "ubuntu";
   font-weight: 600;
   letter-spacing: -0.025em;
   left: 0;
@@ -60,9 +60,9 @@ const HeaderContainer = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    white-space:wrap;
+    white-space: wrap;
     padding-top: 0px;
- }
+  }
 `
 const TitleBox = styled.div`
   display: inline-block;
@@ -76,14 +76,14 @@ const TitleBox = styled.div`
   transform: translateY(-50%);
   word-wrap: break-word;
   box-shadow: 20px 14px 22px 10px rgb(5 23 40 / 52%);
-  h1{
+  h1 {
     font-family: Stolzl;
     font-size: 60px;
     line-height: 1.33;
     letter-spacing: -0.19px;
     color: #ffffff;
     overflow-wrap: normal;
-    font-weight: 400; 
+    font-weight: 400;
     padding: 1rem 0;
     text-transform: Capitalize;
   }
@@ -97,10 +97,10 @@ const TitleBox = styled.div`
     transform: inherit;
     top: 0;
     padding: 120px 1rem 4rem;
-    h1{
+    h1 {
       font-size: 32px;
     }
- }
+  }
 `
 const ImageBox = styled.div`
   display: inline-block;
@@ -108,7 +108,7 @@ const ImageBox = styled.div`
   width: 65%;
   right: -40%;
   z-index: -1;
-  Img{
+  img {
     max-width: 100%;
     height: auto;
     position: absolute;
@@ -116,10 +116,14 @@ const ImageBox = styled.div`
     filter: contrast(1.25);
   }
   &:after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(5,22,40,0.26) 0%, rgba(43,200,215,0.68) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(5, 22, 40, 0.26) 0%,
+      rgba(43, 200, 215, 0.68) 100%
+    );
     position: absolute;
     top: 0;
     left: 0;
@@ -127,7 +131,7 @@ const ImageBox = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     right: 0;
- } 
+  }
 `
 
 const BlogDate = styled.small`
@@ -135,13 +139,13 @@ const BlogDate = styled.small`
   font-size: 30px;
   letter-spacing: -0.1px;
   color: #2bc8d7;
-  ::before{
+  ::before {
     display: inline-block;
     content: "";
-    border-top: .28rem solid #d5330d;
+    border-top: 0.28rem solid #d5330d;
     width: 36px;
-    margin-right: .75rem;
-    transform: translateY(-.25rem);
+    margin-right: 0.75rem;
+    transform: translateY(-0.25rem);
   }
   @media (max-width: 768px) {
     font-size: 20px;
@@ -172,7 +176,7 @@ const LeftSide = styled.div`
   &:before {
     width: 125px;
     height: 125px;
-    content: '';
+    content: "";
     position: absolute;
     z-index: 1;
     border-top: 5px solid #d53410;
@@ -180,7 +184,7 @@ const LeftSide = styled.div`
     top: -20px;
     left: -32px;
   }
-  h2{
+  h2 {
     font-family: Stolzl;
     font-size: 30px;
     font-weight: bold;
@@ -188,14 +192,14 @@ const LeftSide = styled.div`
     color: #051628;
     padding: 1.5rem 0 1rem;
   }
-  p{
+  p {
     font-family: Ubuntu;
     font-size: 21px;
     line-height: 1.75;
     letter-spacing: 0.25px;
     color: #051628;
   }
-  img{
+  img {
     width: 100%;
   }
   figure {
@@ -207,7 +211,7 @@ const LeftSide = styled.div`
       text-align: center;
       font-style: italic;
       padding: 0.25rem 2.75rem;
-  
+
       p {
         line-height: 1.65;
         font-size: 0.95rem;
@@ -218,17 +222,17 @@ const LeftSide = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-  h3{
+  h3 {
     font-family: Ubuntu;
     font-size: 25px;
     font-weight: 500;
     letter-spacing: 0.31px;
     color: #0c7489;
   }
-  a{
+  a {
     color: #0c7489;
   }
-  ul{
+  ul {
     font-family: Ubuntu;
     font-size: 20px;
     line-height: 1.75;
@@ -245,41 +249,40 @@ const LeftSide = styled.div`
         height: 10px;
         border-radius: 50%;
         background: #0d7489;
-        content: '';
+        content: "";
         position: absolute;
         left: -21px;
         top: 12px;
       }
     }
   }
-  ol{
+  ol {
     font-family: Ubuntu;
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.25px;
     color: #051628;
-    margin: 2rem 0 2rem .75rem;
+    margin: 2rem 0 2rem 0.75rem;
     list-style: none;
     counter-reset: my-awesome-counter;
     list-style-position: outside;
     border-left: 4px solid #041829;
     padding-left: 20px;
-    li{
+    li {
       padding-left: 0;
       counter-increment: my-awesome-counter;
       line-height: 1.5;
-      &:before{
+      &:before {
         content: counter(my-awesome-counter) ". ";
         color: #d53410;
         font-weight: bold;
         left: 0;
         font-size: 1.4rem;
-        margin-right: .25rem;
+        margin-right: 0.25rem;
       }
     }
   }
-  li{
-
+  li {
   }
   blockquote {
     font-size: 28px;
@@ -333,7 +336,7 @@ const LeftSide = styled.div`
     line-height: 1.65;
     font-size: 14px;
     p {
-      font-size: 16px; 
+      font-size: 16px;
       display: inline-block;
     }
     li {
@@ -343,7 +346,6 @@ const LeftSide = styled.div`
       font-size: 16px;
       display: inline-block;
     }
-
   }
 `
 const RightSide = styled.div`
@@ -402,12 +404,12 @@ const BioBox = styled.div`
   margin-top: 4em;
   @media (max-width: 768px) {
     display: block;
- }
+  }
 `
 const BioImageBox = styled.div`
   flex: 0 0 90px;
   margin-right: 1rem;
-  Img{
+  img {
     width: 100%;
     border-radius: 50%;
   }
@@ -416,35 +418,34 @@ const BioImageBox = styled.div`
     margin: 0;
     padding: 1rem 1.5rem 2rem;
     margin: 0 auto;
- }
+  }
 `
 const BioTextBox = styled.div`
   font-family: Ubuntu;
   max-width: 542px;
-  .BioH4{
+  .BioH4 {
     font-size: 16px;
     letter-spacing: 0.2px;
     color: #2bc8d7;
     margin: 0;
-    padding-bottom: .65rem;
+    padding-bottom: 0.65rem;
   }
-  .BioH3{
+  .BioH3 {
     font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.28px;
     color: #ffffff;
     margin: 0;
-    padding-bottom: .65rem;
+    padding-bottom: 0.65rem;
   }
-  .BioP{
+  .BioP {
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.23px;
     color: #ffffff;
-    opacity: .75;
+    opacity: 0.75;
     margin: 0;
   }
-
 `
 
 const ConsultBox = styled.div`
@@ -453,17 +454,17 @@ const ConsultBox = styled.div`
   text-align: center;
   margin: 0 auto;
   padding: 8rem 0 7rem;
-  p{
+  p {
     font-family: Ubuntu;
     font-size: 25px;
     line-height: 1.44;
-    letter-spacing: -.75px;
+    letter-spacing: -0.75px;
     font-weight: 500;
   }
 `
 
 const Button = styled(Link)`
-  background-color: #D5330D;
+  background-color: #d5330d;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -489,10 +490,10 @@ export default function BlogPost({ data }) {
   const bioImgFluid = post.frontmatter.bioImage.childImageSharp.fluid
 
   //For the social share buttons
-  const title = `Read ${post.frontmatter.title} `;
-  const url = typeof window !== 'undefined' ? window.location.href : '';
-  const twitterHandle = "heynovaio";
-  const tags = post.frontmatter.category;
+  const title = `Read ${post.frontmatter.title} `
+  const url = typeof window !== "undefined" ? window.location.href : ""
+  const twitterHandle = "heynovaio"
+  const tags = post.frontmatter.category
 
   return (
     <Layout title={siteTitle}>
@@ -502,14 +503,16 @@ export default function BlogPost({ data }) {
         image={post.frontmatter.metaImage}
       />
       <HeaderContainer>
-        <Back to="/blog"><FontAwesomeIcon icon={faChevronLeft} /> Back to all Blogs</Back>
-        <TitleBox id ="main">
+        <Back to="/blog">
+          <FontAwesomeIcon icon={faChevronLeft} /> Back to all Blogs
+        </Back>
+        <TitleBox id="main">
           <BlogTag>{post.frontmatter.category}</BlogTag>
           <h1>{post.frontmatter.title}</h1>
-          <BlogDate>{post.frontmatter.date}</BlogDate> 
+          <BlogDate>{post.frontmatter.date}</BlogDate>
         </TitleBox>
         <ImageBox>
-          <Img alt="" role="presentation" fluid={featuredImgFluid}/>
+          <Img alt="" role="presentation" fluid={featuredImgFluid} />
         </ImageBox>
       </HeaderContainer>
       <ContentContainer>
@@ -518,7 +521,7 @@ export default function BlogPost({ data }) {
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
             <BioBox>
               <BioImageBox>
-                <Img role="presentation" fluid={bioImgFluid}/>
+                <Img role="presentation" fluid={bioImgFluid} />
               </BioImageBox>
               <BioTextBox>
                 <h2 class="BioH4">Written by </h2>
@@ -530,20 +533,25 @@ export default function BlogPost({ data }) {
           <RightSide>
             <SocialButtons>
               <h2>Share it</h2>
-              <FacebookShareButton url={url} >
-                <FacebookIcon  size={60} round={true}/>
+              <FacebookShareButton url={url}>
+                <FacebookIcon size={60} round={true} />
               </FacebookShareButton>
 
-              <TwitterShareButton url={url} title={title} via={twitterHandle} hashtags={tags}>
-                <TwitterIcon  size={60} round={true} />
+              <TwitterShareButton
+                url={url}
+                title={title}
+                via={twitterHandle}
+                hashtags={tags}
+              >
+                <TwitterIcon size={60} round={true} />
               </TwitterShareButton>
 
-              <LinkedinShareButton url={url} >
-                <LinkedinIcon  size={60} round={true}/>
+              <LinkedinShareButton url={url}>
+                <LinkedinIcon size={60} round={true} />
               </LinkedinShareButton>
 
-              <RedditShareButton url={url} title={title} >
-                <RedditIcon  size={60} round={true} />
+              <RedditShareButton url={url} title={title}>
+                <RedditIcon size={60} round={true} />
               </RedditShareButton>
             </SocialButtons>
             <QuoteContainer>
@@ -552,17 +560,20 @@ export default function BlogPost({ data }) {
           </RightSide>
         </BlogBox>
         <ConsultBox>
-          <p>Interested to learn more about what we do at Hey Nova?  Book a free consult or send us an email!</p>
+          <p>
+            Interested to learn more about what we do at Hey Nova? Book a free
+            consult or send us an email!
+          </p>
           <Button to="/contact">Get in Touch</Button>
         </ConsultBox>
       </ContentContainer>
-      <Subscribe/>
+      <Subscribe />
     </Layout>
   )
 }
 
 export const query = graphql`
-  query BlogQuery($slug: String!) { 
+  query BlogQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

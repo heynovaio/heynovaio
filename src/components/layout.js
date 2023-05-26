@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
 import Footer from "./footer"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import "./layout.css"
 
 const Main = styled.main`

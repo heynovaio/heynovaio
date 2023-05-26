@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import { keyframes } from "@emotion/core"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const WhoSection = styled.section`
   padding: 0 20px;
@@ -110,8 +110,7 @@ const ImgContainer = styled.div`
     display: none;
   }
 `
-function Who () {
-
+function Who() {
   const data = useStaticQuery(graphql`
     query {
       astro: file(relativePath: { eq: "astronaut.png" }) {
@@ -128,11 +127,21 @@ function Who () {
     <WhoSection>
       <ContentCenter>
         <ImgContainer>
-          <Img alt="Astronaut" role="presentation" fadeIn={false} fixed={data.astro.childImageSharp.fixed} />
+          <Img
+            alt="Astronaut"
+            role="presentation"
+            fadeIn={false}
+            fixed={data.astro.childImageSharp.fixed}
+          />
         </ImgContainer>
         <Content>
           <H2>A digital design agency forging a bold path forward</H2>
-          <P>Successful products are determined by people, not numbers or stereotypes.  Our approach considers the lived experiences of users to provide the most comprehensive and effective digital experience for your brand.</P>
+          <P>
+            Successful products are determined by people, not numbers or
+            stereotypes. Our approach considers the lived experiences of users
+            to provide the most comprehensive and effective digital experience
+            for your brand.
+          </P>
         </Content>
       </ContentCenter>
     </WhoSection>

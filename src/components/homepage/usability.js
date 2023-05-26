@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import Bg from '../../images/space-background.jpg'
+import styled from "@emotion/styled"
+import React from "react"
+import Bg from "../../images/space-background.jpg"
 
 const What = styled.section`
   padding: 75px 20px 0px;
@@ -11,7 +11,7 @@ const H2 = styled.h2`
   line-height: 1.28;
   letter-spacing: -1px;
   text-align: center;
-  color: #0C7489;
+  color: #0c7489;
   font-family: Stolzl;
   max-width: 800px;
   margin: 0 auto 15px;
@@ -63,9 +63,9 @@ const Number = styled.span`
   -webkit-letter-spacing: -2px;
   -moz-letter-spacing: -2px;
   -ms-letter-spacing: -2px;
-  letter-spacing: -.08em;
+  letter-spacing: -0.08em;
   margin-bottom: 30px;
-  background: url( ${Bg} ) no-repeat;
+  background: url(${Bg}) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0000;
   background-attachment: fixed;
@@ -79,20 +79,28 @@ export default () => (
   <What>
     <Container>
       <H2>We believe in the power of knowledge</H2>
-      <HeadingParagraph>So let's look at how accessibility affects the digital space</HeadingParagraph>
+      <HeadingParagraph>
+        So let's look at how accessibility affects the digital space
+      </HeadingParagraph>
       <Flex>
         <FlexBox>
-          <P><Number>98.1%</Number> of 1,000,000 websites tested in February 2020 failed accessibility testing - and that’s just from automated tests!
+          <P>
+            <Number>98.1%</Number> of 1,000,000 websites tested in February 2020
+            failed accessibility testing - and that’s just from automated tests!
           </P>
         </FlexBox>
         <FlexBox>
           <P>
-            <Number>22%</Number> of Canadians have at least one disability that affects their sight, hearing, or dexterity. 54% of adults living with a disability currently go online.
+            <Number>22%</Number> of Canadians have at least one disability that
+            affects their sight, hearing, or dexterity. 54% of adults living
+            with a disability currently go online.
           </P>
         </FlexBox>
         <FlexBox>
           <P>
-            <Number>88%</Number> of online shoppers won’t return to a website after having a bad user experience. When you make your website accessible you give everyone the best user experience.
+            <Number>88%</Number> of online shoppers won’t return to a website
+            after having a bad user experience. When you make your website
+            accessible you give everyone the best user experience.
           </P>
         </FlexBox>
       </Flex>

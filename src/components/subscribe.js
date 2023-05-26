@@ -1,11 +1,10 @@
 import React, { useState } from "react"
-import styled from '@emotion/styled'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-import AstroRead from './../images/astronaut-reading.svg'
+import styled from "@emotion/styled"
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import AstroRead from "./../images/astronaut-reading.svg"
 
 const SubSect = styled.section`
   background-color: #0c7489;
-
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -33,12 +32,12 @@ const SubmitBox = styled.div`
     padding: 30px 20px 0px;
     margin: 10px 10px 40px;
   }
-  h3{
+  h3 {
     font-family: Stolzl;
     font-size: 60px;
     font-weight: 500;
     letter-spacing: -0.19px;
-    line-height: .85;
+    line-height: 0.85;
     color: #0a2239;
     margin: 0;
     padding: 0 175px 10px 0;
@@ -77,7 +76,7 @@ const EmailInput = styled.input`
   }
 `
 const ButtonInput = styled.button`
-  background-color: #D5330D;
+  background-color: #d5330d;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -86,7 +85,7 @@ const ButtonInput = styled.button`
   text-decoration: none;
   border: none;
   display: inline-block;
-  margin-left:15px;
+  margin-left: 15px;
   padding: 14px 70px 15px 71px;
   transform: translateY(-2px);
   cursor: pointer;
@@ -127,33 +126,39 @@ const Desc = styled.p`
 `
 
 function Subscribe() {
-
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState("")
+  const [message, setMessage] = useState("")
 
   const handleSubmit = async event => {
-    event.preventDefault();
+    event.preventDefault()
     // Mailchimp always responds with status code 200, accompanied by a string indicating the result of the response.
-    const { result, msg } = await addToMailchimp(email);
-    result === 'success' && setEmail('');
+    const { result, msg } = await addToMailchimp(email)
+    result === "success" && setEmail("")
     // Removes the HTML returned in some response messages in case of error
-    setMessage(msg.split('<')[0]);
-    setStatus(result);
-  };
+    setMessage(msg.split("<")[0])
+    setStatus(result)
+  }
 
-  const handleChange = event => setEmail(event.target.value);
+  const handleChange = event => setEmail(event.target.value)
 
   return (
     <SubSect id="subscribe">
       <ContentContainer>
         <PhotoBox>
-          <img src={AstroRead} alt="AstroRead" role="presentation" class="AstroRead"/>
+          <img
+            src={AstroRead}
+            alt="AstroRead"
+            role="presentation"
+            class="AstroRead"
+          />
         </PhotoBox>
         <SubmitBox>
           <h3>Stay in the loop</h3>
-          <Desc>Leave your email to get updated on the happenings at HEY NOVA</Desc>
-          
+          <Desc>
+            Leave your email to get updated on the happenings at HEY NOVA
+          </Desc>
+
           <form id="contactForm">
             <EmailLabel htmlFor="emailInput">Email:</EmailLabel>
             <Grid>
@@ -166,24 +171,16 @@ function Subscribe() {
                 onChange={handleChange}
                 required
               />
-              <ButtonInput
-                type="submit"
-                onClick={handleSubmit}
-              >
+              <ButtonInput type="submit" onClick={handleSubmit}>
                 Subscribe
               </ButtonInput>
-            </Grid> 
-            <MessageState
-              status={status}
-            >
-              {message}
-            </MessageState>
+            </Grid>
+            <MessageState status={status}>{message}</MessageState>
           </form>
-
         </SubmitBox>
       </ContentContainer>
     </SubSect>
-  );
+  )
 }
 
-export default Subscribe;
+export default Subscribe

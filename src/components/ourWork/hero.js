@@ -1,18 +1,15 @@
 import React from "react"
-import styled from '@emotion/styled'
-import { useStaticQuery, graphql } from 'gatsby'
+import styled from "@emotion/styled"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
-
-const HeroSection = styled.section`
-
-`
+const HeroSection = styled.section``
 const Space = styled.div`
   position: absolute;
   right: 0;
   top: -5px;
-  width:50%;
+  width: 50%;
   max-width: 1000px;
 `
 const ContentContainer = styled.div`
@@ -26,7 +23,6 @@ const ContentContainer = styled.div`
   @media (max-width: 768px) {
     padding-top: 115px;
   }
-  
 `
 const Content = styled.div`
   font-family: Ubuntu;
@@ -41,7 +37,6 @@ const H1 = styled.h1`
   font-family: Stolzl;
 `
 const P = styled.p`
-
   font-size: 20px;
   line-height: 35px;
 `
@@ -66,7 +61,7 @@ const Button = styled(Link)`
   }
 `
 
-function Hero () {
+function Hero() {
   const data = useStaticQuery(graphql`
     query {
       space: file(relativePath: { eq: "space-hero-image.png" }) {
@@ -78,19 +73,27 @@ function Hero () {
       }
     }
   `)
-  return(
-  	<HeroSection>
+  return (
+    <HeroSection>
       <Space>
-        <Img alt="" role="presentation" fadeIn={false} fluid={data.space.childImageSharp.fluid} />
+        <Img
+          alt=""
+          role="presentation"
+          fadeIn={false}
+          fluid={data.space.childImageSharp.fluid}
+        />
       </Space>
-  	  <ContentContainer> 
+      <ContentContainer>
         <Content>
           <H1>Our Work</H1>
-          <P>We love our clients and having the priviledge to work on inspiring projects.</P>
+          <P>
+            We love our clients and having the priviledge to work on inspiring
+            projects.
+          </P>
           <Button to="/contact">Contact Us</Button>
         </Content>
-  	  </ContentContainer>
-  	</HeroSection>
+      </ContentContainer>
+    </HeroSection>
   )
 }
 export default Hero

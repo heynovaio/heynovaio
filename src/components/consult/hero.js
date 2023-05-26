@@ -1,7 +1,7 @@
 import React from "react"
-import styled from '@emotion/styled'
-import img1 from '../../images/landing-bg.jpg'
-import { PopupText } from 'react-calendly'
+import styled from "@emotion/styled"
+import img1 from "../../images/landing-bg.jpg"
+import { PopupText } from "react-calendly"
 
 const HeroSection = styled.section`
   background-color: #051628;
@@ -9,7 +9,7 @@ const HeroSection = styled.section`
   position: relative;
   padding-top: 50px;
   @media (min-width: 960px) {
-    background-image: url( ${img1} );
+    background-image: url(${img1});
     background-size: cover;
   }
   @media (max-width: 960px) {
@@ -19,7 +19,7 @@ const HeroSection = styled.section`
     padding-bottom: 75px;
     overflow: hidden;
   }
-  p{
+  p {
     max-width: 556px;
   }
 `
@@ -33,9 +33,8 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 115px;
-
   }
-  h1{
+  h1 {
     max-width: 600px;
   }
 `
@@ -62,13 +61,13 @@ const P = styled.p`
   color: #0a2239;
   margin: 20px 0 20px;
   font-family: Ubuntu;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     color: #fff;
   }
 `
 const Button = styled.div`
   a {
-    background-color: #D5330D;
+    background-color: #d5330d;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -82,21 +81,23 @@ const Button = styled.div`
   }
 `
 
-function Hero () {
-  return(
-  	<HeroSection>
-  	  <ContentContainer>
-  	    <H1 id="main">E-Commerce Services</H1>
-  	    <P>Making your mark in today's most important industry by building superior shopping experiences
-  	    </P>
-  	    <Button>
-  	      <PopupText
-  	        text="Book a Free Consult"
-  	        url="https://calendly.com/hey-nova/free-consultation"
-  	      />
-  	    </Button>
-  	  </ContentContainer>
-  	</HeroSection>
+function Hero() {
+  return (
+    <HeroSection>
+      <ContentContainer>
+        <H1 id="main">E-Commerce Services</H1>
+        <P>
+          Making your mark in today's most important industry by building
+          superior shopping experiences
+        </P>
+        <Button>
+          <PopupText
+            text="Book a Free Consult"
+            url="https://calendly.com/hey-nova/free-consultation"
+          />
+        </Button>
+      </ContentContainer>
+    </HeroSection>
   )
 }
 export default Hero

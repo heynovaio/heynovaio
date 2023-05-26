@@ -1,8 +1,8 @@
 import React from "react"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 
 const ContactSection = styled.section`
-  background: #0A2239;
+  background: #0a2239;
 `
 
 const ContentContainer = styled.div`
@@ -15,9 +15,7 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 115px;
-
   }
-  
 `
 const Form = styled.form`
   max-width: 800px;
@@ -26,7 +24,7 @@ const Form = styled.form`
   position: relative;
   padding: 24px;
   color: #fff;
-  h1{
+  h1 {
     text-align: center;
     font-family: Stolzl;
     font-weight: 400;
@@ -48,7 +46,7 @@ const Form = styled.form`
     width: 100%;
     margin-bottom: 25px;
     background: #fff;
-    
+
     border: none;
     font-size: 18px;
     font-weight: 300;
@@ -128,37 +126,55 @@ const A = styled.a`
 const Span = styled.span`
   padding: 22px 100px 20px;
   font-weight: 500;
-   margin: auto 0;
+  margin: auto 0;
   @media (max-width: 767px) {
     display: block;
     padding-top: 35px;
   }
 `
-function Contact () {
-  return(
-  	<ContactSection>
-  	  <ContentContainer>
-        
-        <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
+function Contact() {
+  return (
+    <ContactSection>
+      <ContentContainer>
+        <Form
+          action="https://formspree.io/info@heynova.io"
+          method="post"
+          name="contact-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
           <h1>Like what you see? Let's chat.</h1>
           <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
               <label htmlFor="cf-EMAIL">Email </label>
-              <input type="email" name="EMAIL" required class="required email" id="cf-EMAIL"/>
+              <input
+                type="email"
+                name="EMAIL"
+                required
+                class="required email"
+                id="cf-EMAIL"
+              />
             </div>
             <div class="mc-field-group">
               <label htmlFor="cf-MSG">Message</label>
               <textarea name="MSG" class="required msg" id="cf-MSG"></textarea>
             </div>
             <ActionContainer>
-              <input type="submit" value="SEND MESSAGE" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>
+              <input
+                type="submit"
+                value="SEND MESSAGE"
+                name="SUBMIT"
+                id="cf-embedded-subscribe"
+                class="btn-primary"
+              />
               <Span>or</Span>
               <A href="mailto:info@heynova.io">Book a call</A>
             </ActionContainer>
           </div>
         </Form>
-  	  </ContentContainer>
-  	</ContactSection>
+      </ContentContainer>
+    </ContactSection>
   )
 }
 export default Contact

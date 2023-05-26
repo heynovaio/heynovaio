@@ -1,8 +1,8 @@
-import styled from '@emotion/styled'
-import React from 'react'
+import styled from "@emotion/styled"
+import React from "react"
 
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const HowSection = styled.section`
   padding: 0 0 80px;
@@ -107,10 +107,10 @@ const ImgContainer = styled.div`
     display: none;
   }
 `
-const Elem = ({children}) => (
+const Elem = ({ children }) => (
   <ListElementStyle>
     {children}
-    <Marker/>
+    <Marker />
   </ListElementStyle>
 )
 const Center = styled.div`
@@ -121,8 +121,7 @@ const Center = styled.div`
   }
 `
 
-function How () {
-
+function How() {
   const data = useStaticQuery(graphql`
     query {
       consult: file(relativePath: { eq: "consulting-icon@2x.png" }) {
@@ -131,28 +130,28 @@ function How () {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       dev: file(relativePath: { eq: "dev-icon@2x.png" }) {
         childImageSharp {
-          fixed(width: 88 quality: 100) {
+          fixed(width: 88, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       design: file(relativePath: { eq: "design-icon@2x.png" }) {
         childImageSharp {
           fixed(width: 88, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       strategy: file(relativePath: { eq: "strategy-icon@2x.png" }) {
         childImageSharp {
           fixed(width: 88, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
-      },
+      }
       planet: file(relativePath: { eq: "group-17.png" }) {
         childImageSharp {
           fixed(width: 400, quality: 100) {
@@ -164,13 +163,20 @@ function How () {
   `)
 
   return (
-
     <HowSection>
       <H2>Curious about our process?</H2>
-      <P>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</P>
+      <P>
+        We can break down our methodology into four key components: strategy,
+        design, implementation, and consultation.
+      </P>
       <Flex>
         <Box>
-          <Img alt="Strategy Icon" role="presentation" fadeIn={false} fixed={data.strategy.childImageSharp.fixed} />
+          <Img
+            alt="Strategy Icon"
+            role="presentation"
+            fadeIn={false}
+            fixed={data.strategy.childImageSharp.fixed}
+          />
           <Center>
             <H3>Strategy</H3>
             <Elem>User Research</Elem>
@@ -182,7 +188,12 @@ function How () {
           </Center>
         </Box>
         <Box>
-          <Img alt="Design Icon" role="presentation" fadeIn={false} fixed={data.design.childImageSharp.fixed} />
+          <Img
+            alt="Design Icon"
+            role="presentation"
+            fadeIn={false}
+            fixed={data.design.childImageSharp.fixed}
+          />
           <Center>
             <H3>Design</H3>
             <Elem>Branding</Elem>
@@ -194,7 +205,12 @@ function How () {
           </Center>
         </Box>
         <Box>
-          <Img alt="Dev Icon" role="presentation" fadeIn={false} fixed={data.dev.childImageSharp.fixed} />
+          <Img
+            alt="Dev Icon"
+            role="presentation"
+            fadeIn={false}
+            fixed={data.dev.childImageSharp.fixed}
+          />
           <Center>
             <H3>Implementation</H3>
             <Elem>Web Development</Elem>
@@ -206,7 +222,12 @@ function How () {
           </Center>
         </Box>
         <Box>
-          <Img alt="Consulting Icon" role="presentation" fadeIn={false} fixed={data.consult.childImageSharp.fixed} />
+          <Img
+            alt="Consulting Icon"
+            role="presentation"
+            fadeIn={false}
+            fixed={data.consult.childImageSharp.fixed}
+          />
           <Center>
             <H3>Consulting</H3>
             <Elem>Workshops & Mentoring</Elem>
@@ -219,7 +240,12 @@ function How () {
         </Box>
       </Flex>
       <ImgContainer>
-        <Img alt="Planet" role="presentation" fadeIn={false} fixed={data.planet.childImageSharp.fixed} />
+        <Img
+          alt="Planet"
+          role="presentation"
+          fadeIn={false}
+          fixed={data.planet.childImageSharp.fixed}
+        />
       </ImgContainer>
     </HowSection>
   )
