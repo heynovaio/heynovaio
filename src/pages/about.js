@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Hero, Mission, Values } from "../components/about"
+import { Hero, Mission, Values, Contact } from "../components/about"
 
 export default function About() {
   return (
@@ -9,6 +9,7 @@ export default function About() {
       <Mission />
       {/* <Team /> */}
       <Values />
+      <Contact />
     </Layout>
   )
 }
