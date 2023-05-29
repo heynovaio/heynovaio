@@ -2,6 +2,7 @@ import WomenLed from "./assets/women-led.svg"
 import RemoteForever from "./assets/remote-forever.svg"
 import PurposeDrive from "./assets/purpose-driven.svg"
 import Inclusive from "./assets/inclusive-accessible.svg"
+import Bryony from "./assets/bryony.jpg"
 
 // TODO: change content
 export const values = [
@@ -28,5 +29,88 @@ export const values = [
     title: "Inclusive & Accessible",
     content:
       "Dolor adipisicing nam cupiditate quisquam iste. Cupiditate repellat amet unde.",
+  },
+]
+
+export const teamMembers = [
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
+  },
+  {
+    img: Bryony,
+    name: "Bryony Giesbrecht",
+    title: "Title",
+    desc:
+      "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
+    location: "Calgary AB, Canada",
   },
 ]
