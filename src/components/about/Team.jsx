@@ -2,6 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { teamMembers } from "./content"
 import shortid from "shortid"
+import Line from "./assets/line"
+import SpaceShip from "./assets/spaceship.svg"
 import Earth from "./assets/earth.svg"
 
 export function Team() {
@@ -17,23 +19,60 @@ export function Team() {
         </p>
       </SectionHeader>
 
-      <TeamSection>
-        {teamMembers.map(mem => (
-          <li key={shortid.generate()}>
-            <TeamCard {...mem} />
-          </li>
-        ))}
-      </TeamSection>
+      <TeamContainer>
+        <SvgContainer>
+          <img src={SpaceShip} className="center spaceship" />
+          <Line className="line center" />
+        </SvgContainer>
+
+        <TeamSection>
+          {teamMembers.map(mem => (
+            <li key={shortid.generate()}>
+              <TeamCard {...mem} />
+            </li>
+          ))}
+        </TeamSection>
+      </TeamContainer>
     </Section>
   )
 }
 
-const TeamSection = styled.ul`
+const TeamContainer = styled.div`
+  position: relative;
+`
+
+const SvgContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+  .spaceship {
+    margin-left: 4px;
+    margin-bottom: 40px !important;
+    transform: translate(-50%, -3rem);
+  }
+  .line {
+    svg,
+    line {
+      height: 100%;
+    }
+  }
+`
+
+const TeamSection = styled.div`
   margin: 0;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 10rem;
+  gap: 8rem;
   width: 100%;
   @media only screen and (min-width: 1000px) {
     row-gap: 5rem;
@@ -47,6 +86,7 @@ const TeamSection = styled.ul`
 
 const SectionHeader = styled.div`
   text-align: center;
+  margin-bottom: 5rem;
   h2 {
     font-family: "Stolzl";
     font-style: normal;
@@ -69,11 +109,13 @@ const SectionHeader = styled.div`
 `
 
 const Section = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   margin-top: 8rem;
+  margin-bottom: 10rem;
   li {
     list-style: none;
   }
@@ -95,6 +137,7 @@ function TeamCard({ img, name, title, desc, location }) {
 }
 
 const Card = styled.div`
+  padding: 5px;
   font-family: "Ubuntu";
   background-color: white;
   width: 100%;
