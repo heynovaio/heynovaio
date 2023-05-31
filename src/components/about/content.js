@@ -3,6 +3,16 @@ import RemoteForever from "./assets/remote-forever.svg"
 import PurposeDrive from "./assets/purpose-driven.svg"
 import Inclusive from "./assets/inclusive-accessible.svg"
 import Bryony from "./assets/bryony.jpg"
+import Planet1 from "./assets/planet1.svg"
+import Planet2 from "./assets/planet2.svg"
+import Planet3 from "./assets/planet3.svg"
+import Planet4 from "./assets/planet4.svg"
+import Planet5 from "./assets/planet5.svg"
+import Planet6 from "./assets/planet6.svg"
+import Planet7 from "./assets/planet7.svg"
+import Planet8 from "./assets/planet8.svg"
+import Planet9 from "./assets/planet9.svg"
+import Planet10 from "./assets/planet10.svg"
 
 // TODO: change content
 export const values = [
@@ -40,6 +50,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet1,
   },
   {
     img: Bryony,
@@ -48,6 +59,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet2,
   },
   {
     img: Bryony,
@@ -56,6 +68,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet3,
   },
   {
     img: Bryony,
@@ -64,6 +77,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet4,
   },
   {
     img: Bryony,
@@ -72,6 +86,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet5,
   },
   {
     img: Bryony,
@@ -80,6 +95,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet6,
   },
   {
     img: Bryony,
@@ -88,6 +104,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet7,
   },
   {
     img: Bryony,
@@ -96,6 +113,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet8,
   },
   {
     img: Bryony,
@@ -104,6 +122,7 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet9,
   },
   {
     img: Bryony,
@@ -112,5 +131,6 @@ export const teamMembers = [
     desc:
       "Sit veritatis maxime aut nulla necessitatibus! Voluptatem iusto iusto voluptas rerum commodi? Distinctio reiciendis alias tempore voluptas.",
     location: "Calgary AB, Canada",
+    planet: Planet10,
   },
 ]

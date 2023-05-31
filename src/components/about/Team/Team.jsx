@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { teamMembers } from "./content"
+import { teamMembers } from "../content"
 import shortid from "shortid"
-import Line from "./assets/line"
-import SpaceShip from "./assets/spaceship.svg"
-import Earth from "./assets/earth.svg"
-import HorizontalLine from "./assets/horizontal-line.svg"
+import Line from "../assets/line"
+import SpaceShip from "../assets/spaceship.svg"
+import Earth from "../assets/earth.svg"
+import HorizontalLine from "../assets/horizontal-line.svg"
 
 export function Team() {
   return (
@@ -27,8 +27,8 @@ export function Team() {
         </SvgContainer>
 
         <TeamSection>
-          {teamMembers.map(mem => (
-            <li key={shortid.generate()}>
+          {teamMembers.map((mem, idx) => (
+            <li key={shortid.generate()} className={`mem-${idx}`}>
               <TeamCard {...mem} />
             </li>
           ))}
@@ -75,16 +75,30 @@ const TeamSection = styled.div`
   justify-items: center;
   gap: 8rem;
   width: 100%;
+  img.planet,
+  .horizontal-line {
+    display: none;
+  }
   @media only screen and (min-width: 1000px) {
     row-gap: 5rem;
     width: 1000px;
     grid-template-columns: repeat(2, 1fr);
 
+    img.planet,
+    .horizontal-line {
+      display: block;
+    }
     .horizontal-line {
       position: absolute;
       top: 2rem;
       width: 50%;
       z-index: -1;
+    }
+    img.planet {
+      position: absolute;
+      top: 1.4rem;
+      right: 0;
+      scale: 0.8;
     }
     li:nth-child(odd) {
       transform: translateY(11rem);
@@ -92,11 +106,19 @@ const TeamSection = styled.div`
         right: 0;
         transform: translateX(4.8rem);
       }
+      img.planet {
+        right: -9.5rem;
+        transform: translate(0rem, -50%);
+      }
     }
     li:nth-child(even) {
       .horizontal-line {
         left: 0;
         transform: translateX(-4.8rem);
+      }
+      img.planet {
+        left: -9.9rem;
+        transform: translate(0rem, -50%);
       }
     }
   }
@@ -139,11 +161,12 @@ const Section = styled.section`
   }
 `
 
-function TeamCard({ img, name, title, desc, location }) {
+function TeamCard({ img, name, title, desc, location, planet }) {
   return (
     <Card>
       <img src={img} alt={name} />
       <img src={HorizontalLine} className="horizontal-line" />
+      <img src={planet} className="planet" />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
