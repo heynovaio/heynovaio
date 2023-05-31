@@ -5,6 +5,7 @@ import shortid from "shortid"
 import Line from "./assets/line"
 import SpaceShip from "./assets/spaceship.svg"
 import Earth from "./assets/earth.svg"
+import HorizontalLine from "./assets/horizontal-line.svg"
 
 export function Team() {
   return (
@@ -78,8 +79,25 @@ const TeamSection = styled.div`
     row-gap: 5rem;
     width: 1000px;
     grid-template-columns: repeat(2, 1fr);
+
+    .horizontal-line {
+      position: absolute;
+      top: 2rem;
+      width: 50%;
+      z-index: -1;
+    }
     li:nth-child(odd) {
       transform: translateY(11rem);
+      .horizontal-line {
+        right: 0;
+        transform: translateX(4.8rem);
+      }
+    }
+    li:nth-child(even) {
+      .horizontal-line {
+        left: 0;
+        transform: translateX(-4.8rem);
+      }
     }
   }
 `
@@ -125,6 +143,7 @@ function TeamCard({ img, name, title, desc, location }) {
   return (
     <Card>
       <img src={img} alt={name} />
+      <img src={HorizontalLine} className="horizontal-line" />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
@@ -137,6 +156,7 @@ function TeamCard({ img, name, title, desc, location }) {
 }
 
 const Card = styled.div`
+  position: relative;
   padding: 5px;
   font-family: "Ubuntu";
   background-color: white;
