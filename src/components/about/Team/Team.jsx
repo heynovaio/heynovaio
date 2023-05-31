@@ -4,8 +4,7 @@ import { teamMembers } from "../content"
 import shortid from "shortid"
 import Line from "../assets/line"
 import SpaceShip from "../assets/spaceship.svg"
-import Earth from "../assets/earth.svg"
-import HorizontalLine from "../assets/horizontal-line.svg"
+import { TeamCard } from "./TeamCard"
 
 export function Team() {
   return (
@@ -55,9 +54,8 @@ const SvgContainer = styled.div`
     left: 50%;
   }
   .spaceship {
-    margin-left: 4px;
-    margin-bottom: 40px !important;
-    transform: translate(-50%, -3rem);
+    transform: translate(-1.8rem, -7rem);
+    scale: 0.8;
   }
   .line {
     svg,
@@ -121,12 +119,24 @@ const TeamSection = styled.div`
         transform: translate(0rem, -50%);
       }
     }
+    li:nth-child(1) img.planet {
+      transform: translate(-1.7rem, -0.6rem);
+    }
+    li:nth-child(2) img.planet {
+      transform: translate(3rem, -1rem);
+    }
+    li:nth-child(4) img.planet {
+      transform: translate(-3.5rem, -50%);
+    }
+    li:nth-child(9) img.planet {
+      transform: translate(-0.8rem, -0.8rem);
+    }
   }
 `
 
 const SectionHeader = styled.div`
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 9rem;
   h2 {
     font-family: "Stolzl";
     font-style: normal;
@@ -158,80 +168,5 @@ const Section = styled.section`
   margin-bottom: 10rem;
   li {
     list-style: none;
-  }
-`
-
-function TeamCard({ img, name, title, desc, location, planet }) {
-  return (
-    <Card>
-      <img src={img} alt={name} />
-      <img src={HorizontalLine} className="horizontal-line" />
-      <img src={planet} className="planet" />
-      <Name>{name}</Name>
-      <Title>{title}</Title>
-      <Desc>{desc}</Desc>
-      <Location>
-        <img src={Earth} />
-        <p>{location}</p>
-      </Location>
-    </Card>
-  )
-}
-
-const Card = styled.div`
-  position: relative;
-  padding: 5px;
-  font-family: "Ubuntu";
-  background-color: white;
-  width: 100%;
-  max-width: 351px;
-  margin: 0;
-  img {
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  h3,
-  h4 {
-    margin: 0; /* Reseting default margin */
-  }
-`
-
-const Name = styled.h3`
-  font-family: "Stolzl";
-  font-style: normal;
-  font-size: 30px;
-  line-height: 44px;
-  letter-spacing: -0.5px;
-  color: #0a2239;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-`
-
-const Title = styled.h4`
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 35px;
-  color: #d5330d;
-  margin: 1rem 0 !important;
-`
-
-const Desc = styled.p`
-  font-size: 18px;
-  line-height: 150%;
-  color: #0a2239;
-  margin-bottom: 0.5rem;
-`
-
-const Location = styled.div`
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 35px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  img {
-    margin: 0 !important;
   }
 `
