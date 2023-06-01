@@ -15,7 +15,7 @@ export function Hero() {
         <button>Contact Us</button>
       </HeroContent>
 
-      <img alt="planets" src={HeroPlanets} />
+      <img alt="" src={HeroPlanets} role="presentation" />
     </Section>
   )
 }

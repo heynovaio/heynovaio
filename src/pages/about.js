@@ -4,12 +4,14 @@ import { Hero, Mission, Values, Contact, Team } from "../components/about"
 
 export default function About() {
   return (
-    <Layout>
+    <>
       <Hero />
-      <Mission />
-      <Team />
-      <Values />
-      <Contact />
-    </Layout>
+      <Layout>
+        <Mission />
+        <Team />
+        <Values />
+        <Contact />
+      </Layout>
+    </>
   )
 }

@@ -7,8 +7,13 @@ export function TeamCard({ img, name, title, desc, location, planet }) {
   return (
     <Card>
       <img src={img} alt={name} />
-      <img src={HorizontalLine} className="horizontal-line" />
-      <img src={planet} className="planet" />
+      <img
+        src={HorizontalLine}
+        className="horizontal-line"
+        alt=""
+        role="presentation"
+      />
+      <img src={planet} className="planet" role="presentation" alt="" />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{desc}</Desc>

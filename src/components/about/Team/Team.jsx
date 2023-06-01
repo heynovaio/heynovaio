@@ -21,8 +21,13 @@ export function Team() {
 
       <TeamContainer>
         <SvgContainer>
-          <img src={SpaceShip} className="center spaceship" />
-          <Line className="line center" />
+          <img
+            src={SpaceShip}
+            className="center spaceship"
+            alt=""
+            role="presentation"
+          />
+          <Line className="line center" alt="" role="presentation" />
         </SvgContainer>
 
         <TeamSection>
