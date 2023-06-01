@@ -1,21 +1,28 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { PopupText } from "react-calendly"
 
 export function Contact() {
   return (
     <Section>
       <h3>Connect with us</h3>
-      <form>
+      <form netlify action="/thanks" method="POST" name="contact">
         <label htmlFor="email">Email</label>
-        <input id="email" />
+        <input id="email" name="email" />
 
         <label htmlFor="message">Message</label>
-        <textarea id="message" />
+        <textarea id="message" name="message" />
 
         <Div>
-          <ButtonMain>Send Message</ButtonMain>
+          <ButtonMain type="submit">Send Message</ButtonMain>
           <p>or</p>
-          <ButtonSecondary>Book a call</ButtonSecondary>
+
+          <ButtonSecondary>
+            <PopupText
+              text="BOOK A CALL"
+              url="https://calendly.com/hey-nova/free-consultation"
+            />
+          </ButtonSecondary>
         </Div>
       </form>
     </Section>
@@ -58,7 +65,7 @@ const ButtonMain = styled.button`
 `
 
 const ButtonSecondary = styled.button`
-  padding: 18px 37px;
+  padding: 1.1rem 1.5rem;
   font-family: Stolzl;
   font-size: 20px;
   font-weight: 700;
