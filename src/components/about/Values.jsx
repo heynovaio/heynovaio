@@ -8,7 +8,7 @@ import shortid from "shortid"
 export function Values() {
   return (
     <Div>
-      <img src={UpperMoon} alt="upper moon" />
+      <img src={UpperMoon} alt="" role="presentation" />
 
       <Container>
         <Section>
@@ -24,7 +24,12 @@ export function Values() {
         </Section>
       </Container>
 
-      <img src={LowerMoon} alt="lower moon" style={{ marginTop: "-3px" }} />
+      <img
+        src={LowerMoon}
+        alt=""
+        role="presentation"
+        style={{ marginTop: "-3px" }}
+      />
     </Div>
   )
 }
@@ -90,7 +95,7 @@ const Ul = styled.ul`
 function ValueCard({ icon, title, content }) {
   return (
     <Card>
-      <img src={icon} role="img" />
+      <img src={icon} role="presentation" alt="" />
 
       <h3>{title}</h3>
 
