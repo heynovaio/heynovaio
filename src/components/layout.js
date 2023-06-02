@@ -19,9 +19,9 @@ const Main = styled.main`
 const Layout = ({ children }) => {
   return (
     <>
-      <Header></Header>
-      <Main>{children}</Main>
-      <Footer></Footer>
+      <Header />
+      <Main id="#main">{children}</Main>
+      <Footer />
     </>
   )
 }
