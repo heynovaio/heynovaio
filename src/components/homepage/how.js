@@ -165,7 +165,7 @@ function How () {
 
   return (
 
-    <HowSection>
+    <HowSection id="services">
       <H2>Curious about our process?</H2>
       <P>We can break down our methodology into four key components: strategy, design, implementation, and consultation.</P>
       <Flex>
