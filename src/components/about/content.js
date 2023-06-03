@@ -3,6 +3,7 @@ import RemoteForever from "./assets/remote-forever.svg"
 import PurposeDrive from "./assets/purpose-driven.svg"
 import Inclusive from "./assets/inclusive-accessible.svg"
 import Bryony from "./assets/bryony.jpg"
+import Kirsten from "./assets/kirsten.png"
 import Planet1 from "./assets/planet1.svg"
 import Planet2 from "./assets/planet2.svg"
 import Planet3 from "./assets/planet3.svg"
@@ -44,7 +45,7 @@ export const values = [
 
 export const teamMembers = [
   {
-    img: Bryony,
+    img: Kirsten,
     name: "Bryony Giesbrecht",
     title: "Title",
     desc:
