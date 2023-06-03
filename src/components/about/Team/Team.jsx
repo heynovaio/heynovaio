@@ -82,97 +82,47 @@ const TeamSection = styled.div`
     display: none;
   }
   img.planet {
-    scale: 0.8;
-    position: absolute;
-    transform-origin: center;
-    bottom: -130px;
-    left: 110px;
     margin: 0;
+    padding: 0;
   }
-  li:nth-child(1) img.planet {
-    transform: translate(37px, -30px);
-  }
-  li:nth-child(2) img.planet {
-    transform: translate(50px, -35px);
-  }
-  li:nth-child(3) img.planet {
-    transform: translate(20px, 3px);
-  }
-  li:nth-child(4) img.planet {
-    transform: translate(-80px, 30px);
-    scale: 0.6;
-  }
-  li:nth-child(5) img.planet {
-    transform: translate(0px, 20px);
-  }
-  li:nth-child(6) img.planet {
-    transform: translate(0px, 15px);
-  }
-  li:nth-child(8) img.planet {
-    transform: translate(-9px, -8px);
-  }
-  li:nth-child(9) img.planet {
-    transform: translate(20px, -30px);
-  }
-  li:nth-child(10) img.planet {
-    transform: translate(-5px, 90px);
-  }
-  @media only screen and (min-width: 1000px) {
-    row-gap: 5rem;
-    width: 1000px;
-    grid-template-columns: repeat(2, 1fr);
-    .horizontal-line {
-      display: block;
-    }
-    img.horizontal-line {
-      position: absolute;
-      top: 2rem;
-      width: 50%;
-      z-index: -1;
-    }
+  @media (max-width: 999px) {
     img.planet {
-      top: 24px;
-      right: 0;
-      transform: translate(0, 0);
-    }
-    li:nth-child(odd) {
-      margin-top: 176px;
-      .horizontal-line {
-        right: 0;
-        transform: translateX(85px);
-      }
-      img.planet {
-        left: 115%;
-      }
-    }
-    li:nth-child(even) {
-      .horizontal-line {
-        left: 0;
-        transform: translateX(-90px);
-      }
-      img.planet {
-        left: -180px;
-        top: -33px;
-        //transform: translate(0rem, -50%);
-      }
-    }
-    li:nth-child(2) img.planet {
-      transform: translate(56px, 55px);
-    }
-    li:nth-child(4) img.planet {
-      transform: translate(-60px, -10px);
-    }
-    li:nth-child(8) img.planet {
-      transform: translate(-5px, 27px);
+      scale: 0.7;
+      position: absolute;
+      transform-origin: center;
+      left: 115px;
+      bottom: -130px;
     }
     li:nth-child(1) img.planet {
-      transform: translate();
+      transform: translate(35px, -35px);
+    }
+    li:nth-child(2) img.planet {
+      transform: translate(53px, -35px);
     }
     li:nth-child(3) img.planet {
-      transform: translate(-4px, -45px);
+      transform: translate(17px, 5px);
+    }
+    li:nth-child(4) img.planet {
+      transform: translate(-110px, 40px);
+      scale: 0.5;
+    }
+    li:nth-child(5) img.planet {
+      transform: translate(-7px, 20px);
+    }
+    li:nth-child(6) img.planet {
+      transform: translate(-4px, 20px);
+    }
+    li:nth-child(7) img.planet {
+      transform: translate(-1px, 15px);
+    }
+    li:nth-child(8) img.planet {
+      transform: translate(-18px, 0px);
     }
     li:nth-child(9) img.planet {
-      transform: translate(-20px, -14px);
+      transform: translate(18px, -25px);
+    }
+    li:nth-child(10) img.planet {
+      transform: translate(-14px, 95px);
     }
   }
 `
