@@ -32,10 +32,10 @@ export function Team() {
         </SvgContainer>
 
         <TeamSection>
-          {teamMembers.map((mem, idx) => {
+          {teamMembers.map(mem => {
             const { planet, ...rest } = mem
             return (
-              <li key={shortid.generate()} className={`mem-${idx}`}>
+              <li key={shortid.generate()}>
                 <img
                   src={HorizontalLine}
                   className="horizontal-line"
@@ -108,6 +108,9 @@ const TeamSection = styled.div`
     transform-origin: center;
   }
   @media (max-width: 999px) {
+    img.horizontal-line {
+      display: none;
+    }
     img.planet {
       left: 115px;
       bottom: -130px;
@@ -146,10 +149,63 @@ const TeamSection = styled.div`
   }
   @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
-    li:nth-child(odd) {
-      margin-top: 80px;
+    .horizontal-line {
+      display: block;
+      width: 50%;
+      position: absolute;
+      top: 50px;
     }
     img.planet {
+      top: 0;
+      z-index: 999;
+      scale: 0.6;
+    }
+    li:nth-child(odd) {
+      margin-top: calc(50% - 50px);
+      .horizontal-line {
+        right: -69px; /* nice */
+      }
+      .planet {
+        left: 100%;
+      }
+    }
+    li:nth-child(even) {
+      .horizontal-line {
+        left: -69px;
+      }
+      .planet {
+        right: 100%;
+      }
+    }
+    li:nth-child(1) .planet {
+      transform: translate(60px, 50px);
+    }
+    li:nth-child(2) .planet {
+      transform: translate(-75px, 45px);
+    }
+    li:nth-child(3) .planet {
+      transform: translate(35px, 3px);
+    }
+    li:nth-child(4) .planet {
+      transform: translate(65px, -50px);
+    }
+    li:nth-child(5) .planet {
+      transform: translate(12px, -20px);
+    }
+    li:nth-child(6) .planet {
+      transform: translate(-15px, -15px);
+    }
+    li:nth-child(7) .planet {
+      transform: translate(18px, -15px);
+    }
+    li:nth-child(8) .planet {
+      transform: translate(12px, -1px);
+    }
+    li:nth-child(9) .planet {
+      transform: translate(37px, 45px);
+    }
+    li:nth-child(10) .planet {
+      transform: translate(17px, -37px);
     }
   }
 `
