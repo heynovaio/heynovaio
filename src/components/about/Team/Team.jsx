@@ -4,6 +4,7 @@ import { teamMembers } from "../content"
 import shortid from "shortid"
 import Line from "../assets/line"
 import SpaceShip from "../assets/spaceship.svg"
+import HorizontalLine from "../assets/horizontal-line.svg"
 import { TeamCard } from "./TeamCard"
 
 export function Team() {
@@ -31,11 +32,26 @@ export function Team() {
         </SvgContainer>
 
         <TeamSection>
-          {teamMembers.map((mem, idx) => (
-            <li key={shortid.generate()} className={`mem-${idx}`}>
-              <TeamCard {...mem} />
-            </li>
-          ))}
+          {teamMembers.map((mem, idx) => {
+            const { planet, ...rest } = mem
+            return (
+              <li key={shortid.generate()} className={`mem-${idx}`}>
+                <img
+                  src={HorizontalLine}
+                  className="horizontal-line"
+                  alt=""
+                  role="presentation"
+                />
+                <img
+                  src={planet}
+                  className="planet"
+                  role="presentation"
+                  alt=""
+                />
+                <TeamCard {...rest} />
+              </li>
+            )
+          })}
         </TeamSection>
       </TeamContainer>
     </Section>
@@ -81,15 +97,18 @@ const TeamSection = styled.div`
   .horizontal-line {
     display: none;
   }
+  li {
+    position: relative;
+  }
   img.planet {
     margin: 0;
     padding: 0;
+    scale: 0.7;
+    position: absolute;
+    transform-origin: center;
   }
   @media (max-width: 999px) {
     img.planet {
-      scale: 0.7;
-      position: absolute;
-      transform-origin: center;
       left: 115px;
       bottom: -130px;
     }
@@ -123,6 +142,14 @@ const TeamSection = styled.div`
     }
     li:nth-child(10) img.planet {
       transform: translate(-14px, 95px);
+    }
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+    li:nth-child(odd) {
+      margin-top: 80px;
+    }
+    img.planet {
     }
   }
 `

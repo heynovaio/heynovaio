@@ -1,19 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Earth from "../assets/earth.svg"
-import HorizontalLine from "../assets/horizontal-line.svg"
 
 export function TeamCard({ img, name, title, desc, location, planet }) {
   return (
     <Card>
       <img src={img} alt={name} />
-      <img
-        src={HorizontalLine}
-        className="horizontal-line"
-        alt=""
-        role="presentation"
-      />
-      <img src={planet} className="planet" role="presentation" alt="" />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
