@@ -41,12 +41,14 @@ export function Team() {
                   className="horizontal-line"
                   alt=""
                   role="presentation"
+                  loading="lazy"
                 />
                 <img
                   src={planet}
                   className="planet"
                   role="presentation"
                   alt=""
+                  loading="lazy"
                 />
                 <TeamCard {...rest} />
               </li>
@@ -163,7 +165,7 @@ const TeamSection = styled.div`
     li:nth-child(odd) {
       margin-top: calc(50% - 50px);
       .horizontal-line {
-        right: -69px; /* nice */
+        right: -69px;
       }
       .planet {
         left: 100%;

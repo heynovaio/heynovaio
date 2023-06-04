@@ -5,7 +5,7 @@ import Earth from "../assets/earth.svg"
 export function TeamCard({ img, name, title, desc, location, planet }) {
   return (
     <Card>
-      <img src={img} alt={name} />
+      <img src={img} loading="lazy" alt={name} />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
