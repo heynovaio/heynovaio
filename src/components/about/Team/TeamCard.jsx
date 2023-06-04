@@ -10,7 +10,7 @@ export function TeamCard({ img, name, title, desc, location, planet }) {
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
       <Location>
-        <img src={Earth} />
+        <img src={Earth} role="presentation" />
         <p>{location}</p>
       </Location>
     </Card>
@@ -20,7 +20,6 @@ export function TeamCard({ img, name, title, desc, location, planet }) {
 const Card = styled.div`
   position: relative;
   padding: 5px;
-  font-family: "Ubuntu";
   background-color: white;
   width: 100%;
   max-width: 351px;
