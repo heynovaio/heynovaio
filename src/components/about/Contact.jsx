@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { PopupText } from "react-calendly"
+import { Button } from "./Button"
 
 export function Contact() {
   return (
@@ -14,7 +15,7 @@ export function Contact() {
         <textarea id="message" name="message" />
 
         <Div>
-          <ButtonMain type="submit">Send Message</ButtonMain>
+          <Button type="submit">Send Message</Button>
           <p>or</p>
 
           <ButtonSecondary>
@@ -49,19 +50,6 @@ const Div = styled.div`
     flex-direction: row;
     justify-content: space-around;
   }
-`
-
-const ButtonMain = styled.button`
-  padding: 18px 37px;
-  background-color: #d5330d;
-  width: max-content;
-  font-family: Stolzl;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22px;
-  color: white;
-  border: none;
-  text-transform: uppercase;
 `
 
 const ButtonSecondary = styled.button`
