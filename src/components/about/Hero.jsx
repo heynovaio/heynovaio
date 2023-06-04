@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import HeroPlanets from "./assets/hero-planets.png"
+import { Button } from "./Button"
 
 export function Hero() {
   return (
@@ -12,7 +13,7 @@ export function Hero() {
           adipisci velit.
         </p>
 
-        <button>Contact Us</button>
+        <Button>Contact Us</Button>
       </HeroContent>
 
       <img alt="" src={HeroPlanets} role="presentation" />
@@ -45,18 +46,6 @@ const HeroContent = styled.div`
     font-style: normal;
     max-width: 40ch;
   }
-  button {
-    padding: 17px 39px;
-    background-color: #d5330d;
-    color: white;
-    font-family: "Stolzl";
-    font-size: 18px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: all 200ms;
-  }
-
   @media (min-width: 1100px) {
     margin: 0;
     width: max(50vw, calc(100vw - 700px));
