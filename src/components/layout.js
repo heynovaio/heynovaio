@@ -14,6 +14,7 @@ import "./layout.css"
 
 const Main = styled.main`
   position: relative;
+  font-family: "Ubuntu";
 `
 
 const Layout = ({ children }) => {
