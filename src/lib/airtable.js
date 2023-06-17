@@ -1,8 +1,7 @@
 import Airtable from "airtable"
 
-const ACCESS_TOKEN = process.env.AIRTABLE_ACCESS_TOKEN
-const BASE_ID = process.env.AIRTABLE_BASEID
-// const ABOUT_ID = process.env.AIRTABLE_ABOUT_ID
+const ACCESS_TOKEN = process.env.GATSBY_AIRTABLE_ACCESS_TOKEN
+const BASE_ID = process.env.GATSBY_AIRTABLE_BASEID
 
 export const PAGES = {
   about: "aboutPage",
