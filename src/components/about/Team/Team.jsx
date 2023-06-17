@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { teamMembers } from "../content"
 import shortid from "shortid"
@@ -9,9 +9,20 @@ import { TeamCard } from "./TeamCard"
 import { table, PAGES } from "../../../lib/airtable"
 
 export function Team() {
-  useFetch()
+  const data = useFetch()
   return (
     <Section>
+      {data?.map(({ id, name, bio, location, email, image }) => {
+        return (
+          <li>
+            {name}
+            <img src={image} />
+            {bio.split("\n").map(p => (
+              <p>{p}</p>
+            ))}
+          </li>
+        )
+      })}
       <SectionHeader>
         <h2>Our Team</h2>
         <p>
@@ -64,14 +75,41 @@ export function Team() {
 
 // hooks
 function useFetch() {
+  const [data, setData] = useState([])
+  const team = []
   useEffect(() => {
     table(PAGES.about)
-      .select({ fields: ["id", "name"] })
-      .eachPage((records, fetchNext) => {
-        console.log(records)
-        fetchNext()
+      .select({
+        fields: ["id", "name", "title", "bio", "location", "images", "email"],
       })
+      .eachPage((records, fetchNext) => {
+        records.forEach(record => {
+          const {
+            name,
+            bio,
+            location,
+            title,
+            id,
+            email,
+            images,
+          } = record.fields
+          // NOTE: accessing image url with console.log(images[0]?.url)
+          const teamMem = {
+            name,
+            bio,
+            location,
+            title,
+            id,
+            email,
+            image: images[0]?.url || "",
+          }
+          team.push(teamMem) // so we don't rerender everytime
+        })
+      })
+    setData(() => team)
   }, [])
+
+  return data
 }
 
 // COMPONENTS
