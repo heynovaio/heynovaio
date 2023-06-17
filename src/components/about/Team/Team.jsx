@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "@emotion/styled"
 import { teamMembers } from "../content"
 import shortid from "shortid"
@@ -6,8 +6,10 @@ import Line from "../assets/line"
 import SpaceShip from "../assets/spaceship.svg"
 import HorizontalLine from "../assets/horizontal-line.svg"
 import { TeamCard } from "./TeamCard"
+import { table, PAGES } from "../../../lib/airtable"
 
 export function Team() {
+  useFetch()
   return (
     <Section>
       <SectionHeader>
@@ -60,6 +62,19 @@ export function Team() {
   )
 }
 
+// hooks
+function useFetch() {
+  useEffect(() => {
+    table(PAGES.about)
+      .select({ fields: ["id", "name"] })
+      .eachPage((records, fetchNext) => {
+        console.log(records)
+        fetchNext()
+      })
+  }, [])
+}
+
+// COMPONENTS
 const TeamContainer = styled.div`
   position: relative;
 `
