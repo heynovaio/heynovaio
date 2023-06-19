@@ -7,22 +7,13 @@ import SpaceShip from "../assets/spaceship.svg"
 import HorizontalLine from "../assets/horizontal-line.svg"
 import { TeamCard } from "./TeamCard"
 import { table, PAGES } from "../../../lib/airtable"
+import { planets } from "../content"
 
 export function Team() {
   const data = useFetch()
+  // {data?.map(({ id, name, bio, location, email, image }) => {
   return (
     <Section>
-      {data?.map(({ id, name, bio, location, email, image }) => {
-        return (
-          <li>
-            {name}
-            <img src={image} />
-            {bio.split("\n").map(p => (
-              <p>{p}</p>
-            ))}
-          </li>
-        )
-      })}
       <SectionHeader>
         <h2>Our Team</h2>
         <p>
@@ -45,28 +36,28 @@ export function Team() {
         </SvgContainer>
 
         <TeamSection>
-          {teamMembers.map(mem => {
-            const { planet, ...rest } = mem
-            return (
-              <li key={shortid.generate()}>
-                <img
-                  src={HorizontalLine}
-                  className="horizontal-line"
-                  alt=""
-                  role="presentation"
-                  loading="lazy"
-                />
-                <img
-                  src={planet}
-                  className="planet"
-                  role="presentation"
-                  alt=""
-                  loading="lazy"
-                />
-                <TeamCard {...rest} />
-              </li>
-            )
-          })}
+          {data.length > 0 &&
+            data?.map((mem, idx) => {
+              return (
+                <li key={shortid.generate()}>
+                  <img
+                    src={HorizontalLine}
+                    className="horizontal-line"
+                    alt=""
+                    role="presentation"
+                    loading="lazy"
+                  />
+                  <img
+                    src={planets[idx % planets.length]}
+                    className="planet"
+                    role="presentation"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <TeamCard {...mem} />
+                </li>
+              )
+            })}
         </TeamSection>
       </TeamContainer>
     </Section>
@@ -81,6 +72,7 @@ function useFetch() {
     table(PAGES.about)
       .select({
         fields: ["id", "name", "title", "bio", "location", "images", "email"],
+        sort: [{ field: "id", direction: "asc" }],
       })
       .eachPage((records, fetchNext) => {
         records.forEach(record => {
@@ -106,8 +98,11 @@ function useFetch() {
           team.push(teamMem) // so we don't rerender everytime
         })
       })
+
     setData(() => team)
   }, [])
+
+  useEffect(() => console.log(data.length), [data])
 
   return data
 }

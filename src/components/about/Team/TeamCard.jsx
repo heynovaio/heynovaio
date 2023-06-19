@@ -2,13 +2,13 @@ import React from "react"
 import styled from "@emotion/styled"
 import Earth from "../assets/earth.svg"
 
-export function TeamCard({ img, name, title, desc, location, planet }) {
+export function TeamCard({ image, name, title, bio, location }) {
   return (
     <Card>
-      <img src={img} loading="lazy" alt={name} />
+      <TeamImage src={image} loading="lazy" alt={name} />
       <Name>{name}</Name>
       <Title>{title}</Title>
-      <Desc>{desc}</Desc>
+      <Desc>{bio}</Desc>
       <Location>
         <img src={Earth} role="presentation" />
         <p>{location}</p>
@@ -32,6 +32,11 @@ const Card = styled.div`
   h4 {
     margin: 0; /* Reseting default margin */
   }
+`
+
+const TeamImage = styled.img`
+  aspect-ratio: 1/1;
+  object-fit: cover;
 `
 
 const Name = styled.h3`

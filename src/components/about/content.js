@@ -15,6 +15,19 @@ import Planet8 from "./assets/planet8.svg"
 import Planet9 from "./assets/planet9.svg"
 import Planet10 from "./assets/planet10.svg"
 
+export const planets = [
+  Planet1,
+  Planet2,
+  Planet3,
+  Planet4,
+  Planet5,
+  Planet6,
+  Planet7,
+  Planet8,
+  Planet9,
+  Planet10,
+]
+
 // TODO: change content
 export const values = [
   {
