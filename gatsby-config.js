@@ -121,5 +121,22 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_ACCESS_TOKEN,
+        tables: [
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASEID,
+            tableName: `aboutPage`,
+          },
+          // We can add other bases/tables here, too!
+          //{
+          //baseId: `AIRTABLE_BASE_ID`,
+          //tableName: `Sides`
+          //}
+        ],
+      },
+    },
   ],
 }
