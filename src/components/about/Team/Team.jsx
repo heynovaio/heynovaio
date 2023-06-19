@@ -11,8 +11,54 @@ import { planets } from "../content"
 import { graphql, useStaticQuery } from "gatsby"
 
 export function Team() {
-  const data = useFetch()
-  const buf = useAirtableQuery()
+  // const data = useFetch()
+  const { data } = useQueries()
+  /* graphql overall shape
+   {
+  "data": {
+    "allAirtable": {
+      "edges": [
+        {
+          "node": {
+            "id": "ce60acbc-a5fa-519e-9e98-b2d6193d93b7",
+            "data": {
+              "bio": "Kathryn started her career as a graphic designer and transitioned to development 15 years ago, and uses her design background to enhance her development work whenever she can! She lives in Victoria, BC with her husband and 2 cats, and loves birding, being outside, and is an avid bike rider and an enthusiastic advocate for accessible transportation infrastructure.",
+              "email": "kathryn@heynova.io",
+              "location": "Victoria, B.C., Canada",
+              "name": "Kathryn Lancashire",
+              "title": "Foo",
+              "images": [
+                {
+                  "url": "https://v5.airtableusercontent.com/v1/18/18/1687226400000/j8S2Sw92PeKAZiAuuavFNA/a5iy3hgvfKCGDEDlVV8sucTgQwROP_srg4mxqHgO9lBAO5rQCQF_IsEGEsti6w6bw5bsmuSzJxbuRiUOZgdF6RaAVga48GVRRMoSOJ0N-kA/RJgOcLdFBtlZoV9qGdbToqWa8DslPuGeCSJ8k2GV7BE"
+                }
+              ],
+              "id": 7
+            }
+          }
+        },
+        {
+          "node": {
+            "id": "e674e830-92b0-57eb-9414-f22291993705",
+            "data": {
+              "bio": "Dina loves bringing clients’ visions to life, and enjoys the challenge of a new project that brings problems to work on and puzzles to solve!\n\nShe lives in Victoria, BC and enjoys exploring the outdoors in all seasons through sailing, hiking, skiing and biking. She also co-created a math and art class at WWU to help make both subjects more tangible and accessible.",
+              "email": "dina@heynova.io",
+              "location": "Victoria, B.C., Canada",
+              "name": "Dina Buric",
+              "title": "Foo",
+              "images": [
+                {
+                  "url": "https://v5.airtableusercontent.com/v1/18/18/1687226400000/Wl3pEw2rygtPGRCNUOFE_g/AZR7JkqaQLTF1gTh4uZSldGJaQka4XcOC3C7Xt0dTy5a3simUGeM2a8ch_XxZafnwaAyaRHGgzlJUQEysPPpkWWjSvXeRhWuAz0Y0skoeQw/HBoHXnp9Ktor22Heq2ab2DvRWJtDBdLIHeqo5uB1wzI"
+                }
+              ],
+              "id": 9
+            }
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {}
+}*/
   useEffect(() => console.log(buf), [buf])
   // {data?.map(({ id, name, bio, location, email, image }) => {
   return (
@@ -67,13 +113,31 @@ export function Team() {
   )
 }
 
-// hooks
-function useAirtableQuery() {
+/** @typedef {object} AirtableAboutPage
+ * @property {object} data
+ * @property {object} data.allAirtable
+ * @property {object[]} data.allAirtable.edges
+ * @property {object} data.allAirtable.edges.node
+ * @property {string} data.allAirtable.edges.node.id
+ * @property {object} data.allAirtable.edges.node.data
+ * @property {string} data.allAirtable.edges.node.data.bio
+ * @property {string} data.allAirtable.edges.node.data.email
+ * @property {number} data.allAirtable.edges.node.data.id
+ * @property {object[]} data.allAirtable.edges.node.data.images
+ * @property {string} data.allAirtable.edges.node.data.images.url
+ * @property {string} data.allAirtable.edges.node.data.location
+ * @property {string} data.allAirtable.edges.node.data.name
+ * @property {string} data.allAirtable.edges.node.data.title
+ *
+ * @returns {AirtableAboutPage} data
+ */
+function useQueries() {
   return useStaticQuery(graphql`
-    query AboutPage {
+    query AboutPageQuery {
       allAirtable {
         edges {
           node {
+            id
             data {
               bio
               email
@@ -81,9 +145,9 @@ function useAirtableQuery() {
               images {
                 url
               }
+              location
               name
               title
-              location
             }
           }
         }
@@ -91,6 +155,7 @@ function useAirtableQuery() {
     }
   `)
 }
+
 function useFetch() {
   const [data, setData] = useState([])
   const team = []
