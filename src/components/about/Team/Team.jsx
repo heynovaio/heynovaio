@@ -8,9 +8,12 @@ import HorizontalLine from "../assets/horizontal-line.svg"
 import { TeamCard } from "./TeamCard"
 import { table, PAGES } from "../../../lib/airtable"
 import { planets } from "../content"
+import { graphql, useStaticQuery } from "gatsby"
 
 export function Team() {
   const data = useFetch()
+  const buf = useAirtableQuery()
+  useEffect(() => console.log(buf), [buf])
   // {data?.map(({ id, name, bio, location, email, image }) => {
   return (
     <Section>
@@ -65,6 +68,29 @@ export function Team() {
 }
 
 // hooks
+function useAirtableQuery() {
+  return useStaticQuery(graphql`
+    query AboutPage {
+      allAirtable {
+        edges {
+          node {
+            data {
+              bio
+              email
+              id
+              images {
+                url
+              }
+              name
+              title
+              location
+            }
+          }
+        }
+      }
+    }
+  `)
+}
 function useFetch() {
   const [data, setData] = useState([])
   const team = []
