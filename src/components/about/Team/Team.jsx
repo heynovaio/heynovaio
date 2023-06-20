@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
 import styled from "@emotion/styled"
 import shortid from "shortid"
 import Line from "../assets/line"
@@ -17,6 +17,8 @@ export function Team({ data }) {
       return { ...rest, image: images[0].url }
     })
     .sort((prev, next) => prev.id - next.id)
+
+  const { ref, height } = useResponsiveHeight()
 
   return (
     <Section>
@@ -38,10 +40,15 @@ export function Team({ data }) {
             alt=""
             role="presentation"
           />
-          <Line className="line center" alt="" role="presentation" />
+          <Line
+            className="line center"
+            alt=""
+            role="presentation"
+            height={height}
+          />
         </SvgContainer>
 
-        <TeamSection>
+        <TeamSection ref={ref}>
           {teamMembers.map((mem, idx) => {
             return (
               <li key={shortid.generate()}>
@@ -67,6 +74,23 @@ export function Team({ data }) {
       </TeamContainer>
     </Section>
   )
+}
+// hooks
+/**
+ * @typedef {object} Prop
+ * @property {number} height
+ * @property {React.MutableRefObject<null | HTMLElement>} prop.ref
+ * @returns {Prop} prop
+ * */
+function useResponsiveHeight() {
+  const ref = useRef()
+  const [height, setHeight] = useState(0)
+
+  useEffect(() => {
+    setHeight(() => ref?.current?.clientHeight)
+  }, [ref])
+
+  return { ref, height }
 }
 
 // COMPONENTS
