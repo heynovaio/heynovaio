@@ -36,6 +36,7 @@ const Card = styled.div`
 
 const TeamImage = styled.img`
   aspect-ratio: 1/1;
+  width: 100%;
   object-fit: cover;
 `
 
