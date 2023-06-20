@@ -1,7 +1,11 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
+import styled from "@emotion/styled"
+import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLinkedinIn,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 const Footer = styled.footer`
   padding: 30px 20px 15px;
@@ -27,7 +31,7 @@ const P = styled.p`
   letter-spacing: -1px;
   font-family: Stolzl;
   text-align: center;
-  color: #2BC8D7;
+  color: #2bc8d7;
 `
 const Span = styled.span`
   color: #fff;
@@ -47,16 +51,31 @@ const Icon = styled.a`
 export default () => (
   <Footer>
     <Flex>
-      <Icon aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/company/hey-nova/">
-         <FontAwesomeIcon icon={faLinkedinIn} />
+      <Icon
+        aria-label="LinkedIn"
+        target="blank"
+        href="https://www.linkedin.com/company/hey-nova/"
+      >
+        <FontAwesomeIcon icon={faLinkedinIn} />
       </Icon>
-      <Icon aria-label="Facebook" target="blank" href="https://www.facebook.com/heynovaio/">
-         <FontAwesomeIcon icon={faFacebook} />
+      <Icon
+        aria-label="Facebook"
+        target="blank"
+        href="https://www.facebook.com/heynovaio/"
+      >
+        <FontAwesomeIcon icon={faFacebook} />
       </Icon>
-      <Icon aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
-         <FontAwesomeIcon icon={faInstagram} />
+      <Icon
+        aria-label="Instagram"
+        target="blank"
+        href="https://www.instagram.com/heynovaio/"
+      >
+        <FontAwesomeIcon icon={faInstagram} />
       </Icon>
     </Flex>
-    <P> &copy; {new Date().getFullYear()} <Span>HEY NOVA</Span></P>
+    <P>
+      {" "}
+      &copy; {new Date().getFullYear()} <Span>HEY NOVA</Span>
+    </P>
   </Footer>
 )

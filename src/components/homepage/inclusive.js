@@ -1,9 +1,8 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { Link } from "gatsby"
-
 
 const InclusiveSection = styled.section`
   padding: 50px 0 80px;
@@ -26,7 +25,7 @@ const H3 = styled.h3`
   font-size: 34px;
   font-weight: 400;
   line-height: 1.25;
-  color: #0FA3B1;
+  color: #0fa3b1;
   margin-bottom: 10px;
   font-family: Stolzl;
   @media (max-width: 780px) {
@@ -114,7 +113,7 @@ const ImgContainer = styled.div`
 `
 const Button = styled(Link)`
   margin-bottom: 30px;
-  background-color: #D5330D;
+  background-color: #d5330d;
   font-size: 18px;
   text-align: center;
   color: #fff;
@@ -126,8 +125,7 @@ const Button = styled(Link)`
   border: none;
   display: inline-block;
 `
-function Inclusive () {
-
+function Inclusive() {
   const data = useStaticQuery(graphql`
     query {
       planet: file(relativePath: { eq: "planet-1.png" }) {
@@ -141,38 +139,65 @@ function Inclusive () {
   `)
 
   return (
-
     <InclusiveSection>
       <Center>
         <Sticky>
           <ImgContainer>
-            <Img alt="planet" role="presentation" fadeIn={false} fixed={data.planet.childImageSharp.fixed} />
+            <Img
+              alt="planet"
+              role="presentation"
+              fadeIn={false}
+              fixed={data.planet.childImageSharp.fixed}
+            />
           </ImgContainer>
         </Sticky>
         <MainContent>
           <H2>Does your website work for everyone?</H2>
-          <MainParaOne>These are ways we are able to help you find out.</MainParaOne>
-          <MainPara>Through an empathetic human lens we aim to ensure your success in reaching full accessibility and providing ALL your users with the best experience possible.</MainPara>
-          <Button to="/accessibility">
-            Accessibility Services
-          </Button>
+          <MainParaOne>
+            These are ways we are able to help you find out.
+          </MainParaOne>
+          <MainPara>
+            Through an empathetic human lens we aim to ensure your success in
+            reaching full accessibility and providing ALL your users with the
+            best experience possible.
+          </MainPara>
+          <Button to="/accessibility">Accessibility Services</Button>
         </MainContent>
         <List>
           <Elem>
             <H3>Testing</H3>
-            <P>Our accessibility testing identifies key elements in your website’s code and design that could be causing your users problems.</P>
+            <P>
+              Our accessibility testing identifies key elements in your
+              website’s code and design that could be causing your users
+              problems.
+            </P>
           </Elem>
           <Elem>
             <H3>Consulting</H3>
-            <P>We help you reach your marginalized users through a step-by-step guide of what your digital solution needs. We Work collaboratively with your team, teaching and expanding your accessibility knowledge base.</P>
+            <P>
+              We help you reach your marginalized users through a step-by-step
+              guide of what your digital solution needs. We Work collaboratively
+              with your team, teaching and expanding your accessibility
+              knowledge base.
+            </P>
           </Elem>
           <Elem>
             <H3>Workshop</H3>
-            <P>We want to help everyone take a step towards a future with more inclusive technologies, so we provide immersive educational workshops that empower you and your team to maximize accessibility.</P>
+            <P>
+              We want to help everyone take a step towards a future with more
+              inclusive technologies, so we provide immersive educational
+              workshops that empower you and your team to maximize
+              accessibility.
+            </P>
           </Elem>
           <Elem>
             <H3>Design & Implementation</H3>
-            <P>Whether you already have a website or are starting from scratch, we work with you to build creative, quality and inclusive applications that give ALL your users a superior digital experience.</P>
+            <P>
+              Whether you already have a website or are starting from scratch,
+              we work with you to build creative, quality and inclusive
+              applications that give ALL your users a superior digital
+              experience.
+            </P>
           </Elem>
         </List>
       </Center>

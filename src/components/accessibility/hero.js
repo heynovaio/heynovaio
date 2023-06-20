@@ -1,9 +1,7 @@
 import React from "react"
-import styled from '@emotion/styled'
-import img1 from '../../images/accessibility-fold-bg@2x.jpg'
-import { PopupText } from 'react-calendly'
-
-
+import styled from "@emotion/styled"
+import img1 from "../../images/accessibility-fold-bg@2x.jpg"
+import { PopupText } from "react-calendly"
 
 const HeroSection = styled.section`
   background-color: #051628;
@@ -12,13 +10,13 @@ const HeroSection = styled.section`
   margin-top: 0;
 
   @media (min-width: 960px) {
-    background: url( ${img1} ), #ffffff;
+    background: url(${img1}), #ffffff;
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 50%;
   }
   @media (min-width: 1880px) {
-    background: url( ${img1} ), #ffffff;
+    background: url(${img1}), #ffffff;
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 920px;
@@ -30,7 +28,7 @@ const HeroSection = styled.section`
     padding-bottom: 75px;
     overflow: hidden;
   }
-  p{
+  p {
     max-width: 556px;
   }
   h1 {
@@ -50,9 +48,8 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 115px;
-
   }
-  h1{
+  h1 {
     max-width: 600px;
   }
 `
@@ -64,7 +61,7 @@ const H1 = styled.h1`
   font-size: 70px;
   line-height: 90px;
   letter-spacing: -0.224359px;
-  color: #0D2C4C;
+  color: #0d2c4c;
   margin: 30px 0 20px;
   font-family: Stolzl;
 
@@ -81,13 +78,13 @@ const P = styled.p`
   color: #0a2239;
   margin: 20px 0 20px;
   font-family: Ubuntu;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     color: #fff;
   }
 `
 const Button = styled.div`
   a {
-    background-color: #D5330D;
+    background-color: #d5330d;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -101,21 +98,24 @@ const Button = styled.div`
   }
 `
 
-function Hero () {
-  return(
-  	<HeroSection>
-  	  <ContentContainer>
-  	    <H1 id="main">Making the digital world more inclusive</H1>
-  	    <P>Bake accessibility into your tech team's process so you can not only create products that are useable to a wider audience but also comply with WCAG 2.1 guidelines.
-  	    </P>
-  	    <Button>
-  	      <PopupText
-  	        text="Book a Free Consult"
-  	        url="https://calendly.com/hey-nova/free-consultation"
-  	      />
-  	    </Button>
-  	  </ContentContainer>
-  	</HeroSection>
+function Hero() {
+  return (
+    <HeroSection>
+      <ContentContainer>
+        <H1 id="main">Making the digital world more inclusive</H1>
+        <P>
+          Bake accessibility into your tech team's process so you can not only
+          create products that are useable to a wider audience but also comply
+          with WCAG 2.1 guidelines.
+        </P>
+        <Button>
+          <PopupText
+            text="Book a Free Consult"
+            url="https://calendly.com/hey-nova/free-consultation"
+          />
+        </Button>
+      </ContentContainer>
+    </HeroSection>
   )
 }
 export default Hero

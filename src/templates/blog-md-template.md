@@ -1,9 +1,7 @@
 ---
-title: 
-author: 
-date: 
-category: 
-featuredImage: 
+title:
+author:
+date:
+category:
+featuredImage:
 ---
-
-

@@ -1,20 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from '@emotion/styled'
-import { PopupText } from 'react-calendly'
+import styled from "@emotion/styled"
+import { PopupText } from "react-calendly"
 
-import planet from '../../images/planet-1.png'
-import meteor from '../../images/meteor.svg'
+import planet from "../../images/planet-1.png"
+import meteor from "../../images/meteor.svg"
 
-import joni from '../../images/joni.png'
-import pharm from '../../images/pharm.png'
-import fatso from '../../images/fatso.png'
-import cHaul from '../../images/communityHall.png'
+import joni from "../../images/joni.png"
+import pharm from "../../images/pharm.png"
+import fatso from "../../images/fatso.png"
+import cHaul from "../../images/communityHall.png"
 
 const ProjSection = styled.section`
   padding: 0px 0px 100px 0px;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -49,40 +49,40 @@ const P = styled.p`
   color: #0a2239;
   margin: 20px 0 0;
   font-family: Ubuntu;
-  padding-right:20px;
+  padding-right: 20px;
 `
 const Wrapper = styled.div`
-  position:relative;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:45px;
-  padding-bottom:100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 45px;
+  padding-bottom: 100px;
   @media (max-width: 1026px) {
-    justify-content:space-evenly;
+    justify-content: space-evenly;
   }
 `
 const FlexL = styled.div`
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  max-width:567px;
-  width:100%;
-  gap:45px;
-  flex:1 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 567px;
+  width: 100%;
+  gap: 45px;
+  flex: 1 450px;
 `
 const FlexR = styled(FlexL)`
-  justify-content:start;
+  justify-content: start;
 `
 const Copy = styled.div`
-  margin-bottom:90px;
-  max-width:505px;
+  margin-bottom: 90px;
+  max-width: 505px;
 `
 const Brand = styled.div`
-  img{
-    margin:0;
-    width:100%;
-    transition: all .25s;
+  img {
+    margin: 0;
+    width: 100%;
+    transition: all 0.25s;
   }
   a:hover {
     img {
@@ -92,21 +92,21 @@ const Brand = styled.div`
   }
 `
 const Content = styled.div`
-  max-width:720px; 
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
-  text-align:center;
-  padding-top:120px;
+  text-align: center;
+  padding-top: 120px;
 `
 const Button = styled.div`
-  display:flex;
-  justify-content:center;
-  margin-top:30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
   a {
-    background-color: #D5330D;
+    background-color: #d5330d;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -120,90 +120,100 @@ const Button = styled.div`
   }
 `
 const OuterBox = styled.div`
-  position:relative;
-  width:100%;
+  position: relative;
+  width: 100%;
 `
 const ImgBox = styled.div`
-  position:absolute;
-  right:-150px;
-  bottom:-50px;
-  width:450px;
-  height:450px;
-  img{
-    width:100%;
-    position:absolute;
+  position: absolute;
+  right: -150px;
+  bottom: -50px;
+  width: 450px;
+  height: 450px;
+  img {
+    width: 100%;
+    position: absolute;
   }
-  img:nth-child(1){
-    width:108px;
-    left:20px;
-    top:80px;
+  img:nth-child(1) {
+    width: 108px;
+    left: 20px;
+    top: 80px;
   }
-  img:nth-child(2){
-    width:110px;
-    left:0;
-    bottom:80px;
-    transform:rotate(10deg);
+  img:nth-child(2) {
+    width: 110px;
+    left: 0;
+    bottom: 80px;
+    transform: rotate(10deg);
   }
-  img:nth-child(3){
-    width:79px;
+  img:nth-child(3) {
+    width: 79px;
     left: 80px;
-    bottom:0;
+    bottom: 0;
   }
-  img:nth-child(4){
-    max-width:325px;
-    right:0;
-    top:0;
+  img:nth-child(4) {
+    max-width: 325px;
+    right: 0;
+    top: 0;
   }
   @media (max-width: 1026px) {
-    visibility:hidden;
+    visibility: hidden;
   }
 `
 
-function Projects () {
-  return(
-  	<ProjSection>
-  	  <ContentContainer>
+function Projects() {
+  return (
+    <ProjSection>
+      <ContentContainer>
         <Wrapper>
           <FlexL>
             <Copy>
               <H1>Examples of Our Work</H1>
-              <P>We’re the digital team you want to work with! We know our websites are stunning, but it’s also our approachable style and hard work that makes our clients keep coming back for new projects, extra pages, or general support.</P>
+              <P>
+                We’re the digital team you want to work with! We know our
+                websites are stunning, but it’s also our approachable style and
+                hard work that makes our clients keep coming back for new
+                projects, extra pages, or general support.
+              </P>
             </Copy>
             <Brand>
               <a href="https://getjoni.com/" target="_blank">
-                <img src={joni} alt="Joni Website"/>
+                <img src={joni} alt="Joni Website" />
               </a>
             </Brand>
             <Brand>
               <a href="https://pharmacyforlife.ca/" target="_blank">
-                <img src={pharm} alt="Pharmacy for Life Website"/>
-              </a>  
+                <img src={pharm} alt="Pharmacy for Life Website" />
+              </a>
             </Brand>
           </FlexL>
           <FlexR>
             <Brand>
               <a href="https://eatfatso.com/" target="_blank">
-                <img src={fatso} alt="Fatso Peanut Butter Website"/>
-              </a>  
+                <img src={fatso} alt="Fatso Peanut Butter Website" />
+              </a>
             </Brand>
             <Brand>
               <a href="https://hhcommunityhaul.ca/" target="_blank">
-                <img src={cHaul} alt="Community Haul"/>
-              </a>  
+                <img src={cHaul} alt="Community Haul" />
+              </a>
             </Brand>
-          </FlexR>     
+          </FlexR>
         </Wrapper>
         <OuterBox>
           <ImgBox>
-            <img src={meteor} alt=""/>
-            <img src={meteor} alt=""/>
-            <img src={meteor} alt=""/>
-            <img src={planet} alt=""/>
+            <img src={meteor} alt="" />
+            <img src={meteor} alt="" />
+            <img src={meteor} alt="" />
+            <img src={planet} alt="" />
           </ImgBox>
         </OuterBox>
         <Content>
           <H1>What's the next step?</H1>
-          <P>We know it can be hard to tell what the right solution is for your business or where to get started, which is why we offer a free consult. During this time we help you determine the right options to take your business to the next level.</P>
+          <P>
+            We know it can be hard to tell what the right solution is for your
+            business or where to get started, which is why we offer a free
+            consult. During this time we help you determine the right options to
+            take your business to the next level.
+          </P>
           <Button>
             <PopupText
               text="Book a Free Consult"
@@ -211,8 +221,8 @@ function Projects () {
             />
           </Button>
         </Content>
-  	  </ContentContainer>
-  	</ProjSection>
+      </ContentContainer>
+    </ProjSection>
   )
 }
 export default Projects

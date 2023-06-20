@@ -1,8 +1,7 @@
 import React from "react"
-import styled from '@emotion/styled'
-import Bg from '../../images/space-background.jpg'
+import styled from "@emotion/styled"
+import Bg from "../../images/space-background.jpg"
 import { Link } from "gatsby"
-
 
 const WhySection = styled.section`
   color: #0a2239;
@@ -36,22 +35,22 @@ const StickyBox = styled.div`
   max-width: 494px;
   overflow-y: auto;
   height: auto;
-  h2::before{
+  h2::before {
     display: inline-block;
     content: "";
-    border-top: .28rem solid #d5330d;
+    border-top: 0.28rem solid #d5330d;
     width: 36px;
-    margin-right: .75rem;
-    transform: translateY(-.25rem);
+    margin-right: 0.75rem;
+    transform: translateY(-0.25rem);
   }
-  h2{
+  h2 {
     font-family: Stolzl;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.44px;
     text-transform: uppercase;
   }
-  p{
+  p {
     font-family: Stolzl;
     font-size: 39px;
     font-weight: 300;
@@ -62,7 +61,7 @@ const StickyBox = styled.div`
     width: 100%;
     position: relative;
     padding-bottom: 4rem;
- }
+  }
 `
 const FlexBox = styled.div`
   display: flex;
@@ -70,11 +69,11 @@ const FlexBox = styled.div`
   justify-content: space-between;
   max-width: 677px;
   padding-top: 0;
-  .subHeader{
-    color: #0FA3B1; 
-    margin: .5rem 0 0;
+  .subHeader {
+    color: #0fa3b1;
+    margin: 0.5rem 0 0;
   }
-  .book{
+  .book {
     font-family: Ubuntu;
     font-size: 20px;
     font-weight: 600;
@@ -82,7 +81,7 @@ const FlexBox = styled.div`
     padding-top: 2rem;
     letter-spacing: 0.1px;
   }
-  a{
+  a {
     color: inherit;
     width: 100%;
     font-family: Ubuntu;
@@ -93,12 +92,12 @@ const FlexBox = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    h4{
+    h4 {
       width: 100%;
     }
- }
+  }
 `
-const Quote = styled.p `
+const Quote = styled.p`
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0;
@@ -112,7 +111,7 @@ const Quote = styled.p `
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.38px;
-  span{
+  span {
     display: block;
     font-weight: 600;
     font-size: 20px;
@@ -131,7 +130,7 @@ const Percent = styled.span`
   display: block;
   margin-top: -50px;
   line-height: 1.5;
-  background: url( ${Bg} ) no-repeat;
+  background: url(${Bg}) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0000;
   background-attachment: fixed;
@@ -139,10 +138,10 @@ const Percent = styled.span`
 `
 const Sub = styled.div`
   max-width: 264px;
-  text-align: left; 
+  text-align: left;
   margin: 0 auto 50px;
 
-  p{
+  p {
     font-weight: 500;
     line-height: 23px;
     font-size: 18px;
@@ -151,33 +150,33 @@ const Sub = styled.div`
     max-width: 100%;
     padding-bottom: 2rem;
     text-align: center;
- }
+  }
 `
 
 const QuoteBox = styled.div`
-  background-color: #0A2239;
+  background-color: #0a2239;
   padding: 30px 35px 45px;
-  h3{
+  h3 {
     font-family: Stolzl;
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
     letter-spacing: -0.0961538px;
-    color: #2BC8D7;
+    color: #2bc8d7;
     display: block;
     width: 100%;
   }
-  p{
+  p {
     color: #ffffff;
     padding-left: 35px;
-    ::before{
+    ::before {
       content: open-quote;
       position: absolute;
       transform: translate(-30px, -30px);
       font-size: 60px;
       font-family: Georgina;
     }
-    ::after{
+    ::after {
       content: close-quote;
       position: absolute;
       transform: translate(5px, -15px);
@@ -185,13 +184,13 @@ const QuoteBox = styled.div`
       font-family: Georgina;
     }
   }
-  span{
+  span {
     font-family: Ubuntu;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.225px;
-    color: #2BC8D7;
+    color: #2bc8d7;
     padding-left: 35px;
   }
 `
@@ -244,53 +243,90 @@ const BookLink = styled(Link)`
   }
 `
 
-function Why () {
-  return(
-  	<WhySection>
-      <ContentContainer> 
+function Why() {
+  return (
+    <WhySection>
+      <ContentContainer>
         <RowContainer>
           <StickyBox>
             <h2>Why Include Accessibility</h2>
-            <p>Accessibility is a necessary practice to stay current & competitive</p>
+            <p>
+              Accessibility is a necessary practice to stay current &
+              competitive
+            </p>
           </StickyBox>
           <FlexBox>
-            <Quote>Designing inclusive software results in improved usability and customer satisfaction.
-            <span>-Microsoft's app developer guide</span></Quote>
+            <Quote>
+              Designing inclusive software results in improved usability and
+              customer satisfaction.
+              <span>-Microsoft's app developer guide</span>
+            </Quote>
             <Sub>
               <P>
-              <Percent>67%</Percent>
-              of consumers will pay more for a great experience</P>
+                <Percent>67%</Percent>
+                of consumers will pay more for a great experience
+              </P>
             </Sub>
             <h3 class="subHeader">For Users</h3>
-            <P>Good user experience can not be achieved without considering all needs and circumstances of your users, 
-            especially when considering that persons living with disabilities and impairments take up around 15% of the 
-            world’s population. Yet it goes beyond that 15%. Accessible design and development leads to huge improvements 
-            in the experience and loyalty of all users, not just those with disabilities.</P>
-            <P>As the digital world becomes even more influential in people's daily lives, many apps and websites will be 
-            made redundant when they fail to accommodate their users. Just consider, 79% of those who dislike a website 
-            will leave to find a competitor who serves their needs.</P>
+            <P>
+              Good user experience can not be achieved without considering all
+              needs and circumstances of your users, especially when considering
+              that persons living with disabilities and impairments take up
+              around 15% of the world’s population. Yet it goes beyond that 15%.
+              Accessible design and development leads to huge improvements in
+              the experience and loyalty of all users, not just those with
+              disabilities.
+            </P>
+            <P>
+              As the digital world becomes even more influential in people's
+              daily lives, many apps and websites will be made redundant when
+              they fail to accommodate their users. Just consider, 79% of those
+              who dislike a website will leave to find a competitor who serves
+              their needs.
+            </P>
             <h3 class="subHeader">For Business</h3>
-            <P>As businesses continue to learn to grasp the financial value in having great user experience, the push for 
-            design and development teams that offer this service is increasing. I mean, who can argue with a potential 
-            rise in the company’s KPIs up to 83% in conversion lift?</P>
+            <P>
+              As businesses continue to learn to grasp the financial value in
+              having great user experience, the push for design and development
+              teams that offer this service is increasing. I mean, who can argue
+              with a potential rise in the company’s KPIs up to 83% in
+              conversion lift?
+            </P>
             <h3 class="subHeader">For the Future</h3>
-            <P>Many provinces in Canada are progressing towards adopting similar accessibility laws to The Accessibility 
-            for Ontarians with Disabilities Act (AODA), making it a legal requirement for businesses to have accessible 
-            websites. When these laws are passed, any team not prepared will scramble to not get left behind.</P>
-            <P>Then there is America, where websites that do business in the United States are legally required to provide 
-            equal accessibility to all people following Title III of the Americans with Disabilities Act (ADA), yet many 
-            still do not which is the cause of major lawsuits and financial loss for those businesses. In 2019, web 
-            accessibility federal lawsuits hit record numbers, with 11,053 suits filed in federal court, an 8.8% increase 
-            from 2018.</P>
+            <P>
+              Many provinces in Canada are progressing towards adopting similar
+              accessibility laws to The Accessibility for Ontarians with
+              Disabilities Act (AODA), making it a legal requirement for
+              businesses to have accessible websites. When these laws are
+              passed, any team not prepared will scramble to not get left
+              behind.
+            </P>
+            <P>
+              Then there is America, where websites that do business in the
+              United States are legally required to provide equal accessibility
+              to all people following Title III of the Americans with
+              Disabilities Act (ADA), yet many still do not which is the cause
+              of major lawsuits and financial loss for those businesses. In
+              2019, web accessibility federal lawsuits hit record numbers, with
+              11,053 suits filed in federal court, an 8.8% increase from 2018.
+            </P>
 
-            <BookLink to="/contact" aria-label="Contact us to learn more about why accessibility is important">
+            <BookLink
+              to="/contact"
+              aria-label="Contact us to learn more about why accessibility is important"
+            >
               Contact us to learn more
               <Line role="presentation" />
             </BookLink>
             <QuoteBox>
               <h3>The future is accessible</h3>
-              <P>The accessibility problems of today are the mainstream breakthroughs of tomorrow.</P>
-              <span class="author">Eve Andersson, Director of Accessibility Engineering at Google</span>
+              <P>
+                The accessibility problems of today are the mainstream
+                breakthroughs of tomorrow.
+              </P>
+              <span class="author">
+                Eve Andersson, Director of Accessibility Engineering at Google
+              </span>
             </QuoteBox>
           </FlexBox>
         </RowContainer>
@@ -301,24 +337,51 @@ function Why () {
             <p>When you put your users first, they put you first!</p>
           </StickyBox>
           <FlexBox>
-            <Quote>Companies must remind themselves that people with disabilities are also important customers.</Quote>
+            <Quote>
+              Companies must remind themselves that people with disabilities are
+              also important customers.
+            </Quote>
             <Sub>
               <P>
-              <Percent>306%</Percent>
-              increase in financial value when a user is loyal to your brand</P>
+                <Percent>306%</Percent>
+                increase in financial value when a user is loyal to your brand
+              </P>
             </Sub>
-            <P>According to Paul Smyth, the Head of Digital Accessibility at Barclays, many organizations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, improving customer experience and colleague productivity, not to mention that accessibility strengthens brand presence. With so many companies out there competing for customers’ attention, it is increasingly important to build authentic brands that connect to your audience and keeps their engagement. In Canada and the US combined there are approximately 67.2 million people living with a disability, all with family members and friends who care equally about accessibility and are much more likely to be loyal to companies that align with those values.</P>
-            <P>Adopting accessibility into your business shows your customers, clients, and users that you care and gives 
-            them a reason to care about your success too.</P>
-            <Temp>Simply put, when accessibility is part of strategic planning, businesses are better equipped 
-            for success in our connected world of commerce, academia, and civic engagement.</Temp>
-            <BookLink to="/contact" aria-label="Contact us to learn more about brand loyalty">
+            <P>
+              According to Paul Smyth, the Head of Digital Accessibility at
+              Barclays, many organizations are waking up to the fact that
+              embracing accessibility leads to multiple benefits – reducing
+              legal risks, improving customer experience and colleague
+              productivity, not to mention that accessibility strengthens brand
+              presence. With so many companies out there competing for
+              customers’ attention, it is increasingly important to build
+              authentic brands that connect to your audience and keeps their
+              engagement. In Canada and the US combined there are approximately
+              67.2 million people living with a disability, all with family
+              members and friends who care equally about accessibility and are
+              much more likely to be loyal to companies that align with those
+              values.
+            </P>
+            <P>
+              Adopting accessibility into your business shows your customers,
+              clients, and users that you care and gives them a reason to care
+              about your success too.
+            </P>
+            <Temp>
+              Simply put, when accessibility is part of strategic planning,
+              businesses are better equipped for success in our connected world
+              of commerce, academia, and civic engagement.
+            </Temp>
+            <BookLink
+              to="/contact"
+              aria-label="Contact us to learn more about brand loyalty"
+            >
               Contact us to learn more
               <Line role="presentation" />
             </BookLink>
           </FlexBox>
         </RowContainer>
-      </ContentContainer> 
+      </ContentContainer>
     </WhySection>
   )
 }

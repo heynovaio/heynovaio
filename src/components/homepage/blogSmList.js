@@ -1,14 +1,14 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const ContentContainer = styled.div`
   max-width: 1288px;
   padding: 100px 20px 20px;
   margin: 0 auto;
   position: relative;
-  h1{
+  h1 {
     font-family: Ubuntu;
     font-size: 65px;
     font-weight: 500;
@@ -33,38 +33,38 @@ const BlogPreview = styled.div`
   grid-column-gap: 6rem;
   grid-row-gap: 6rem;
   justify-content: center;
-  article{
-    a{
+  article {
+    a {
       text-decoration: none;
     }
-    h2{
+    h2 {
       font-family: Stolzl;
       font-size: 40px;
       line-height: 1.25;
       letter-spacing: -0.13px;
       color: #051628;
       font-weight: 400;
-      padding: .25rem 0 .5rem;
+      padding: 0.25rem 0 0.5rem;
       margin: 0;
     }
-    small{
+    small {
       font-family: Ubuntu;
       letter-spacing: -0.06px;
       font-size: 18px;
     }
-    span{
+    span {
       color: #0c7489;
     }
   }
   @media (max-width: 768px) {
     grid-template-columns: repeat(auto-fill, 320px);
     grid-row-gap: 4rem;
-    article{
-      h2{
+    article {
+      h2 {
         font-size: 34px;
       }
     }
- }
+  }
 `
 const ImageBox = styled.div`
   width: 520px;
@@ -72,8 +72,8 @@ const ImageBox = styled.div`
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: .5rem;
-  Img{
+  margin-bottom: 0.5rem;
+  img {
     position: absolute;
   }
   @media (max-width: 768px) {
@@ -94,13 +94,13 @@ const BlogTag = styled.small`
 `
 const BlogAuth = styled.small`
   color: #051628;
-  ::before{
+  ::before {
     display: inline-block;
     content: "";
-    border-top: .2rem solid #d5330d;
+    border-top: 0.2rem solid #d5330d;
     width: 26px;
-    margin-right: .75rem;
-    transform: translateY(-.2rem);
+    margin-right: 0.75rem;
+    transform: translateY(-0.2rem);
   }
 `
 const BlogDate = styled.small`
@@ -109,11 +109,9 @@ const BlogDate = styled.small`
 
 export const query = graphql`
   query BlogListQuery {
-    blog: allMarkdownRemark (
-      limit: 3
-    ) {
+    blog: allMarkdownRemark(limit: 3) {
       posts: nodes {
-        fields{
+        fields {
           slug
         }
         frontmatter {
@@ -135,8 +133,7 @@ export const query = graphql`
 `
 
 export default function BlogSmList({ data }) {
-
-const posts = (data || {}).blog
+  const posts = (data || {}).blog
 
   return (
     <ContentContainer>
@@ -146,11 +143,17 @@ const posts = (data || {}).blog
           <article key={post.id}>
             <a href={post.fields.slug}>
               <ImageBox>
-                <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid}/>
+                <Img
+                  fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+                />
               </ImageBox>
               <BlogTag>{post.frontmatter.category}</BlogTag>
               <h2>{post.frontmatter.title}</h2>
-              <div><BlogAuth>{post.frontmatter.author}</BlogAuth> <span>&#8226;</span> <BlogDate>{post.frontmatter.date}</BlogDate></div>
+              <div>
+                <BlogAuth>{post.frontmatter.author}</BlogAuth>{" "}
+                <span>&#8226;</span>{" "}
+                <BlogDate>{post.frontmatter.date}</BlogDate>
+              </div>
             </a>
           </article>
         ))}
