@@ -1,21 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import { Hero, Mission, Values, Contact, Team } from "../components/about"
-import { useStaticQuery, graphql } from "gatsby"
-
-export default function About({ data }) {
-  return (
-    <>
-      <Layout>
-        <Hero />
-        <Mission />
-        <Team data={data} />
-        <Values />
-        <Contact />
-      </Layout>
-    </>
-  )
-}
+import { graphql } from "gatsby"
 
 /** @typedef {object} AirtableAboutPage
  * @property {object} data
@@ -32,9 +18,22 @@ export default function About({ data }) {
  * @property {string} data.allAirtable.edges.node.data.location
  * @property {string} data.allAirtable.edges.node.data.name
  * @property {string} data.allAirtable.edges.node.data.title
- *
- * @returns {AirtableAboutPage} data
  */
+
+export default function About({ data }) {
+  return (
+    <>
+      <Layout>
+        <Hero />
+        <Mission />
+        <Team data={data} />
+        <Values />
+        <Contact />
+      </Layout>
+    </>
+  )
+}
+
 export const pageQuery = graphql`
   query AboutPageQuery {
     allAirtable {
