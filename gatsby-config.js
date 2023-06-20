@@ -130,11 +130,6 @@ module.exports = {
             baseId: process.env.GATSBY_AIRTABLE_BASEID,
             tableName: `aboutPage`,
           },
-          // We can add other bases/tables here, too!
-          //{
-          //baseId: `AIRTABLE_BASE_ID`,
-          //tableName: `Sides`
-          //}
         ],
       },
     },
