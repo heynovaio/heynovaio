@@ -1,15 +1,15 @@
 import React from "react"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 
-import GIcon1 from '../../images/group113.svg'
-import GIcon2 from '../../images/group119.svg'
-import GIcon3 from '../../images/group112.svg'
-import GIcon4 from '../../images/group118.svg'
-import GIcon5 from '../../images/group120.svg'
-import GIcon6 from '../../images/group121.svg'
-import GIcon7 from '../../images/group117.svg'
-import GIcon8 from '../../images/group110.svg'
-import GIcon9 from '../../images/group111.svg'
+import GIcon1 from "../../images/group113.svg"
+import GIcon2 from "../../images/group119.svg"
+import GIcon3 from "../../images/group112.svg"
+import GIcon4 from "../../images/group118.svg"
+import GIcon5 from "../../images/group120.svg"
+import GIcon6 from "../../images/group121.svg"
+import GIcon7 from "../../images/group117.svg"
+import GIcon8 from "../../images/group110.svg"
+import GIcon9 from "../../images/group111.svg"
 
 const FeatureSection = styled.section`
   background-color: #0a2239;
@@ -24,9 +24,8 @@ const ContentContainer = styled.div`
   }
   @media (max-width: 768px) {
     padding-top: 115px;
-
   }
-  h1{
+  h1 {
     max-width: 600px;
   }
 `
@@ -45,7 +44,7 @@ const GridBox = styled.div`
 const GridItem = styled.div`
   color: #ffffff;
   text-align: center;
-  h3{
+  h3 {
     display: inline;
     font-family: Stolzl;
     font-size: 22px;
@@ -58,8 +57,8 @@ const GridItem = styled.div`
   }
 `
 const IconBox = styled.div`
-  padding: 1rem 0 .5rem 0;
-  img{
+  padding: 1rem 0 0.5rem 0;
+  img {
     width: 70px;
     height: 70px;
     margin: 0 auto;
@@ -81,63 +80,63 @@ const H2 = styled.h2`
   margin: auto;
 `
 
-function Feature () {
-  return(
-  	<FeatureSection>
-     	<ContentContainer>
+function Feature() {
+  return (
+    <FeatureSection>
+      <ContentContainer>
         <H2>Important Components for an Accessible Website</H2>
         <GridBox>
           <GridItem>
             <IconBox>
-              <img src={GIcon1} alt="Icon1" role="presentation"/>
+              <img src={GIcon1} alt="Icon1" role="presentation" />
             </IconBox>
             <h3>Semantic code & added accessibility best practices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon2} alt="Icon2" role="presentation"/>
+              <img src={GIcon2} alt="Icon2" role="presentation" />
             </IconBox>
             <h3>Multiple ways for the user to receive information</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon3} alt="Icon3" role="presentation"/>
+              <img src={GIcon3} alt="Icon3" role="presentation" />
             </IconBox>
             <h3>Viewable on all screen sizes & devices</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon4} alt="Icon4" role="presentation"/>
+              <img src={GIcon4} alt="Icon4" role="presentation" />
             </IconBox>
             <h3>Content that is easy to read and understand</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon5} alt="Icon5" role="presentation"/>
+              <img src={GIcon5} alt="Icon5" role="presentation" />
             </IconBox>
             <h3>Intuitive user-flow & easy to interact with</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon6} alt="Icon6" role="presentation"/>
+              <img src={GIcon6} alt="Icon6" role="presentation" />
             </IconBox>
             <h3>Functional control of the interactive elements</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon7} alt="Icon7" role="presentation"/>
+              <img src={GIcon7} alt="Icon7" role="presentation" />
             </IconBox>
             <h3>Usable with assistive technologies</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon8} alt="Icon8" role="presentation"/>
+              <img src={GIcon8} alt="Icon8" role="presentation" />
             </IconBox>
             <h3>User research & an empathetic approach</h3>
           </GridItem>
           <GridItem>
             <IconBox>
-              <img src={GIcon9} alt="Icon9" role="presentation"/>
+              <img src={GIcon9} alt="Icon9" role="presentation" />
             </IconBox>
             <h3>Proper use of colour and contrast ratio</h3>
           </GridItem>

@@ -1,9 +1,9 @@
-import styled from '@emotion/styled'
-import React from 'react'
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import styled from "@emotion/styled"
+import React from "react"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const TestimonialSection = styled.section`
   padding: 63px 20px 50px;
@@ -20,8 +20,8 @@ const TestimonialSection = styled.section`
   }
   .alice-carousel__dots-item {
     box-shadow: 0 2px 12px 0 #0d1015;
-    border: 1px solid #0FA3B1;
-    background-color: #0D2D4B;
+    border: 1px solid #0fa3b1;
+    background-color: #0d2d4b;
     width: 16px;
     height: 16px;
     margin: 0 7px;
@@ -46,7 +46,7 @@ const TestimonialSection = styled.section`
   }
   .alice-carousel__prev-btn-item:hover span,
   .alice-carousel__next-btn-item:hover span {
-    background: #D5330D;
+    background: #d5330d;
     color: #fff;
   }
   .alice-carousel__prev-btn,
@@ -72,7 +72,6 @@ const ContentCenter = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-
 `
 const Content = styled.div`
   max-width: 615px;
@@ -174,8 +173,7 @@ const TestimonialDetails = styled.div`
 
 const handleOnDragStart = e => e.preventDefault()
 
-function Testimonial () {
-
+function Testimonial() {
   const data = useStaticQuery(graphql`
     query {
       Kwench: file(relativePath: { eq: "kwench-img2.png" }) {
@@ -184,49 +182,49 @@ function Testimonial () {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       P4l: file(relativePath: { eq: "p4l-img.png" }) {
         childImageSharp {
           fluid(maxWidth: 585, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       Brainbox: file(relativePath: { eq: "brainbox-workshop.png" }) {
         childImageSharp {
           fluid(maxWidth: 625, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       Tipp: file(relativePath: { eq: "tipp-img.png" }) {
         childImageSharp {
           fluid(maxWidth: 585, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       Grapevine: file(relativePath: { eq: "grapevine-img.png" }) {
         childImageSharp {
           fluid(maxWidth: 585, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       Eco: file(relativePath: { eq: "eco-img.png" }) {
         childImageSharp {
           fluid(maxWidth: 585, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       wb: file(relativePath: { eq: "watson-img.png" }) {
         childImageSharp {
           fluid(maxWidth: 585, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
-      },
+      }
       quote: file(relativePath: { eq: "quote-left.png" }) {
         childImageSharp {
           fluid(maxWidth: 66, quality: 100) {
@@ -238,7 +236,6 @@ function Testimonial () {
   `)
 
   return (
-
     <TestimonialSection>
       <H2>What our clients have to say</H2>
       <AliceCarousel
@@ -246,49 +243,107 @@ function Testimonial () {
         mouseDragEnabled={true}
         disableAutoPlayOnAction={true}
         autoPlay={true}
-        autoPlayInterval={5000}>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        autoPlayInterval={5000}
+      >
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" fadeIn={false} role="presentation" fluid={data.Grapevine.childImageSharp.fluid} />
-              <SiteLink href="https://grapevinetattoo.com/" target="_blank">View site</SiteLink>
+              <Img
+                alt="Tipp Consulting Screenshot"
+                fadeIn={false}
+                role="presentation"
+                fluid={data.Grapevine.childImageSharp.fluid}
+              />
+              <SiteLink href="https://grapevinetattoo.com/" target="_blank">
+                View site
+              </SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
                   <QuoteLeft>
-                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
                   </QuoteLeft>
                   <Quote>
-                    <p>Bryony Anderson and Kirsten Dodd, co-founders of Hey Nova and their staff are nothing short of amazing. They're diligent and committed to producing the best possible product. Our finished website was beyond our expectations. I wholeheartedly recommend them to anyone looking for a new website or cloud application.</p>
+                    <p>
+                      Bryony Anderson and Kirsten Dodd, co-founders of Hey Nova
+                      and their staff are nothing short of amazing. They're
+                      diligent and committed to producing the best possible
+                      product. Our finished website was beyond our expectations.
+                      I wholeheartedly recommend them to anyone looking for a
+                      new website or cloud application.
+                    </p>
                   </Quote>
                 </TestimonialQuote>
                 <TestimonialDetails>
                   <Name>John Baran</Name>
-                  <JobPosition>Project Manager, Netterbot Communications</JobPosition>
+                  <JobPosition>
+                    Project Manager, Netterbot Communications
+                  </JobPosition>
                   <Place>Vancouver, BC</Place>
                 </TestimonialDetails>
               </Content>
             </ContentCenter>
           </Flex>
         </div>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="P4L Website Screenshot" fadeIn={false} role="presentation" fluid={data.P4l.childImageSharp.fluid} />
-              <SiteLink href="https://pharmacyforlife.ca/" target="_blank">View site</SiteLink>
+              <Img
+                alt="P4L Website Screenshot"
+                fadeIn={false}
+                role="presentation"
+                fluid={data.P4l.childImageSharp.fluid}
+              />
+              <SiteLink href="https://pharmacyforlife.ca/" target="_blank">
+                View site
+              </SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
                   <QuoteLeft>
-                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
                   </QuoteLeft>
                   <Quote>
                     <p>What can I say… they had me at “Hey”.</p>
-                    <p>The Hey Nova team has been instrumental in helping us set up our e-commerce website. From the planning stages to building the format and content to preparing for launch, Hey Nova is with you every step.</p>
-                    <p>We enjoy our brainstorming sessions and working in collaboration with Hey Nova to distill ideas into functional, accessible and attractive designs and concepts. Whether you are just getting started or looking to provide your online business identity with a boost or a complete overhaul, Hey Nova can help road map your way to success.</p>
-                    <p>We look forward to continuing to work with Hey Nova to create a first-class experience with our online business.</p>
+                    <p>
+                      The Hey Nova team has been instrumental in helping us set
+                      up our e-commerce website. From the planning stages to
+                      building the format and content to preparing for launch,
+                      Hey Nova is with you every step.
+                    </p>
+                    <p>
+                      We enjoy our brainstorming sessions and working in
+                      collaboration with Hey Nova to distill ideas into
+                      functional, accessible and attractive designs and
+                      concepts. Whether you are just getting started or looking
+                      to provide your online business identity with a boost or a
+                      complete overhaul, Hey Nova can help road map your way to
+                      success.
+                    </p>
+                    <p>
+                      We look forward to continuing to work with Hey Nova to
+                      create a first-class experience with our online business.
+                    </p>
                   </Quote>
                 </TestimonialQuote>
                 <TestimonialDetails>
@@ -300,20 +355,44 @@ function Testimonial () {
             </ContentCenter>
           </Flex>
         </div>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="Watson and Barnard Website Screenshot" fadeIn={false} role="presentation" fluid={data.wb.childImageSharp.fluid} />
-              <SiteLink href="http://www.wbsurveys.bc.ca/" target="_blank">View site</SiteLink>
+              <Img
+                alt="Watson and Barnard Website Screenshot"
+                fadeIn={false}
+                role="presentation"
+                fluid={data.wb.childImageSharp.fluid}
+              />
+              <SiteLink href="http://www.wbsurveys.bc.ca/" target="_blank">
+                View site
+              </SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
                   <QuoteLeft>
-                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
                   </QuoteLeft>
                   <Quote>
-                    <p>We hired Hey Nova to create a website that would attract new clients and advertise our accomplishments within our community. Kirsten and Bryony were eager to meet with us and understand our business and needs. They helped expand our online presence and reinvent our brand. Once the new website launched, we started receiving new clients within days.</p>
+                    <p>
+                      We hired Hey Nova to create a website that would attract
+                      new clients and advertise our accomplishments within our
+                      community. Kirsten and Bryony were eager to meet with us
+                      and understand our business and needs. They helped expand
+                      our online presence and reinvent our brand. Once the new
+                      website launched, we started receiving new clients within
+                      days.
+                    </p>
                   </Quote>
                 </TestimonialQuote>
                 <TestimonialDetails>
@@ -325,21 +404,40 @@ function Testimonial () {
             </ContentCenter>
           </Flex>
         </div>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="Kwench Website Screenshot" fadeIn={false} role="presentation" fluid={data.Kwench.childImageSharp.fluid} />
-              <SiteLink href="https://www.clubkwench.com/" target="_blank">View site</SiteLink>
-              </ImgCenter>
+              <Img
+                alt="Kwench Website Screenshot"
+                fadeIn={false}
+                role="presentation"
+                fluid={data.Kwench.childImageSharp.fluid}
+              />
+              <SiteLink href="https://www.clubkwench.com/" target="_blank">
+                View site
+              </SiteLink>
+            </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
                   <QuoteLeft>
-                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
                   </QuoteLeft>
                   <Quote>
                     <p>
-                      With their competent and calm approach, Hey Nova has been an integral part of our technology team.  They are professional, accountable, and realistic regarding the scope of a project. I recommend them to anyone I meet.
+                      With their competent and calm approach, Hey Nova has been
+                      an integral part of our technology team. They are
+                      professional, accountable, and realistic regarding the
+                      scope of a project. I recommend them to anyone I meet.
                     </p>
                   </Quote>
                 </TestimonialQuote>
@@ -353,19 +451,44 @@ function Testimonial () {
           </Flex>
         </div>
 
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="Brainbox Accessibility Workshop Screenshot" fadeIn={false} role="presentation" fluid={data.Brainbox.childImageSharp.fluid} />
+              <Img
+                alt="Brainbox Accessibility Workshop Screenshot"
+                fadeIn={false}
+                role="presentation"
+                fluid={data.Brainbox.childImageSharp.fluid}
+              />
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
                   <QuoteLeft>
-                    <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
                   </QuoteLeft>
                   <Quote>
-                    <p>Our overall experience with Hey Nova was, in short, easy. They worked closely with us on large and small projects, while providing valuable insight to better our understanding of accessibility. They delivered all feedback in one go, which allowed us to be more efficient for faster client turnaround times. The owners, Kirsten and Bryony, really care about accessibility. Not only do they care about being compliant, but they care about the human aspect of accessibility and how it feels to someone with accessibility needs.</p>
+                    <p>
+                      Our overall experience with Hey Nova was, in short, easy.
+                      They worked closely with us on large and small projects,
+                      while providing valuable insight to better our
+                      understanding of accessibility. They delivered all
+                      feedback in one go, which allowed us to be more efficient
+                      for faster client turnaround times. The owners, Kirsten
+                      and Bryony, really care about accessibility. Not only do
+                      they care about being compliant, but they care about the
+                      human aspect of accessibility and how it feels to someone
+                      with accessibility needs.
+                    </p>
                   </Quote>
                 </TestimonialQuote>
                 <TestimonialDetails>
@@ -377,23 +500,42 @@ function Testimonial () {
             </ContentCenter>
           </Flex>
         </div>
-        <div role="presentation" onDragStart={handleOnDragStart} className="item">
+        <div
+          role="presentation"
+          onDragStart={handleOnDragStart}
+          className="item"
+        >
           <Flex>
             <ImgCenter>
-              <Img alt="Tipp Consulting Screenshot" role="presentation" fadeIn={false} fluid={data.Tipp.childImageSharp.fluid} />
-              <SiteLink href="http://tippconsulting.com/" target="_blank">View site</SiteLink>
+              <Img
+                alt="Tipp Consulting Screenshot"
+                role="presentation"
+                fadeIn={false}
+                fluid={data.Tipp.childImageSharp.fluid}
+              />
+              <SiteLink href="http://tippconsulting.com/" target="_blank">
+                View site
+              </SiteLink>
             </ImgCenter>
             <ContentCenter>
               <Content>
                 <TestimonialQuote>
-                <QuoteLeft>
-                  <Img alt="Left Quote" fadeIn={false} role="presentation" fluid={data.quote.childImageSharp.fluid} />
-                </QuoteLeft>
-                <Quote>
-                  <p>I am very pleased with my new website. Hey Nova was lovely to work with.
-                  The project was completed within reasonable budget and timeline.
-                  Bryony and Kirsten are talented, pragmatic and attentive to client needs.</p>
-                </Quote>
+                  <QuoteLeft>
+                    <Img
+                      alt="Left Quote"
+                      fadeIn={false}
+                      role="presentation"
+                      fluid={data.quote.childImageSharp.fluid}
+                    />
+                  </QuoteLeft>
+                  <Quote>
+                    <p>
+                      I am very pleased with my new website. Hey Nova was lovely
+                      to work with. The project was completed within reasonable
+                      budget and timeline. Bryony and Kirsten are talented,
+                      pragmatic and attentive to client needs.
+                    </p>
+                  </Quote>
                 </TestimonialQuote>
                 <TestimonialDetails>
                   <Name>Aggie Mikulski</Name>

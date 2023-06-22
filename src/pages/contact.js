@@ -1,8 +1,8 @@
 import React from "react"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import Contact from "../components/homepage/contact"
-import { PopupText } from 'react-calendly'
+import { PopupText } from "react-calendly"
 import SEO from "../components/seo"
 
 const H1 = styled.h1`
@@ -17,9 +17,7 @@ const H1 = styled.h1`
     font-size: 48px;
   }
 `
-const Main = styled.div`
-
-`
+const Main = styled.div``
 const P = styled.p`
   color: #0a2239;
   max-width: 556px;
@@ -192,7 +190,17 @@ export default () => (
     <SEO
       title="Contact us"
       description="Get in touch so we can help you with your next accessibile digital solution."
-      keywords={[ `Web Design`, `Accessibility`, `Web Development`, `Victoria`, `Halifax`,`Toronto`, `Marketing`, `User Experience`, `Branding` ]}
+      keywords={[
+        `Web Design`,
+        `Accessibility`,
+        `Web Development`,
+        `Victoria`,
+        `Halifax`,
+        `Toronto`,
+        `Marketing`,
+        `User Experience`,
+        `Branding`,
+      ]}
     />
     <Main>
       <Container>
@@ -208,7 +216,7 @@ export default () => (
           <Span>or</Span>
           <A href="mailto:info@heynova.io">Email us a Question</A>
         </ActionContainer>
-        
+
         {/* <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
           <h2>Leave us a Message</h2>
           <p>We will get back to you shortly!</p>
@@ -228,9 +236,8 @@ export default () => (
             <input type="submit" value="I Want to Chat" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>
           </div>
         </Form> */}
-
       </Container>
     </Main>
-    <Contact/>
+    <Contact />
   </Layout>
 )

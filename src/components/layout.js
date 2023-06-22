@@ -9,19 +9,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
 import Footer from "./footer"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import "./layout.css"
 
 const Main = styled.main`
   position: relative;
+  font-family: "Ubuntu";
 `
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Header></Header>
-      <Main>{children}</Main>
-      <Footer></Footer>
+      <Header />
+      <Main id="#main">{children}</Main>
+      <Footer />
     </>
   )
 }

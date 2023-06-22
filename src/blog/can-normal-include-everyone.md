@@ -22,7 +22,6 @@ For many people who had attempted to secure remote work accommodation prior to t
 
 With COVID-19 rampaging around the globe, “no” was no longer an option. Seemingly overnight, longstanding attitudes toward at-home productivity were forced to sit back and embrace the circumstances. This went for similar previous assumptions as well, such as [video games and screen time for children](https://www.unicef.org/globalinsight/stories/rethinking-screen-time-time-covid-19).
 
-
 ![Young woman signing while on a video call at her laptop](../images/sign-language-laptop.jpg)
 
 In many cases, remote work and other pandemic-driven adjustments have lead us collectively to better accommodate people with disabilities. For some advocates, the injustice of only having accommodation granted when everyone needed it is yet another reminder of the discriminatory treatment that many deal with every day.
@@ -46,7 +45,6 @@ Learning new technology, rewriting habits, and embracing change can be tough for
 Many restaurants, packed with high-touch surfaces, jumped to [smartphone-friendly options, such as QR codes](https://www.esquire.com/food-drink/restaurants/a36875447/qr-code-menus-restaurants-permanent/) in order to keep their staff and patrons safe. Users with low vision, learning disabilities, vision impairments, or any number of other experiences, can potentially access a menu on their device of choice, with their screen reader, colour filter, zoom level, or other assistive tools, to help navigate the limited world of paper menus.
 
 For business owners, leadership teams, and managers, consider the positives that have come for your staff, if they’ve been working from home. The flexibility of hours, stress-reduction from no commute, cost-savings from coffee and food at home, increased time for friends, family, and hobbies is a plus many people would be hesitant to give up. Add to that the reduction in stress and struggle for employees (current or prospective) with physical disabilities, mental illness, appointments with care providers and specialists, children or other dependents at home, and your company has the potential to be a more diverse, inclusive, and successful workplace.
-
 
 ![Man sitting in a wheelchair uses a mouse and laptop at a desk setup in a home office](../images/home-office.jpg)
 

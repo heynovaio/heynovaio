@@ -1,8 +1,8 @@
 import React from "react"
 
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import { PopupText } from 'react-calendly'
+import { PopupText } from "react-calendly"
 import SEO from "../components/seo"
 
 const H1 = styled.h1`
@@ -17,9 +17,7 @@ const H1 = styled.h1`
     font-size: 48px;
   }
 `
-const Main = styled.div`
-
-`
+const Main = styled.div``
 const P = styled.p`
   color: #0a2239;
   max-width: 556px;
@@ -103,13 +101,14 @@ const Span = styled.span`
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO
-      title="404: Not found"
-     />
+    <SEO title="404: Not found" />
     <Main>
       <Container>
         <H1 id="main">Oops, this page doesn't exist!</H1>
-        <P>If you need help finding what you're looking for feel free to reach out!</P>
+        <P>
+          If you need help finding what you're looking for feel free to reach
+          out!
+        </P>
         <ActionContainer>
           <Button>
             <PopupText

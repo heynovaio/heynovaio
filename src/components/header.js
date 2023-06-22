@@ -1,10 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled"
 
-import img1 from '../images/heynova-logo-new.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedinIn, faFacebook, faInstagram} from "@fortawesome/free-brands-svg-icons"
+import img1 from "../images/heynova-logo-new.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLinkedinIn,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 
 const HeaderStyle = styled.header`
   display: flex;
@@ -74,35 +78,40 @@ const SkipButton = styled.a`
   transform: translateY(-100%);
   transition: transform 0.3s;
 
-  &:focus{
+  &:focus {
     transform: translateY(0%);
   }
 `
 
 const showDrop = () => {
+  var button = document.getElementById("burger")
+  var menu = document.getElementById("drop")
 
-  var button = document.getElementById("burger");
-  var menu = document.getElementById("drop");
+  menu.classList.toggle("open")
+  button.classList.toggle("open")
 
-  menu.classList.toggle("open");
-  button.classList.toggle("open");
+  var expanded = button.getAttribute("aria-expanded")
 
-  var expanded = button.getAttribute('aria-expanded');
-
-    if (expanded === 'false') {
-      button.setAttribute('aria-expanded', 'true')
-      menu.setAttribute('aria-hidden', 'false')
-
-    } else {
-      button.setAttribute('aria-expanded', 'false')
-      menu.setAttribute('aria-hidden', 'true')
-    }
+  if (expanded === "false") {
+    button.setAttribute("aria-expanded", "true")
+    menu.setAttribute("aria-hidden", "false")
+  } else {
+    button.setAttribute("aria-expanded", "false")
+    menu.setAttribute("aria-hidden", "true")
+  }
 }
 
-
 const Hamburger = () => (
-  <HamburgerStyle id="burger" onClick={showDrop} aria-label="Navigation Menu" aria-expanded="false" aria-controls="menu">
-    <div/><div/><div/>
+  <HamburgerStyle
+    id="burger"
+    onClick={showDrop}
+    aria-label="Navigation Menu"
+    aria-expanded="false"
+    aria-controls="menu"
+  >
+    <div />
+    <div />
+    <div />
   </HamburgerStyle>
 )
 
@@ -122,10 +131,10 @@ const HamburgerStyle = styled.button`
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 
   div {
@@ -135,10 +144,10 @@ const HamburgerStyle = styled.button`
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
-    transition: .25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
   div:first-of-type {
     width: 38px;
@@ -179,7 +188,7 @@ const HamburgerStyle = styled.button`
     }
   }
 `
-const NavContainer = styled.div `
+const NavContainer = styled.div`
   a {
     text-decoration: none;
     padding: 10px 10px 10px;
@@ -192,7 +201,7 @@ const NavContainer = styled.div `
     line-height: 1.04;
     font-family: Stolzl;
     position: relative;
-    transition: all .5s;
+    transition: all 0.5s;
     @media (max-width: 960px) {
       font-size: 64px;
       -webkit-text-stroke: 2px #0a2239;
@@ -202,14 +211,14 @@ const NavContainer = styled.div `
       -webkit-text-stroke: 2px #0a2239;
     }
     &:hover {
-      background-image: -webkit-linear-gradient(#0a2239 0,#0fa3b1 76%);
+      background-image: -webkit-linear-gradient(#0a2239 0, #0fa3b1 76%);
       background-size: 100% 60px;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
   }
 `
-const Menu = styled.nav `
+const Menu = styled.nav`
   position: fixed;
   top: 0;
   right: 0;
@@ -219,7 +228,7 @@ const Menu = styled.nav `
   background: #0fa3b1;
   z-index: 3;
   opacity: 0;
-  transition: .25s all;
+  transition: 0.25s all;
   visibility: hidden;
   ul {
     padding-left: 0;
@@ -256,66 +265,109 @@ const LinkContainerMenu = styled.div`
   }
 `
 
-
 class Header extends React.Component {
-
   componentDidMount() {
-    window.onkeydown = function( event ) {
-      if ( event.keyCode === 27 ) {
+    window.onkeydown = function(event) {
+      if (event.keyCode === 27) {
+        var button = document.getElementById("burger")
+        var menu = document.getElementById("drop")
+        var expanded = button.getAttribute("aria-expanded")
 
-        var button = document.getElementById("burger");
-        var menu = document.getElementById("drop");
-        var expanded = button.getAttribute('aria-expanded');
-        
-        if (expanded === 'true') {
-          menu.classList.toggle("open");
-          button.classList.toggle("open");
-          button.setAttribute('aria-expanded', 'false')
-          menu.setAttribute('aria-hidden', 'true')
+        if (expanded === "true") {
+          menu.classList.toggle("open")
+          button.classList.toggle("open")
+          button.setAttribute("aria-expanded", "false")
+          menu.setAttribute("aria-hidden", "true")
         }
       }
     }
   }
 
-  render () {
+  render() {
     return (
-
       <HeaderStyle>
-        <SkipButton href="#main">   
-            Skip to Content
-        </SkipButton>
+        <SkipButton href="#main">Skip to Content</SkipButton>
         <ImgContainer to="/" title="Hey Nova Homepage">
-          <img role="presentation" alt="Hey Nova Logo" src={img1}/>
+          <img role="presentation" alt="Hey Nova Logo" src={img1} />
         </ImgContainer>
         <LinkContainer tabindex="-1">
-          <LinkedInLink aria-label="LinkedIn" tabindex="-1" target="_blank" href="https://www.linkedin.com/company/hey-nova/">
-             <FontAwesomeIcon icon={faLinkedinIn} />
+          <LinkedInLink
+            aria-label="LinkedIn"
+            tabindex="-1"
+            target="_blank"
+            href="https://www.linkedin.com/company/hey-nova/"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </LinkedInLink>
-          <FaceBookLink aria-label="Facebook" tabindex="-1" target="_blank" href="https://www.facebook.com/heynovaio/">
-             <FontAwesomeIcon icon={faFacebook} />
+          <FaceBookLink
+            aria-label="Facebook"
+            tabindex="-1"
+            target="_blank"
+            href="https://www.facebook.com/heynovaio/"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
           </FaceBookLink>
-          <InstagramLink aria-label="Instagram" tabindex="-1" target="_blank" href="https://www.instagram.com/heynovaio/">
-             <FontAwesomeIcon icon={faInstagram} />
+          <InstagramLink
+            aria-label="Instagram"
+            tabindex="-1"
+            target="_blank"
+            href="https://www.instagram.com/heynovaio/"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
           </InstagramLink>
         </LinkContainer>
         <NavContainer>
-          <Hamburger  />
-          <Menu aria-hidden="true" aria-labelledby="burger" id="drop">{/*whole drop down*/}
+          <Hamburger />
+          <Menu aria-hidden="true" aria-labelledby="burger" id="drop">
+            {/*whole drop down*/}
             <ul>
-              <li><Link onClick={showDrop} to="/">Home</Link></li>
-              <li><Link onClick={showDrop} to="/blog/">Our Blog</Link></li>
-              <li><Link onClick={showDrop} to="/accessibility/">Accessibility</Link></li>
-              <li><Link onClick={showDrop} to="/contact/">Get in Touch</Link></li>
+              <li>
+                <Link onClick={showDrop} to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link onClick={showDrop} to="/about/">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link onClick={showDrop} to="/blog/">
+                  Our Blog
+                </Link>
+              </li>
+              <li>
+                <Link onClick={showDrop} to="/accessibility/">
+                  Accessibility
+                </Link>
+              </li>
+              <li>
+                <Link onClick={showDrop} to="/contact/">
+                  Get in Touch
+                </Link>
+              </li>
             </ul>
             <LinkContainerMenu>
-              <LinkedInLink aria-label="LinkedIn" target="blank" href="https://www.linkedin.com/company/hey-nova/">
-                 <FontAwesomeIcon icon={faLinkedinIn} />
+              <LinkedInLink
+                aria-label="LinkedIn"
+                target="blank"
+                href="https://www.linkedin.com/company/hey-nova/"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} />
               </LinkedInLink>
-              <FaceBookLink aria-label="facebook" target="blank" href="https://www.facebook.com/heynovaio/">
-                 <FontAwesomeIcon icon={faFacebook} />
+              <FaceBookLink
+                aria-label="facebook"
+                target="blank"
+                href="https://www.facebook.com/heynovaio/"
+              >
+                <FontAwesomeIcon icon={faFacebook} />
               </FaceBookLink>
-              <InstagramLink aria-label="Instagram" target="blank" href="https://www.instagram.com/heynovaio/">
-                 <FontAwesomeIcon icon={faInstagram} />
+              <InstagramLink
+                aria-label="Instagram"
+                target="blank"
+                href="https://www.instagram.com/heynovaio/"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
               </InstagramLink>
             </LinkContainerMenu>
           </Menu>
