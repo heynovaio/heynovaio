@@ -20,6 +20,9 @@ import { graphql } from "gatsby"
  * @property {string} data.allAirtable.edges.node.data.title
  */
 
+/**
+ * @param {AirtableAboutPage} props
+ */
 export default function About({ data }) {
   return (
     <>

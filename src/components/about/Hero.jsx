@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import HeroPlanets from "./assets/hero-planets.png"
+import HeroPlanets from "./assets/hero.svg"
 import { Button } from "./Button"
 
 export function Hero() {
@@ -66,17 +66,18 @@ const Section = styled.section`
   padding: 180px 20px;
   img {
     display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 650px;
-    height: auto;
   }
   @media (min-width: 1100px) {
     background-color: white;
     color: #0b2642;
+
     img {
       display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 650px;
+      height: auto;
     }
   }
 `
