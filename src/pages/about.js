@@ -48,7 +48,13 @@ export const pageQuery = graphql`
             email
             id
             images {
-              url
+              localFiles {
+                childImageSharp {
+                  gatsbyImageData
+                }
+                extension
+                src: publicURL
+              }
             }
             location
             name

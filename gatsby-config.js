@@ -127,6 +127,7 @@ module.exports = {
         apiKey: process.env.GATSBY_AIRTABLE_ACCESS_TOKEN,
         tables: [
           {
+            mapping: { images: "fileNode" },
             baseId: process.env.GATSBY_AIRTABLE_BASEID,
             tableName: `aboutPage`,
           },
