@@ -130,6 +130,10 @@ module.exports = {
             baseId: process.env.GATSBY_AIRTABLE_BASEID,
             tableName: `aboutPage`,
           },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_CONTENT_BASEID,
+            tableName: `aboutPageContent`,
+          },
         ],
       },
     },

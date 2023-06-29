@@ -8,15 +8,22 @@ import { TeamCard } from "./TeamCard"
 import { planets } from "../content"
 
 /**
- * @param {import("../../../pages/about").AirtableAboutPage} props.data
+ * @param {object} props
+ * @param {import("../../../pages/about").TeamInfo[]} props.team
+ * @param {string} props.content
  * */
-export function Team({ data }) {
-  const teamMembers = data.allAirtable.edges
+export function Team({ team, content }) {
+  const t = team
+    .filter(({ node }) => node.data.id !== null)
     .map(({ node }) => {
       const { images, ...rest } = node.data
       return { ...rest, image: images[0].url }
     })
     .sort((prev, next) => prev.id - next.id)
+
+  const founder = t.slice(0, 2)
+  const employees = t.slice(2).sort((prev, next) => prev.name - next.name)
+  const teamMembers = [...founder, ...employees]
 
   const { ref, height } = useResponsiveHeight()
 
@@ -24,12 +31,7 @@ export function Team({ data }) {
     <Section>
       <SectionHeader>
         <h2>Our Team</h2>
-        <p>
-          Lorem aliquam facilis quam nesciunt maxime. Doloremque modi incidunt
-          iure dicta incidunt cumque? Ad dignissimos delectus totam dolorum
-          deleniti? Sit consectetur iure omnis autem esse Cumque assumenda odit
-          omnis voluptatibus!
-        </p>
+        <p>{content}</p>
       </SectionHeader>
 
       <TeamContainer>

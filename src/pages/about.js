@@ -3,33 +3,70 @@ import Layout from "../components/layout"
 import { Hero, Mission, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
 
-/** @typedef {object} AirtableAboutPage
- * @property {object} data
- * @property {object} data.allAirtable
- * @property {object[]} data.allAirtable.edges
- * @property {object} data.allAirtable.edges.node
- * @property {string} data.allAirtable.edges.node.id
- * @property {object} data.allAirtable.edges.node.data
- * @property {string} data.allAirtable.edges.node.data.bio
- * @property {string} data.allAirtable.edges.node.data.email
- * @property {number} data.allAirtable.edges.node.data.id
- * @property {object[]} data.allAirtable.edges.node.data.images
- * @property {string} data.allAirtable.edges.node.data.images.url
- * @property {string} data.allAirtable.edges.node.data.location
- * @property {string} data.allAirtable.edges.node.data.name
- * @property {string} data.allAirtable.edges.node.data.title
+/**
+ * @typedef {object} ContentDetail
+ * @property {object} node
+ * @property {object} node.data
+ * @property {string} node.data.paragraph
+ * @property {string} node.data.context
  */
 
-/**
- * @param {AirtableAboutPage} props
+/** @typedef {object} Content
+ * @property {ContentDetail[]} edges
  */
-export default function About({ data }) {
+
+/** @typedef {object} TeamInfo
+ * @property {object} node
+ * @property {string} node.id
+ * @property {object} node.data
+ * @property {string} node.data.bio
+ * @property {string} node.data.email
+ * @property {number} node.data.id
+ * @property {object[]} node.data.images
+ * @property {string} node.data.images.url
+ * @property {string} node.data.location
+ * @property {string} node.data.name
+ * @property {string} node.data.title
+ */
+
+/** @typedef {object} Team
+ * @property {object[]} edges
+ * @property {object} edges.node
+ * @property {string} edges.node.id
+ * @property {object} edges.node.data
+ * @property {string} edges.node.data.bio
+ * @property {string} edges.node.data.email
+ * @property {number} edges.node.data.id
+ * @property {object[]} edges.node.data.images
+ * @property {string} edges.node.data.images.url
+ * @property {string} edges.node.data.location
+ * @property {string} edges.node.data.name
+ * @property {string} edges.node.data.title
+ */
+
+/** @typedef AirtableQuery
+ * @property {object} data
+ * @property {Content} data.content
+ * @property {Team} data.team
+ * */
+
+/**
+ * @param {AirtableQuery} props
+ */
+export default function About({ data: { content, team } }) {
+  const contextMap = getContentIndex(content.edges)
+  const ctx = content.edges
+  const heroContent = ctx[contextMap["hero"]].node.data.paragraph
+  const mission = ctx[contextMap["mission"]].node.data.paragraph
+  const missionHeader = ctx[contextMap["missionHeader"]].node.data.paragraph
+  const teamContent = ctx[contextMap["team"]].node.data.paragraph
+
   return (
     <>
       <Layout>
-        <Hero />
-        <Mission />
-        <Team data={data} />
+        <Hero content={heroContent} />
+        <Mission content={mission} header={missionHeader} />
+        <Team team={team.edges} content={teamContent} />
         <Values />
         <Contact />
       </Layout>
@@ -37,9 +74,35 @@ export default function About({ data }) {
   )
 }
 
+/**
+ * @param {ContentDetail[]} t
+ * @returns {{[key: string]: number}} index: map { context: index }
+ */
+function getContentIndex(t) {
+  const buf = {}
+
+  t.forEach(({ node }, idx) => {
+    const { context } = node.data
+    buf[context] = idx
+  })
+
+  return buf
+}
+
 export const pageQuery = graphql`
   query AboutPageQuery {
-    allAirtable {
+    content: allAirtable(filter: { table: { eq: "aboutPageContent" } }) {
+      edges {
+        node {
+          data {
+            paragraph
+            context
+          }
+        }
+      }
+    }
+
+    team: allAirtable {
       edges {
         node {
           id

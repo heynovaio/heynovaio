@@ -3,15 +3,16 @@ import styled from "@emotion/styled"
 import HeroPlanets from "./assets/hero.svg"
 import { Button } from "./Button"
 
-export function Hero() {
+/**
+ * @param {object} props
+ * @param {string} props.content
+ */
+export function Hero({ content }) {
   return (
     <Section>
       <HeroContent>
         <h1>About Us</h1>
-        <p>
-          Amet maxime id possimus earum repellendus! Explicabo nobis autem cum
-          adipisci velit.
-        </p>
+        <p>{content}</p>
 
         <Button>Contact Us</Button>
       </HeroContent>
@@ -36,6 +37,10 @@ const HeroContent = styled.div`
     font-weight: 500;
     font-size: 72px;
     line-height: 94px;
+    background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   p {
     font-weight: 400;
