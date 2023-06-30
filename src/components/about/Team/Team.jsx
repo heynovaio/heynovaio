@@ -13,17 +13,15 @@ import { planets } from "../content"
  * @param {string} props.content
  * */
 export function Team({ team, content }) {
-  const t = team
+  const teamMembers = team
     .filter(({ node }) => node.data.id !== null)
     .map(({ node }) => {
       const { images, ...rest } = node.data
       return { ...rest, image: images[0].url }
     })
-    .sort((prev, next) => prev.id - next.id)
-
-  const founder = t.slice(0, 2)
-  const employees = t.slice(2).sort((prev, next) => prev.name - next.name)
-  const teamMembers = [...founder, ...employees]
+    .sort((prev, next) => {
+      return prev.name < next.name ? -1 : 1
+    })
 
   const { ref, height } = useResponsiveHeight()
 
