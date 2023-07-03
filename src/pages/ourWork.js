@@ -1,10 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../reset.css"
+import {
+  HeroImage,
+  Container,
+  HeroContainer,
+  Center,
+  HeroHeading,
+  HeroContent,
+  HeroText,
+  Button,
+} from "../components/ourWork/styles"
+import Hero from "../components/ourWork/assets/hero.svg"
 
-import Hero from "../components/ourWork/hero"
-import PastDesigns from "../components/ourWork/pastDesigns"
-import Contact from "../components/ourWork/contact"
 export default () => (
   <Layout>
     <SEO
@@ -25,8 +34,20 @@ export default () => (
       ]}
       image="https://heynova.io/static/laptop-planets-cc259abd5061e4d434e01ab4ce745fb1.svg"
     />
-    <Hero />
-    <PastDesigns />
-    {/* <Contact/> */}
+    <Container>
+      <Center>
+        <HeroContainer>
+          <HeroImage src={Hero} />
+          <HeroContent>
+            <HeroHeading>Our Work</HeroHeading>
+            <HeroText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
+            </HeroText>
+
+            <Button>Contact us</Button>
+          </HeroContent>
+        </HeroContainer>
+      </Center>
+    </Container>
   </Layout>
 )
