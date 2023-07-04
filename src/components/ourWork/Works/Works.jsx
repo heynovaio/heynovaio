@@ -1,26 +1,25 @@
 import React from "react"
-import s from "./styles.module.css"
-import shortid from "shortid"
+import "./styles.css"
+import cx from "classnames"
 
 /**
- * @typedef {object} OurWorkProps props
- * @param {object} props
- * @param {object[]} props.works
- * @param {string} props.works.image
- * @param {string?} props.works.background
- * @param {string} props.works.title
- *
+ * @typedef {object} WorkProps prop
+ * @property {string} prop.image
+ * @property {string?} prop.background
+ * @property {string} prop.title
+ * @property {string?} prop.className
+ */
+
+/**
+ * @param {WorkProps} props
  * NOTE: the long one is the first one in the list.
  */
-export function WorkGroup({ works }) {
+export function Work({ image, background, title, className }) {
   return (
-    <ul>
-      {works.map(({ image, background, title }) => (
-        <li style={background && {}}>
-          <img src={image} alt="title" />
-          <h6>{title}</h6>
-        </li>
-      ))}
-    </ul>
+    <div className={cx(["workCard", className])}>
+      <img src={image} alt="" className="img" />
+      {background && <img src={background} alt="presentation" className="bg" />}
+      <h6 className="title">{title}</h6>
+    </div>
   )
 }
