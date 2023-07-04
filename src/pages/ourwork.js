@@ -36,8 +36,10 @@ export default () => (
     />
     <Container>
       <Center>
+        {/* HERO SECTION */}
         <HeroContainer>
           <HeroImage src={Hero} />
+
           <HeroContent>
             <HeroHeading>Our Work</HeroHeading>
 
@@ -48,6 +50,8 @@ export default () => (
             <Button>Contact us</Button>
           </HeroContent>
         </HeroContainer>
+
+        {/* WORK SECTION */}
       </Center>
     </Container>
   </Layout>
