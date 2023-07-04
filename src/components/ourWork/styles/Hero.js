@@ -22,6 +22,10 @@ export const HeroContent = styled.div`
   button {
     margin-top: 30px;
   }
+
+  @media only screen and (min-width: 900px) {
+    padding-top: 150px;
+  }
 `
 
 export const HeroHeading = styled.h1`

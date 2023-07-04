@@ -40,6 +40,7 @@ export default () => (
           <HeroImage src={Hero} />
           <HeroContent>
             <HeroHeading>Our Work</HeroHeading>
+
             <HeroText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
             </HeroText>

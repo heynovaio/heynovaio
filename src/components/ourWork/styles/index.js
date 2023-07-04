@@ -16,8 +16,8 @@ export const Container = styled.div`
 export const Center = styled.div`
   padding: 0 20px;
   @media only screen and (min-width: 900px) {
-    padding: 0;
-    max-width: 900px;
+    padding: 0 80px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 `
