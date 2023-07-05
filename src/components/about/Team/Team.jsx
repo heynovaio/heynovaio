@@ -17,7 +17,7 @@ export function Team({ team, content }) {
     .filter(({ node }) => node.data.id !== null)
     .map(({ node }) => {
       const { images, ...rest } = node.data
-      return { ...rest, image: images[0].url }
+      return { ...rest, image: images.localFiles[0].childImageSharp.fluid }
     })
     .sort((prev, next) => {
       return prev.name < next.name ? -1 : 1
