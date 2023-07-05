@@ -46,6 +46,7 @@
     "shortid": "^2.2.16"
   },
   "devDependencies": {
+    "@types/classnames": "^2.3.1",
     "prettier": "^1.18.2"
   },
   "keywords": [

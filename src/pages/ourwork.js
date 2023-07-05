@@ -90,7 +90,7 @@ export default function OurWork() {
         {/* WORK SECTION */}
         <Center className="works">
           <Group>
-            <Work {...moli} className="moli" />
+            <Work {...moli} className="moli long" />
             <Work {...codeToLearn} className="code-to-learn" />
             <Work {...yourVoice} className="your-voice" />
           </Group>
