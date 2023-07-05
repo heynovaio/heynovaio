@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../reset.css"
-import "../components/ourWork/styles/style.css"
+import "../components/ourWork/styles/styles.css"
 import {
   HeroImage,
   Container,
@@ -13,7 +13,7 @@ import {
   HeroText,
   Button,
 } from "../components/ourWork/styles"
-import { Work } from "../components/ourWork/Works/Works"
+import { Group, Work } from "../components/ourWork/Works"
 
 import Hero from "../components/ourWork/assets/hero.svg"
 import Moli from "../components/ourWork/assets/moli-industries.png"
@@ -88,10 +88,12 @@ export default function OurWork() {
         </Center>
 
         {/* WORK SECTION */}
-        <Center className="work-grid">
-          <Work {...moli} className="moli" />
-          <Work {...codeToLearn} className="code-to-learn" />
-          <Work {...yourVoice} className="your-voice" />
+        <Center className="works">
+          <Group>
+            <Work {...moli} className="moli" />
+            <Work {...codeToLearn} className="code-to-learn" />
+            <Work {...yourVoice} className="your-voice" />
+          </Group>
         </Center>
       </Container>
     </Layout>

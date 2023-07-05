@@ -1,0 +1,83 @@
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media only screen and (min-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    grid-template-areas:
+      "a b"
+      "a c";
+  }
+
+  .work-grid[data-order-grid="reverse"] {
+    grid-template-areas:
+      "b a"
+      "c a";
+  }
+
+  .moli {
+    grid-area: a;
+  }
+
+  .code-to-learn {
+    grid-area: b;
+  }
+
+  .your-voice {
+    grid-area: c;
+  }
+}
+
+.workCard {
+  position: relative;
+  border-radius: 12.767px;
+  isolation: isolate;
+  background: linear-gradient(136deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
+  padding: 50px 45px 65px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  border-radius: 12px;
+  z-index: 1;
+  width: 90%;
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 15.348px;
+  font-family: Stolzl;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.moli .bg {
+  transform: translateY(229px);
+}
+
+.code-to-learn .bg {
+  transform: translate(-2px, -8px);
+}
