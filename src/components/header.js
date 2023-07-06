@@ -327,11 +327,6 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link onClick={showDrop} to="/about/">
-                  About
-                </Link>
-              </li>
-              <li>
                 <Link onClick={showDrop} to="/blog/">
                   Our Blog
                 </Link>

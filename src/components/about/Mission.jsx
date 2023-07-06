@@ -1,16 +1,16 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-export function Mission() {
+/**
+ * @param {object} props
+ * @param {string} props.content
+ * @param {string} props.header
+ */
+export function Mission({ content, header }) {
   return (
     <Section>
-      <h2>Sit quasi iure et ea velit. Velit similique nemo eveniet</h2>
-      <p>
-        Adipisicing quisquam magnam at totam deserunt dolor atque impedit? Quos
-        aliquid doloremque perferendis eligendi quos Totam veniam harum beatae
-        voluptates distinctio sequi Autem eum aut reiciendis itaque consequuntur
-        rem? Ullam aliquam ipsam sequi aut voluptas?
-      </p>
+      <h2>{header}</h2>
+      <p>{content}</p>
     </Section>
   )
 }

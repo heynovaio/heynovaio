@@ -1,9 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
-import HeroPlanets from "./assets/hero.svg"
+import HeroGraphic from "./assets/hero.svg"
+import HeroMoonGraphic from "./assets/moon.svg"
+import HeroStarDust from "./assets/star-dust.svg"
 import { Button } from "./Button"
 
-export function Hero() {
+/**
+ * @param {object} props
+ * @param {string} props.content
+ */
+export function Hero({ content }) {
   return (
     <Section>
       <HeroContent>
@@ -16,10 +22,50 @@ export function Hero() {
         <Button>Contact Us</Button>
       </HeroContent>
 
-      <HeroImage alt="" src={HeroPlanets} role="presentation" />
+      <MobileGraphic>
+        <HeroMoon>
+          <img alt="" src={HeroMoonGraphic} role="presentation" />
+          <div className="drop-shadow" />
+        </HeroMoon>
+        <StarDust alt="" src={HeroStarDust} role="presentation" />
+      </MobileGraphic>
+
+      <HeroImage alt="" src={HeroGraphic} role="presentation" />
     </Section>
   )
 }
+
+const MobileGraphic = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media only screen and (min-width: 1100px) {
+    display: none;
+  }
+`
+
+const StarDust = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const HeroMoon = styled.div`
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  img {
+    padding: 0;
+    margin: 0;
+  }
+`
 
 const HeroImage = styled.img`
   display: none;
@@ -64,12 +110,15 @@ const HeroHeading = styled.h1`
   font-weight: 500;
   font-size: 72px;
   line-height: 94px;
+  background: linear-gradient(to right, #0fa3b1, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 
   @media only screen and (min-width: 1000px) {
     font-size: 72px;
     background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
 `
 
@@ -84,7 +133,10 @@ const Section = styled.section`
   color: white;
   position: relative;
   isolation: isolate;
-  padding: 180px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 704px;
   @media (min-width: 1100px) {
     background-color: white;
     color: #0b2642;
