@@ -12,6 +12,13 @@ import {
   HeroContent,
   HeroText,
   Button,
+  Contact,
+  ContactForm,
+  ContactFormLabel,
+  ContactFormInput,
+  ContactFormTextArea,
+  InputGroup,
+  ContactFormSubmit,
 } from "../components/ourWork/styles"
 import { Group, Work } from "../components/ourWork/Works"
 
@@ -95,6 +102,28 @@ export default function OurWork() {
             <Work {...yourVoice} className="your-voice" />
           </Group>
         </Center>
+
+        <Contact>
+          <p>Like what you see? Let's chat.</p>
+
+          <ContactForm>
+            <InputGroup>
+              <ContactFormLabel>Email</ContactFormLabel>
+              <ContactFormInput />
+            </InputGroup>
+
+            <InputGroup>
+              <ContactFormLabel>Message</ContactFormLabel>
+              <ContactFormTextArea />
+            </InputGroup>
+
+            <ContactFormSubmit className="submit">
+              <Button type="submit">Send Message</Button>
+              <p>or</p>
+              <a role="button">Book a Call</a>
+            </ContactFormSubmit>
+          </ContactForm>
+        </Contact>
       </Container>
     </Layout>
   )
