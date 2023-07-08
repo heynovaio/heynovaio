@@ -30,6 +30,33 @@ import YourVoiceBG from "../components/ourWork/assets/your-voice-bg.svg"
 import CodeToLearn from "../components/ourWork/assets/code-to-learn.png"
 import CodeToLearnBG from "../components/ourWork/assets/code-to-learn-bg.svg"
 
+import IICAcademy from "../components/ourWork/assets/iic-academy.png"
+import PelvicHealth from "../components/ourWork/assets/pelvic-health.png"
+import RisingYouth from "../components/ourWork/assets/rising-youth.png"
+
+import Commit2Act from "../components/ourWork/assets/commit-to-act.png"
+import SnapTrade from "../components/ourWork/assets/snap-trade.png"
+import GrapevineTattoo from "../components/ourWork/assets/grapevine-tattoo.png"
+
+import Sprout from "../components/ourWork/assets/sprout.png"
+import ConnectedNorthWebapp from "../components/ourWork/assets/connected-north-webapp.png"
+import TakingITGlobal from "../components/ourWork/assets/taking-it-global.png"
+
+import ConnectedNorth from "../components/ourWork/assets/connected-north.png"
+import WhoseLand from "../components/ourWork/assets/whose-land.png"
+import Passiv from "../components/ourWork/assets/passiv.png"
+
+import PharmacyForLife from "../components/ourWork/assets/pharmacy-for-life.png"
+import Nixit from "../components/ourWork/assets/nixit.png"
+import WatsonAndBarnard from "../components/ourWork/assets/watson-and-bernard.png"
+
+import StreamOfConsciousness from "../components/ourWork/assets/stream-of-consciousness.png"
+import SrpoutLearningPortal from "../components/ourWork/assets/sprout-learning-portal.png"
+import Commit2ActWebapp from "../components/ourWork/assets/commit-2-act-webapp.png"
+
+import PurpleSector from "../components/ourWork/assets/purple-sector.png"
+import Joni from "../components/ourWork/assets/joni.png"
+
 export default function OurWork() {
   /**
    * @type {import("../components/ourWork/Works/Works").WorkProps[]}
@@ -50,11 +77,118 @@ export default function OurWork() {
       background: YourVoiceBG,
       image: YourVoice,
     },
+    {
+      title: "IIC Academy",
+      image: IICAcademy,
+    },
+    {
+      title: "Pelvic Health & Physiotherapy",
+      image: PelvicHealth,
+    },
+    {
+      title: "Rising Youth",
+      image: RisingYouth,
+    },
+    {
+      title: "Commit2Act",
+      image: Commit2Act,
+    },
+    {
+      title: "SnapTrade",
+      image: SnapTrade,
+    },
+    {
+      title: "Grapevine Tattoo",
+      image: GrapevineTattoo,
+    },
+    {
+      title: "Sprout",
+      image: Sprout,
+    },
+    {
+      title: "Connected North Webapp",
+      image: ConnectedNorthWebapp,
+    },
+    {
+      title: "TakingITGlobal",
+      image: TakingITGlobal,
+    },
+    {
+      title: "Conneceted North",
+      image: ConnectedNorth,
+    },
+    {
+      title: "Whoseland PWA",
+      image: WhoseLand,
+    },
+    {
+      title: "Passiv",
+      image: Passiv,
+    },
+    {
+      title: "Pharmacy for Life",
+      image: PharmacyForLife,
+    },
+    {
+      title: "Nixit",
+      image: Nixit,
+    },
+    {
+      title: "Watson and Barnard",
+      image: WatsonAndBarnard,
+    },
+    {
+      title: "Stream of Consciousness",
+      image: StreamOfConsciousness,
+    },
+    {
+      title: "Sprout Learning Portal",
+      image: SrpoutLearningPortal,
+    },
+    {
+      title: "Commit2Act Webapp",
+      image: Commit2ActWebapp,
+    },
+    {
+      title: "Purle Sector",
+      image: PurpleSector,
+    },
+    {
+      title: "Joni",
+      image: Joni,
+    },
   ]
 
   const moli = works[0]
   const codeToLearn = works[1]
   const yourVoice = works[2]
+
+  const iicAcademy = works[3]
+  const pelvicHealth = works[4]
+  const risingYouth = works[5]
+
+  const commit2Act = works[6]
+  const snapTrade = works[7]
+  const grapevineTattoo = works[8]
+
+  const sprout = works[9]
+  const connectedNorthWebapp = works[10]
+  const takingITGlobal = works[11]
+
+  const connectedNorth = works[12]
+  const whoseLand = works[13]
+  const passiv = works[14]
+
+  const pharmacyForLife = works[15]
+  const nixIt = works[16]
+  const watsonAndBarnard = works[17]
+
+  const streamOfConsciousness = works[18]
+  const sproutLearningPortal = works[19]
+  const commit2ActWebapp = works[20]
+
+  const purpleSector = works[21]
+  const joni = works[22]
 
   return (
     <Layout>
@@ -76,6 +210,7 @@ export default function OurWork() {
         ]}
         image="https://heynova.io/static/laptop-planets-cc259abd5061e4d434e01ab4ce745fb1.svg"
       />
+
       <Container>
         <Center>
           {/* HERO SECTION */}
@@ -98,8 +233,49 @@ export default function OurWork() {
         <Center className="works">
           <Group>
             <Work {...moli} className="moli long" />
-            <Work {...codeToLearn} className="code-to-learn" />
-            <Work {...yourVoice} className="your-voice" />
+            <Work {...codeToLearn} className="code-to-learn short" />
+            <Work {...yourVoice} className="your-voice short" />
+          </Group>
+
+          <Group reverse>
+            <Work {...iicAcademy} className="long" />
+            <Work {...pelvicHealth} className="short" />
+            <Work {...risingYouth} className="short" />
+          </Group>
+
+          <Group>
+            <Work {...commit2Act} className="long" />
+            <Work {...snapTrade} className="short" />
+            <Work {...grapevineTattoo} className="short" />
+          </Group>
+
+          <Group reverse>
+            <Work {...sprout} className="long" />
+            <Work {...connectedNorthWebapp} className="short" />
+            <Work {...takingITGlobal} className="short" />
+          </Group>
+
+          <Group>
+            <Work {...connectedNorth} className="long" />
+            <Work {...whoseLand} className="short" />
+            <Work {...passiv} className="short" />
+          </Group>
+
+          <Group reverse>
+            <Work {...pharmacyForLife} className="long" />
+            <Work {...nixIt} className="short" />
+            <Work {...watsonAndBarnard} className="short" />
+          </Group>
+
+          <Group>
+            <Work {...streamOfConsciousness} className="long" />
+            <Work {...sproutLearningPortal} className="short" />
+            <Work {...commit2ActWebapp} className="short" />
+          </Group>
+
+          <Group>
+            <Work {...purpleSector} className="long" />
+            <Work {...joni} className="short" />
           </Group>
         </Center>
 

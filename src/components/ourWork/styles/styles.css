@@ -1,21 +1,29 @@
+.works {
+  padding: 0px 0 40px 0 !important;
+}
+
 .work-grid {
+  --gap: 30px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: var(--gap);
   width: 100%;
   margin: 0 auto;
+  margin-bottom: var(--gap);
 }
 
 @media only screen and (min-width: 1200px) {
   .work-grid {
+    --gap: 40px;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: var(--gap);
     grid-template-areas:
       "a b"
       "a c";
     margin: 0 auto;
     width: max-content;
     justify-items: center;
+    margin-bottom: var(--gap);
   }
 
   .work-grid[data-order-grid="reverse"] {
@@ -24,16 +32,16 @@
       "c a";
   }
 
-  .moli {
+  .long {
     grid-area: a;
   }
 
-  .code-to-learn {
-    grid-area: b;
+  .short:first-child {
+    grid-area: c;
   }
 
-  .your-voice {
-    grid-area: c;
+  .short:last-child {
+    grid-area: b;
   }
 }
 
@@ -55,14 +63,20 @@
   margin: 0 auto;
 }
 
+.word-card .img {
+  width: 395px;
+  height: 256px;
+  object-fit: cover;
+  object-position: top;
+}
+
 .long {
   height: 614px;
 }
 
 .long .img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+  width: 226px;
+  height: 474px;
 }
 
 .work-card .img {
@@ -92,17 +106,22 @@
   line-height: normal;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
   .work-card {
-    --width: 552px;
     --height: 448px;
     --gap: 40px;
     width: 552px;
-    height: 448px;
+    height: var(--height);
   }
 
   .long {
-    height: calc(2 * var(--height) + var(--gap));
+    height: calc(var(--height) * 2 + var(--gap));
+    width: 546px;
+  }
+
+  .long .img {
+    width: 350px;
+    height: 733px;
   }
 }
 
@@ -113,4 +132,10 @@
 
 .code-to-learn .bg {
   transform: translate(-2px, -8px);
+}
+
+@media only screen and (min-width: 1200px) {
+  .moli .bg {
+    transform: translateY(253px);
+  }
 }
