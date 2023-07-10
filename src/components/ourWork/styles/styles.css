@@ -23,6 +23,7 @@
     margin: 0 auto;
     width: max-content;
     justify-items: center;
+    align-items: start;
     margin-bottom: var(--gap);
   }
 
@@ -37,17 +38,18 @@
   }
 
   .short:first-child {
-    grid-area: c;
+    grid-area: b;
   }
 
   .short:last-child {
-    grid-area: b;
+    grid-area: c;
   }
 }
 
 .work-card {
   position: relative;
   border-radius: 12.767px;
+  border: none;
   width: 353px;
   height: 287px;
   isolation: isolate;
@@ -61,6 +63,7 @@
   display: grid;
   place-items: center;
   margin: 0 auto;
+  backdrop-filter: blur(2px);
 }
 
 .word-card .img {
@@ -134,8 +137,40 @@
   transform: translate(-2px, -8px);
 }
 
+.commit2act .bg {
+  width: 130px;
+  aspect-ratio: auto;
+  transform: translateY(210px);
+}
+
+.joni .bg {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.nixit .bg {
+  transform: translateY(20px);
+}
+
 @media only screen and (min-width: 1200px) {
   .moli .bg {
     transform: translateY(253px);
+  }
+
+  .joni {
+    grid-area: b !important;
+  }
+
+  .commit2act .bg {
+    transform: translateY(350px);
+  }
+
+  .purple-sector .bg {
+    transform: scale(1.02);
+    transform-origin: center;
+  }
+
+  .nixit .bg {
+    transform: translateY(50px);
   }
 }

@@ -16,7 +16,13 @@ import cx from "classnames"
  */
 export function Work({ image, background, title, className }) {
   return (
-    <div className={cx(["work-card", className])}>
+    <div
+      className={cx([
+        "work-card",
+        title.replace(" ", "-").toLowerCase(),
+        className,
+      ])}
+    >
       <img src={image} alt="" className="img" />
       {background && <img src={background} alt="presentation" className="bg" />}
       <h6 className="title">{title}</h6>

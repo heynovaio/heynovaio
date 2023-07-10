@@ -31,11 +31,15 @@ import CodeToLearn from "../components/ourWork/assets/code-to-learn.png"
 import CodeToLearnBG from "../components/ourWork/assets/code-to-learn-bg.svg"
 
 import IICAcademy from "../components/ourWork/assets/iic-academy.png"
+import IICBG from "../components/ourWork/assets/iic-bg.svg"
 import PelvicHealth from "../components/ourWork/assets/pelvic-health.png"
+import PelvicHealthBG from "../components/ourWork/assets/pelvic-health-bg.svg"
 import RisingYouth from "../components/ourWork/assets/rising-youth.png"
 
 import Commit2Act from "../components/ourWork/assets/commit-to-act.png"
+import Commit2ActBG from "../components/ourWork/assets/commit2act-bg.svg"
 import SnapTrade from "../components/ourWork/assets/snap-trade.png"
+import SnapTradeBG from "../components/ourWork/assets/snaptrade-bg.svg"
 import GrapevineTattoo from "../components/ourWork/assets/grapevine-tattoo.png"
 
 import Sprout from "../components/ourWork/assets/sprout.png"
@@ -43,11 +47,14 @@ import ConnectedNorthWebapp from "../components/ourWork/assets/connected-north-w
 import TakingITGlobal from "../components/ourWork/assets/taking-it-global.png"
 
 import ConnectedNorth from "../components/ourWork/assets/connected-north.png"
+import ConnectedNorthBG from "../components/ourWork/assets/connected-north-bg.svg"
 import WhoseLand from "../components/ourWork/assets/whose-land.png"
 import Passiv from "../components/ourWork/assets/passiv.png"
+import PassivBG from "../components/ourWork/assets/passiv-bg.svg"
 
 import PharmacyForLife from "../components/ourWork/assets/pharmacy-for-life.png"
 import Nixit from "../components/ourWork/assets/nixit.png"
+import NixitBG from "../components/ourWork/assets/nixit-bg.svg"
 import WatsonAndBarnard from "../components/ourWork/assets/watson-and-bernard.png"
 
 import StreamOfConsciousness from "../components/ourWork/assets/stream-of-consciousness.png"
@@ -55,7 +62,9 @@ import SrpoutLearningPortal from "../components/ourWork/assets/sprout-learning-p
 import Commit2ActWebapp from "../components/ourWork/assets/commit-2-act-webapp.png"
 
 import PurpleSector from "../components/ourWork/assets/purple-sector.png"
+import PurpleSectorBG from "../components/ourWork/assets/purple-sector-bg.svg"
 import Joni from "../components/ourWork/assets/joni.png"
+import JoniBG from "../components/ourWork/assets/joni-bg.svg"
 
 export default function OurWork() {
   /**
@@ -80,10 +89,12 @@ export default function OurWork() {
     {
       title: "IIC Academy",
       image: IICAcademy,
+      background: IICBG,
     },
     {
       title: "Pelvic Health & Physiotherapy",
       image: PelvicHealth,
+      background: PelvicHealthBG,
     },
     {
       title: "Rising Youth",
@@ -92,10 +103,12 @@ export default function OurWork() {
     {
       title: "Commit2Act",
       image: Commit2Act,
+      background: Commit2ActBG,
     },
     {
       title: "SnapTrade",
       image: SnapTrade,
+      background: SnapTradeBG,
     },
     {
       title: "Grapevine Tattoo",
@@ -116,6 +129,7 @@ export default function OurWork() {
     {
       title: "Conneceted North",
       image: ConnectedNorth,
+      background: ConnectedNorthBG,
     },
     {
       title: "Whoseland PWA",
@@ -124,6 +138,7 @@ export default function OurWork() {
     {
       title: "Passiv",
       image: Passiv,
+      background: PassivBG,
     },
     {
       title: "Pharmacy for Life",
@@ -132,6 +147,7 @@ export default function OurWork() {
     {
       title: "Nixit",
       image: Nixit,
+      background: NixitBG,
     },
     {
       title: "Watson and Barnard",
@@ -150,12 +166,14 @@ export default function OurWork() {
       image: Commit2ActWebapp,
     },
     {
-      title: "Purle Sector",
+      title: "Purple Sector",
       image: PurpleSector,
+      background: PurpleSectorBG,
     },
     {
       title: "Joni",
       image: Joni,
+      background: JoniBG,
     },
   ]
 
@@ -239,7 +257,7 @@ export default function OurWork() {
 
           <Group reverse>
             <Work {...iicAcademy} className="long" />
-            <Work {...pelvicHealth} className="short" />
+            <Work {...pelvicHealth} className="short pelvic-health" />
             <Work {...risingYouth} className="short" />
           </Group>
 
@@ -275,7 +293,7 @@ export default function OurWork() {
 
           <Group>
             <Work {...purpleSector} className="long" />
-            <Work {...joni} className="short" />
+            <Work {...joni} className="short joni" />
           </Group>
         </Center>
 
