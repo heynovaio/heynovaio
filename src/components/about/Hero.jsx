@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
-import HeroPlanets from "./assets/hero.svg"
+import HeroGraphic from "./assets/hero.svg"
+import HeroMoonGraphic from "./assets/moon.svg"
+import HeroStarDust from "./assets/star-dust.svg"
 import { Button } from "./Button"
 
 /**
@@ -11,16 +13,72 @@ export function Hero({ content }) {
   return (
     <Section>
       <HeroContent>
-        <h1>About Us</h1>
-        <p>{content}</p>
+        <HeroHeading>About Us</HeroHeading>
+        <p>
+          Amet maxime id possimus earum repellendus! Explicabo nobis autem cum
+          adipisci velit.
+        </p>
 
         <Button>Contact Us</Button>
       </HeroContent>
 
-      <img alt="" src={HeroPlanets} role="presentation" />
+      <MobileGraphic>
+        <HeroMoon>
+          <img alt="" src={HeroMoonGraphic} role="presentation" />
+          <div className="drop-shadow" />
+        </HeroMoon>
+        <StarDust alt="" src={HeroStarDust} role="presentation" />
+      </MobileGraphic>
+
+      <HeroImage alt="" src={HeroGraphic} role="presentation" />
     </Section>
   )
 }
+
+const MobileGraphic = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media only screen and (min-width: 1100px) {
+    display: none;
+  }
+`
+
+const StarDust = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const HeroMoon = styled.div`
+  position: absolute;
+  bottom: -150px;
+  right: 0;
+  img {
+    padding: 0;
+    margin: 0;
+  }
+`
+
+const HeroImage = styled.img`
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 650px;
+  height: auto;
+
+  @media (min-width: 1100px) {
+    display: block;
+  }
+`
 
 const HeroContent = styled.div`
   display: flex;
@@ -30,18 +88,6 @@ const HeroContent = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  h1 {
-    color: #0fa3b1;
-    font-family: "Stolzl";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 72px;
-    line-height: 94px;
-    background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
   p {
     font-weight: 400;
     font-size: 20px;
@@ -57,6 +103,25 @@ const HeroContent = styled.div`
   }
 `
 
+const HeroHeading = styled.h1`
+  color: #0fa3b1;
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 94px;
+  background: linear-gradient(to right, #0fa3b1, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  @media only screen and (min-width: 1000px) {
+    font-size: 72px;
+    background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+`
+
 const Section = styled.section`
   width: 100%;
   position: absolute;
@@ -68,21 +133,12 @@ const Section = styled.section`
   color: white;
   position: relative;
   isolation: isolate;
-  padding: 180px 20px;
-  img {
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 704px;
   @media (min-width: 1100px) {
     background-color: white;
     color: #0b2642;
-
-    img {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 650px;
-      height: auto;
-    }
   }
 `

@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Earth from "../assets/earth.svg"
+import Img from "gatsby-image"
 
 export function TeamCard({ image, name, title, bio, location }) {
   return (
     <Card>
-      <TeamImage src={image} loading="lazy" alt={name} />
+      <Img fluid={image} alt={name} />
       <Name>{name}</Name>
       <Title>{title}</Title>
       <Desc>{bio}</Desc>
@@ -32,12 +33,6 @@ const Card = styled.div`
   h4 {
     margin: 0; /* Reseting default margin */
   }
-`
-
-const TeamImage = styled.img`
-  aspect-ratio: 1/1;
-  width: 100%;
-  object-fit: cover;
 `
 
 const Name = styled.h3`

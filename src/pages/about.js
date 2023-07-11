@@ -38,7 +38,6 @@ import { graphql } from "gatsby"
  * @property {string} edges.node.data.email
  * @property {number} edges.node.data.id
  * @property {object[]} edges.node.data.images
- * @property {string} edges.node.data.images.url
  * @property {string} edges.node.data.location
  * @property {string} edges.node.data.name
  * @property {string} edges.node.data.title
@@ -111,7 +110,13 @@ export const pageQuery = graphql`
             email
             id
             images {
-              url
+              localFiles {
+                childImageSharp {
+                  fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             location
             name
