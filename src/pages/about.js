@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import { Hero, Mission, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 /**
  * @typedef {object} Val
  * @property {object} node
+ * @property {string} node.id
  * @property {object} node.data
  * @property {object[]} node.data.svg
  * @property {string} node.data.svg.url
@@ -75,8 +76,6 @@ export default function About({ data: { content, team, values } }) {
   const missionHeader = ctx[contextMap["missionHeader"]].node.data.paragraph
   const teamContent = ctx[contextMap["team"]].node.data.paragraph
 
-  useEffect(() => console.log(values), [])
-
   return (
     <>
       <Layout>
@@ -110,6 +109,7 @@ export const pageQuery = graphql`
     values: allAirtable(filter: { table: { eq: "aboutPageValues" } }) {
       edges {
         node {
+          id
           data {
             svg {
               url
