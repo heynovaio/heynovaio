@@ -42,18 +42,17 @@ const MobileGraphic = styled.div`
   right: 0;
   bottom: 0;
 
-  @media only screen and (min-width: 1100px) {
+  @media only screen and (min-width: 600px) {
     display: none;
   }
 `
 
 const StarDust = styled.img`
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 `
 
@@ -110,6 +109,7 @@ const HeroHeading = styled.h1`
   font-weight: 500;
   font-size: 72px;
   line-height: 94px;
+  z-index: 999;
   background: linear-gradient(to right, #0fa3b1, #ffffff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
