@@ -153,10 +153,7 @@ const TeamSection = styled.div`
       bottom: -130px;
     }
     li:nth-child(1) img.planet {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 999 !important;
+      transform: translate(35px, -40px);
     }
     li:nth-child(2) img.planet {
       transform: translate(53px, -35px);
@@ -218,13 +215,13 @@ const TeamSection = styled.div`
       }
     }
     li:nth-child(1) .planet {
-      transform: translate(60px, 50px);
+      transform: translate(75px, 50px);
     }
     li:nth-child(2) .planet {
-      transform: translate(-75px, 43px);
+      transform: translate(-90px, 43px);
     }
     li:nth-child(3) .planet {
-      transform: translate(37px, 3px);
+      transform: translate(47px, 3px);
     }
     li:nth-child(4) .planet {
       transform: translate(55px, -50px);
