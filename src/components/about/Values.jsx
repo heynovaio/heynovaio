@@ -2,6 +2,7 @@ import React from "react"
 import UpperMoon from "./assets/upper-moon.svg"
 import LowerMoon from "./assets/lower-moon.svg"
 import styled from "@emotion/styled"
+import { values as content } from "./content"
 
 /**
  * @param {object} props
@@ -10,7 +11,7 @@ import styled from "@emotion/styled"
 export function Values({ values: v }) {
   const values = v.map(({ node }) => ({
     id: node.id,
-    icon: node.data.svg[0].url,
+    icon: content[node.data.title],
     title: node.data.value,
     content: node.data.text,
   }))
