@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { PopupText } from "react-calendly"
-import { Button } from "./Button"
+import { Button } from "../shared/Button"
 
 export function Contact() {
   return (

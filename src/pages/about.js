@@ -8,8 +8,6 @@ import { graphql } from "gatsby"
  * @property {object} node
  * @property {string} node.id
  * @property {object} node.data
- * @property {object[]} node.data.svg
- * @property {string} node.data.svg.url
  * @property {string} node.data.text
  * @property {string} node.data.value
  */
@@ -111,9 +109,6 @@ export const pageQuery = graphql`
         node {
           id
           data {
-            svg {
-              url
-            }
             text
             value
           }

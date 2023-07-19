@@ -215,10 +215,10 @@ const TeamSection = styled.div`
       }
     }
     li:nth-child(1) .planet {
-      transform: translate(75px, 50px);
+      transform: translate(65px, 50px);
     }
     li:nth-child(2) .planet {
-      transform: translate(-90px, 43px);
+      transform: translate(-75px, 43px);
     }
     li:nth-child(3) .planet {
       transform: translate(47px, 3px);

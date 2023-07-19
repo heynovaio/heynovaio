@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import HeroGraphic from "./assets/hero.svg"
 import HeroMoonGraphic from "./assets/moon.svg"
 import HeroStarDust from "./assets/star-dust.svg"
-import { Button } from "./Button"
+import { Button } from "../shared/Button"
 
 /**
  * @param {object} props
@@ -14,10 +14,7 @@ export function Hero({ content }) {
     <Section>
       <HeroContent>
         <HeroHeading>About Us</HeroHeading>
-        <p>
-          Amet maxime id possimus earum repellendus! Explicabo nobis autem cum
-          adipisci velit.
-        </p>
+        <p>{content}</p>
 
         <Button>Contact Us</Button>
       </HeroContent>
@@ -41,6 +38,7 @@ const MobileGraphic = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 
   @media only screen and (min-width: 600px) {
     display: none;
@@ -54,6 +52,7 @@ const StarDust = styled.img`
   bottom: 0;
   width: 100vw;
   height: 100%;
+  z-index: -1;
 `
 
 const HeroMoon = styled.div`
@@ -86,6 +85,7 @@ const HeroContent = styled.div`
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 
   p {
     font-weight: 400;
@@ -107,14 +107,18 @@ const HeroHeading = styled.h1`
   font-family: "Stolzl";
   font-style: normal;
   font-weight: 500;
-  font-size: 72px;
+  font-size: 62px;
   line-height: 94px;
   z-index: 999;
   background: linear-gradient(to right, #0fa3b1, #ffffff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 
-  @media only screen and (min-width: 1000px) {
+  @media only screen and (min-width: 400px) {
+    font-size: 72px;
+  }
+
+  @media only screen and (min-width: 1100px) {
     font-size: 72px;
     background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
     -webkit-text-fill-color: transparent;

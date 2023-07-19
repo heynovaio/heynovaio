@@ -11,7 +11,7 @@ import { values as content } from "./content"
 export function Values({ values: v }) {
   const values = v.map(({ node }) => ({
     id: node.id,
-    icon: content[node.data.title],
+    icon: content[node.data.value],
     title: node.data.value,
     content: node.data.text,
   }))

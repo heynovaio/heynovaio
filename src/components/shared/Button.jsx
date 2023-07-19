@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-export function Button(props) {
-  const { children, ...rest } = props
-
+/**
+ * @param {React.HTMLAttributes<HTMLButtonElement>} props
+ */
+export function Button({ children, ...rest }) {
   return <Btn {...rest}>{children}</Btn>
 }
 
@@ -17,6 +18,7 @@ const Btn = styled.button`
   line-height: 22px;
   color: white;
   border: none;
+  border-radius: 40px;
   text-transform: uppercase;
   transition: all 200ms;
   cursor: pointer;
