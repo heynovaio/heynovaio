@@ -472,7 +472,7 @@ function PastDesigns() {
                 alt=""
                 role="presentation"
                 fadeIn={false}
-                fluid={data.ch.childImageSharp.fluid}
+                fluid={data.ch?.childImageSharp.fluid}
               />
               <HB3>
                 <Content>

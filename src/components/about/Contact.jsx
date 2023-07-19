@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { PopupText } from "react-calendly"
-import { Button } from "./Button"
+import { Button } from "../shared/Button"
 
 export function Contact() {
   return (
@@ -15,7 +15,7 @@ export function Contact() {
         <textarea id="message" name="message" />
 
         <Div>
-          <Button type="submit">Send Message</Button>
+          <ButtonSubmit type="submit">Send Message</ButtonSubmit>
           <p>or</p>
 
           <ButtonSecondary>
@@ -51,8 +51,29 @@ const Div = styled.div`
     justify-content: space-around;
   }
 `
-
-const ButtonSecondary = styled.button`
+const ButtonSubmit = styled.button`
+  padding: 18px 37px;
+  background-color: #d5330d;
+  width: max-content;
+  font-family: Stolzl;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 200ms;
+  cursor: pointer;
+  &:focus {
+    outline: 4px solid hsla();
+  }
+  &:hover {
+    filter: grayscale(15%);
+  }
+`
+const ButtonSecondary = styled.div`
   padding: 1.1rem 1.5rem;
   font-family: Stolzl;
   font-size: 20px;
@@ -62,6 +83,9 @@ const ButtonSecondary = styled.button`
   border: none;
   text-decoration: underline;
   text-transform: uppercase;
+  & > a {
+    color: #0a2239;
+  }
 `
 
 const Section = styled.section`

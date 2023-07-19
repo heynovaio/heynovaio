@@ -2,14 +2,13 @@ import React from "react"
 import Layout from "../components/layout"
 import { Hero, Mission, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 /**
  * @typedef {object} Val
  * @property {object} node
  * @property {string} node.id
  * @property {object} node.data
- * @property {object[]} node.data.svg
- * @property {string} node.data.svg.url
  * @property {string} node.data.text
  * @property {string} node.data.value
  */
@@ -79,6 +78,21 @@ export default function About({ data: { content, team, values } }) {
   return (
     <>
       <Layout>
+        <SEO
+          title="About us"
+          description="Learn more about the team behind Hey Nova."
+          keywords={[
+            `Web Design`,
+            `Accessibility`,
+            `Web Development`,
+            `Victoria`,
+            `Halifax`,
+            `Toronto`,
+            `Marketing`,
+            `User Experience`,
+            `Branding`,
+          ]}
+        />
         <Hero content={heroContent} />
         <Mission content={mission} header={missionHeader} />
         <Team team={team.edges} content={teamContent} />
@@ -111,9 +125,6 @@ export const pageQuery = graphql`
         node {
           id
           data {
-            svg {
-              url
-            }
             text
             value
           }
