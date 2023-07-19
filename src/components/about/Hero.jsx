@@ -16,7 +16,7 @@ export function Hero({ content }) {
         <HeroHeading>About Us</HeroHeading>
         <p>{content}</p>
 
-        <Button>Contact Us</Button>
+        <Button to={'/contact'}>Contact Us</Button>
       </HeroContent>
 
       <MobileGraphic>

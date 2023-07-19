@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 
 /**
  * @param {React.HTMLAttributes<HTMLButtonElement>} props
@@ -8,7 +9,7 @@ export function Button({ children, ...rest }) {
   return <Btn {...rest}>{children}</Btn>
 }
 
-const Btn = styled.button`
+const Btn = styled(Link)`
   padding: 18px 37px;
   background-color: #d5330d;
   width: max-content;
@@ -20,6 +21,7 @@ const Btn = styled.button`
   border: none;
   border-radius: 40px;
   text-transform: uppercase;
+  text-decoration: none;
   transition: all 200ms;
   cursor: pointer;
   &:focus {

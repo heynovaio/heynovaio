@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Hero, Mission, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
+import SEO from "../components/seo"
 
 /**
  * @typedef {object} Val
@@ -77,6 +78,21 @@ export default function About({ data: { content, team, values } }) {
   return (
     <>
       <Layout>
+        <SEO
+          title="About us"
+          description="Learn more about the team behind Hey Nova."
+          keywords={[
+            `Web Design`,
+            `Accessibility`,
+            `Web Development`,
+            `Victoria`,
+            `Halifax`,
+            `Toronto`,
+            `Marketing`,
+            `User Experience`,
+            `Branding`,
+          ]}
+        />
         <Hero content={heroContent} />
         <Mission content={mission} header={missionHeader} />
         <Team team={team.edges} content={teamContent} />

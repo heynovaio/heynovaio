@@ -123,7 +123,7 @@ const SvgContainer = styled.div`
   }
 `
 
-const TeamSection = styled.div`
+const TeamSection = styled.ul`
   margin: 0;
   margin-top: 3rem;
   display: grid;
@@ -152,35 +152,35 @@ const TeamSection = styled.div`
       left: 115px;
       bottom: -130px;
     }
-    li:nth-child(1) img.planet {
+    li:nth-of-type(1) img.planet {
       transform: translate(35px, -40px);
     }
-    li:nth-child(2) img.planet {
+    li:nth-of-type(2) img.planet {
       transform: translate(53px, -35px);
     }
-    li:nth-child(3) img.planet {
+    li:nth-of-type(3) img.planet {
       transform: translate(17px, 5px);
     }
-    li:nth-child(4) img.planet {
+    li:nth-of-type(4) img.planet {
       transform: translate(-110px, 40px);
       scale: 0.5;
     }
-    li:nth-child(5) img.planet {
+    li:nth-of-type(5) img.planet {
       transform: translate(-7px, 20px);
     }
-    li:nth-child(6) img.planet {
+    li:nth-of-type(6) img.planet {
       transform: translate(-4px, 20px);
     }
-    li:nth-child(7) img.planet {
+    li:nth-of-type(7) img.planet {
       transform: translate(-1px, 15px);
     }
-    li:nth-child(8) img.planet {
+    li:nth-of-type(8) img.planet {
       transform: translate(-18px, 0px);
     }
-    li:nth-child(9) img.planet {
+    li:nth-of-type(9) img.planet {
       transform: translate(18px, -25px);
     }
-    li:nth-child(10) img.planet {
+    li:nth-of-type(10) img.planet {
       transform: translate(-14px, 95px);
     }
   }
@@ -197,7 +197,7 @@ const TeamSection = styled.div`
       z-index: 999;
       scale: 0.6;
     }
-    li:nth-child(odd) {
+    li:nth-of-type(odd) {
       margin-top: calc(50% - 50px);
       .horizontal-line {
         right: -69px;
@@ -206,7 +206,7 @@ const TeamSection = styled.div`
         left: 100%;
       }
     }
-    li:nth-child(even) {
+    li:nth-of-type(even) {
       .horizontal-line {
         left: -69px;
       }
@@ -214,34 +214,34 @@ const TeamSection = styled.div`
         right: 100%;
       }
     }
-    li:nth-child(1) .planet {
+    li:nth-of-type(1) .planet {
       transform: translate(65px, 50px);
     }
-    li:nth-child(2) .planet {
+    li:nth-of-type(2) .planet {
       transform: translate(-75px, 43px);
     }
-    li:nth-child(3) .planet {
+    li:nth-of-type(3) .planet {
       transform: translate(47px, 3px);
     }
-    li:nth-child(4) .planet {
+    li:nth-of-type(4) .planet {
       transform: translate(55px, -50px);
     }
-    li:nth-child(5) .planet {
+    li:nth-of-type(5) .planet {
       transform: translate(14px, -20px);
     }
-    li:nth-child(6) .planet {
+    li:nth-of-type(6) .planet {
       transform: translate(-30px, -18px);
     }
-    li:nth-child(7) .planet {
+    li:nth-of-type(7) .planet {
       transform: translate(20px, -15px);
     }
-    li:nth-child(8) .planet {
+    li:nth-of-type(8) .planet {
       transform: translate(5px, -1px);
     }
-    li:nth-child(9) .planet {
+    li:nth-of-type(9) .planet {
       transform: translate(45px, 45px);
     }
-    li:nth-child(10) .planet {
+    li:nth-of-type(10) .planet {
       transform: translate(15px, -37px);
     }
   }
