@@ -12,6 +12,10 @@
   margin-bottom: var(--gap);
 }
 
+.work-grid .work-card:first-child {
+  height: 100%;
+}
+
 @media only screen and (min-width: 1200px) {
   .work-grid {
     --gap: 40px;
@@ -33,7 +37,8 @@
       "c a";
   }
 
-  .long {
+  .work-grid .work-card:first-child {
+    height: 614px;
     grid-area: a;
   }
 
@@ -53,11 +58,9 @@
   width: 353px;
   height: 287px;
   isolation: isolate;
-  background: linear-gradient(
-    136deg,
-    rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0.12) 100%
-  );
+  background: linear-gradient(136deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.12) 100%);
   padding: 50px 45px 65px;
   overflow: hidden;
   display: grid;
@@ -73,11 +76,7 @@
   object-position: top;
 }
 
-.long {
-  height: 614px;
-}
-
-.long .img {
+.work-grid .work-card:first-child .img {
   width: 226px;
   height: 474px;
 }
@@ -117,19 +116,19 @@
     height: var(--height);
   }
 
-  .long {
+  .word-grid .work-card:first-child {
     height: calc(var(--height) * 2 + var(--gap));
     width: 546px;
   }
 
-  .long .img {
+  .word-grid .work-card:first-child .img {
     width: 350px;
     height: 733px;
   }
 }
 
 /* SPECIFIC STYLINGS */
-.moli .bg {
+.moli-industries-ltd .bg {
   transform: translateY(229px);
 }
 
@@ -153,7 +152,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .moli .bg {
+  .moli-industries-ltd .bg {
     transform: translateY(253px);
   }
 

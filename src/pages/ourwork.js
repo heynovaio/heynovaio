@@ -11,7 +11,6 @@ import {
   HeroHeading,
   HeroContent,
   HeroText,
-  Button,
   Contact,
   ContactForm,
   ContactFormLabel,
@@ -21,6 +20,7 @@ import {
   ContactFormSubmit,
 } from "../components/ourWork/styles"
 import { Group, Work } from "../components/ourWork/Works"
+import { Button } from "../components/shared/Button"
 
 import Hero from "../components/ourWork/assets/hero.svg"
 import Moli from "../components/ourWork/assets/moli-industries.png"
@@ -66,147 +66,117 @@ import PurpleSectorBG from "../components/ourWork/assets/purple-sector-bg.svg"
 import Joni from "../components/ourWork/assets/joni.png"
 import JoniBG from "../components/ourWork/assets/joni-bg.svg"
 
+/**
+ * @type {import("../components/ourWork/Works/Works").WorkProps[]}
+ */
+const works = [
+  {
+    title: "Moli Industries LTD",
+    background: MoliBG,
+    image: Moli,
+  },
+  {
+    title: "Code to Learn",
+    background: CodeToLearnBG,
+    image: CodeToLearn,
+  },
+  {
+    title: "Your Voice is Power",
+    background: YourVoiceBG,
+    image: YourVoice,
+  },
+  {
+    title: "IIC Academy",
+    image: IICAcademy,
+    background: IICBG,
+  },
+  {
+    title: "Pelvic Health & Physiotherapy",
+    image: PelvicHealth,
+    background: PelvicHealthBG,
+  },
+  {
+    title: "Rising Youth",
+    image: RisingYouth,
+  },
+  {
+    title: "Commit2Act",
+    image: Commit2Act,
+    background: Commit2ActBG,
+  },
+  {
+    title: "SnapTrade",
+    image: SnapTrade,
+    background: SnapTradeBG,
+  },
+  {
+    title: "Grapevine Tattoo",
+    image: GrapevineTattoo,
+  },
+  {
+    title: "Sprout",
+    image: Sprout,
+  },
+  {
+    title: "Connected North Webapp",
+    image: ConnectedNorthWebapp,
+  },
+  {
+    title: "TakingITGlobal",
+    image: TakingITGlobal,
+  },
+  {
+    title: "Conneceted North",
+    image: ConnectedNorth,
+    background: ConnectedNorthBG,
+  },
+  {
+    title: "Whoseland PWA",
+    image: WhoseLand,
+  },
+  {
+    title: "Passiv",
+    image: Passiv,
+    background: PassivBG,
+  },
+  {
+    title: "Pharmacy for Life",
+    image: PharmacyForLife,
+  },
+  {
+    title: "Nixit",
+    image: Nixit,
+    background: NixitBG,
+  },
+  {
+    title: "Watson and Barnard",
+    image: WatsonAndBarnard,
+  },
+  {
+    title: "Stream of Consciousness",
+    image: StreamOfConsciousness,
+  },
+  {
+    title: "Sprout Learning Portal",
+    image: SrpoutLearningPortal,
+  },
+  {
+    title: "Commit2Act Webapp",
+    image: Commit2ActWebapp,
+  },
+  {
+    title: "Purple Sector",
+    image: PurpleSector,
+    background: PurpleSectorBG,
+  },
+  {
+    title: "Joni",
+    image: Joni,
+    background: JoniBG,
+  },
+]
 export default function OurWork() {
-  /**
-   * @type {import("../components/ourWork/Works/Works").WorkProps[]}
-   */
-  const works = [
-    {
-      title: "Moli Industries LTD",
-      background: MoliBG,
-      image: Moli,
-    },
-    {
-      title: "Code to Learn",
-      background: CodeToLearnBG,
-      image: CodeToLearn,
-    },
-    {
-      title: "Your Voice is Power",
-      background: YourVoiceBG,
-      image: YourVoice,
-    },
-    {
-      title: "IIC Academy",
-      image: IICAcademy,
-      background: IICBG,
-    },
-    {
-      title: "Pelvic Health & Physiotherapy",
-      image: PelvicHealth,
-      background: PelvicHealthBG,
-    },
-    {
-      title: "Rising Youth",
-      image: RisingYouth,
-    },
-    {
-      title: "Commit2Act",
-      image: Commit2Act,
-      background: Commit2ActBG,
-    },
-    {
-      title: "SnapTrade",
-      image: SnapTrade,
-      background: SnapTradeBG,
-    },
-    {
-      title: "Grapevine Tattoo",
-      image: GrapevineTattoo,
-    },
-    {
-      title: "Sprout",
-      image: Sprout,
-    },
-    {
-      title: "Connected North Webapp",
-      image: ConnectedNorthWebapp,
-    },
-    {
-      title: "TakingITGlobal",
-      image: TakingITGlobal,
-    },
-    {
-      title: "Conneceted North",
-      image: ConnectedNorth,
-      background: ConnectedNorthBG,
-    },
-    {
-      title: "Whoseland PWA",
-      image: WhoseLand,
-    },
-    {
-      title: "Passiv",
-      image: Passiv,
-      background: PassivBG,
-    },
-    {
-      title: "Pharmacy for Life",
-      image: PharmacyForLife,
-    },
-    {
-      title: "Nixit",
-      image: Nixit,
-      background: NixitBG,
-    },
-    {
-      title: "Watson and Barnard",
-      image: WatsonAndBarnard,
-    },
-    {
-      title: "Stream of Consciousness",
-      image: StreamOfConsciousness,
-    },
-    {
-      title: "Sprout Learning Portal",
-      image: SrpoutLearningPortal,
-    },
-    {
-      title: "Commit2Act Webapp",
-      image: Commit2ActWebapp,
-    },
-    {
-      title: "Purple Sector",
-      image: PurpleSector,
-      background: PurpleSectorBG,
-    },
-    {
-      title: "Joni",
-      image: Joni,
-      background: JoniBG,
-    },
-  ]
-
-  const moli = works[0]
-  const codeToLearn = works[1]
-  const yourVoice = works[2]
-
-  const iicAcademy = works[3]
-  const pelvicHealth = works[4]
-  const risingYouth = works[5]
-
-  const commit2Act = works[6]
-  const snapTrade = works[7]
-  const grapevineTattoo = works[8]
-
-  const sprout = works[9]
-  const connectedNorthWebapp = works[10]
-  const takingITGlobal = works[11]
-
-  const connectedNorth = works[12]
-  const whoseLand = works[13]
-  const passiv = works[14]
-
-  const pharmacyForLife = works[15]
-  const nixIt = works[16]
-  const watsonAndBarnard = works[17]
-
-  const streamOfConsciousness = works[18]
-  const sproutLearningPortal = works[19]
-  const commit2ActWebapp = works[20]
-
-  const purpleSector = works[21]
-  const joni = works[22]
+  const w = serializeWorks(works)
 
   return (
     <Layout>
@@ -249,52 +219,13 @@ export default function OurWork() {
 
         {/* WORK SECTION */}
         <Center className="works">
-          <Group>
-            <Work {...moli} className="moli long" />
-            <Work {...codeToLearn} className="code-to-learn short" />
-            <Work {...yourVoice} className="your-voice short" />
-          </Group>
-
-          <Group reverse>
-            <Work {...iicAcademy} className="long" />
-            <Work {...pelvicHealth} className="short pelvic-health" />
-            <Work {...risingYouth} className="short" />
-          </Group>
-
-          <Group>
-            <Work {...commit2Act} className="long" />
-            <Work {...snapTrade} className="short" />
-            <Work {...grapevineTattoo} className="short" />
-          </Group>
-
-          <Group reverse>
-            <Work {...sprout} className="long" />
-            <Work {...connectedNorthWebapp} className="short" />
-            <Work {...takingITGlobal} className="short" />
-          </Group>
-
-          <Group>
-            <Work {...connectedNorth} className="long" />
-            <Work {...whoseLand} className="short" />
-            <Work {...passiv} className="short" />
-          </Group>
-
-          <Group reverse>
-            <Work {...pharmacyForLife} className="long" />
-            <Work {...nixIt} className="short" />
-            <Work {...watsonAndBarnard} className="short" />
-          </Group>
-
-          <Group>
-            <Work {...streamOfConsciousness} className="long" />
-            <Work {...sproutLearningPortal} className="short" />
-            <Work {...commit2ActWebapp} className="short" />
-          </Group>
-
-          <Group>
-            <Work {...purpleSector} className="long" />
-            <Work {...joni} className="short joni" />
-          </Group>
+          {w.map((a, i) => (
+            <Group reverse={i % 2 === 0 ? false : true}>
+              {a.map(project => (
+                <Work {...project} />
+              ))}
+            </Group>
+          ))}
         </Center>
 
         <Contact>
@@ -321,4 +252,20 @@ export default function OurWork() {
       </Container>
     </Layout>
   )
+}
+
+/**
+ * @param {import("../components/ourWork/Works/Works").WorkProps[]} w
+ * @returns {import("../components/ourWork/Works/Works").WorkProps[][]}
+ */
+function serializeWorks(w) {
+  /** @type {import("../components/ourWork/Works/Works").WorkProps[]} */
+  const buf = []
+  for (let i = 0; i < w.length; i += 3) {
+    let j = i + 3
+    if (j >= w.length - 1) j = w.length - 1
+    buf.push(w.slice(i, i + 3))
+  }
+
+  return buf
 }

@@ -19,7 +19,7 @@ export function Work({ image, background, title, className }) {
     <div
       className={cx([
         "work-card",
-        title.replace(" ", "-").toLowerCase(),
+        title.replaceAll(" ", "-").toLowerCase(),
         className,
       ])}
     >
