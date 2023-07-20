@@ -2,10 +2,19 @@ import React from "react"
 import UpperMoon from "./assets/upper-moon.svg"
 import LowerMoon from "./assets/lower-moon.svg"
 import styled from "@emotion/styled"
-import { values } from "./content"
-import shortid from "shortid"
 
-export function Values() {
+/**
+ * @param {object} props
+ * @param {import("../../pages/about").Val[]} props.values
+ */
+export function Values({ values: v }) {
+  const values = v.map(({ node }) => ({
+    id: node.id,
+    icon: node.data.svg[0].url,
+    title: node.data.value,
+    content: node.data.text,
+  }))
+
   return (
     <Div>
       <img src={UpperMoon} alt="" role="presentation" />
@@ -15,11 +24,14 @@ export function Values() {
           <h2>Our Core Values</h2>
 
           <Ul>
-            {values.map(value => (
-              <li key={shortid.generate()}>
-                <ValueCard {...value} />
-              </li>
-            ))}
+            {values.map(value => {
+              const { id, ...rest } = value
+              return (
+                <li key={id}>
+                  <ValueCard {...rest} />
+                </li>
+              )
+            })}
           </Ul>
         </Section>
       </Container>
@@ -128,5 +140,12 @@ const Card = styled.section`
     text-align: center;
     width: 27ch;
     padding: 0 10px;
+  }
+  img {
+    height: 40px;
+    aspect-ratio: auto;
+    @media only screen and (min-width: 800px) {
+      height: 45px;
+    }
   }
 `

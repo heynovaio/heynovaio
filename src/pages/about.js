@@ -4,6 +4,21 @@ import { Hero, Mission, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
 
 /**
+ * @typedef {object} Val
+ * @property {object} node
+ * @property {string} node.id
+ * @property {object} node.data
+ * @property {object[]} node.data.svg
+ * @property {string} node.data.svg.url
+ * @property {string} node.data.text
+ * @property {string} node.data.value
+ */
+
+/** @typedef {object} Value
+ * @property {Val[]} edges
+ */
+
+/**
  * @typedef {object} ContentDetail
  * @property {object} node
  * @property {object} node.data
@@ -47,12 +62,13 @@ import { graphql } from "gatsby"
  * @property {object} data
  * @property {Content} data.content
  * @property {Team} data.team
+ * @property {Value} data.values
  * */
 
 /**
  * @param {AirtableQuery} props
  */
-export default function About({ data: { content, team } }) {
+export default function About({ data: { content, team, values } }) {
   const contextMap = getContentIndex(content.edges)
   const ctx = content.edges
   const heroContent = ctx[contextMap["hero"]].node.data.paragraph
@@ -66,7 +82,7 @@ export default function About({ data: { content, team } }) {
         <Hero content={heroContent} />
         <Mission content={mission} header={missionHeader} />
         <Team team={team.edges} content={teamContent} />
-        <Values />
+        <Values values={values.edges} />
         <Contact />
       </Layout>
     </>
@@ -90,6 +106,21 @@ function getContentIndex(t) {
 
 export const pageQuery = graphql`
   query AboutPageQuery {
+    values: allAirtable(filter: { table: { eq: "aboutPageValues" } }) {
+      edges {
+        node {
+          id
+          data {
+            svg {
+              url
+            }
+            text
+            value
+          }
+        }
+      }
+    }
+
     content: allAirtable(filter: { table: { eq: "aboutPageContent" } }) {
       edges {
         node {

@@ -75,7 +75,8 @@ export function Team({ team, content }) {
     </Section>
   )
 }
-// hooks
+
+// HOOKS
 /**
  * @typedef {object} Prop
  * @property {number} height
@@ -152,7 +153,7 @@ const TeamSection = styled.div`
       bottom: -130px;
     }
     li:nth-child(1) img.planet {
-      transform: translate(35px, -35px);
+      transform: translate(35px, -40px);
     }
     li:nth-child(2) img.planet {
       transform: translate(53px, -35px);
@@ -214,34 +215,34 @@ const TeamSection = styled.div`
       }
     }
     li:nth-child(1) .planet {
-      transform: translate(60px, 50px);
+      transform: translate(75px, 50px);
     }
     li:nth-child(2) .planet {
-      transform: translate(-75px, 45px);
+      transform: translate(-90px, 43px);
     }
     li:nth-child(3) .planet {
-      transform: translate(35px, 3px);
+      transform: translate(47px, 3px);
     }
     li:nth-child(4) .planet {
-      transform: translate(65px, -50px);
+      transform: translate(55px, -50px);
     }
     li:nth-child(5) .planet {
-      transform: translate(12px, -20px);
+      transform: translate(14px, -20px);
     }
     li:nth-child(6) .planet {
-      transform: translate(-15px, -15px);
+      transform: translate(-30px, -18px);
     }
     li:nth-child(7) .planet {
-      transform: translate(18px, -15px);
+      transform: translate(20px, -15px);
     }
     li:nth-child(8) .planet {
-      transform: translate(12px, -1px);
+      transform: translate(5px, -1px);
     }
     li:nth-child(9) .planet {
-      transform: translate(37px, 45px);
+      transform: translate(45px, 45px);
     }
     li:nth-child(10) .planet {
-      transform: translate(17px, -37px);
+      transform: translate(15px, -37px);
     }
   }
 `
