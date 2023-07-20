@@ -8,6 +8,10 @@ import Planet7 from "./assets/planet7.svg"
 import Planet8 from "./assets/planet8.svg"
 import Planet9 from "./assets/planet9.svg"
 import Planet10 from "./assets/planet10.svg"
+import PurposeDriven from "./assets/purpose-driven.svg"
+import InclusiveAccessible from "./assets/inclusive-accessible.svg"
+import RemoteForever from "./assets/remote-forever.svg"
+import WomenLed from "./assets/women-led.svg"
 
 export const planets = [
   Planet1,
@@ -21,3 +25,10 @@ export const planets = [
   Planet9,
   Planet10,
 ]
+
+export const values = {
+  "Purpose Driven": PurposeDriven,
+  "Inclusive & Accessible": InclusiveAccessible,
+  "Remote Forever": RemoteForever,
+  "Women Led": WomenLed,
+}
