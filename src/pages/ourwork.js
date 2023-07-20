@@ -220,9 +220,9 @@ export default function OurWork() {
         {/* WORK SECTION */}
         <Center className="works">
           {w.map((a, i) => (
-            <Group reverse={i % 2 === 0 ? false : true}>
-              {a.map(project => (
-                <Work {...project} />
+            <Group key={i} reverse={i % 2 === 0 ? false : true}>
+              {a.map((project, j) => (
+                <Work key={j + i} {...project} />
               ))}
             </Group>
           ))}
@@ -244,7 +244,9 @@ export default function OurWork() {
 
             <ContactFormSubmit className="submit">
               <Button type="submit">Send Message</Button>
+
               <p>or</p>
+
               <a role="button">Book a Call</a>
             </ContactFormSubmit>
           </ContactForm>
