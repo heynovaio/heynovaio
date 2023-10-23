@@ -16,7 +16,7 @@ export function Hero({ content }) {
         <HeroHeading>About Us</HeroHeading>
         <p>{content}</p>
 
-        <Button to={'/contact'}>Contact Us</Button>
+        <Button to={"/contact"}>Contact Us</Button>
       </HeroContent>
 
       <MobileGraphic>
@@ -99,6 +99,10 @@ const HeroContent = styled.div`
   @media (min-width: 1100px) {
     margin: 0;
     width: max(50vw, calc(100vw - 700px));
+    transform: translateX(-300px);
+  }
+  @media (min-width: 1400px) {
+    transform: none;
   }
 `
 
