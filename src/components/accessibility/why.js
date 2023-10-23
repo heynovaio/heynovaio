@@ -133,7 +133,6 @@ const Percent = styled.span`
   background: url(${Bg}) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0000;
-  background-attachment: fixed;
   background-size: cover;
 `
 const Sub = styled.div`
