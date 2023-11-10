@@ -10,9 +10,10 @@ import { Button } from "../shared/Button"
  * @param {string} props.content
  */
 export function Hero({ content }) {
-  function onScroll() {
-    const el = document.getElementById("contact-form")
-    el?.scrollIntoView({ behavior: "smooth" })
+  function handleClick() {
+    document
+      .getElementById("contact-form")
+      .scrollIntoView({ behavior: "smooth" })
   }
   return (
     <Section>
@@ -20,7 +21,7 @@ export function Hero({ content }) {
         <HeroHeading>About Us</HeroHeading>
         <p>{content}</p>
 
-        <Button onClick={onScroll}>Contact Us</Button>
+        <Button onClick={handleClick}>Contact Us</Button>
       </HeroContent>
 
       <MobileGraphic>
