@@ -7,7 +7,13 @@ export function Contact() {
   return (
     <Section>
       <h3>Connect with us</h3>
-      <form netlify action="/thanks" method="POST" name="contact">
+      <form
+        netlify
+        action="/thanks"
+        method="POST"
+        name="contact"
+        id="contact-form"
+      >
         <label htmlFor="email">Email</label>
         <input id="email" name="email" />
 
