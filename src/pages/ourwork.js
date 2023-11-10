@@ -231,15 +231,15 @@ export default function OurWork() {
         <Contact>
           <p>Like what you see? Let's chat.</p>
 
-          <ContactForm>
+          <form netlify name="contact" id="contact-form" action="/ourwork">
             <InputGroup>
-              <ContactFormLabel>Email</ContactFormLabel>
-              <ContactFormInput />
+              <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
+              <ContactFormInput id="email" name="email" />
             </InputGroup>
 
             <InputGroup>
-              <ContactFormLabel>Message</ContactFormLabel>
-              <ContactFormTextArea />
+              <ContactFormLabel htmlFor="message">Message</ContactFormLabel>
+              <ContactFormTextArea id="message" name="message" />
             </InputGroup>
 
             <ContactFormSubmit className="submit">
@@ -249,7 +249,7 @@ export default function OurWork() {
 
               <a role="button">Book a Call</a>
             </ContactFormSubmit>
-          </ContactForm>
+          </form>
         </Contact>
       </Container>
     </Layout>
