@@ -181,7 +181,13 @@ const TeamSection = styled.ul`
       transform: translate(18px, -25px);
     }
     li:nth-of-type(10) img.planet {
-      transform: translate(-14px, 95px);
+      transform: translate(-14px, 25px);
+    }
+    li:nth-of-type(11) .planet {
+      transform: translate(35px, -60px);
+    }
+    li:nth-of-type(12) .planet {
+      transform: translate(50px, 10px);
     }
   }
   @media (min-width: 1000px) {
@@ -215,34 +221,40 @@ const TeamSection = styled.ul`
       }
     }
     li:nth-of-type(1) .planet {
-      transform: translate(65px, 50px);
+      transform: translate(45px, 50px);
     }
     li:nth-of-type(2) .planet {
-      transform: translate(-75px, 43px);
+      transform: translate(-65px, 43px);
     }
     li:nth-of-type(3) .planet {
-      transform: translate(47px, 3px);
+      transform: translate(20px, 3px);
     }
     li:nth-of-type(4) .planet {
-      transform: translate(55px, -50px);
+      transform: translate(65px, -50px);
     }
     li:nth-of-type(5) .planet {
-      transform: translate(14px, -20px);
+      transform: translate(-2px, -20px);
     }
     li:nth-of-type(6) .planet {
-      transform: translate(-30px, -18px);
+      transform: translate(-5px, -18px);
     }
     li:nth-of-type(7) .planet {
-      transform: translate(20px, -15px);
+      transform: translate(10px, -15px);
     }
     li:nth-of-type(8) .planet {
-      transform: translate(5px, -1px);
+      transform: translate(19px, -1px);
     }
     li:nth-of-type(9) .planet {
-      transform: translate(45px, 45px);
+      transform: translate(25px, 45px);
     }
     li:nth-of-type(10) .planet {
-      transform: translate(15px, -37px);
+      transform: translate(25px, -37px);
+    }
+    li:nth-of-type(11) .planet {
+      transform: translate(45px, 50px);
+    }
+    li:nth-of-type(12) .planet {
+      transform: translate(-65px, 43px);
     }
   }
 `
