@@ -270,6 +270,7 @@ const SectionHeader = styled.div`
     text-align: center;
     letter-spacing: -0.8px;
     color: #0b2642;
+    margin-bottom: 0.3em;
   }
   p {
     max-width: 65ch;
