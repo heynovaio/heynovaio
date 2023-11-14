@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { PopupText } from "react-calendly"
-import { Button } from "../shared/Button"
 
 export function Contact() {
   return (
     <Section>
       <h3>Connect with us</h3>
-      <form netlify action="/thanks" method="POST" name="contact">
+      <form netlify name="contact" id="contact-form" action="/about">
         <label htmlFor="email">Email</label>
         <input id="email" name="email" />
 
