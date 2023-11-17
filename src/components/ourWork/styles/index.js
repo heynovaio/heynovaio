@@ -48,13 +48,13 @@ export const HeroHeading = styled.h1`
 export const HeroText = styled.p`
   overflow-wrap: break-word;
   width: 30ch;
-  color: #fff;
-  font-size: 0.91em;
+  color: #000000;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 400;
   line-height: 1.7;
   margin-top: 15px;
+  font-size: 18px;
 `
 
 export const Container = styled.div`

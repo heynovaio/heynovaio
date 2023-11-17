@@ -71,9 +71,9 @@ import JoniBG from "../components/ourWork/assets/joni-bg.svg"
  */
 const works = [
   {
-    title: "Moli Industries LTD",
-    background: MoliBG,
-    image: Moli,
+    title: "Commit2Act",
+    image: Commit2Act,
+    background: Commit2ActBG,
   },
   {
     title: "Code to Learn",
@@ -100,9 +100,9 @@ const works = [
     image: RisingYouth,
   },
   {
-    title: "Commit2Act",
-    image: Commit2Act,
-    background: Commit2ActBG,
+    title: "Moli Industries LTD",
+    background: MoliBG,
+    image: Moli,
   },
   {
     title: "SnapTrade",
@@ -209,7 +209,7 @@ export default function OurWork() {
               <HeroHeading>Our Work</HeroHeading>
 
               <HeroText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.
+                Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces.
               </HeroText>
 
               <Button>Contact us</Button>
