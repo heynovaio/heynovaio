@@ -94,7 +94,6 @@ export default function About({ data: { content, team, values } }) {
           ]}
         />
         <Hero content={heroContent} />
-        <Mission content={mission} header={missionHeader} />
         <Team team={team.edges} content={teamContent} />
         <Values values={values.edges} />
         <Contact />

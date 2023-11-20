@@ -1,6 +1,8 @@
 import React from "react"
 import "../styles/styles.css"
 import cx from "classnames"
+import Img from "gatsby-image"
+
 
 /**
  * @typedef {object} WorkProps prop
@@ -14,7 +16,26 @@ import cx from "classnames"
  * @param {WorkProps} props
  * NOTE: the long one is the first one in the list.
  */
-export function Work({ image, background, title, className }) {
+export function Work({ image, link=null, background, title, className }) {
+  if(link) return (
+    <a href={link}
+      className={cx([
+        "work-card",
+        title.replaceAll(" ", "-").toLowerCase(),
+        className,
+      ])}
+    >
+      <Img
+        alt=""
+        role="presentation"
+        fadeIn={false}
+        className="img"
+        fluid={image}
+      />
+      {background && <img src={background} alt="presentation" className="bg" />}
+      <h6 className="title">{title}</h6>
+    </a>
+  )
   return (
     <div
       className={cx([
@@ -23,7 +44,13 @@ export function Work({ image, background, title, className }) {
         className,
       ])}
     >
-      <img src={image} alt="" className="img" />
+      <Img
+        alt=""
+        role="presentation"
+        fadeIn={false}
+        className="img"
+        fluid={image}
+      />
       {background && <img src={background} alt="presentation" className="bg" />}
       <h6 className="title">{title}</h6>
     </div>

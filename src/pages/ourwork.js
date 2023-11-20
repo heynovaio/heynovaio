@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "../reset.css"
 import "../components/ourWork/styles/styles.css"
+import { graphql, useStaticQuery } from "gatsby"
 import {
   HeroImage,
   Container,
@@ -23,159 +24,330 @@ import { Group, Work } from "../components/ourWork/Works"
 import { Button } from "../components/shared/Button"
 
 import Hero from "../components/ourWork/assets/hero.svg"
-import Moli from "../components/ourWork/assets/moli-industries.png"
+
 import MoliBG from "../components/ourWork/assets/moli-bg.svg"
-import YourVoice from "../components/ourWork/assets/your-voice-is-power.png"
+
 import YourVoiceBG from "../components/ourWork/assets/your-voice-bg.svg"
-import CodeToLearn from "../components/ourWork/assets/code-to-learn.png"
+
 import CodeToLearnBG from "../components/ourWork/assets/code-to-learn-bg.svg"
 
-import IICAcademy from "../components/ourWork/assets/iic-academy.png"
 import IICBG from "../components/ourWork/assets/iic-bg.svg"
-import PelvicHealth from "../components/ourWork/assets/pelvic-health.png"
+
 import PelvicHealthBG from "../components/ourWork/assets/pelvic-health-bg.svg"
-import RisingYouth from "../components/ourWork/assets/rising-youth.png"
 
-import Commit2Act from "../components/ourWork/assets/commit-to-act.png"
+
 import Commit2ActBG from "../components/ourWork/assets/commit2act-bg.svg"
-import SnapTrade from "../components/ourWork/assets/snap-trade.png"
+
 import SnapTradeBG from "../components/ourWork/assets/snaptrade-bg.svg"
-import GrapevineTattoo from "../components/ourWork/assets/grapevine-tattoo.png"
 
-import Sprout from "../components/ourWork/assets/sprout.png"
-import ConnectedNorthWebapp from "../components/ourWork/assets/connected-north-webapp.png"
-import TakingITGlobal from "../components/ourWork/assets/taking-it-global.png"
 
-import ConnectedNorth from "../components/ourWork/assets/connected-north.png"
 import ConnectedNorthBG from "../components/ourWork/assets/connected-north-bg.svg"
-import WhoseLand from "../components/ourWork/assets/whose-land.png"
-import Passiv from "../components/ourWork/assets/passiv.png"
 import PassivBG from "../components/ourWork/assets/passiv-bg.svg"
 
-import PharmacyForLife from "../components/ourWork/assets/pharmacy-for-life.png"
-import Nixit from "../components/ourWork/assets/nixit.png"
 import NixitBG from "../components/ourWork/assets/nixit-bg.svg"
-import WatsonAndBarnard from "../components/ourWork/assets/watson-and-bernard.png"
-
-import StreamOfConsciousness from "../components/ourWork/assets/stream-of-consciousness.png"
-import SrpoutLearningPortal from "../components/ourWork/assets/sprout-learning-portal.png"
-import Commit2ActWebapp from "../components/ourWork/assets/commit-2-act-webapp.png"
-
-import PurpleSector from "../components/ourWork/assets/purple-sector.png"
 import PurpleSectorBG from "../components/ourWork/assets/purple-sector-bg.svg"
-import Joni from "../components/ourWork/assets/joni.png"
 import JoniBG from "../components/ourWork/assets/joni-bg.svg"
+
 
 /**
  * @type {import("../components/ourWork/Works/Works").WorkProps[]}
  */
-const works = [
-  {
-    title: "Commit2Act",
-    image: Commit2Act,
-    background: Commit2ActBG,
-  },
-  {
-    title: "Code to Learn",
-    background: CodeToLearnBG,
-    image: CodeToLearn,
-  },
-  {
-    title: "Your Voice is Power",
-    background: YourVoiceBG,
-    image: YourVoice,
-  },
-  {
-    title: "IIC Academy",
-    image: IICAcademy,
-    background: IICBG,
-  },
-  {
-    title: "Pelvic Health & Physiotherapy",
-    image: PelvicHealth,
-    background: PelvicHealthBG,
-  },
-  {
-    title: "Rising Youth",
-    image: RisingYouth,
-  },
-  {
-    title: "Moli Industries LTD",
-    background: MoliBG,
-    image: Moli,
-  },
-  {
-    title: "SnapTrade",
-    image: SnapTrade,
-    background: SnapTradeBG,
-  },
-  {
-    title: "Grapevine Tattoo",
-    image: GrapevineTattoo,
-  },
-  {
-    title: "Sprout",
-    image: Sprout,
-  },
-  {
-    title: "Connected North Webapp",
-    image: ConnectedNorthWebapp,
-  },
-  {
-    title: "TakingITGlobal",
-    image: TakingITGlobal,
-  },
-  {
-    title: "Conneceted North",
-    image: ConnectedNorth,
-    background: ConnectedNorthBG,
-  },
-  {
-    title: "Whoseland PWA",
-    image: WhoseLand,
-  },
-  {
-    title: "Passiv",
-    image: Passiv,
-    background: PassivBG,
-  },
-  {
-    title: "Pharmacy for Life",
-    image: PharmacyForLife,
-  },
-  {
-    title: "Nixit",
-    image: Nixit,
-    background: NixitBG,
-  },
-  {
-    title: "Watson and Barnard",
-    image: WatsonAndBarnard,
-  },
-  {
-    title: "Stream of Consciousness",
-    image: StreamOfConsciousness,
-  },
-  {
-    title: "Sprout Learning Portal",
-    image: SrpoutLearningPortal,
-  },
-  {
-    title: "Commit2Act Webapp",
-    image: Commit2ActWebapp,
-  },
-  {
-    title: "Purple Sector",
-    image: PurpleSector,
-    background: PurpleSectorBG,
-  },
-  {
-    title: "Joni",
-    image: Joni,
-    background: JoniBG,
-  },
-]
+
 export default function OurWork() {
+  const data = useStaticQuery(graphql`
+    query {
+      moli: file(relativePath: { eq: "moli-industries.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yourVoice: file(relativePath: { eq: "your-voice-is-power.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      codeToLearn: file(relativePath: { eq: "code-to-learn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      iicAcademy: file(relativePath: { eq: "iic-academy.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pelvicHealth: file(relativePath: { eq: "pelvic-health.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      risingYouth: file(relativePath: { eq: "rising-youth.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      commit2Act: file(relativePath: { eq: "commit-to-act.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      snaptrade: file(relativePath: { eq: "snap-trade.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      grapevineTattoo: file(relativePath: { eq: "grapevine-tattoo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sprout: file(relativePath: { eq: "sprout.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      connectedNorthWebApp: file(relativePath: { eq: "connected-north-webapp.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      takingITGlobal: file(relativePath: { eq: "taking-it-global.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      connectedNorth: file(relativePath: { eq: "connected-north.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      whoseLand: file(relativePath: { eq: "whose-land.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      passiv: file(relativePath: { eq: "passiv-alt.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pharmacyForLife: file(relativePath: { eq: "pharmacy-for-life.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      nixit: file(relativePath: { eq: "nixit.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      watsonAndBarnard: file(relativePath: { eq: "watson-and-bernard.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      streamOfConsciousness: file(relativePath: { eq: "stream-of-consciousness.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sproutLearningPortal: file(relativePath: { eq: "sprout-learning-portal.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      commit2ActWebApp: file(relativePath: { eq: "commit-2-act-webapp.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      purpleSector: file(relativePath: { eq: "purple-sector.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      joni: file(relativePath: { eq: "joni-alt.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  const works = [
+    {
+      title: "Commit2Act",
+      image: data.commit2Act.childImageSharp.fluid,
+      background: Commit2ActBG,
+      link: "https://www.commit2act.org/",
+    },
+    {
+      title: "Code to Learn",
+      background: CodeToLearnBG,
+      image: data.codeToLearn.childImageSharp.fluid,
+      link: "https://www.codetolearn.ca/en",
+    },
+    {
+      title: "Your Voice is Power",
+      background: YourVoiceBG,
+      image: data.yourVoice.childImageSharp.fluid,
+      link: "https://www.yourvoiceispower.ca/",
+    },
+    {
+      title: "IIC Academy",
+      image: data.iicAcademy.childImageSharp.fluid,
+      background: IICBG,
+      link: "https://www.iicacademy.com/",
+    },
+    {
+      title: "Pelvic Health & Physiotherapy",
+      image: data.pelvicHealth.childImageSharp.fluid,
+      background: PelvicHealthBG,
+      link: "https://pelvic-floor.ca/",
+    },
+    {
+      title: "Rising Youth",
+      image: data.risingYouth.childImageSharp.fluid,
+      link: "https://www.risingyouth.ca/stories",
+    },
+    {
+      title: "Moli Industries LTD",
+      background: MoliBG,
+      image: data.moli.childImageSharp.fluid,
+      link: "https://moli.ca/"
+    },
+    {
+      title: "SnapTrade",
+      image: data.snaptrade.childImageSharp.fluid,
+      background: SnapTradeBG,
+      link: "https://snaptrade.com/",
+    },
+    {
+      title: "Grapevine Tattoo",
+      image: data.grapevineTattoo.childImageSharp.fluid,
+      link: "https://grapevinetattoo.com/",
+    },
+    {
+      title: "Sprout",
+      image: data.sprout.childImageSharp.fluid,
+      link: "https://www.sproutideas.org/",
+    },
+    {
+      title: "Connected North Webapp",
+      image: data.connectedNorthWebApp.childImageSharp.fluid,
+
+    },
+    {
+      title: "TakingITGlobal",
+      image: data.takingITGlobal.childImageSharp.fluid,
+      link: "https://takingitglobal.org/",
+    },
+    {
+      title: "Conneceted North",
+      image: data.connectedNorth.childImageSharp.fluid,
+      background: ConnectedNorthBG,
+      link: "https://www.connectednorth.org/",
+    },
+    {
+      title: "Whoseland PWA",
+      image: data.whoseLand.childImageSharp.fluid,
+      link: "https://www.whose.land/",
+    },
+    {
+      title: "Passiv",
+      image: data.passiv.childImageSharp.fluid,
+      background: PassivBG,
+      link: "https://passiv.com/",
+    },
+    {
+      title: "Pharmacy for Life",
+      image: data.pharmacyForLife.childImageSharp.fluid,
+      link: "https://pharmacyforlife.ca/",
+    },
+    {
+      title: "Nixit",
+      image: data.nixit.childImageSharp.fluid,
+      background: NixitBG,
+
+    },
+    {
+      title: "Watson and Barnard",
+      image: data.watsonAndBarnard.childImageSharp.fluid,
+      link: "https://wbsurveys.ca/",
+    },
+    {
+      title: "Stream of Consciousness",
+      image: data.streamOfConsciousness.childImageSharp.fluid,
+      link: "https://streamofconsciousness.ca/",
+    },
+    {
+      title: "Sprout Learning Portal",
+      image: data.sproutLearningPortal.childImageSharp.fluid,
+
+    },
+    {
+      title: "Commit2Act Webapp",
+      image: data.commit2ActWebApp.childImageSharp.fluid,
+
+    },
+    {
+      title: "Purple Sector",
+      image: data.purpleSector.childImageSharp.fluid,
+      background: PurpleSectorBG,
+
+    },
+    {
+      title: "Joni",
+      image: data.joni.childImageSharp.fluid,
+      background: JoniBG,
+      link: "https://getjoni.com/",
+    },
+  ]
   const w = serializeWorks(works)
 
   return (

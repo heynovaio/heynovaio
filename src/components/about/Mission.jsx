@@ -9,7 +9,7 @@ import styled from "@emotion/styled"
 export function Mission({ content, header }) {
   return (
     <Section>
-      <h2>{header}</h2>
+      <h2>{header} -</h2>
       <p>{content}</p>
     </Section>
   )

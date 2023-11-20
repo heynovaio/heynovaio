@@ -15,6 +15,7 @@ export const HeroImage = styled.img`
 export const HeroContainer = styled.section`
   isolation: isolate;
   min-height: 500px;
+  padding: 0 40px;
 `
 
 export const HeroContent = styled.div`
@@ -69,7 +70,7 @@ export const Container = styled.div`
 export const Center = styled.div`
   padding: 0 20px;
   @media only screen and (min-width: 900px) {
-    padding: 0 80px;
+    padding: 0 40px;
     max-width: 1400px;
     margin: 0 auto;
   }

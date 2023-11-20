@@ -192,7 +192,7 @@ const NavContainer = styled.div`
   a {
     text-decoration: none;
     padding: 10px 10px 10px;
-    font-size: 94px;
+    font-size: 74px;
     display: block;
     line-height: 1;
     color: #0fa3b1;
@@ -207,7 +207,7 @@ const NavContainer = styled.div`
       -webkit-text-stroke: 2px #0a2239;
     }
     @media (max-width: 780px) {
-      font-size: 50px;
+      font-size: 40px;
       -webkit-text-stroke: 2px #0a2239;
     }
     &:hover {
@@ -336,6 +336,7 @@ class Header extends React.Component {
                   Our Blog
                 </Link>
               </li>
+              
               <li>
                 <Link onClick={showDrop} to="/accessibility/">
                   Accessibility
@@ -344,6 +345,11 @@ class Header extends React.Component {
               <li>
                 <Link onClick={showDrop} to="/contact/">
                   Get in Touch
+                </Link>
+              </li>
+              <li>
+                <Link onClick={showDrop} to="/ourwork/">
+                  Our Work
                 </Link>
               </li>
             </ul>

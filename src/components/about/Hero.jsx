@@ -86,12 +86,12 @@ const HeroImage = styled.img`
 const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contents: center;
-  align-items: center;
+  
+  align-items: flex-start;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
 
+  padding: 0 20px;
+  max-width: 500px;
   p {
     font-weight: 400;
     font-size: 20px;
@@ -99,7 +99,8 @@ const HeroContent = styled.div`
     font-family: "Ubuntu";
     color: inherit;
     font-style: normal;
-    max-width: 40ch;
+    margin-bottom: 1rem;
+    
   }
   @media (min-width: 1100px) {
     margin: 0;
@@ -142,7 +143,7 @@ const Section = styled.section`
   left: 0;
   right: 0;
   background-color: #0d1f31;
-  text-align: center;
+  text-align: left;
   color: white;
   position: relative;
   isolation: isolate;
