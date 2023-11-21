@@ -62,8 +62,10 @@ export const Container = styled.div`
   background-image: url(${BgMobile});
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(1.2);
   @media only screen and (min-width: 900px) {
     background-image: url(${BgDesktop});
+    filter: brightness(1.2);
   }
 `
 
