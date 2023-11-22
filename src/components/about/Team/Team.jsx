@@ -250,6 +250,7 @@ const TeamSection = styled.ul`
 const SectionHeader = styled.div`
   text-align: center;
   margin-bottom: 9rem;
+  padding-top: 0;
   h2 {
     font-family: "Stolzl";
     font-style: normal;
@@ -258,6 +259,7 @@ const SectionHeader = styled.div`
     text-align: center;
     letter-spacing: -0.8px;
     color: #0b2642;
+    margin-bottom: 20px;
   }
   p {
     max-width: 65ch;
@@ -277,7 +279,7 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  margin-top: 8rem;
+  margin-top: 2rem;
   margin-bottom: 10rem;
   li {
     list-style: none;

@@ -4,6 +4,9 @@ import SEO from "../components/seo"
 import "../reset.css"
 import "../components/ourWork/styles/styles.css"
 import { graphql, useStaticQuery } from "gatsby"
+import { PopupText } from "react-calendly"
+import { Link } from "gatsby"
+
 import {
   HeroImage,
   Container,
@@ -19,6 +22,7 @@ import {
   ContactFormTextArea,
   InputGroup,
   ContactFormSubmit,
+  ButtonLink,
 } from "../components/ourWork/styles"
 import { Group, Work } from "../components/ourWork/Works"
 import { Button } from "../components/shared/Button"
@@ -353,8 +357,8 @@ export default function OurWork() {
   return (
     <Layout>
       <SEO
-        title="Previous Consulting Work"
-        description="Bake accessibility into your tech team's process so you can not only create products that are useable to a wider audience but also comply with WCAG 2.1 guidelines."
+        title="Our Work"
+        description="Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces."
         keywords={[
           `Accessibility`,
           `Web Design`,
@@ -384,7 +388,7 @@ export default function OurWork() {
                 Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces.
               </HeroText>
 
-              <Button>Contact us</Button>
+              <ButtonLink to="/contact">Get in Touch</ButtonLink>
             </HeroContent>
           </HeroContainer>
         </Center>
@@ -419,7 +423,10 @@ export default function OurWork() {
 
               <p>or</p>
 
-              <a role="button">Book a Call</a>
+              <PopupText
+                text="Book a Call"
+                url="https://calendly.com/hey-nova/free-consultation"
+              />
             </ContactFormSubmit>
           </form>
         </Contact>

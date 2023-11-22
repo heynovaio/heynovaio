@@ -91,7 +91,7 @@ const HeroContent = styled.div`
   width: 100%;
 
   padding: 0 20px;
-  max-width: 500px;
+  max-width: 1400px;
   p {
     font-weight: 400;
     font-size: 20px;
@@ -100,6 +100,7 @@ const HeroContent = styled.div`
     color: inherit;
     font-style: normal;
     margin-bottom: 1rem;
+    max-width: 500px;
     
   }
   @media (min-width: 1100px) {
@@ -138,7 +139,6 @@ const HeroHeading = styled.h1`
 
 const Section = styled.section`
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;

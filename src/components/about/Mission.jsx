@@ -25,6 +25,7 @@ const Section = styled.section`
     font-size: 30px;
     line-height: 150%;
     letter-spacing: -0.8px;
+    margin-bottom: 20px;
   }
   p {
     font-family: Ubuntu;

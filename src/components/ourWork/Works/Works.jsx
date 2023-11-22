@@ -19,6 +19,7 @@ import Img from "gatsby-image"
 export function Work({ image, link=null, background, title, className }) {
   if(link) return (
     <a href={link}
+      target="_blank"
       className={cx([
         "work-card",
         title.replaceAll(" ", "-").toLowerCase(),

@@ -29,10 +29,6 @@ const Card = styled.div`
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  h3,
-  h4 {
-    margin: 0; /* Reseting default margin */
-  }
 `
 
 const Name = styled.h3`
@@ -46,6 +42,7 @@ const Name = styled.h3`
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  margin: 12px 0 0px;
 `
 
 const Title = styled.h4`
@@ -53,7 +50,7 @@ const Title = styled.h4`
   font-size: 20px;
   line-height: 35px;
   color: #d5330d;
-  margin: 1rem 0 !important;
+  margin-bottom: 12px;
 `
 
 const Desc = styled.p`

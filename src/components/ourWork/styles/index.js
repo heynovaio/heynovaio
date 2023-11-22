@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import BgMobile from "../assets/bgmobile.svg"
 import BgDesktop from "../assets/bgdesktop.svg"
+import { Link } from "gatsby"
 
 export const HeroImage = styled.img`
   position: absolute;
@@ -10,6 +11,9 @@ export const HeroImage = styled.img`
   aspect-ratio: auto;
   max-height: 600px;
   z-index: -1;
+  @media only screen and (max-width: 900px) {
+    max-width: 50vw
+  }
 `
 
 export const HeroContainer = styled.section`
@@ -108,6 +112,25 @@ export const Contact = styled.section`
   letter-spacing: 0px;
   text-align: center;
   padding: 45px 30px;
+`
+
+export const ButtonLink = styled(Link)`
+  border-radius: 3px;
+  width: 197px;
+  padding: 15px 0 18px;
+  background-color: #d5330d;
+  margin: 45px 0 0;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  text-align: center;
+  color: #ffffff;
+  font-family: Stolzl;
+  text-decoration: none;
+  &:hover {
+    background: #ae2a09;
+  }
 `
 
 export const ContactForm = styled.form``

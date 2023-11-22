@@ -1,5 +1,4 @@
 export * from "./Hero"
-export * from "./Hero"
 export * from "./Mission"
 export * from "./Values"
 export * from "./Contact"

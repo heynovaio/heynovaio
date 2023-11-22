@@ -192,11 +192,10 @@ const NavContainer = styled.div`
   a {
     text-decoration: none;
     padding: 10px 10px 10px;
-    font-size: 74px;
+    font-size: 50px;
     display: block;
-    line-height: 1;
     color: #0fa3b1;
-    -webkit-text-stroke: 3px #0a2239;
+    -webkit-text-stroke: 2px #0a2239;
     font-weight: 700;
     line-height: 1.04;
     font-family: Stolzl;
@@ -241,7 +240,7 @@ const Menu = styled.nav`
     display: block;
     height: 100vh;
     opacity: 1;
-    padding-top: 200px;
+    padding-top: 5vh;
     visibility: visible;
   }
 `
@@ -288,7 +287,7 @@ class Header extends React.Component {
       <HeaderStyle>
         <SkipButton href="#main">Skip to Content</SkipButton>
         <ImgContainer to="/" title="Hey Nova Homepage">
-          <img role="presentation" alt="Hey Nova Logo" src={img1} />
+          <img alt="Hey Nova Logo" src={img1} />
         </ImgContainer>
         <LinkContainer tabindex="-1">
           <LinkedInLink
@@ -327,6 +326,11 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
+                <Link onClick={showDrop} to="/ourwork/">
+                  Our Work
+                </Link>
+              </li>
+              <li>
                 <Link onClick={showDrop} to="/about/">
                   About
                 </Link>
@@ -345,11 +349,6 @@ class Header extends React.Component {
               <li>
                 <Link onClick={showDrop} to="/contact/">
                   Get in Touch
-                </Link>
-              </li>
-              <li>
-                <Link onClick={showDrop} to="/ourwork/">
-                  Our Work
                 </Link>
               </li>
             </ul>
