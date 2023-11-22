@@ -8,8 +8,8 @@ import "../styles/styles.css"
  */
 export function Group({ children, reverse }) {
   return (
-    <ul className="work-grid" data-order-grid={reverse ? "reverse" : null}>
+    <div className="work-grid" data-order-grid={reverse ? "reverse" : null}>
       {children}
-    </ul>
+    </div>
   )
 }
