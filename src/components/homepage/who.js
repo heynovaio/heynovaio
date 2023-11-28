@@ -35,6 +35,7 @@ const H2 = styled.h2`
   text-align: center;
   color: #0a2239;
   font-family: Stolzl;
+  margin-bottom: 10px;
   @media (max-width: 780px) {
     font-size: 35px;
     line-height: 1.2;
