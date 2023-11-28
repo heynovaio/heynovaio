@@ -54,6 +54,7 @@ const NonStickyBox = styled.div`
     font-size: 22px;
     font-weight: 500;
     letter-spacing: -0.44px;
+    margin-bottom: 10px;
   }
   p {
     font-family: Stolzl;
@@ -121,6 +122,7 @@ const ListBox = styled.div`
   ul {
     list-style: none;
     margin: 0;
+    margin-top: 10px;
     padding-left: 0.5rem;
   }
   li {
@@ -250,270 +252,270 @@ const FlexBox = styled.div`
 `
 
 function Service() {
-  return (
-    <ServiceSection>
-      <ContentContainer>
-        <ServiceHeader>
-          <h2>Our Services</h2>
-          <p class="Subheader">
-            Our general approach has produced resounding success; however, we
-            don’t believe one size fits all so we tailor our services to meet
-            your needs based on the requirements and size of your team.
-          </p>
-        </ServiceHeader>
-        <RowContainer>
-          <NonStickyBox>
-            <h3>WORKSHOP/WEBINAR</h3>
-            <p>
-              An overview to get you started on the journey of accessibility
-            </p>
-            <PhotoBox>
-              <img
-                src={LaptopPlanet}
-                alt="Laptop Planets"
-                role="presentation"
-                class="Single"
-              />
-            </PhotoBox>
-          </NonStickyBox>
-          <FlexBox>
-            <P>
-              We find the best way to kick off our accessibility training is to
-              start with a comprehensive overview. This zoom based workshop gets
-              your team looking at accessibility through an empathetic lens by
-              expressing the impact of an inaccessible digital world. The WCAG
-              2.1 guidelines can be overwhelming, so we break it down into
-              people-friendly terms based on the stages in your build process so
-              each team member knows their role in achieving accessibility.{" "}
-            </P>
-            <h3>They will learn:</h3>
-            <ListBox>
-              <ul>
-                <li>
-                  <p>Who accessibility impacts</p>
-                </li>
-                <li>
-                  <p>
-                    The WCAG 2.1 Accessibility Guidelines and what is needed to
-                    meet them
-                  </p>
-                </li>
-                <li>
-                  <p>Best practices for building with accessibility in mind</p>
-                </li>
-                <li>
-                  <p>
-                    What tools and resources are needed to test for
-                    accessibility
-                  </p>
-                </li>
-                <li>
-                  <p>Other tips and tricks that will help along the way</p>
-                </li>
-              </ul>
-              <BookLink
-                to="/contact"
-                aria-label="Contact us to learn more about our webinars"
-              >
-                Contact us to learn more
-                <Line role="presentation" />
-              </BookLink>
-            </ListBox>
-          </FlexBox>
-        </RowContainer>
+    return (
+        <ServiceSection>
+            <ContentContainer>
+                <ServiceHeader>
+                    <h2>Our Services</h2>
+                    <p class="Subheader">
+                        Our general approach has produced resounding success; however, we
+                        don’t believe one size fits all so we tailor our services to meet
+                        your needs based on the requirements and size of your team.
+                    </p>
+                </ServiceHeader>
+                <RowContainer>
+                    <NonStickyBox>
+                        <h3>WORKSHOP/WEBINAR</h3>
+                        <p>
+                            An overview to get you started on the journey of accessibility
+                        </p>
+                        <PhotoBox>
+                            <img
+                                src={LaptopPlanet}
+                                alt="Laptop Planets"
+                                role="presentation"
+                                class="Single"
+                            />
+                        </PhotoBox>
+                    </NonStickyBox>
+                    <FlexBox>
+                        <P>
+                            We find the best way to kick off our accessibility training is to
+                            start with a comprehensive overview. This zoom based workshop gets
+                            your team looking at accessibility through an empathetic lens by
+                            expressing the impact of an inaccessible digital world. The WCAG
+                            2.1 guidelines can be overwhelming, so we break it down into
+                            people-friendly terms based on the stages in your build process so
+                            each team member knows their role in achieving accessibility.{" "}
+                        </P>
+                        <h3>They will learn:</h3>
+                        <ListBox>
+                            <ul>
+                                <li>
+                                    <p>Who accessibility impacts</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        The WCAG 2.1 Accessibility Guidelines and what is needed to
+                                        meet them
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Best practices for building with accessibility in mind</p>
+                                </li>
+                                <li>
+                                    <p>
+                                        What tools and resources are needed to test for
+                                        accessibility
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Other tips and tricks that will help along the way</p>
+                                </li>
+                            </ul>
+                            <BookLink
+                                to="/contact"
+                                aria-label="Contact us to learn more about our webinars"
+                            >
+                                Contact us to learn more
+                                <Line role="presentation" />
+                            </BookLink>
+                        </ListBox>
+                    </FlexBox>
+                </RowContainer>
 
-        <RowContainer>
-          <NonStickyBox>
-            <h3>Process & Strategy</h3>
-            <p>Holistically weave accessibility into your overall process</p>
-            <PhotoBox>
-              <img
-                src={ProcessGraphic}
-                alt=""
-                role="presentation"
-                class="Single"
-              />
-            </PhotoBox>
-          </NonStickyBox>
-          <FlexBox>
-            <P>
-              Weaving Accessibility into your current build process is key.
-              Waiting until the end of a project to initiate it can be
-              time-consuming and costly. Luckily, with our help, accessibility
-              will be a practice so baked into your process that it becomes
-              second nature to include. We teach your team how to involve it at
-              every stage of the project process, from strategic planning,
-              through all the UX, interface design, & development stages.{" "}
-            </P>
-            <h3>You will gain:</h3>
-            <ListBox>
-              <ul>
-                <li>
-                  <p>
-                    Accessibility checklists for each major project milestone
-                  </p>
-                </li>
-                <li>
-                  <p>A collaborative team accessibility goal</p>
-                </li>
-                <li>
-                  <p>Confidence in your inclusive strategy</p>
-                </li>
-                <li>
-                  <p>A strategy that will save you time and money</p>
-                </li>
-              </ul>
-              <BookLink
-                to="/contact"
-                aria-label="Contact us to learn more about our auditing services"
-              >
-                Contact us to learn more
-                <Line role="presentation" />
-              </BookLink>
-            </ListBox>
-          </FlexBox>
-        </RowContainer>
+                <RowContainer>
+                    <NonStickyBox>
+                        <h3>Process & Strategy</h3>
+                        <p>Holistically weave accessibility into your overall process</p>
+                        <PhotoBox>
+                            <img
+                                src={ProcessGraphic}
+                                alt=""
+                                role="presentation"
+                                class="Single"
+                            />
+                        </PhotoBox>
+                    </NonStickyBox>
+                    <FlexBox>
+                        <P>
+                            Weaving Accessibility into your current build process is key.
+                            Waiting until the end of a project to initiate it can be
+                            time-consuming and costly. Luckily, with our help, accessibility
+                            will be a practice so baked into your process that it becomes
+                            second nature to include. We teach your team how to involve it at
+                            every stage of the project process, from strategic planning,
+                            through all the UX, interface design, & development stages.{" "}
+                        </P>
+                        <h3>You will gain:</h3>
+                        <ListBox>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Accessibility checklists for each major project milestone
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>A collaborative team accessibility goal</p>
+                                </li>
+                                <li>
+                                    <p>Confidence in your inclusive strategy</p>
+                                </li>
+                                <li>
+                                    <p>A strategy that will save you time and money</p>
+                                </li>
+                            </ul>
+                            <BookLink
+                                to="/contact"
+                                aria-label="Contact us to learn more about our auditing services"
+                            >
+                                Contact us to learn more
+                                <Line role="presentation" />
+                            </BookLink>
+                        </ListBox>
+                    </FlexBox>
+                </RowContainer>
 
-        <RowContainer>
-          <NonStickyBox>
-            <h3>AUDITS & REPORTS</h3>
-            <p>
-              We give you an evaluation of your current level of accessibility
-            </p>
-            <PhotoBox>
-              <img
-                src={AstroClipboard}
-                alt=""
-                role="presentation"
-                class="Single"
-              />
-            </PhotoBox>
-          </NonStickyBox>
-          <FlexBox>
-            <P>
-              Our audits map out all the accessibility errors on your
-              product/application that need to be fixed to meet WCAG 2.1
-              Guidelines and be legally AODA and ADA compliant. However, we
-              believe that accessibility is best achieved when it goes beyond a
-              compliancy checklist, so we include recommendations that may not
-              necessarily fit into a specific WCAG list item. This leaves you
-              with suggestions that improve not only accessibility but overall
-              usability.
-            </P>
-            <h3>You will gain:</h3>
-            <ListBox>
-              <ul>
-                <li>
-                  <p>
-                    An overall summary of the numbers or errors we discovered by
-                    category
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Extensive test results based on manual code review,
-                    contrast, keyboard, and screen-reader testing
-                  </p>
-                </li>
-                <li>
-                  <p>How each issue can affect users</p>
-                </li>
-                <li>
-                  <p>How to fix the issues</p>
-                </li>
-              </ul>
-              <BookLink
-                to="/contact"
-                aria-label="Contact us to learn more about our auditing services"
-              >
-                Contact us to learn more
-                <Line role="presentation" />
-              </BookLink>
-            </ListBox>
-          </FlexBox>
-        </RowContainer>
+                <RowContainer>
+                    <NonStickyBox>
+                        <h3>AUDITS & REPORTS</h3>
+                        <p>
+                            We give you an evaluation of your current level of accessibility
+                        </p>
+                        <PhotoBox>
+                            <img
+                                src={AstroClipboard}
+                                alt=""
+                                role="presentation"
+                                class="Single"
+                            />
+                        </PhotoBox>
+                    </NonStickyBox>
+                    <FlexBox>
+                        <P>
+                            Our audits map out all the accessibility errors on your
+                            product/application that need to be fixed to meet WCAG 2.1
+                            Guidelines and be legally AODA and ADA compliant. However, we
+                            believe that accessibility is best achieved when it goes beyond a
+                            compliancy checklist, so we include recommendations that may not
+                            necessarily fit into a specific WCAG list item. This leaves you
+                            with suggestions that improve not only accessibility but overall
+                            usability.
+                        </P>
+                        <h3>You will gain:</h3>
+                        <ListBox>
+                            <ul>
+                                <li>
+                                    <p>
+                                        An overall summary of the numbers or errors we discovered by
+                                        category
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Extensive test results based on manual code review,
+                                        contrast, keyboard, and screen-reader testing
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>How each issue can affect users</p>
+                                </li>
+                                <li>
+                                    <p>How to fix the issues</p>
+                                </li>
+                            </ul>
+                            <BookLink
+                                to="/contact"
+                                aria-label="Contact us to learn more about our auditing services"
+                            >
+                                Contact us to learn more
+                                <Line role="presentation" />
+                            </BookLink>
+                        </ListBox>
+                    </FlexBox>
+                </RowContainer>
 
-        <RowContainer>
-          <NonStickyBox>
-            <h3>MENTORSHIP & EDUCATION</h3>
-            <p>
-              We will be right by your side (virtually) as you and your team
-              learn and grow
-            </p>
-            <PhotoBox>
-              <img src={Astros} alt="" role="presentation" class="Single" />
-            </PhotoBox>
-          </NonStickyBox>
-          <FlexBox>
-            <P>
-              Every team is different, with different internal processes,
-              different ways they like to learn, and varying understanding of
-              accessibility. That is why we cater our mentorship approach to
-              ensure they have the resources they need to empower them towards
-              accessible design and development in the formats that best suit
-              them. Whether this is regular meetings or detailed documentation,
-              your team will complete their time with us fueled with both
-              knowledge and compassion for accessibility, making it a daily
-              practice in their work.
-            </P>
-            <BookLink
-              to="/contact"
-              aria-label="Contact us to learn more about our educational services"
-            >
-              Contact us to learn more
-              <Line role="presentation" />
-            </BookLink>
-          </FlexBox>
-        </RowContainer>
+                <RowContainer>
+                    <NonStickyBox>
+                        <h3>MENTORSHIP & EDUCATION</h3>
+                        <p>
+                            We will be right by your side (virtually) as you and your team
+                            learn and grow
+                        </p>
+                        <PhotoBox>
+                            <img src={Astros} alt="" role="presentation" class="Single" />
+                        </PhotoBox>
+                    </NonStickyBox>
+                    <FlexBox>
+                        <P>
+                            Every team is different, with different internal processes,
+                            different ways they like to learn, and varying understanding of
+                            accessibility. That is why we cater our mentorship approach to
+                            ensure they have the resources they need to empower them towards
+                            accessible design and development in the formats that best suit
+                            them. Whether this is regular meetings or detailed documentation,
+                            your team will complete their time with us fueled with both
+                            knowledge and compassion for accessibility, making it a daily
+                            practice in their work.
+                        </P>
+                        <BookLink
+                            to="/contact"
+                            aria-label="Contact us to learn more about our educational services"
+                        >
+                            Contact us to learn more
+                            <Line role="presentation" />
+                        </BookLink>
+                    </FlexBox>
+                </RowContainer>
 
-        <RowContainer>
-          <NonStickyBox>
-            <h3>ONGOING SUPPORT</h3>
-            <p>We are just a call or email away, always!</p>
-            <PhotoBox>
-              <img
-                src={AstroSpace}
-                alt="Astro Space"
-                role="presentation"
-                class="Single"
-              />
-            </PhotoBox>
-          </NonStickyBox>
-          <FlexBox>
-            <P>
-              Real growth is never over. After your team is ready to start
-              tackling accessibility internally, we will always remain a quick
-              message away to answer any questions that come up during new
-              projects. We know our training will have you feeling so confident
-              you will rarely need this, but as the technology field is always
-              evolving and changing it is nice to know we are here if you need
-              us.
-            </P>
-            <BookLink
-              to="/contact"
-              aria-label="Contact us to learn more about our accessibility support"
-            >
-              Contact us to learn more
-              <Line role="presentation" />
-            </BookLink>
-          </FlexBox>
-        </RowContainer>
+                <RowContainer>
+                    <NonStickyBox>
+                        <h3>ONGOING SUPPORT</h3>
+                        <p>We are just a call or email away, always!</p>
+                        <PhotoBox>
+                            <img
+                                src={AstroSpace}
+                                alt="Astro Space"
+                                role="presentation"
+                                class="Single"
+                            />
+                        </PhotoBox>
+                    </NonStickyBox>
+                    <FlexBox>
+                        <P>
+                            Real growth is never over. After your team is ready to start
+                            tackling accessibility internally, we will always remain a quick
+                            message away to answer any questions that come up during new
+                            projects. We know our training will have you feeling so confident
+                            you will rarely need this, but as the technology field is always
+                            evolving and changing it is nice to know we are here if you need
+                            us.
+                        </P>
+                        <BookLink
+                            to="/contact"
+                            aria-label="Contact us to learn more about our accessibility support"
+                        >
+                            Contact us to learn more
+                            <Line role="presentation" />
+                        </BookLink>
+                    </FlexBox>
+                </RowContainer>
 
-        <ServiceFooter>
-          <p>
-            Not sure what you need yet? That’s okay! We can help you determine
-            the best course of action after a free session to better understand
-            your needs.
-          </p>
-          <Button>
-            <PopupText
-              text="Book a Free Consult"
-              url="https://calendly.com/hey-nova/free-consultation"
-            />
-          </Button>
-        </ServiceFooter>
-      </ContentContainer>
-    </ServiceSection>
-  )
+                <ServiceFooter>
+                    <p>
+                        Not sure what you need yet? That’s okay! We can help you determine
+                        the best course of action after a free session to better understand
+                        your needs.
+                    </p>
+                    <Button>
+                        <PopupText
+                            text="Book a Free Consult"
+                            url="https://calendly.com/hey-nova/free-consultation"
+                        />
+                    </Button>
+                </ServiceFooter>
+            </ContentContainer>
+        </ServiceSection>
+    )
 }
 export default Service
