@@ -50,6 +50,6 @@ Fashion has a long journey ahead before we can truly call it accessible and incl
 
 > "Three decades after the passage of the landmark Americans With Disabilities Act, disabled people want to have the freedom of self-expression through fashion rather than accepting scraps from an industry that has been slow to embrace us and our needs."
 >
-> - [Keah Brown](https://www.nytimes.com/2020/07/26/style/functional-fashion.html)
+> [Keah Brown](https://www.nytimes.com/2020/07/26/style/functional-fashion.html)
 
 The adaptive fashion movement is working to break down these barriers, making fashion accessible and inclusive for everyone, regardless of their abilities. It's not just about clothing; it's about empowerment, self-expression, and a more inclusive world.
