@@ -2,8 +2,8 @@
 date: 2023-12-13
 author: Lourdes Duah
 title: "Adaptive Fashion Can Push Beyond the Basics: A Movement for Inclusive Style"
-featuredImage: ../images/blog/red-shirt-disco-ball-wheelchair-cover.png
-metaImage: src/images/blog/red-shirt-disco-ball-wheelchair-cover.png
+featuredImage: ../images/blog/bob-haircut-black-blazer.jpg
+metaImage: src/images/blog/bob-haircut-black-blazer.jpg
 category: accessibility
 bio: Artist, writer, and ethical fashion enthusiast. She/her.
 bioImage: ../images/lourdes.jpg
