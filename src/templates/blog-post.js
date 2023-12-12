@@ -398,10 +398,11 @@ const QuoteContainer = styled.div`
 `
 const BioBox = styled.div`
   background-color: #051628;
-  padding: 1.5rem;
   display: flex;
-  justify-content: right;
   margin-top: 4em;
+  justify-content: left;
+  padding: 32px;
+  border-radius: 4px;
   @media (max-width: 768px) {
     display: block;
   }
@@ -429,6 +430,7 @@ const BioTextBox = styled.div`
     color: #2bc8d7;
     margin: 0;
     padding-bottom: 0.65rem;
+    padding-top: 0.5rem;
   }
   .BioH3 {
     font-size: 22px;
