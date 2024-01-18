@@ -5,24 +5,22 @@ import "../reset.css"
 import "../components/ourWork/styles/styles.css"
 import { graphql, useStaticQuery } from "gatsby"
 import { PopupText } from "react-calendly"
-import { Link } from "gatsby"
 
 import {
-  HeroImage,
-  Container,
-  HeroContainer,
-  Center,
-  HeroHeading,
-  HeroContent,
-  HeroText,
-  Contact,
-  ContactForm,
-  ContactFormLabel,
-  ContactFormInput,
-  ContactFormTextArea,
-  InputGroup,
-  ContactFormSubmit,
-  ButtonLink,
+    HeroImage,
+    Container,
+    HeroContainer,
+    Center,
+    HeroHeading,
+    HeroContent,
+    HeroText,
+    Contact,
+    ContactFormLabel,
+    ContactFormInput,
+    ContactFormTextArea,
+    InputGroup,
+    ContactFormSubmit,
+    ButtonLink,
 } from "../components/ourWork/styles"
 import { Group, Work } from "../components/ourWork/Works"
 import { Button } from "../components/shared/Button"
@@ -58,7 +56,7 @@ import JoniBG from "../components/ourWork/assets/joni-bg.svg"
  */
 
 export default function OurWork() {
-  const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query {
       moli: file(relativePath: { eq: "moli-industries.png" }) {
         childImageSharp {
@@ -223,216 +221,220 @@ export default function OurWork() {
       }
     }
   `)
-  const works = [
-    {
-      title: "Commit2Act",
-      image: data.commit2Act.childImageSharp.fluid,
-      background: Commit2ActBG,
-      link: "https://www.commit2act.org/",
-    },
-    {
-      title: "Code to Learn",
-      background: CodeToLearnBG,
-      image: data.codeToLearn.childImageSharp.fluid,
-      link: "https://www.codetolearn.ca/en",
-    },
-    {
-      title: "Your Voice is Power",
-      background: YourVoiceBG,
-      image: data.yourVoice.childImageSharp.fluid,
-      link: "https://www.yourvoiceispower.ca/",
-    },
-    {
-      title: "IIC Academy",
-      image: data.iicAcademy.childImageSharp.fluid,
-      background: IICBG,
-      link: "https://www.iicacademy.com/",
-    },
-    {
-      title: "Pelvic Health & Physiotherapy",
-      image: data.pelvicHealth.childImageSharp.fluid,
-      background: PelvicHealthBG,
-      link: "https://pelvic-floor.ca/",
-    },
-    {
-      title: "Rising Youth",
-      image: data.risingYouth.childImageSharp.fluid,
-      link: "https://www.risingyouth.ca/stories",
-    },
-    {
-      title: "Moli Industries LTD",
-      background: MoliBG,
-      image: data.moli.childImageSharp.fluid,
-      link: "https://moli.ca/"
-    },
-    {
-      title: "SnapTrade",
-      image: data.snaptrade.childImageSharp.fluid,
-      background: SnapTradeBG,
-      link: "https://snaptrade.com/",
-    },
-    {
-      title: "Grapevine Tattoo",
-      image: data.grapevineTattoo.childImageSharp.fluid,
-      link: "https://grapevinetattoo.com/",
-    },
-    {
-      title: "Sprout",
-      image: data.sprout.childImageSharp.fluid,
-      link: "https://www.sproutideas.org/",
-    },
-    {
-      title: "Connected North Webapp",
-      image: data.connectedNorthWebApp.childImageSharp.fluid,
+    const works = [
+        {
+            title: "Commit2Act",
+            image: data.commit2Act.childImageSharp.fluid,
+            background: Commit2ActBG,
+            link: "https://www.commit2act.org/",
+        },
+        {
+            title: "Code to Learn",
+            background: CodeToLearnBG,
+            image: data.codeToLearn.childImageSharp.fluid,
+            link: "https://www.codetolearn.ca/en",
+        },
+        {
+            title: "Your Voice is Power",
+            background: YourVoiceBG,
+            image: data.yourVoice.childImageSharp.fluid,
+            link: "https://www.yourvoiceispower.ca/",
+        },
+        {
+            title: "IIC Academy",
+            image: data.iicAcademy.childImageSharp.fluid,
+            background: IICBG,
+            link: "https://www.iicacademy.com/",
+        },
+        {
+            title: "Pelvic Health & Physiotherapy",
+            image: data.pelvicHealth.childImageSharp.fluid,
+            background: PelvicHealthBG,
+            link: "https://pelvic-floor.ca/",
+        },
+        {
+            title: "Rising Youth",
+            image: data.risingYouth.childImageSharp.fluid,
+            link: "https://www.risingyouth.ca/stories",
+        },
+        {
+            title: "Moli Industries LTD",
+            background: MoliBG,
+            image: data.moli.childImageSharp.fluid,
+            link: "https://moli.ca/"
+        },
+        {
+            title: "SnapTrade",
+            image: data.snaptrade.childImageSharp.fluid,
+            background: SnapTradeBG,
+            link: "https://snaptrade.com/",
+        },
+        {
+            title: "Grapevine Tattoo",
+            image: data.grapevineTattoo.childImageSharp.fluid,
+            link: "https://grapevinetattoo.com/",
+        },
+        {
+            title: "Sprout",
+            image: data.sprout.childImageSharp.fluid,
+            link: "https://www.sproutideas.org/",
+        },
+        {
+            title: "Connected North Webapp",
+            image: data.connectedNorthWebApp.childImageSharp.fluid,
 
-    },
-    {
-      title: "TakingITGlobal",
-      image: data.takingITGlobal.childImageSharp.fluid,
-      link: "https://takingitglobal.org/",
-    },
-    {
-      title: "Conneceted North",
-      image: data.connectedNorth.childImageSharp.fluid,
-      background: ConnectedNorthBG,
-      link: "https://www.connectednorth.org/",
-    },
-    {
-      title: "Whoseland PWA",
-      image: data.whoseLand.childImageSharp.fluid,
-      link: "https://www.whose.land/",
-    },
-    {
-      title: "Passiv",
-      image: data.passiv.childImageSharp.fluid,
-      background: PassivBG,
-      link: "https://passiv.com/",
-    },
-    {
-      title: "Pharmacy for Life",
-      image: data.pharmacyForLife.childImageSharp.fluid,
-      link: "https://pharmacyforlife.ca/",
-    },
-    {
-      title: "Nixit",
-      image: data.nixit.childImageSharp.fluid,
-      background: NixitBG,
+        },
+        {
+            title: "TakingITGlobal",
+            image: data.takingITGlobal.childImageSharp.fluid,
+            link: "https://takingitglobal.org/",
+        },
+        {
+            title: "Conneceted North",
+            image: data.connectedNorth.childImageSharp.fluid,
+            background: ConnectedNorthBG,
+            link: "https://www.connectednorth.org/",
+        },
+        {
+            title: "Whoseland PWA",
+            image: data.whoseLand.childImageSharp.fluid,
+            link: "https://www.whose.land/",
+        },
+        {
+            title: "Passiv",
+            image: data.passiv.childImageSharp.fluid,
+            background: PassivBG,
+            link: "https://passiv.com/",
+        },
+        {
+            title: "Pharmacy for Life",
+            image: data.pharmacyForLife.childImageSharp.fluid,
+            link: "https://pharmacyforlife.ca/",
+        },
+        {
+            title: "Nixit",
+            image: data.nixit.childImageSharp.fluid,
+            background: NixitBG,
 
-    },
-    {
-      title: "Watson and Barnard",
-      image: data.watsonAndBarnard.childImageSharp.fluid,
-      link: "https://wbsurveys.ca/",
-    },
-    {
-      title: "Stream of Consciousness",
-      image: data.streamOfConsciousness.childImageSharp.fluid,
-      link: "https://streamofconsciousness.ca/",
-    },
-    {
-      title: "Sprout Learning Portal",
-      image: data.sproutLearningPortal.childImageSharp.fluid,
+        },
+        {
+            title: "Watson and Barnard",
+            image: data.watsonAndBarnard.childImageSharp.fluid,
+            link: "https://wbsurveys.ca/",
+        },
+        {
+            title: "Stream of Consciousness",
+            image: data.streamOfConsciousness.childImageSharp.fluid,
+            link: "https://streamofconsciousness.ca/",
+        },
+        {
+            title: "Sprout Learning Portal",
+            image: data.sproutLearningPortal.childImageSharp.fluid,
 
-    },
-    {
-      title: "Commit2Act Webapp",
-      image: data.commit2ActWebApp.childImageSharp.fluid,
+        },
+        {
+            title: "Commit2Act Webapp",
+            image: data.commit2ActWebApp.childImageSharp.fluid,
 
-    },
-    {
-      title: "Purple Sector",
-      image: data.purpleSector.childImageSharp.fluid,
-      background: PurpleSectorBG,
+        },
+        {
+            title: "Purple Sector",
+            image: data.purpleSector.childImageSharp.fluid,
+            background: PurpleSectorBG,
 
-    },
-    {
-      title: "Joni",
-      image: data.joni.childImageSharp.fluid,
-      background: JoniBG,
-      link: "https://getjoni.com/",
-    },
-  ]
-  const w = serializeWorks(works)
+        },
+        {
+            title: "Joni",
+            image: data.joni.childImageSharp.fluid,
+            background: JoniBG,
+            link: "https://getjoni.com/",
+        },
+    ]
+    const w = serializeWorks(works)
 
-  return (
-    <Layout>
-      <SEO
-        title="Our Work"
-        description="Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces."
-        keywords={[
-          `Accessibility`,
-          `Web Design`,
-          `Web Development`,
-          `Canada`,
-          `British Columbia`,
-          `Ontario`,
-          `Nova Scotia`,
-          `Alberta`,
-          `Marketing`,
-          `User Experience`,
-          `Branding`,
-        ]}
-        image="https://heynova.io/static/laptop-planets-cc259abd5061e4d434e01ab4ce745fb1.svg"
-      />
+    return (
+        <Layout>
+            <SEO
+                title="Our Work"
+                description="Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces."
+                keywords={[
+                    `Accessibility`,
+                    `Web Design`,
+                    `Web Development`,
+                    `Canada`,
+                    `British Columbia`,
+                    `Ontario`,
+                    `Nova Scotia`,
+                    `Alberta`,
+                    `Marketing`,
+                    `User Experience`,
+                    `Branding`,
+                ]}
+                image="https://heynova.io/static/laptop-planets-cc259abd5061e4d434e01ab4ce745fb1.svg"
+            />
 
-      <Container>
-        <Center>
-          {/* HERO SECTION */}
-          <HeroContainer>
-            <HeroImage src={Hero} />
+            <Container>
+                <Center>
+                    {/* HERO SECTION */}
+                    <HeroContainer>
+                        <HeroImage src={Hero} />
 
-            <HeroContent>
-              <HeroHeading>Our Work</HeroHeading>
+                        <HeroContent>
+                            <HeroHeading>Our Work</HeroHeading>
 
-              <HeroText>
-                Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces.
-              </HeroText>
+                            <HeroText>
+                                Where creativity meets accessibility; see how we’ve transformed our client’s ideas into beautiful and inclusive digital spaces.
+                            </HeroText>
 
-              <ButtonLink to="/contact">Get in Touch</ButtonLink>
-            </HeroContent>
-          </HeroContainer>
-        </Center>
+                            <ButtonLink to="/contact">Get in Touch</ButtonLink>
+                        </HeroContent>
+                    </HeroContainer>
+                </Center>
 
-        {/* WORK SECTION */}
-        <Center className="works">
-          {w.map((a, i) => (
-            <Group key={i} reverse={i % 2 === 0 ? false : true}>
-              {a.map((project, j) => (
-                <Work key={j + i} {...project} />
-              ))}
-            </Group>
-          ))}
-        </Center>
+                {/* WORK SECTION */}
+                <Center className="works">
+                    {w.map((a, i) => (
+                        <Group key={i} reverse={i % 2 === 0 ? false : true}>
+                            {a.map((project, j) => (
+                                <Work key={j + i} {...project} />
+                            ))}
+                        </Group>
+                    ))}
+                </Center>
 
-        <Contact>
-          <p>Like what you see? Let's chat.</p>
+                <Contact>
+                    <p>Like what you see? Let's chat.</p>
 
-          <form netlify name="contact" id="contact-form" action="/ourwork">
-            <InputGroup>
-              <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
-              <ContactFormInput id="email" name="email" />
-            </InputGroup>
+                    <form netlify name="contact" id="contact-form" action="/ourwork">
+                        <InputGroup>
+                            <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
+                            <ContactFormInput id="email" name="email" />
+                        </InputGroup>
 
-            <InputGroup>
-              <ContactFormLabel htmlFor="message">Message</ContactFormLabel>
-              <ContactFormTextArea id="message" name="message" />
-            </InputGroup>
+                        <InputGroup>
+                            <ContactFormLabel htmlFor="message">Message</ContactFormLabel>
+                            <ContactFormTextArea id="message" name="message" />
+                        </InputGroup>
 
-            <ContactFormSubmit className="submit">
-              <Button type="submit">Send Message</Button>
+                        <ContactFormSubmit className="submit">
+                            <Button type="submit">Send Message</Button>
 
-              <p>or</p>
+                            <p style={{ marginBottom: 0 }}>or</p>
 
-              <PopupText
-                text="Book a Call"
-                url="https://calendly.com/hey-nova/free-consultation"
-              />
-            </ContactFormSubmit>
-          </form>
-        </Contact>
-      </Container>
-    </Layout>
-  )
+                            <PopupText
+                                text="Book a Call"
+                                url="https://calendly.com/hey-nova/free-consultation"
+                                styles={{
+                                    color: "white", 
+
+                                }}
+                            />
+                        </ContactFormSubmit>
+                    </form>
+                </Contact>
+            </Container>
+        </Layout>
+    )
 }
 
 /**
@@ -440,13 +442,13 @@ export default function OurWork() {
  * @returns {import("../components/ourWork/Works/Works").WorkProps[][]}
  */
 function serializeWorks(w) {
-  /** @type {import("../components/ourWork/Works/Works").WorkProps[]} */
-  const buf = []
-  for (let i = 0; i < w.length; i += 3) {
-    let j = i + 3
-    if (j >= w.length - 1) j = w.length - 1
-    buf.push(w.slice(i, i + 3))
-  }
+    /** @type {import("../components/ourWork/Works/Works").WorkProps[]} */
+    const buf = []
+    for (let i = 0; i < w.length; i += 3) {
+        let j = i + 3
+        if (j >= w.length - 1) j = w.length - 1
+        buf.push(w.slice(i, i + 3))
+    }
 
-  return buf
+    return buf
 }

@@ -68,42 +68,40 @@ const Number = styled.span`
   background: url(${Bg}) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #0000;
-  background-attachment: fixed;
-  background-size: cover;
   @media (max-width: 1026px) {
     font-size: 96px;
   }
 `
 
 export default () => (
-  <What>
-    <Container>
-      <H2>We believe in the power of knowledge</H2>
-      <HeadingParagraph>
-        So let's look at how accessibility affects the digital space
-      </HeadingParagraph>
-      <Flex>
-        <FlexBox>
-          <P>
-            <Number>98.1%</Number> of 1,000,000 websites tested in February 2020
-            failed accessibility testing - and that’s just from automated tests!
-          </P>
-        </FlexBox>
-        <FlexBox>
-          <P>
-            <Number>22%</Number> of Canadians have at least one disability that
-            affects their sight, hearing, or dexterity. 54% of adults living
-            with a disability currently go online.
-          </P>
-        </FlexBox>
-        <FlexBox>
-          <P>
-            <Number>88%</Number> of online shoppers won’t return to a website
-            after having a bad user experience. When you make your website
-            accessible you give everyone the best user experience.
-          </P>
-        </FlexBox>
-      </Flex>
-    </Container>
-  </What>
+    <What>
+        <Container>
+            <H2>We believe in the power of knowledge</H2>
+            <HeadingParagraph>
+                So let's look at how accessibility affects the digital space
+            </HeadingParagraph>
+            <Flex>
+                <FlexBox>
+                    <P>
+                        <Number>98.1%</Number> of 1,000,000 websites tested in February 2020
+                        failed accessibility testing - and that’s just from automated tests!
+                    </P>
+                </FlexBox>
+                <FlexBox>
+                    <P>
+                        <Number>22%</Number> of Canadians have at least one disability that
+                        affects their sight, hearing, or dexterity. 54% of adults living
+                        with a disability currently go online.
+                    </P>
+                </FlexBox>
+                <FlexBox>
+                    <P>
+                        <Number>88%</Number> of online shoppers won’t return to a website
+                        after having a bad user experience. When you make your website
+                        accessible you give everyone the best user experience.
+                    </P>
+                </FlexBox>
+            </Flex>
+        </Container>
+    </What>
 )
