@@ -13,6 +13,7 @@ export default function HTML(props) {
         />
         <link rel="stylesheet" href="https://use.typekit.net/sty6ouh.css" />
         {props.headComponents}
+        <meta name="facebook-domain-verification" content="dh3l0i08nvrv1ezen3zagqqlnex5w8" />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

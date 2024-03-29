@@ -42,14 +42,11 @@ import PelvicHealthBG from "../components/ourWork/assets/pelvic-health-bg.svg"
 
 import Commit2ActBG from "../components/ourWork/assets/commit2act-bg.svg"
 
-import SnapTradeBG from "../components/ourWork/assets/snaptrade-bg.svg"
-
 
 import ConnectedNorthBG from "../components/ourWork/assets/connected-north-bg.svg"
 import PassivBG from "../components/ourWork/assets/passiv-bg.svg"
 
 import NixitBG from "../components/ourWork/assets/nixit-bg.svg"
-import PurpleSectorBG from "../components/ourWork/assets/purple-sector-bg.svg"
 import JoniBG from "../components/ourWork/assets/joni-bg.svg"
 
 
@@ -266,17 +263,6 @@ export default function OurWork() {
       link: "https://moli.ca/"
     },
     {
-      title: "SnapTrade",
-      image: data.snaptrade.childImageSharp.fluid,
-      background: SnapTradeBG,
-      link: "https://snaptrade.com/",
-    },
-    {
-      title: "Grapevine Tattoo",
-      image: data.grapevineTattoo.childImageSharp.fluid,
-      link: "https://grapevinetattoo.com/",
-    },
-    {
       title: "Sprout",
       image: data.sprout.childImageSharp.fluid,
       link: "https://www.sproutideas.org/",
@@ -337,12 +323,6 @@ export default function OurWork() {
     {
       title: "Commit2Act Webapp",
       image: data.commit2ActWebApp.childImageSharp.fluid,
-
-    },
-    {
-      title: "Purple Sector",
-      image: data.purpleSector.childImageSharp.fluid,
-      background: PurpleSectorBG,
 
     },
     {
