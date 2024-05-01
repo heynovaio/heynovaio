@@ -61,7 +61,7 @@ const H1 = styled.h1`
   font-size: 70px;
   line-height: 90px;
   letter-spacing: -0.224359px;
-  color: #0d2c4c;
+  color: var(--HN-Indigo);
   margin: 30px 0 20px;
   font-family: Stolzl;
 
@@ -75,7 +75,7 @@ const H1 = styled.h1`
 const P = styled.p`
   font-size: 18px;
   line-height: 1.7;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 20px 0 20px;
   font-family: Ubuntu;
   @media (max-width: 960px) {
@@ -84,7 +84,7 @@ const P = styled.p`
 `
 const Button = styled.div`
   a {
-    background-color: #d5330d;
+    background-color: var(--HN-Fuchsia);
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -94,7 +94,11 @@ const Button = styled.div`
     text-decoration: none;
     margin-top: 20px;
     border: none;
+    border-radius: 25px;
     display: inline-block;
+  }
+  &:hover {
+    filter: grayscale(20%);
   }
 `
 
@@ -111,7 +115,7 @@ function Hero() {
         <Button>
           <PopupText
             text="Book a Free Consult"
-            url="https://calendly.com/hey-nova/free-consultation"
+            url="https://calendly.com/hey-nova/free-consult"
           />
         </Button>
       </ContentContainer>

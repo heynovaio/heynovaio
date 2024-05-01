@@ -66,7 +66,7 @@ const HeaderContainer = styled.div`
 `
 const TitleBox = styled.div`
   display: inline-block;
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   width: 60%;
   padding: 3rem 2.5rem 4rem;
   margin-left: -4%;
@@ -142,7 +142,7 @@ const BlogDate = styled.small`
   ::before {
     display: inline-block;
     content: "";
-    border-top: 0.28rem solid #d5330d;
+    border-top: 0.28rem solid var(--HN-Fuchsia);
     width: 36px;
     margin-right: 0.75rem;
     transform: translateY(-0.25rem);
@@ -155,7 +155,7 @@ const BlogTag = styled.small`
   font-family: Ubuntu;
   font-size: 20px;
   letter-spacing: 0.23px;
-  color: #d5330d;
+  color: var(--HN-Fuchsia);
   font-weight: 700;
   text-transform: uppercase;
 `
@@ -179,8 +179,8 @@ const LeftSide = styled.div`
     content: "";
     position: absolute;
     z-index: 1;
-    border-top: 5px solid #d53410;
-    border-left: 5px solid #d53410;
+    border-top: 5px solid var(--HN-Fuchsia);
+    border-left: 5px solid var(--HN-Fuchsia);
     top: -20px;
     left: -32px;
   }
@@ -189,7 +189,7 @@ const LeftSide = styled.div`
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 0.38px;
-    color: #051628;
+    color: var(--HN-Indigo);
     padding: 1.5rem 0 1rem;
   }
   p {
@@ -197,7 +197,7 @@ const LeftSide = styled.div`
     font-size: 21px;
     line-height: 1.75;
     letter-spacing: 0.25px;
-    color: #051628;
+    color: var(--HN-Indigo);
   }
   img {
     width: 100%;
@@ -237,7 +237,7 @@ const LeftSide = styled.div`
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.25px;
-    color: #051628;
+    color: var(--HN-Indigo);
     list-style: disc;
     margin: 2rem 0;
     padding-left: 34px;
@@ -261,7 +261,7 @@ const LeftSide = styled.div`
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.25px;
-    color: #051628;
+    color: var(--HN-Indigo);
     margin: 2rem 0 2rem 0.75rem;
     list-style: none;
     counter-reset: my-awesome-counter;
@@ -274,7 +274,7 @@ const LeftSide = styled.div`
       line-height: 1.5;
       &:before {
         content: counter(my-awesome-counter) ". ";
-        color: #d53410;
+        color: var(--HN-Fuchsia);
         font-weight: bold;
         left: 0;
         font-size: 1.4rem;
@@ -296,7 +296,7 @@ const LeftSide = styled.div`
       font-size: 28px;
     }
     a {
-      color: #051628;
+      color: var(--HN-Indigo);
     }
   }
   .bluebox {
@@ -365,7 +365,7 @@ const SocialButtons = styled.div`
     font-family: Stolzl;
     font-size: 26px;
     font-weight: bold;
-    color: #051628;
+    color: var(--HN-Indigo);
   }
   button {
     display: block;
@@ -397,7 +397,7 @@ const QuoteContainer = styled.div`
   height: 100%;
 `
 const BioBox = styled.div`
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   display: flex;
   margin-top: 4em;
   justify-content: left;
@@ -451,7 +451,7 @@ const BioTextBox = styled.div`
 `
 
 const ConsultBox = styled.div`
-  color: #051628;
+  color: var(--HN-Indigo);
   max-width: 625px;
   text-align: center;
   margin: 0 auto;
@@ -466,7 +466,8 @@ const ConsultBox = styled.div`
 `
 
 const Button = styled(Link)`
-  background-color: #d5330d;
+  border-radius: 25px;
+  background-color: var(--HN-Fuchsia);
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -478,6 +479,9 @@ const Button = styled(Link)`
   border: none;
   display: inline-block;
   cursor: pointer;
+  &:hover {
+    filter: grayscale(20%);
+  }
 `
 
 export default function BlogPost({ data }) {

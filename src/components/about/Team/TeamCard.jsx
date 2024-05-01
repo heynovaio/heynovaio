@@ -37,7 +37,7 @@ const Name = styled.h3`
   font-size: 30px;
   line-height: 44px;
   letter-spacing: -0.5px;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   flex: none;
   order: 1;
   align-self: stretch;
@@ -49,14 +49,14 @@ const Title = styled.h4`
   font-weight: 500;
   font-size: 20px;
   line-height: 35px;
-  color: #d5330d;
+  color: var(--HN-Fuchsia);
   margin-bottom: 12px;
 `
 
 const Desc = styled.p`
   font-size: 18px;
   line-height: 150%;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin-bottom: 0.5rem;
 `
 

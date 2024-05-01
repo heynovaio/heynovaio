@@ -81,8 +81,8 @@ export const Center = styled.div`
 `
 
 export const Button = styled.button`
-  border-radius: 40px;
-  background: #d5330d;
+  border-radius: 25px;
+  background: var(--HN-Fuchsia);
   padding: 13px 20px;
   color: #fff;
   text-align: center;
@@ -96,12 +96,12 @@ export const Button = styled.button`
   transition: filter 150ms ease-in-out;
   &:hover {
     cursor: pointer;
-    filter: grayscale(0.2);
+    filter: grayscale(20%);
   }
 `
 
 export const Contact = styled.section`
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   color: #fff;
   font-family: Stolzl;
   font-size: 20px;
@@ -113,10 +113,10 @@ export const Contact = styled.section`
 `
 
 export const ButtonLink = styled(Link)`
-  border-radius: 3px;
+  border-radius: 25px;
   width: 197px;
   padding: 15px 0 18px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   margin: 45px 0 0;
   display: block;
   font-size: 18px;
@@ -127,7 +127,7 @@ export const ButtonLink = styled(Link)`
   font-family: Stolzl;
   text-decoration: none;
   &:hover {
-    background: #ae2a09;
+    filter: grayscale(20%);
   }
 `
 
@@ -176,8 +176,10 @@ export const ContactFormSubmit = styled.div`
     text-decoration: underline;
     text-transform: uppercase;
     padding: 13px 20px;
+    color: var(--HN-Teal);
     &:hover {
       cursor: pointer;
+      color: var(--HN-Fuchsia);
     }
   }
 

@@ -15,7 +15,7 @@ const ContentContainer = styled.div`
     font-size: 110px;
     font-weight: 500;
     line-height: 1.04;
-    color: #0a2239;
+    color: var(--HN-Indigo);
     margin: 0 0 25px;
     font-family: Stolzl;
     text-align: center;
@@ -59,7 +59,7 @@ const BlogPreview = styled.div`
       font-size: 36px;
       line-height: 1.25;
       letter-spacing: -0.13px;
-      color: #051628;
+      color: var(--HN-Indigo);
       font-weight: 400;
       padding: 0.25rem 0 0.5rem;
       margin: 0;
@@ -127,11 +127,11 @@ const BlogTag = styled.small`
   }
 `
 const BlogAuth = styled.small`
-  color: #051628;
+  color: var(--HN-Indigo);
   ::before {
     display: inline-block;
     content: "";
-    border-top: 0.2rem solid #d5330d;
+    border-top: 0.2rem solid var(--HN-Fuchsia);
     width: 26px;
     margin-right: 0.75rem;
     transform: translateY(-0.2rem);
@@ -149,7 +149,7 @@ const BlogDate = styled.span`
 `
 
 const P = styled.p`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   max-width: 756px;
   font-size: 26px;
   line-height: 1.64;

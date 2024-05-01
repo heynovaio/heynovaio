@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 const HeroSection = styled.section`
-  background-color: #051627;
+  background-color: var(--HN-Indigo);
   padding: 0 20px 20px;
   position: relative;
   @media (min-width: 1026px) {
@@ -57,10 +57,10 @@ const ContentContainer = styled.div`
   }
 `
 const Button = styled(Link)`
-  border-radius: 3px;
+  border-radius: 25px;
   width: 197px;
   padding: 15px 0 18px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   margin: 45px 0 0;
   display: block;
   font-size: 18px;
@@ -71,7 +71,7 @@ const Button = styled(Link)`
   font-family: Stolzl;
   text-decoration: none;
   &:hover {
-    background: #ae2a09;
+    filter: grayscale(20%);
   }
 `
 const ImgContainer = styled.div`

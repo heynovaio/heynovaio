@@ -20,7 +20,7 @@ module.exports = {
         includePaths: [{ regex: "^/blog" }],
         excludePaths: ["/blog"],
         height: 10,
-        color: `#d5330d;`,
+        color: `var(--HN-Fuchsia)`,
         footerHeight: 500,
       },
     },
