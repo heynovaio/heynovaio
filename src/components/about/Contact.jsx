@@ -20,7 +20,7 @@ export function Contact() {
           <ButtonSecondary>
             <PopupText
               text="BOOK A CALL"
-              url="https://calendly.com/hey-nova/free-consultation"
+              url="https://calendly.com/hey-nova/free-consult"
             />
           </ButtonSecondary>
         </Div>
@@ -52,7 +52,7 @@ const Div = styled.div`
 `
 const ButtonSubmit = styled.button`
   padding: 18px 37px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   width: max-content;
   font-family: Stolzl;
   font-size: 18px;
@@ -60,7 +60,7 @@ const ButtonSubmit = styled.button`
   line-height: 22px;
   color: white;
   border: none;
-  border-radius: 40px;
+  border-radius: 25px;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 200ms;
@@ -69,7 +69,7 @@ const ButtonSubmit = styled.button`
     outline: 4px solid hsla();
   }
   &:hover {
-    filter: grayscale(15%);
+    filter: grayscale(20%);
   }
 `
 const ButtonSecondary = styled.div`
@@ -83,7 +83,10 @@ const ButtonSecondary = styled.div`
   text-decoration: underline;
   text-transform: uppercase;
   & > a {
-    color: #0a2239;
+    color: var(--HN-Indigo);
+  }
+  & > a:hover{
+    color: var(--HN-Fuchsia)
   }
 `
 
@@ -104,6 +107,7 @@ const Section = styled.section`
     }
   }
   h3 {
+    color: var(--HN-Indigo);
     margin-top: 10rem;
     font-family: Stolzl;
     font-size: 40px;
@@ -115,6 +119,7 @@ const Section = styled.section`
   label,
   input,
   textarea {
+    color: var(--HN-Indigo);
     display: block;
     width: 100%;
     max-width: 665px;

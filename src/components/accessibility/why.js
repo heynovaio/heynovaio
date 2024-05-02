@@ -4,7 +4,7 @@ import Bg from "../../images/space-background.jpg"
 import { Link } from "gatsby"
 
 const WhySection = styled.section`
-  color: #0a2239;
+  color: var(--HN-Indigo);
 `
 const ContentContainer = styled.div`
   max-width: 1288px;
@@ -38,7 +38,7 @@ const StickyBox = styled.div`
   h2::before {
     display: inline-block;
     content: "";
-    border-top: 0.28rem solid #d5330d;
+    border-top: 0.28rem solid var(--HN-Fuchsia);
     width: 36px;
     margin-right: 0.75rem;
     transform: translateY(-0.25rem);
@@ -153,7 +153,7 @@ const Sub = styled.div`
 `
 
 const QuoteBox = styled.div`
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
   padding: 30px 35px 45px;
   h3 {
     font-family: Stolzl;
@@ -196,7 +196,7 @@ const QuoteBox = styled.div`
 
 const Line = styled.span`
   content:'';
-  background: #d5330d;
+  background: var(--HN-Fuchsia);
   height: 1.5px;
   width: 35px;
   margin: 0px 10px 0;
@@ -210,13 +210,13 @@ const Line = styled.span`
     height: 0;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-left: 8px solid #d5330d;
+    border-left: 8px solid var(--HN-Fuchsia)
 `
 
 const P = styled.p`
   font-size: 18px;
   line-height: 1.7;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 20px 0 20px;
   font-family: Ubuntu;
 `

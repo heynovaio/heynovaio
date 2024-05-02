@@ -22,7 +22,7 @@ const ContentContainer = styled.div`
     font-size: 60px;
     line-height: 60px;
     letter-spacing: -1px;
-    color: #0a2239;
+    color: var(--HN-Indigo);
     padding-bottom: 100px;
     margin: 0;
     text-align: center;
@@ -44,7 +44,7 @@ const ContentContainer = styled.div`
 `
 const QuoteBox = styled.div`
   max-width: 75%;
-  background: #0a2239;
+  background: var(--HN-Indigo);
   border-radius: 4px;
   padding: 30px 45px 0 40px;
   margin: 0;
@@ -62,7 +62,7 @@ const QuoteBox = styled.div`
     font-family: Stolzl;
     font-size: 26px;
     line-height: 31px;
-    color: #d5330d;
+    color: var(--HN-Fuchsia);
     font-weight: 400;
     margin: 0;
   }
@@ -75,7 +75,7 @@ const SigBox = styled.div`
   h4 {
     padding: 5px 0 30px 40px;
     max-width: 27.5%;
-    background: #0a2239;
+    background: var(--HN-Indigo);
     margin: 0;
     border-radius: 4px;
     transform: translateY(-5px);
@@ -85,7 +85,7 @@ const SigBox = styled.div`
   h5 {
     padding: 5px 0 30px 40px;
     max-width: 15%;
-    background: #0a2239;
+    background: var(--HN-Indigo);
     margin: 0;
     border-radius: 4px;
     transform: translateY(-30px);

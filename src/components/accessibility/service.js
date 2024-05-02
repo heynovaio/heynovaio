@@ -9,7 +9,7 @@ import ProcessGraphic from "../../images/process-consulting.svg"
 import { Link } from "gatsby"
 
 const ServiceSection = styled.section`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   padding-bottom: 0;
 `
 const ContentContainer = styled.div`
@@ -44,7 +44,7 @@ const NonStickyBox = styled.div`
   h3::before {
     display: inline-block;
     content: "";
-    border-top: 0.28rem solid #d5330d;
+    border-top: 0.28rem solid var(--HN-Fuchsia);
     width: 36px;
     margin-right: 0.75rem;
     transform: translateY(-0.25rem);
@@ -96,7 +96,7 @@ const BookLink = styled(Link)`
 `
 const Line = styled.span`
   content: "";
-  background: #d5330d;
+  background: var(--HN-Fuchsia);
   height: 1.5px;
   width: 35px;
   margin: 0px 10px 0;
@@ -110,7 +110,7 @@ const Line = styled.span`
     height: 0;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-left: 8px solid #d5330d;
+    border-left: 8px solid var(--HN-Fuchsia);
   }
 `
 const ListBox = styled.div`
@@ -161,7 +161,7 @@ const ServiceHeader = styled.div`
   .Subheader {
     font-size: 18px;
     line-height: 1.7;
-    color: #0a2239;
+    color: var(--HN-Indigo);
     margin: 20px 0 20px;
     font-family: Ubuntu;
   }
@@ -180,13 +180,13 @@ const ServiceFooter = styled.div`
 const P = styled.p`
   font-size: 18px;
   line-height: 1.7;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 20px 0 20px;
   font-family: Ubuntu;
 `
 const Button = styled.div`
   a {
-    background-color: #d5330d;
+    background-color: var(--HN-Fuchsia);
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -196,7 +196,11 @@ const Button = styled.div`
     text-decoration: none;
     margin-top: 20px;
     border: none;
+    border-radius: 25px;
     display: inline-block;
+  }
+  & > a:hover {
+    filter: grayscale(20%);
   }
 `
 const FlexBox = styled.div`
@@ -217,7 +221,7 @@ const FlexBox = styled.div`
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.38px;
-    color: #0a2239;
+    color: var(--HN-Indigo);
   }
   p {
     font-weight: 400;
@@ -508,7 +512,7 @@ function Service() {
           <Button>
             <PopupText
               text="Book a Free Consult"
-              url="https://calendly.com/hey-nova/free-consultation"
+              url="https://calendly.com/hey-nova/free-consult"
             />
           </Button>
         </ServiceFooter>

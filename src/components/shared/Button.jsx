@@ -10,7 +10,7 @@ export function Button({ children, ...rest }) {
 
 const Btn = styled.button`
   padding: 18px 37px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   width: max-content;
   font-family: Stolzl;
   font-size: 18px;
@@ -26,6 +26,6 @@ const Btn = styled.button`
     outline: 4px solid hsla();
   }
   &:hover {
-    filter: grayscale(15%);
+    filter: grayscale(20%);
   }
 `
