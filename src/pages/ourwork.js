@@ -27,7 +27,7 @@ import {
 import { Group, Work } from "../components/ourWork/Works"
 import { Button } from "../components/shared/Button"
 
-import Hero from "../components/ourWork/assets/hero.svg"
+import Hero from "../components/ourWork/assets/heroX2.png"
 
 import MoliBG from "../components/ourWork/assets/moli-bg.svg"
 
