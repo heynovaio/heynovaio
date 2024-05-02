@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
-import BgMobile from "../assets/bgmobile.svg"
-import BgDesktop from "../assets/bgdesktop.svg"
+import BgMobile from "../assets/bg-mobile.svg"
+import BgDesktop from "../assets/bg-desktop.svg"
 import { Link } from "gatsby"
 
 export const HeroImage = styled.img`
