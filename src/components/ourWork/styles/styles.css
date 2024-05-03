@@ -60,7 +60,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  color: #000;
+  color: #0F002E;
   font-size: 18px;
   font-family: Stolzl;
   font-style: normal;
@@ -152,5 +152,9 @@
 @media only screen and (max-width: 980px) {
   .blooming-house .bg {
     transform: scale(0.45) translate(-75%, 65%);
+  }
+
+  .commit2act .bg {
+    transform: scale(0.5) translate(-55%, 75%);
   }
 }
