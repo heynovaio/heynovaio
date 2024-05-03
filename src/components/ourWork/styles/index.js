@@ -43,11 +43,7 @@ export const HeroHeading = styled.h1`
   @media only screen and (min-width: 900px) {
     font-size: 90px;
   }
-  background: -webkit-linear-gradient(#ffffff, #49e1ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #051627;
+  color: #0F002E;
 `
 
 export const HeroText = styled.p`
