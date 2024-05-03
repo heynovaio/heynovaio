@@ -44,7 +44,6 @@ import Commit2ActBG from "../components/ourWork/assets/commit2act-bg.svg"
 import ConnectedNorthBG from "../components/ourWork/assets/connected-north-bg.svg"
 import PassivBG from "../components/ourWork/assets/passiv-bg.svg"
 
-import NixitBG from "../components/ourWork/assets/nixit-bg.svg"
 import JoniBG from "../components/ourWork/assets/joni-bg.svg"
 
 import BloomingHouseBg from "../components/ourWork/assets/blooming-house-bg.svg"
