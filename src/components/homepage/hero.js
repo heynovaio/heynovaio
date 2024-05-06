@@ -11,7 +11,7 @@ const HeroSection = styled.section`
   position: relative;
   @media (min-width: 1026px) {
     background-image: url(${img1});
-    background-size: 620px 585px;
+    background-size: 690px 655px;
     background-position: right bottom;
     background-repeat: no-repeat;
   }
@@ -84,15 +84,15 @@ const ImgContainer = styled.div`
 `
 const Planet1 = styled.div`
   position: absolute;
-  bottom: -101px;
-  right: 50px;
+  bottom: -105px;
+  right: 63px;
   @media (max-width: 768px) {
     display: none;
   }
 `
 const Planet2 = styled.div`
   position: absolute;
-  bottom: 255px;
+  bottom: 285px;
   right: 10px;
   @media (max-width: 900px) {
     bottom: 577px;
@@ -104,8 +104,8 @@ const Planet2 = styled.div`
 `
 const Planet3 = styled.div`
   position: absolute;
-  bottom: 55px;
-  right: 320px;
+  bottom: 70px;
+  right: 365px;
   @media (max-width: 768px) {
     right: 0px;
     bottom: -7px;
@@ -117,14 +117,14 @@ function Hero() {
     query {
       Planet1: file(relativePath: { eq: "planet1-img.png" }) {
         childImageSharp {
-          fixed(width: 235, quality: 100) {
+          fixed(width: 245, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       Planet2: file(relativePath: { eq: "planet2-img.png" }) {
         childImageSharp {
-          fixed(width: 210, quality: 100) {
+          fixed(width: 220, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
