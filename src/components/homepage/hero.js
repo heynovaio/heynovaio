@@ -25,7 +25,7 @@ const HeroSection = styled.section`
     font-size: 90px;
     font-weight: 500;
     line-height: 1.04;
-    color: #0fa3b1;
+    color: #97E1E5;
     margin: 0 0 25px;
     font-family: Stolzl;
     @media (max-width: 1026px) {
