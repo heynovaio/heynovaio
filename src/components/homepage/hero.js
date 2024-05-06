@@ -84,7 +84,7 @@ const ImgContainer = styled.div`
 `
 const Planet1 = styled.div`
   position: absolute;
-  bottom: -105px;
+  bottom: -110px;
   right: 63px;
   @media (max-width: 768px) {
     display: none;
@@ -117,7 +117,7 @@ function Hero() {
     query {
       Planet1: file(relativePath: { eq: "planet1-img.png" }) {
         childImageSharp {
-          fixed(width: 245, quality: 100) {
+          fixed(width: 255, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
