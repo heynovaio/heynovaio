@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
-import img1 from "../../images/planet-bg.webp"
+import img1 from "../../images/homepage-hero-img.png"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
@@ -84,16 +84,16 @@ const ImgContainer = styled.div`
 `
 const Planet1 = styled.div`
   position: absolute;
-  bottom: -60px;
-  right: 0;
+  bottom: -101px;
+  right: 50px;
   @media (max-width: 768px) {
     display: none;
   }
 `
 const Planet2 = styled.div`
   position: absolute;
-  bottom: 300px;
-  right: 50px;
+  bottom: 255px;
+  right: 10px;
   @media (max-width: 900px) {
     bottom: 577px;
   }
@@ -104,8 +104,8 @@ const Planet2 = styled.div`
 `
 const Planet3 = styled.div`
   position: absolute;
-  bottom: 100px;
-  right: 300px;
+  bottom: 55px;
+  right: 320px;
   @media (max-width: 768px) {
     right: 0px;
     bottom: -7px;
@@ -115,23 +115,23 @@ const Planet3 = styled.div`
 function Hero() {
   const data = useStaticQuery(graphql`
     query {
-      Planet1: file(relativePath: { eq: "hero-planet1.png" }) {
+      Planet1: file(relativePath: { eq: "planet1-img.png" }) {
         childImageSharp {
-          fixed(width: 192, quality: 100) {
+          fixed(width: 235, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
-      Planet2: file(relativePath: { eq: "hero-planet2.png" }) {
+      Planet2: file(relativePath: { eq: "planet2-img.png" }) {
         childImageSharp {
-          fixed(width: 180, quality: 100) {
+          fixed(width: 210, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
-      Planet3: file(relativePath: { eq: "hero-planet3.png" }) {
+      Planet3: file(relativePath: { eq: "planet3-img.png" }) {
         childImageSharp {
-          fixed(width: 153, quality: 100) {
+          fixed(width: 130, quality: 100) {
             ...GatsbyImageSharpFixed_noBase64
           }
         }
