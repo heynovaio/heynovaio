@@ -150,7 +150,6 @@
   .commit2act .bg {
     transform: translateY(350px);
   }
-
 }
 
 @media only screen and (max-width: 980px) {
@@ -163,5 +162,8 @@
   }
   .iic-academy .bg {
     transform: scale(1.6);
+  }
+  .moli-industries-ltd .bg {
+    transform: scale(1.1) translate(-16px, 30px);
   }
 }
