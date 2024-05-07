@@ -169,4 +169,7 @@
   .connected-north .bg {
     transform: translate(-55px, 4px);
   }
+  .joni .bg {
+    transform: scale(1.35);
+  }
 }
