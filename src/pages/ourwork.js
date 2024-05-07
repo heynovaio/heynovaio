@@ -203,6 +203,13 @@ export default function OurWork() {
           }
         }
       }
+      createToLearn: file(relativePath: { eq: "create-to-learn.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   const works = [
@@ -308,6 +315,11 @@ export default function OurWork() {
       image: data.iicAcademy.childImageSharp.fluid,
       background: IICBG,
       link: "https://www.iicacademy.com/",
+    },
+    {
+      title: "Create to Learn",
+      image: data.createToLearn.childImageSharp.fluid,
+      link: "https://www.createtolearn.ca/",
     },
   ]
   const w = serializeWorks(works)
