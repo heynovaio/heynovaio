@@ -135,7 +135,7 @@
 }
 
 .blooming-house .bg {
-  transform: scale(0.45) translate(-400px, 650px) ;
+  transform: scale(0.45) translate(-400px, 650px);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -160,5 +160,8 @@
 
   .commit2act .bg {
     transform: scale(0.5) translate(-55%, 75%);
+  }
+  .iic-academy .bg {
+    transform: scale(1.6);
   }
 }
