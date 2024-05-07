@@ -14,6 +14,10 @@
 
 .work-card {
   position: relative;
+  border-left: 2px solid #6dc9cf69;
+  border-bottom: 2px solid #6dc9cf88;
+  border-right: 2px solid rgba(255, 255, 255, 0.466);
+  border-top: 2px solid #6dc9cf50;
   border-radius: 12.767px;
   width: 80vw;
   height: 40vh;
@@ -29,18 +33,6 @@
   place-items: center;
   margin: 0 auto;
   backdrop-filter: blur(2px);
-}
-
-/* Conflicting with the transparent background above when it sits behind it, so unable to use to create the gradient border around the work-card */
-.work-card::before {
-  background: linear-gradient(red, blue); 
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 .work-grid .work-card:first-child .img {
