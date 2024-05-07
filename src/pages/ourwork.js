@@ -261,7 +261,7 @@ export default function OurWork() {
       link: "https://www.whose.land/",
     },
     {
-      title: "Conneceted North",
+      title: "Connected North",
       image: data.connectedNorth.childImageSharp.fluid,
       background: ConnectedNorthBG,
       link: "https://www.connectednorth.org/",

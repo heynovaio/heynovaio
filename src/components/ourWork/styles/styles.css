@@ -166,4 +166,7 @@
   .moli-industries-ltd .bg {
     transform: scale(1.1) translate(-16px, 30px);
   }
+  .connected-north .bg {
+    transform: translate(-55px, 4px);
+  }
 }
