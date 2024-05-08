@@ -1,6 +1,4 @@
 import styled from "@emotion/styled"
-import BgMobile from "../assets/bg-mobile.svg"
-import BgDesktop from "../assets/bg-desktop.svg"
 import { Link } from "gatsby"
 
 export const HeroImage = styled.img`
@@ -59,12 +57,10 @@ export const HeroText = styled.p`
 `
 
 export const Container = styled.div`
-  background-image: url(${BgMobile});
+  background: radial-gradient(751.95% 45.58% at 89.31% 52.02%, #63B2B9 0.96%, #C8F2F5 25.5%, rgba(150, 224, 229, 0.382722) 46.5%, #97E1E6 78%, rgba(151, 225, 230, 0.37) 100%);
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (min-width: 900px) {
-    background-image: url(${BgDesktop});
-  }
 `
 
 export const Center = styled.div`
