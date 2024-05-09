@@ -31,6 +31,7 @@ export function Contact() {
 
 const Div = styled.div`
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,13 +81,28 @@ const ButtonSecondary = styled.div`
   line-height: 24px;
   background-color: transparent;
   border: none;
-  text-decoration: underline;
   text-transform: uppercase;
   & > a {
-    color: var(--HN-Indigo);
-  }
-  & > a:hover{
-    color: var(--HN-Fuchsia)
+    padding: 18px 37px;
+    background-color: var(--HN-Fuchsia);
+    width: max-content;
+    font-family: Stolzl;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 22px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 200ms;
+    cursor: pointer;
+    &:focus {
+      outline: 4px solid hsla();
+    }
+    &:hover {
+      filter: grayscale(25%);
+    }
   }
 `
 
