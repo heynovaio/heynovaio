@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 
 const TestimonialSection = styled.section`
   padding: 63px 20px 50px;
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   position: relative;
   img {
     width: 100%;
@@ -42,11 +42,12 @@ const TestimonialSection = styled.section`
     span {
       border: 1px solid #7f8b97;
       padding: 4px 20px 6px;
+      border-radius: 25px;
     }
   }
   .alice-carousel__prev-btn-item:hover span,
   .alice-carousel__next-btn-item:hover span {
-    background: #d5330d;
+    background: var(--HN-Fuchsia);
     color: #fff;
   }
   .alice-carousel__prev-btn,
@@ -91,7 +92,7 @@ const ImgCenter = styled.div`
 const SiteLink = styled.a`
   color: #fff;
   font-size: 22px;
-  border-bottom: 1px solid #d5330d;
+  border-bottom: 1px solid var(--HN-Fuchsia);
   font-family: Stolzl;
   display: inline-block;
   text-decoration: none;
@@ -99,7 +100,7 @@ const SiteLink = styled.a`
   left: 18px;
   bottom: 0;
   &:hover {
-    color: #d5330d;
+    color: var(--HN-Fuchsia);
   }
   @media (max-width: 1026px) {
     bottom: -28px;

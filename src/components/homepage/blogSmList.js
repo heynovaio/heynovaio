@@ -15,7 +15,7 @@ const ContentContainer = styled.div`
     line-height: 0.83;
     letter-spacing: -0.19px;
     text-align: center;
-    color: #051628;
+    color: #0F002E;
     margin: 0;
     padding: 4rem 0;
   }
@@ -42,7 +42,7 @@ const BlogPreview = styled.div`
       font-size: 40px;
       line-height: 1.25;
       letter-spacing: -0.13px;
-      color: #051628;
+      color: #0F002E;
       font-weight: 400;
       padding: 0.25rem 0 0.5rem;
       margin: 0;

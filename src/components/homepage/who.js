@@ -33,7 +33,7 @@ const H2 = styled.h2`
   line-height: 1.28;
   letter-spacing: -1px;
   text-align: center;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   font-family: Stolzl;
   @media (max-width: 780px) {
     font-size: 35px;

@@ -9,7 +9,7 @@ const H1 = styled.h1`
   font-size: 110px;
   font-weight: 500;
   line-height: 1.04;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 0 0 25px;
   font-family: Stolzl;
   text-align: center;
@@ -19,7 +19,7 @@ const H1 = styled.h1`
 `
 const Main = styled.div``
 const P = styled.p`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   max-width: 556px;
   font-size: 26px;
   line-height: 1.64;
@@ -57,7 +57,8 @@ const ActionContainer = styled.div`
 `
 const Button = styled.div`
   a {
-    background: #d5330d;
+    border-radius: 25px;
+    background: var(--HN-Fuchsia);
     color: #fff;
     padding: 18px 25px 22px;
     font-size: 20px;
@@ -70,12 +71,13 @@ const Button = styled.div`
       width: 300px;
     }
     &:hover {
-      background: #b33113;
+      filter: grayscale(20%);
     }
   }
 `
 const A = styled.a`
-  background: #d5330d;
+  background: var(--HN-Fuchsia);
+  border-radius: 25px;
   color: #fff;
   padding: 18px 25px 22px;
   font-size: 20px;
@@ -88,7 +90,7 @@ const A = styled.a`
     width: 300px;
   }
   &:hover {
-    background: #b33113;
+    filter: grayscale(20%);
   }
 `
 const Span = styled.span`
@@ -210,7 +212,7 @@ export default () => (
           <Button>
             <PopupText
               text="Book a Meeting"
-              url="https://calendly.com/hey-nova/free-consultation"
+              url="https://calendly.com/hey-nova/free-consult"
             />
           </Button>
           <Span>or</Span>

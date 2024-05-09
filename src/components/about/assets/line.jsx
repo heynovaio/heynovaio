@@ -17,7 +17,7 @@ export default function Line({ height }) {
         y1="0"
         x2="2.15234"
         y2={`${height + padd}`}
-        stroke="#D5330D"
+        stroke="#D70449"
         strokeWidth="3"
         strokeDasharray="14 14"
         style={{ transform: "translateY(-400px)" }}

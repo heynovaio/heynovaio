@@ -38,7 +38,7 @@ const SubmitBox = styled.div`
     font-weight: 500;
     letter-spacing: -0.19px;
     line-height: 0.85;
-    color: #0a2239;
+    color: var(--HN-Indigo);
     margin: 0;
     padding: 0 175px 10px 0;
     @media (max-width: 767px) {
@@ -57,7 +57,7 @@ const EmailLabel = styled.label`
   font-family: Ubuntu;
   font-size: 25px;
   letter-spacing: 0.31px;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   font-weight: 600;
   margin: 0;
   display: block;
@@ -65,7 +65,7 @@ const EmailLabel = styled.label`
 `
 
 const EmailInput = styled.input`
-  border: solid 3px #0a2239;
+  border: solid 3px var(--HN-Indigo);
   height: 54px;
   font-size: 22px;
   width: 65%;
@@ -76,7 +76,8 @@ const EmailInput = styled.input`
   }
 `
 const ButtonInput = styled.button`
-  background-color: #d5330d;
+  border-radius: 25px;
+  background-color: var(--HN-Fuchsia);
   font-size: 18px;
   font-weight: 400;
   text-align: center;
@@ -97,6 +98,9 @@ const ButtonInput = styled.button`
   &:focus {
     outline: #000 auto 1px;
   }
+  &:hover {
+    filter: grayscale(20%);
+  } 
 `
 const PhotoBox = styled.div`
   transform: translateY(70px);
@@ -120,7 +124,7 @@ const Desc = styled.p`
   font-size: 22px;
   line-height: 1.45;
   letter-spacing: 0.28px;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 0;
   padding: 10px 0 25px;
 `

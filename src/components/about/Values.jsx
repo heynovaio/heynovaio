@@ -123,7 +123,7 @@ const Card = styled.section`
   align-items: center;
   padding: 44px 5px;
   gap: 10px;
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
   border-radius: 8px;
   color: #ffffff;
   width: 100%;

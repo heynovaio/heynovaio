@@ -258,7 +258,7 @@ const SectionHeader = styled.div`
     font-size: 30px;
     text-align: center;
     letter-spacing: -0.8px;
-    color: #0b2642;
+    color: var(--HN-Indigo);
     margin-bottom: 20px;
   }
   p {
@@ -269,7 +269,7 @@ const SectionHeader = styled.div`
     line-height: 35px;
     letter-spacing: 0px;
     text-align: center;
-    color: #0b2642;
+    color: var(--HN-Indigo);
   }
 `
 

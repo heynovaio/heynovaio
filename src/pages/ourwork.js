@@ -395,7 +395,7 @@ export default function OurWork() {
 
               <PopupText
                 text="Book a Call"
-                url="https://calendly.com/hey-nova/free-consultation"
+                url="https://calendly.com/hey-nova/free-consult"
               />
             </ContactFormSubmit>
           </form>
