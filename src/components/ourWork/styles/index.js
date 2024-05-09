@@ -173,13 +173,25 @@ export const ContactFormSubmit = styled.div`
   gap: 20px;
 
   a {
-    text-decoration: underline;
+    padding: 18px 37px;
+    background-color: var(--HN-Fuchsia);
+    width: max-content;
+    font-family: Stolzl;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 22px;
+    color: white;
+    border: none;
+    border-radius: 40px;
     text-transform: uppercase;
-    padding: 13px 20px;
-    color: var(--HN-Teal);
+    transition: all 200ms;
+    cursor: pointer;
+    &:focus {
+      outline: 4px solid hsla();
+    }
     &:hover {
-      cursor: pointer;
-      color: var(--HN-Fuchsia);
+      filter: grayscale(25%);
     }
   }
 
