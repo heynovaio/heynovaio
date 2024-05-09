@@ -151,7 +151,10 @@
   }
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 767px) {
+  .work-card {
+    height: auto;
+  }
   .blooming-house .bg {
     transform: scale(0.45) translate(-75%, 65%);
   }
@@ -174,5 +177,40 @@
 
   .joni .bg {
     transform: scale(1.35);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .work-card {
+    width: 552px;
+    height: auto;
+  }
+
+  .blooming-house .bg {
+    transform: scale(0.35) translate(-103%, 95%);
+  }
+
+  .commit2act .bg {
+    transform: scale(0.6) translate(-45%, 55%);
+  }
+
+  .connected-north .bg {
+    transform: scale(1.35) translate(8%, 0.5%);
+  }
+
+  .iic-academy .bg {
+    transform: scale(2.2);
+  }
+
+  .moli-industries-ltd .bg {
+    transform: scale(1.1) translate(-4%, 26%);
+  }
+
+  .code-to-learn .bg {
+    transform: scale(1.08);
+  }
+  
+  .your-voice-is-power .bg {
+    transform: scale(1.05) translate(2%, -3%);
   }
 }

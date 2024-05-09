@@ -9,7 +9,7 @@ export const HeroImage = styled.img`
   aspect-ratio: auto;
   max-height: 600px;
   z-index: -1;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1199px) {
     max-width: 50vw
   }
 `
