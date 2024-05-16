@@ -31,7 +31,8 @@ export function Contact() {
 
 const Div = styled.div`
   margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,13 +109,12 @@ const ButtonSecondary = styled.div`
 
 const Section = styled.section`
   width: 100%;
-  padding: 0 20px;
+  padding: 0 20px 3rem;
+  margin
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (min-width: 700px) {
-    margin-bottom: 5rem;
-  }
+  margin-bottom: 0;
   form {
     width: 100%;
     @media (min-width: 700px) {

@@ -62,6 +62,7 @@ const Section = styled.div`
     line-height: 64px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 2.5rem;
   }
 `
 

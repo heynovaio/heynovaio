@@ -112,8 +112,11 @@ const SvgContainer = styled.div`
     left: 50%;
   }
   .spaceship {
-    transform: translate(-34px, -105px);
+    transform: translate(-34px, 0px);
     scale: 0.8;
+    position: sticky;
+    top: 300;
+    margin-top: -105px;
   }
   .line {
     svg,

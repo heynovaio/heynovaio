@@ -23,11 +23,27 @@ const Card = styled.div`
   padding: 5px;
   background-color: white;
   width: 100%;
-  max-width: 351px;
+  max-width: 500px;
+  min-width: 100%;
+  p {
+    width: 100%;
+  }
+
   margin: 0;
+  position: relative;
+  border-left: 2px solid #6dc9cf69;
+  border-bottom: 2px solid #6dc9cf88;
+  border-right: 2px solid rgba(255, 255, 255, 0.466);
+  border-top: 2px solid #6dc9cf50;
+  border-radius: 12.767px;
+  background: #ffffff;
+  padding: 50px 45px 65px;
+  margin: 0 auto;
+
   img {
     border-radius: 10px;
     margin-bottom: 10px;
+    max-width: 400px
   }
 `
 

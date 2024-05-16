@@ -17,7 +17,6 @@ export const HeroImage = styled.img`
 export const HeroContainer = styled.section`
   isolation: isolate;
   min-height: 500px;
-  padding: 0 40px;
 `
 
 export const HeroContent = styled.div`
