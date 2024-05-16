@@ -32,6 +32,12 @@
   display: grid;
   place-items: center;
   margin: 0 auto;
+  transition: .5s all;
+}
+
+a.work-card:hover {
+  background: #bad1ef;
+  transform: scale(1.05);
 }
 
 .work-grid .work-card:first-child .img {
