@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "@emotion/styled"
 
-import img1 from "../images/heynova-logo-new.png"
+import img1 from "../images/HN-logo-fuchsia.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faLinkedinIn,
@@ -32,10 +32,11 @@ const ImgContainer = styled(Link)`
 const LinkContainer = styled.div`
   display: flex;
   margin-right: 56px;
-  background: #051727;
+  background: var(--HN-Indigo);
   padding-left: 20px;
+  border-bottom-left-radius: 5px;
   a {
-    padding: 14px 12px 18px;
+    padding: 15px 12px 20px;
     font-size: 20px;
     font-family: Stolzl;
     font-weight: 400;
@@ -51,20 +52,20 @@ const LinkContainer = styled.div`
   }
 `
 const FaceBookLink = styled.a`
-  color: #d5330d;
+  color: var(--HN-Teal);
 `
 const InstagramLink = styled.a`
-  color: #d5330d;
+  color: var(--HN-Teal);
   margin-right: 20px;
 `
 const LinkedInLink = styled.a`
-  color: #d5330d;
+  color: var(--HN-Teal);
 `
 const SkipButton = styled.a`
   border-radius: 3px;
   width: 150px;
   padding: 8px;
-  background-color: #d5330d;
+  background-color: #D70449;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.025em;
@@ -124,8 +125,10 @@ const HamburgerStyle = styled.button`
   right: 0px;
   top: 0px;
   padding: 15px;
-  background: #041729;
+  border-radius: 0px 0px 0px 15px;
+  background: var(--HN-Indigo);
   border: none;
+
 
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -139,7 +142,7 @@ const HamburgerStyle = styled.button`
 
   div {
     position: absolute;
-    background-color: #d5330d;
+    background-color: var(--HN-Teal);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -194,8 +197,7 @@ const NavContainer = styled.div`
     padding: 10px 10px 10px;
     font-size: 50px;
     display: block;
-    color: #0fa3b1;
-    -webkit-text-stroke: 2px #0a2239;
+    color: var(--HN-Indigo);
     font-weight: 700;
     line-height: 1.04;
     font-family: Stolzl;
@@ -210,7 +212,7 @@ const NavContainer = styled.div`
       -webkit-text-stroke: 2px #0a2239;
     }
     &:hover {
-      background-image: -webkit-linear-gradient(#0a2239 0, #0fa3b1 76%);
+      background-image: -webkit-linear-gradient(#433f6c 0, #d70349 76%);
       background-size: 100% 60px;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;

@@ -1,15 +1,22 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import Contact from "../components/homepage/contact"
 import { PopupText } from "react-calendly"
 import SEO from "../components/seo"
 
+import {
+  ContactFormLabel,
+  ContactFormInput,
+  ContactFormTextArea,
+  InputGroup,
+  ContactFormSubmit,
+} from "../components/ourWork/styles"
+
 const H1 = styled.h1`
-  font-size: 110px;
+  font-size: 90px;
   font-weight: 500;
   line-height: 1.04;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 0 0 25px;
   font-family: Stolzl;
   text-align: center;
@@ -17,11 +24,22 @@ const H1 = styled.h1`
     font-size: 48px;
   }
 `
+const H2 = styled.h2`
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: var(--HN-Indigo);
+  font-family: Stolzl;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+`
 const Main = styled.div``
 const P = styled.p`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   max-width: 556px;
   font-size: 26px;
+  font-weight: bold;
   line-height: 1.64;
   margin: 35px auto 55px;
   font-family: Ubuntu;
@@ -57,7 +75,8 @@ const ActionContainer = styled.div`
 `
 const Button = styled.div`
   a {
-    background: #d5330d;
+    border-radius: 25px;
+    background: var(--HN-Fuchsia);
     color: #fff;
     padding: 18px 25px 22px;
     font-size: 20px;
@@ -70,12 +89,13 @@ const Button = styled.div`
       width: 300px;
     }
     &:hover {
-      background: #b33113;
+      filter: grayscale(20%);
     }
   }
 `
-const A = styled.a`
-  background: #d5330d;
+const SubmitButton = styled.button`
+  border-radius: 25px;
+  background: var(--HN-Fuchsia);
   color: #fff;
   padding: 18px 25px 22px;
   font-size: 20px;
@@ -88,7 +108,25 @@ const A = styled.a`
     width: 300px;
   }
   &:hover {
-    background: #b33113;
+    filter: grayscale(20%);
+  }
+`
+const A = styled.a`
+  background: var(--HN-Fuchsia);
+  border-radius: 25px;
+  color: #fff;
+  padding: 18px 25px 22px;
+  font-size: 20px;
+  text-decoration: none;
+  width: 250px;
+  text-align: center;
+  font-family: Ubuntu;
+  display: inline-block;
+  @media (max-width: 767px) {
+    width: 300px;
+  }
+  &:hover {
+    filter: grayscale(20%);
   }
 `
 const Span = styled.span`
@@ -98,93 +136,7 @@ const Span = styled.span`
     display: block;
   }
 `
-const Form = styled.form`
-  max-width: 800px;
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-  border: 1px solid #051628;
-  padding: 24px;
-  margin-top: 50px;
-  h2 {
-    line-height: 1.2;
-    font-size: 34px;
-    margin: 0px 0 0;
-    font-weight: 700;
-    color: #051628;
-    line-height: 2;
-    font-family: Stolzl;
-    text-align: center;
-  }
-  p {
-    color: #051628;
-    font-weight: 300;
-    margin-bottom: 25px;
-    font-family: Ubuntu;
-    text-align: center;
-  }
-  label {
-    display: block;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    margin-bottom: 15px;
-    color: #051628;
-    font-family: Ubuntu;
-  }
-  textarea,
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    margin-bottom: 25px;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #051628;
-    font-size: 18px;
-    font-weight: 300;
-    color: #051628;
-    line-height: 1.5;
-    height: 38px;
-    outline: none;
-    -webkit-appearance: none;
-    border-radius: 0;
-    font-family: Ubuntu;
-    &:focus {
-      border-bottom: 2px solid #d5330d;
-      box-shadow: 0 0 0 1px #d5330d;
-    }
-  }
-  textarea {
-    border: 2px solid #051628;
-    height: 200px;
-    padding: 15px;
-    font-family: Ubuntu;
-    &:focus {
-      border-color: #d5330d;
-    }
-  }
-  input[type="submit"] {
-    outline: none;
-    -webkit-appearance: none;
-    margin-top: 12px;
-    font-family: Ubuntu;
-    background: #d5330d;
-    color: #fff;
-    padding: 18px 25px 22px;
-    font-size: 20px;
-    text-decoration: none;
-    width: 250px;
-    text-align: center;
-    font-family: Ubuntu;
-    display: inline-block;
-    @media (max-width: 767px) {
-      width: 300px;
-    }
-    &:hover {
-      background: #b33113;
-    }
-  }
-`
+
 export default () => (
   <Layout>
     <SEO
@@ -210,34 +162,33 @@ export default () => (
           <Button>
             <PopupText
               text="Book a Meeting"
-              url="https://calendly.com/hey-nova/free-consultation"
+              url="https://calendly.com/hey-nova/free-consult"
             />
           </Button>
           <Span>or</Span>
           <A href="mailto:info@heynova.io">Email us a Question</A>
         </ActionContainer>
+         <div>
+          <H2>or Fill out this form</H2>
+          <form method="post" data-netlify="true" name="contact" id="contact-form" action="/thanks">
+            <input type="hidden" name="form-name" value="contact" />
+            <InputGroup>
+              <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
+              <ContactFormInput id="email" name="email" />
+            </InputGroup>
 
-        {/* <Form action="https://formspree.io/info@heynova.io" method="post" name="contact-form" class="validate" target="_blank" novalidate>
-          <h2>Leave us a Message</h2>
-          <p>We will get back to you shortly!</p>
-          <div id="mc_embed_signup_scroll">
-            <div class="mc-field-group">
-              <label htmlFor="cf-FNAME">Name </label>
-              <input type="text" required name="FNAME" class="" id="cf-FNAME"/>
-            </div>
-            <div class="mc-field-group">
-              <label htmlFor="cf-EMAIL">Email </label>
-              <input type="email" name="EMAIL" required class="required email" id="cf-EMAIL"/>
-            </div>
-            <div class="mc-field-group">
-              <label htmlFor="cf-MSG">Type Your Message </label>
-              <textarea name="MSG" class="required msg" id="cf-MSG"></textarea>
-            </div>
-            <input type="submit" value="I Want to Chat" name="SUBMIT" id="cf-embedded-subscribe" class="btn-primary"/>
-          </div>
-        </Form> */}
+            <InputGroup>
+              <ContactFormLabel htmlFor="message">Message</ContactFormLabel>
+              <ContactFormTextArea id="message" name="message" />
+            </InputGroup>
+
+            <ContactFormSubmit className="submit">
+              <SubmitButton type="submit">Send Message</SubmitButton>
+            </ContactFormSubmit>
+          </form>
+        </div>
       </Container>
+   
     </Main>
-    <Contact />
   </Layout>
 )

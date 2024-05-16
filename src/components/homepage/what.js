@@ -34,7 +34,7 @@ const H2 = styled.h2`
   line-height: 1;
   letter-spacing: -2px;
   text-align: left;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   font-family: Stolzl;
   max-width: 549px;
   margin-bottom: 5rem;
@@ -59,7 +59,7 @@ const H3 = styled.h3`
   line-height: 1.15;
   font-family: Stolzl;
   margin-bottom: 10px;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   @media (max-width: 960px) {
     font-size: 25px;
   }
@@ -69,7 +69,7 @@ const P = styled.p`
   line-height: 1.4;
   text-align: left;
   font-family: Ubuntu;
-  color: #0a2239;
+  color: #0F002E;
 `
 const Text = styled.div`
   text-align: left;
@@ -132,7 +132,8 @@ const Planet = styled.div`
 `
 const Button = styled.div`
   a {
-    background-color: #d5330d;
+    border-radius: 25px;
+    background-color: #D70449;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: -1px;
@@ -145,6 +146,9 @@ const Button = styled.div`
     margin-top: 20px;
     border: none;
     display: inline-block;
+    &:hover {
+      filter: grayscale(20%);
+    }
   }
 `
 function What() {
@@ -212,7 +216,7 @@ function What() {
           <Button>
             <PopupText
               text="Get a Quote"
-              url="https://calendly.com/hey-nova/free-consultation"
+              url="https://calendly.com/hey-nova/free-consult"
             />
           </Button>
         </Content>

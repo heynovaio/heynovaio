@@ -1,6 +1,4 @@
 import styled from "@emotion/styled"
-import BgMobile from "../assets/bgmobile.svg"
-import BgDesktop from "../assets/bgdesktop.svg"
 import { Link } from "gatsby"
 
 export const HeroImage = styled.img`
@@ -11,7 +9,7 @@ export const HeroImage = styled.img`
   aspect-ratio: auto;
   max-height: 600px;
   z-index: -1;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1199px) {
     max-width: 50vw
   }
 `
@@ -19,7 +17,6 @@ export const HeroImage = styled.img`
 export const HeroContainer = styled.section`
   isolation: isolate;
   min-height: 500px;
-  padding: 0 40px;
 `
 
 export const HeroContent = styled.div`
@@ -43,11 +40,7 @@ export const HeroHeading = styled.h1`
   @media only screen and (min-width: 900px) {
     font-size: 90px;
   }
-  background: -webkit-linear-gradient(#ffffff, #49e1ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #051627;
+  color: #0F002E;
 `
 
 export const HeroText = styled.p`
@@ -63,12 +56,10 @@ export const HeroText = styled.p`
 `
 
 export const Container = styled.div`
-  background-image: url(${BgMobile});
+  background: radial-gradient(751.95% 45.58% at 89.31% 52.02%, #63B2B9 0.96%, #C8F2F5 25.5%, rgba(150, 224, 229, 0.382722) 46.5%, #97E1E6 78%, rgba(151, 225, 230, 0.37) 100%);
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
-  @media only screen and (min-width: 900px) {
-    background-image: url(${BgDesktop});
-  }
 `
 
 export const Center = styled.div`
@@ -81,8 +72,8 @@ export const Center = styled.div`
 `
 
 export const Button = styled.button`
-  border-radius: 40px;
-  background: #d5330d;
+  border-radius: 25px;
+  background: var(--HN-Fuchsia);
   padding: 13px 20px;
   color: #fff;
   text-align: center;
@@ -96,12 +87,12 @@ export const Button = styled.button`
   transition: filter 150ms ease-in-out;
   &:hover {
     cursor: pointer;
-    filter: grayscale(0.2);
+    filter: grayscale(20%);
   }
 `
 
 export const Contact = styled.section`
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   color: #fff;
   font-family: Stolzl;
   font-size: 20px;
@@ -113,10 +104,10 @@ export const Contact = styled.section`
 `
 
 export const ButtonLink = styled(Link)`
-  border-radius: 3px;
+  border-radius: 25px;
   width: 197px;
   padding: 15px 0 18px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   margin: 45px 0 0;
   display: block;
   font-size: 18px;
@@ -127,7 +118,7 @@ export const ButtonLink = styled(Link)`
   font-family: Stolzl;
   text-decoration: none;
   &:hover {
-    background: #ae2a09;
+    filter: grayscale(20%);
   }
 `
 
@@ -173,11 +164,25 @@ export const ContactFormSubmit = styled.div`
   gap: 20px;
 
   a {
-    text-decoration: underline;
+    padding: 18px 37px;
+    background-color: var(--HN-Fuchsia);
+    width: max-content;
+    font-family: Stolzl;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 22px;
+    color: white;
+    border: none;
+    border-radius: 40px;
     text-transform: uppercase;
-    padding: 13px 20px;
+    transition: all 200ms;
+    cursor: pointer;
+    &:focus {
+      outline: 4px solid hsla();
+    }
     &:hover {
-      cursor: pointer;
+      filter: grayscale(25%);
     }
   }
 

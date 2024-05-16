@@ -62,6 +62,7 @@ const Section = styled.div`
     line-height: 64px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 2.5rem;
   }
 `
 
@@ -123,7 +124,7 @@ const Card = styled.section`
   align-items: center;
   padding: 44px 5px;
   gap: 10px;
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
   border-radius: 8px;
   color: #ffffff;
   width: 100%;

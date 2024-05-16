@@ -14,9 +14,12 @@
 
 .work-card {
   position: relative;
+  border-left: 2px solid #6dc9cf69;
+  border-bottom: 2px solid #6dc9cf88;
+  border-right: 2px solid rgba(255, 255, 255, 0.466);
+  border-top: 2px solid #6dc9cf50;
   border-radius: 12.767px;
-  border: none;
-  width: 80vw;
+  width: 95vw;
   height: 40vh;
   isolation: isolate;
   background: linear-gradient(
@@ -29,7 +32,12 @@
   display: grid;
   place-items: center;
   margin: 0 auto;
-  backdrop-filter: blur(2px);
+  transition: .5s all;
+}
+
+a.work-card:hover {
+  background: #bad1ef;
+  transform: scale(1.05);
 }
 
 .work-grid .work-card:first-child .img {
@@ -60,12 +68,13 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  color: #000;
+  color: #0F002E;
   font-size: 18px;
   font-family: Stolzl;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  text-align: right;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -130,8 +139,8 @@
   transform-origin: center;
 }
 
-.nixit .bg {
-  transform: translateY(20px);
+.blooming-house .bg {
+  transform: scale(0.45) translate(-400px, 650px);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -146,13 +155,68 @@
   .commit2act .bg {
     transform: translateY(350px);
   }
+}
 
-  .purple-sector .bg {
-    transform: scale(1.02);
-    transform-origin: center;
+@media only screen and (max-width: 767px) {
+  .work-card {
+    height: auto;
+  }
+  .blooming-house .bg {
+    transform: scale(0.45) translate(-75%, 65%);
   }
 
-  .nixit .bg {
-    transform: translateY(50px);
+  .commit2act .bg {
+    transform: scale(0.5) translate(-55%, 75%);
+  }
+
+  .iic-academy .bg {
+    transform: scale(1.6);
+  }
+
+  .moli-industries-ltd .bg {
+    transform: scale(1.6) translate(6%, 10%);
+  }
+
+  .connected-north .bg {
+    transform: scale(1.2) translate(6%, 1%);
+  }
+
+  .joni .bg {
+    transform: scale(1.35);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .work-card {
+    width: 552px;
+    height: auto;
+  }
+
+  .blooming-house .bg {
+    transform: scale(0.35) translate(-103%, 95%);
+  }
+
+  .commit2act .bg {
+    transform: scale(0.6) translate(-45%, 55%);
+  }
+
+  .connected-north .bg {
+    transform: scale(1.35) translate(8%, 0.5%);
+  }
+
+  .iic-academy .bg {
+    transform: scale(2.2);
+  }
+
+  .moli-industries-ltd .bg {
+    transform: scale(1.1) translate(-4%, 26%);
+  }
+
+  .code-to-learn .bg {
+    transform: scale(1.08);
+  }
+  
+  .your-voice-is-power .bg {
+    transform: scale(1.05) translate(2%, -3%);
   }
 }

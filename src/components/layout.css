@@ -1,3 +1,10 @@
+:root {
+  --HN-Fuchsia: #D70449;
+  --HN-Fuchsia-Hover: #a50339;
+  --HN-Indigo: #0F002E;
+  --HN-Teal: #97E1E5;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

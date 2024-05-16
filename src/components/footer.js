@@ -9,7 +9,7 @@ import {
 
 const Footer = styled.footer`
   padding: 30px 20px 15px;
-  background-color: #051628;
+  background-color: var(--HN-Indigo);
   img {
     width: 100%;
     display: block;
@@ -21,7 +21,7 @@ const Footer = styled.footer`
     color: #ffffff;
     padding: 10px 10px;
     &:hover {
-      color: #d5330d;
+      color: var(--HN-Fuchsia);
     }
   }
 `

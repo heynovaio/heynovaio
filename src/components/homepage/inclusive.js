@@ -17,6 +17,7 @@ const H2 = styled.h2`
   font-size: 62px;
   font-weight: 500;
   line-height: 1;
+  margin-bottom: 1rem;
   @media (max-width: 960px) {
     font-size: 35px;
   }
@@ -53,7 +54,7 @@ const List = styled.div`
 const Elem = styled.div`
   border-radius: 8px;
   margin-bottom: 18px;
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
   padding: 24px 34px 34px;
   max-width: 425px;
   box-shadow: 8px 12px 16px 2px rgba(10, 35, 57, 0.35);
@@ -69,14 +70,14 @@ const P = styled.p`
   font-family: Ubuntu;
 `
 const MainParaOne = styled.p`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   font-size: 24px;
   line-height: 1.5;
   font-family: Ubuntu;
   font-weight: 600;
 `
 const MainPara = styled.p`
-  color: #0a2239;
+  color: var(--HN-Indigo);
   padding-bottom: 0px;
   font-size: 18px;
   line-height: 1.5;
@@ -112,8 +113,9 @@ const ImgContainer = styled.div`
   position: absolute;
 `
 const Button = styled(Link)`
+  border-radius: 25px;
   margin-bottom: 30px;
-  background-color: #d5330d;
+  background-color: var(--HN-Fuchsia);
   font-size: 18px;
   text-align: center;
   color: #fff;
@@ -124,6 +126,9 @@ const Button = styled(Link)`
   margin-top: 20px;
   border: none;
   display: inline-block;
+  &:hover {
+    filter: grayscale(20%);
+  }
 `
 function Inclusive() {
   const data = useStaticQuery(graphql`

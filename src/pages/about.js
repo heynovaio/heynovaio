@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Hero, Mission, Values, Contact, Team } from "../components/about"
+import { Hero, Values, Contact, Team } from "../components/about"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
+import styled from "@emotion/styled"
 
 /**
  * @typedef {object} Val
@@ -71,13 +72,11 @@ export default function About({ data: { content, team, values } }) {
   const contextMap = getContentIndex(content.edges)
   const ctx = content.edges
   const heroContent = ctx[contextMap["hero"]].node.data.paragraph
-  const mission = ctx[contextMap["mission"]].node.data.paragraph
-  const missionHeader = ctx[contextMap["missionHeader"]].node.data.paragraph
   const teamContent = ctx[contextMap["team"]].node.data.paragraph
 
   return (
     <>
-      <Layout>
+      <Layout style="background: green;">
         <SEO
           title="About us"
           description="Learn more about the team behind Hey Nova."
@@ -93,10 +92,12 @@ export default function About({ data: { content, team, values } }) {
             `Branding`,
           ]}
         />
-        <Hero content={heroContent} />
-        <Team team={team.edges} content={teamContent} />
-        <Values values={values.edges} />
-        <Contact />
+        <Background>
+          <Hero content={heroContent} />
+          <Team team={team.edges} content={teamContent} />
+          <Values values={values.edges} />
+          <Contact />
+        </Background>
       </Layout>
     </>
   )
@@ -116,6 +117,13 @@ function getContentIndex(t) {
 
   return buf
 }
+
+export const Background = styled.div`
+  background: radial-gradient(751.95% 45.58% at 89.31% 52.02%, #63B2B9 0.96%, #C8F2F5 25.5%, rgba(150, 224, 229, 0.382722) 46.5%, #97E1E6 78%, rgba(151, 225, 230, 0.37) 100%);
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
 
 export const pageQuery = graphql`
   query AboutPageQuery {

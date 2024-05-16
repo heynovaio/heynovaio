@@ -53,7 +53,7 @@ export function Work({ image, link=null, background, title, className }) {
         fluid={image}
       />
       {background && <img src={background} alt="presentation" className="bg" />}
-      <h6 className="title">{title}</h6>
+      <h3 className="title">{title}</h3>
     </div>
   )
 }

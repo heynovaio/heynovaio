@@ -16,7 +16,6 @@ import {
   HeroContent,
   HeroText,
   Contact,
-  ContactForm,
   ContactFormLabel,
   ContactFormInput,
   ContactFormTextArea,
@@ -27,7 +26,7 @@ import {
 import { Group, Work } from "../components/ourWork/Works"
 import { Button } from "../components/shared/Button"
 
-import Hero from "../components/ourWork/assets/hero.svg"
+import Hero from "../components/ourWork/assets/heroX2.png"
 
 import MoliBG from "../components/ourWork/assets/moli-bg.svg"
 
@@ -39,15 +38,14 @@ import IICBG from "../components/ourWork/assets/iic-bg.svg"
 
 import PelvicHealthBG from "../components/ourWork/assets/pelvic-health-bg.svg"
 
-
 import Commit2ActBG from "../components/ourWork/assets/commit2act-bg.svg"
-
 
 import ConnectedNorthBG from "../components/ourWork/assets/connected-north-bg.svg"
 import PassivBG from "../components/ourWork/assets/passiv-bg.svg"
 
-import NixitBG from "../components/ourWork/assets/nixit-bg.svg"
 import JoniBG from "../components/ourWork/assets/joni-bg.svg"
+
+import BloomingHouseBg from "../components/ourWork/assets/blooming-house-bg.svg"
 
 
 /**
@@ -57,6 +55,13 @@ import JoniBG from "../components/ourWork/assets/joni-bg.svg"
 export default function OurWork() {
   const data = useStaticQuery(graphql`
     query {
+      bloomingHouse: file(relativePath: { eq: "blooming-house.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       moli: file(relativePath: { eq: "moli-industries.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
@@ -169,21 +174,7 @@ export default function OurWork() {
           }
         }
       }
-      nixit: file(relativePath: { eq: "nixit.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       watsonAndBarnard: file(relativePath: { eq: "watson-and-bernard.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      streamOfConsciousness: file(relativePath: { eq: "stream-of-consciousness.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -204,14 +195,14 @@ export default function OurWork() {
           }
         }
       }
-      purpleSector: file(relativePath: { eq: "purple-sector.png" }) {
+      joni: file(relativePath: { eq: "joni-alt.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      joni: file(relativePath: { eq: "joni-alt.png" }) {
+      createToLearn: file(relativePath: { eq: "create-to-learn.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -222,16 +213,24 @@ export default function OurWork() {
   `)
   const works = [
     {
+      title: "Blooming House",
+      image: data.bloomingHouse.childImageSharp.fluid,
+      background: BloomingHouseBg,
+      link: "bloominghouse.ca",
+    },
+    {
+      title: "Commit2Act Webapp",
+      image: data.commit2ActWebApp.childImageSharp.fluid,
+    },
+    {
+      title: "Sprout Learning Portal",
+      image: data.sproutLearningPortal.childImageSharp.fluid,
+    },
+    {
       title: "Commit2Act",
       image: data.commit2Act.childImageSharp.fluid,
       background: Commit2ActBG,
       link: "https://www.commit2act.org/",
-    },
-    {
-      title: "Code to Learn",
-      background: CodeToLearnBG,
-      image: data.codeToLearn.childImageSharp.fluid,
-      link: "https://www.codetolearn.ca/en",
     },
     {
       title: "Your Voice is Power",
@@ -240,27 +239,10 @@ export default function OurWork() {
       link: "https://www.yourvoiceispower.ca/",
     },
     {
-      title: "IIC Academy",
-      image: data.iicAcademy.childImageSharp.fluid,
-      background: IICBG,
-      link: "https://www.iicacademy.com/",
-    },
-    {
-      title: "Pelvic Health & Physiotherapy",
-      image: data.pelvicHealth.childImageSharp.fluid,
-      background: PelvicHealthBG,
-      link: "https://pelvic-floor.ca/",
-    },
-    {
-      title: "Rising Youth",
-      image: data.risingYouth.childImageSharp.fluid,
-      link: "https://www.risingyouth.ca/stories",
-    },
-    {
-      title: "Moli Industries LTD",
-      background: MoliBG,
-      image: data.moli.childImageSharp.fluid,
-      link: "https://moli.ca/"
+      title: "Code to Learn",
+      background: CodeToLearnBG,
+      image: data.codeToLearn.childImageSharp.fluid,
+      link: "https://www.codetolearn.ca/en",
     },
     {
       title: "Sprout",
@@ -268,25 +250,41 @@ export default function OurWork() {
       link: "https://www.sproutideas.org/",
     },
     {
+      title: "Rising Youth",
+      image: data.risingYouth.childImageSharp.fluid,
+      link: "https://www.risingyouth.ca/stories",
+    },
+    {
+      title: "Whoseland PWA",
+      image: data.whoseLand.childImageSharp.fluid,
+      link: "https://www.whose.land/",
+    },
+    {
+      title: "Connected North",
+      image: data.connectedNorth.childImageSharp.fluid,
+      background: ConnectedNorthBG,
+      link: "https://www.connectednorth.org/",
+    },
+    {
       title: "Connected North Webapp",
       image: data.connectedNorthWebApp.childImageSharp.fluid,
-
     },
     {
       title: "TakingITGlobal",
       image: data.takingITGlobal.childImageSharp.fluid,
       link: "https://takingitglobal.org/",
     },
+    
     {
-      title: "Conneceted North",
-      image: data.connectedNorth.childImageSharp.fluid,
-      background: ConnectedNorthBG,
-      link: "https://www.connectednorth.org/",
+      title: "Moli Industries LTD",
+      background: MoliBG,
+      image: data.moli.childImageSharp.fluid,
+      link: "https://moli.ca/"
     },
     {
-      title: "Whoseland PWA",
-      image: data.whoseLand.childImageSharp.fluid,
-      link: "https://www.whose.land/",
+      title: "Watson and Barnard",
+      image: data.watsonAndBarnard.childImageSharp.fluid,
+      link: "https://wbsurveys.ca/",
     },
     {
       title: "Passiv",
@@ -300,36 +298,27 @@ export default function OurWork() {
       link: "https://pharmacyforlife.ca/",
     },
     {
-      title: "Nixit",
-      image: data.nixit.childImageSharp.fluid,
-      background: NixitBG,
-
-    },
-    {
-      title: "Watson and Barnard",
-      image: data.watsonAndBarnard.childImageSharp.fluid,
-      link: "https://wbsurveys.ca/",
-    },
-    {
-      title: "Stream of Consciousness",
-      image: data.streamOfConsciousness.childImageSharp.fluid,
-      link: "https://streamofconsciousness.ca/",
-    },
-    {
-      title: "Sprout Learning Portal",
-      image: data.sproutLearningPortal.childImageSharp.fluid,
-
-    },
-    {
-      title: "Commit2Act Webapp",
-      image: data.commit2ActWebApp.childImageSharp.fluid,
-
+      title: "Pelvic Health & Physiotherapy",
+      image: data.pelvicHealth.childImageSharp.fluid,
+      background: PelvicHealthBG,
+      link: "https://pelvic-floor.ca/",
     },
     {
       title: "Joni",
       image: data.joni.childImageSharp.fluid,
       background: JoniBG,
       link: "https://getjoni.com/",
+    },
+    {
+      title: "IIC Academy",
+      image: data.iicAcademy.childImageSharp.fluid,
+      background: IICBG,
+      link: "https://www.iicacademy.com/",
+    },
+    {
+      title: "Create to Learn",
+      image: data.createToLearn.childImageSharp.fluid,
+      link: "https://www.createtolearn.ca/",
     },
   ]
   const w = serializeWorks(works)
@@ -387,7 +376,8 @@ export default function OurWork() {
         <Contact>
           <p>Like what you see? Let's chat.</p>
 
-          <form netlify name="contact" id="contact-form" action="/ourwork">
+          <form method="post" data-netlify="true" name="contact" id="contact-form" action="/thanks">
+            <input type="hidden" name="form-name" value="contact" />
             <InputGroup>
               <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
               <ContactFormInput id="email" name="email" />
@@ -405,7 +395,7 @@ export default function OurWork() {
 
               <PopupText
                 text="Book a Call"
-                url="https://calendly.com/hey-nova/free-consultation"
+                url="https://calendly.com/hey-nova/free-consult"
               />
             </ContactFormSubmit>
           </form>

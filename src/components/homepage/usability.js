@@ -30,7 +30,7 @@ const HeadingParagraph = styled.p`
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  color: #0a2339;
+  color: var(--HN-Indigo);
   font-family: Ubuntu;
 `
 const FlexBox = styled.div`
@@ -51,7 +51,7 @@ const P = styled.p`
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-  color: #0a2339;
+  color: var(--HN-Indigo);
   font-family: Ubuntu;
 `
 const Number = styled.span`

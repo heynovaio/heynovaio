@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 
 const ContactSection = styled.section`
   padding: 55px 0 21px;
-  background: #051628;
+  background: var(--HN-Indigo);
 `
 const H2 = styled.h2`
   font-size: 50px;
@@ -88,7 +88,7 @@ const EmailLink = styled.a`
   text-decoration: none;
   margin-bottom: 10px;
   &:hover {
-    color: #d5330d;
+    color: var(--HN-Fuchsia);
   }
 `
 const TextBox = styled.div`
@@ -123,14 +123,14 @@ const LinkedInLink = styled.a`
   margin-top: 5px;
   font-weight: 500;
   &:hover {
-    color: #d5330d;
+    color: var(--HN-Fuchsia);
   }
 `
 const GeneralEmailLink = styled.a`
   color: #0fa3b1;
   font-weight: 600;
   &:hover {
-    color: #d5330d;
+    color: var(--HN-Fuchsia);
   }
 `
 

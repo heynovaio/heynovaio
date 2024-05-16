@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import HeroGraphic from "./assets/hero.svg"
+import HeroGraphic from "../ourWork/assets/heroX2.png"
 import HeroMoonGraphic from "./assets/moon.svg"
 import HeroStarDust from "./assets/star-dust.svg"
 import { Button } from "../shared/Button"
@@ -93,48 +93,35 @@ const HeroContent = styled.div`
   padding: 0 20px;
   max-width: 1400px;
   p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 35px;
-    font-family: "Ubuntu";
-    color: inherit;
+    overflow-wrap: break-word;
+    max-width: 50ch;
+    color: #000000;
+    font-family: Ubuntu;
     font-style: normal;
-    margin-bottom: 1rem;
-    max-width: 500px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 15px;
+    font-size: 18px;
     
   }
   @media (min-width: 1100px) {
     margin: 0;
-    width: max(50vw, calc(100vw - 700px));
-    transform: translateX(-300px);
   }
   @media (min-width: 1400px) {
     transform: none;
   }
 `
 
-const HeroHeading = styled.h1`
-  color: #0fa3b1;
-  font-family: "Stolzl";
+export const HeroHeading = styled.h1`
+  font-size: 55px;
+  font-family: Stolzl;
   font-style: normal;
   font-weight: 500;
-  font-size: 62px;
-  line-height: 94px;
-  z-index: 999;
-  background: linear-gradient(to right, #0fa3b1, #ffffff);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-
-  @media only screen and (min-width: 400px) {
-    font-size: 72px;
+  margin-bottom: 1rem;
+  @media only screen and (min-width: 900px) {
+    font-size: 90px;
   }
-
-  @media only screen and (min-width: 1100px) {
-    font-size: 72px;
-    background: linear-gradient(91.86deg, #0fa3b1 5.53%, #0d1f31 102.96%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
+  color: #0F002E;
 `
 
 const Section = styled.section`
@@ -142,7 +129,6 @@ const Section = styled.section`
   top: 0;
   left: 0;
   right: 0;
-  background-color: #0d1f31;
   text-align: left;
   color: white;
   position: relative;
@@ -152,7 +138,6 @@ const Section = styled.section`
   align-items: center;
   height: 704px;
   @media (min-width: 1100px) {
-    background-color: white;
     color: #0b2642;
   }
 `

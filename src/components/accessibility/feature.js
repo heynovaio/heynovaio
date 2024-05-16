@@ -12,7 +12,7 @@ import GIcon8 from "../../images/group110.svg"
 import GIcon9 from "../../images/group111.svg"
 
 const FeatureSection = styled.section`
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
 `
 const ContentContainer = styled.div`
   max-width: 1288px;

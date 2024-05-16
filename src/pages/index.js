@@ -40,6 +40,5 @@ export default () => (
     <Testimonial />
     <About />
     <Subscribe />
-    <Contact />
   </Layout>
 )

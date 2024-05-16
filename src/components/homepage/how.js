@@ -17,7 +17,7 @@ const H2 = styled.h2`
   line-height: 1.28;
   letter-spacing: -1px;
   text-align: center;
-  color: #0a2239;
+  color: var(--HN-Indigo);
   margin: 75px 0 15px;
   font-family: Stolzl;
   @media (max-width: 960px) {
@@ -54,7 +54,7 @@ const Box = styled.div`
   width: 305px;
   min-height: 421px;
   border-radius: 8px;
-  background-color: #0a2239;
+  background-color: var(--HN-Indigo);
   padding: 58px 10px 10px;
   position: relative;
   z-index: 1;

@@ -5,7 +5,7 @@ import { PopupText } from "react-calendly"
 import SEO from "../components/seo"
 
 const H1 = styled.h1`
-  font-size: 110px;
+  font-size: 80px;
   font-weight: 500;
   line-height: 1.04;
   color: #0a2239;
@@ -32,7 +32,7 @@ const Container = styled.div`
   margin: 0 auto;
   position: relative;
   @media (min-width: 768px) {
-    min-height: 678px;
+    min-height: 78vh;
   }
   @media (max-width: 767px) {
     padding: 115px 0 155px;
@@ -56,7 +56,7 @@ const ActionContainer = styled.div`
 `
 const Button = styled.div`
   a {
-    background: #d5330d;
+    background: var(--HN-Fuchsia);
     color: #fff;
     padding: 18px 25px 22px;
     font-size: 20px;
@@ -65,19 +65,18 @@ const Button = styled.div`
     text-align: center;
     font-family: Ubuntu;
     display: inline-block;
+    border-radius: 25px;
     @media (max-width: 767px) {
       width: 300px;
-    }
-    &:hover {
-      background: #b33113;
     }
   }
 `
 const A = styled.a`
-  background: #d5330d;
+background: var(--HN-Fuchsia);
   color: #fff;
   padding: 18px 25px 22px;
   font-size: 20px;
+  border-radius: 25px;
   text-decoration: none;
   width: 250px;
   text-align: center;
@@ -85,9 +84,6 @@ const A = styled.a`
   display: inline-block;
   @media (max-width: 767px) {
     width: 300px;
-  }
-  &:hover {
-    background: #b33113;
   }
 `
 const Span = styled.span`
