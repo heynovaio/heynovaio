@@ -186,6 +186,12 @@ const TeamSection = styled.ul`
     li:nth-of-type(10) img.planet {
       transform: translate(-14px, 95px);
     }
+    li:nth-of-type(11) img.planet {
+      transform: translate(63px, 45px);
+    }
+    li:nth-of-type(12) img.planet {
+      transform: translate(-63px, 45px);
+    }
   }
   @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
@@ -218,10 +224,10 @@ const TeamSection = styled.ul`
       }
     }
     li:nth-of-type(1) .planet {
-      transform: translate(65px, 50px);
+      transform: translate(50px, 50px);
     }
     li:nth-of-type(2) .planet {
-      transform: translate(-75px, 43px);
+      transform: translate(-60px, 43px);
     }
     li:nth-of-type(3) .planet {
       transform: translate(47px, 3px);
@@ -233,7 +239,7 @@ const TeamSection = styled.ul`
       transform: translate(14px, -20px);
     }
     li:nth-of-type(6) .planet {
-      transform: translate(-30px, -18px);
+      transform: translate(0px, -18px);
     }
     li:nth-of-type(7) .planet {
       transform: translate(20px, -15px);
@@ -246,6 +252,12 @@ const TeamSection = styled.ul`
     }
     li:nth-of-type(10) .planet {
       transform: translate(15px, -37px);
+    }
+    li:nth-of-type(11) .planet {
+      transform: translate(50px, 45px);
+    }
+    li:nth-of-type(12) .planet {
+      transform: translate(-63px, 45px);
     }
   }
 `
