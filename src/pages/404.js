@@ -6,7 +6,7 @@ import { PopupText } from "react-calendly"
 import SEO from "../components/seo"
 
 const H1 = styled.h1`
-  font-size: 110px;
+  font-size: 90px;
   font-weight: 500;
   line-height: 1.04;
   color: #0a2239;

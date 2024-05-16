@@ -34,8 +34,9 @@ const LinkContainer = styled.div`
   margin-right: 56px;
   background: var(--HN-Indigo);
   padding-left: 20px;
+  border-bottom-left-radius: 5px;
   a {
-    padding: 14px 12px 18px;
+    padding: 15px 12px 20px;
     font-size: 20px;
     font-family: Stolzl;
     font-weight: 400;
@@ -196,8 +197,7 @@ const NavContainer = styled.div`
     padding: 10px 10px 10px;
     font-size: 50px;
     display: block;
-    color: #0fa3b1;
-    -webkit-text-stroke: 2px #0a2239;
+    color: var(--HN-Indigo);
     font-weight: 700;
     line-height: 1.04;
     font-family: Stolzl;
@@ -212,7 +212,7 @@ const NavContainer = styled.div`
       -webkit-text-stroke: 2px #0a2239;
     }
     &:hover {
-      background-image: -webkit-linear-gradient(#0a2239 0, #0fa3b1 76%);
+      background-image: -webkit-linear-gradient(#433f6c 0, #d70349 76%);
       background-size: 100% 60px;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;

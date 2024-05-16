@@ -6,7 +6,8 @@ export function Contact() {
   return (
     <Section>
       <h3>Connect with us</h3>
-      <form netlify name="contact" id="contact-form" action="/about">
+      <form method="post" data-netlify="true" name="contact" id="contact-form" action="/thanks">
+        <input type="hidden" name="form-name" value="contact" />
         <label htmlFor="email">Email</label>
         <input id="email" name="email" />
 

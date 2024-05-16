@@ -16,7 +16,6 @@ import {
   HeroContent,
   HeroText,
   Contact,
-  ContactForm,
   ContactFormLabel,
   ContactFormInput,
   ContactFormTextArea,
@@ -377,7 +376,8 @@ export default function OurWork() {
         <Contact>
           <p>Like what you see? Let's chat.</p>
 
-          <form netlify name="contact" id="contact-form" action="/ourwork">
+          <form method="post" data-netlify="true" name="contact" id="contact-form" action="/thanks">
+            <input type="hidden" name="form-name" value="contact" />
             <InputGroup>
               <ContactFormLabel htmlFor="email">Email</ContactFormLabel>
               <ContactFormInput id="email" name="email" />

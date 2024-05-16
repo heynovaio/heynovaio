@@ -12,7 +12,7 @@ const ContentContainer = styled.div`
   margin: 0 auto;
   position: relative;
   h1 {
-    font-size: 110px;
+    font-size: 90px;
     font-weight: 500;
     line-height: 1.04;
     color: var(--HN-Indigo);
