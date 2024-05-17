@@ -216,7 +216,7 @@ export default function OurWork() {
       title: "Blooming House",
       image: data.bloomingHouse.childImageSharp.fluid,
       background: BloomingHouseBg,
-      link: "bloominghouse.ca",
+      link: "https://bloominghouse.ca/",
     },
     {
       title: "Commit2Act Webapp",
