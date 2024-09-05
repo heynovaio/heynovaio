@@ -2,8 +2,8 @@
 date: 2024-09-06
 author: Lourdes Duah
 title: Mental Health for Remote Workers
-featuredImage: ../images/blog/bob-haircut-black-blazer.jpg
-metaImage: src/images/blog/bob-haircut-black-blazer.jpg
+featuredImage: ../images/blog/frustrated-man-on-phone.jpg
+metaImage: src/images/blog/frustrated-man-on-phone.jpg
 category: accessibility
 bio: Artist, writer, and ethical fashion enthusiast. She/her.
 bioImage: ../images/lourdes.jpg
@@ -41,9 +41,11 @@ Remote work can also help reduce mental strain by letting everyone create the mo
 
 In an office job, you'll typically share a workspace with coworkers or at least interact with them regularly. But with a remote job, some days, it's just you and your laptop against the world. That can get lonely, and according to U.S. Surgeon General Dr. Vivek H. Murthy, it can even get dangerous:
 
-> Loneliness is far more than just a bad feeling—it harms both individual and societal health. It is associated with a greater risk of cardiovascular disease, dementia, stroke, depression, anxiety, and premature death."
->
-> This doesn't mean that remote work is an automatic recipe for bad health, but remote workers often need to take extra care to meet their needs for connection in the absence of an office.
+> "Loneliness is far more than just a bad feeling—it harms both individual and societal health. It is associated with a greater risk of cardiovascular disease, dementia, stroke, depression, anxiety, and premature death."
+
+This doesn't mean that remote work is an automatic recipe for bad health, but remote workers often need to take extra care to meet their needs for connection in the absence of an office.
+
+![Man sits with a laptop on a couch with a phone up to his ear and looking tired and frustrated](../images/blog/frustrated-man-on-phone.jpg)
 
 ### Work-life balance
 
