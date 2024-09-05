@@ -1,7 +1,7 @@
 ---
 date: 2024-09-06
 author: Lourdes Duah
-title: "Mental Health for Remote Workers"
+title: Mental Health for Remote Workers
 featuredImage: ../images/blog/bob-haircut-black-blazer.jpg
 metaImage: src/images/blog/bob-haircut-black-blazer.jpg
 category: accessibility
@@ -80,13 +80,10 @@ Remote work affects everyone's mental health differently. It will take a few tri
 
 ## Sources and further reading
 
-- ["Is remote work worse for wellbeing than people think?" from BBC](https://www.bbc.com/worklife/article/20220616-is-remote-work-worse-for-wellbeing-than-people-think)
 - ["How Remote Work Can Impact Employees' Mental Health" from Forbes](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health/?sh=2397ac772cf0)
-- https://www.connexontario.ca/en-ca/resource-hub/entryid/39/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis
-
+- ["The Impact of Remote Work on Mental Health: An In-depth Analysis" from ConnexOntario](https://www.connexontario.ca/en-ca/resource-hub/entryid/39/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis)
 - ["State Of Remote Work 2023" from Buffer](https://buffer.com/state-of-remote-work/2023)
 - ["Our Epidemic of Loneliness and Isolation" from US Public Health Service](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf)
-
 - ["The workers keeping their disabilities secret" from BBC](https://www.bbc.com/worklife/article/20211101-the-workers-keeping-their-disabilities-secret)
 - ["The parents who don't want to go back to the office" from BBC](https://www.bbc.com/worklife/article/20211007-the-parents-who-dont-want-to-go-back-to-the-office)
 - ["Is remote work worse for wellbeing than people think?" from BBC](https://www.bbc.com/worklife/article/20220616-is-remote-work-worse-for-wellbeing-than-people-think)
