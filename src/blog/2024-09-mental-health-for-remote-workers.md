@@ -39,7 +39,7 @@ Commuting to work can be a major time sink, especially in busy areas with major 
 
 With unspoken rules, body language expectations, and at times, confusing social etiquette, office jobs can get stressful, especially for workers who are neurodivergent or socially anxious. Virtual meetings and independent work spaces can ease the pressure to fit into typical in-person social norms.
 
-![Young man takes notes at a desk next to his laptop, smiling and holding a glass of water](../images/blog/remote-worker-at-desk.jpg)
+![Young worker takes notes at a desk next to their laptop, smiling and holding a glass of water](../images/blog/remote-worker-at-desk.jpg)
 
 Remote work can also reduce mental strain by letting everyone create the most comfortable and productive work environment for themselves. Music? No music? Working at your desk vs the kitchen table? Each worker is free to decide their best work environment for and change things up if it's not working.
 
@@ -47,7 +47,7 @@ Remote work can also reduce mental strain by letting everyone create the most co
 
 Remote work offers opportunities for mental health management that can be harder to come by in offices. Both workers and employers can benefit greatly from a happier, healthier team.
 
-Individual workers can try the following:
+**Individual workers can try the following:**
 
 - Take at least a 10-minute break every hour to relax, re-energize, and come back to work refreshed.
 - Consider sticking to a schedule for your working hours. This way, you won't have to spend mental energy wondering when to squeeze in your work hours. Plus, any coworkers you pass your schedule onto will know the best times to get a hold of you. You can always adjust for any surprise commitments or change your schedule if it doesn't work.
@@ -55,7 +55,7 @@ Individual workers can try the following:
 - If you choose to work mostly from home and you have the means to customize your space, go for it! This could be anything from hanging your favourite pictures to ergonomic office furniture that reduces stiffness. Creating a space tailored to your physical and mental needs will create a space that feels comfortable to work in long-term.
 - Stay connected with family and friends during your free time.
 
-Remote employers can support their workers' mental health too:
+**Remote employers can support their workers' mental health too:**
 
 - Let your employees know about any mental health benefits available to them.
 - Encourage employees to use their breaks and vacation days to recharge
@@ -65,7 +65,6 @@ With the right strategies, remote work can be a powerful tool for maintaining yo
 
 ## Sources and further reading
 
-- ["2023 Work in America Survey" from the American Psychological Association](https://www.apa.org/pubs/reports/work-in-america/2023-workplace-health-well-being)
 - ["How Remote Work Can Impact Employees' Mental Health" from Forbes](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health)
 - ["The Impact of Remote Work on Mental Health: An In-depth Analysis" from ConnexOntario](https://www.connexontario.ca/en-ca/resource-hub/entryid/39/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis)
 - ["State Of Remote Work 2023" from Buffer](https://buffer.com/state-of-remote-work/2023)
