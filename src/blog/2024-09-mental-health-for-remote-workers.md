@@ -2,8 +2,8 @@
 date: 2024-09-06
 author: Lourdes Duah
 title: Mental Health for Remote Workers
-featuredImage: ../images/blog/frustrated-man-on-phone.jpg
-metaImage: src/images/blog/frustrated-man-on-phone.jpg
+featuredImage: ../images/blog/remote-worker-at-desk.jpg
+metaImage: src/images/blog/remote-worker-at-desk.jpg
 category: accessibility
 bio: Artist, writer, and ethical fashion enthusiast. She/her.
 bioImage: ../images/lourdes.jpg
@@ -18,6 +18,8 @@ At Hey Nova, we're proud to be a remote-forever company, but we know that no wor
 ### Flexibility
 
 A flexible schedule is one of the biggest benefits drawing people to remote work. Instead of struggling with standard 9-5 schedules, many remote jobs let you work when you choose. You can customize your hours based on your energy levels and your other commitments, reducing the stress of conflicting schedules.
+
+![Young man takes notes at a desk next to his laptop, smiling and holding a glass of water](../images/blog/remote-worker-at-desk.jpg)
 
 ### More time for mental-health improving activities
 
