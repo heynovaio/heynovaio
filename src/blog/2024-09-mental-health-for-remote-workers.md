@@ -1,5 +1,5 @@
 ---
-date: 2024-09-06
+date: 2024-09-25
 author: Lourdes Duah
 title: Mental Health for Remote Workers
 featuredImage: ../images/blog/remote-worker-at-desk.jpg
@@ -9,82 +9,64 @@ bio: Artist, writer, and ethical fashion enthusiast. She/her.
 bioImage: ../images/lourdes.jpg
 ---
 
-The COVID-19 pandemic introduced much of the world to the highs and lows of remote work. Depending on what articles you were reading, remote work was either the holy grail of work/life balance or an isolated, nightmarish breeding ground for depression and anxiety.
+At Hey Nova, we're proud to be a remote-forever company. Our adaptable schedules and convenient work locations not only boost our productivity, but they provide major boosts in wellbeing.
 
-At Hey Nova, we're proud to be a remote-forever company, but we know that no work situation is flawless. What are the benefits and drawbacks to a remote setup, and how can we make it work for our brains instead of against them?
+[In a 2023 survey from the American Psychological Association](https://www.apa.org/pubs/reports/work-in-america/2023-workplace-health-well-being), 85% of hybrid workers and 89% of remote workers said they felt satisfied with their control over when, where, and how they worked, compared to 77% of in-person workers. More remote workers also reported feeling like they had enough flexibility to keep a healthy work/life balance (75% compared to 66% of in-person workers).
 
-## Pros
+> Those who work in hybrid or remote arrangements were more likely to be satisfied with the how, when, and where they do their work (85% and 89%, respectively) than those who work in person (77%).
+>
+> ["2023 Work in America Survey" from the American Psychological Association](https://www.apa.org/pubs/reports/work-in-america/2023-workplace-health-well-being)
 
-### Flexibility
+Any place where you spend a majority of your waking hours is bound to impact your mental health. With benefits like more time for loved ones and a routine of your choice, a remote job can unlock huge brain benefits. So, how can we maximize the benefits and stay mentally well both during and outside of work?
 
-A flexible schedule is one of the biggest benefits drawing people to remote work. Instead of struggling with standard 9-5 schedules, many remote jobs let you work when you choose. You can customize your hours based on your energy levels and your other commitments, reducing the stress of conflicting schedules.
+To figure that out, let's start by taking stock of remote work's strengths.
 
-![Young man takes notes at a desk next to his laptop, smiling and holding a glass of water](../images/blog/remote-worker-at-desk.jpg)
+## Flexibility
 
-### More time for mental-health improving activities
+A flexible schedule is one of the biggest benefits drawing people to remote work. Instead of struggling to fit your life around a standard 9-5 schedule, many remote jobs let you work when you choose. You can customize your hours based on your energy levels and your other commitments, reducing the stress of conflicting schedules. Your break times are yours to choose and rest is just a room away if you need it.
 
-Commuting to work can be a major time sink. While some remote employees might choose to go to a co-working space or a secondary work location, they always have the choice to cut the commute entirely and work from home. This leaves more time for wellness management activities like:
+## More time for mental-health improving activities
+
+Commuting to work can be a major time sink, especially in busy areas with major traffic. While remote employees might choose a co-working space or a secondary work location, they always have the choice to cut the commute entirely and work from home. This leaves more time for wellness management activities like:
 
 - Getting enough sleep
 - Taking breaks during work sessions
 - Short breathing and mindfulness exercises
 - Physical health activities like stretching, exercise, and cooking nourishing meals
-- Time with family or friends
+- Time with family and friends
 
-### Increased Comfort
+## Increased Comfort
 
-With its unspoken rules, body language expectations, and at times, confusing social etiquette, office jobs can be pretty stressful, especially for workers who are neurodivergent or socially anxious. Virtual meetings and independent work spaces can ease the pressure to fit into typical in-person social norms.
+With unspoken rules, body language expectations, and at times, confusing social etiquette, office jobs can get stressful, especially for workers who are neurodivergent or socially anxious. Virtual meetings and independent work spaces can ease the pressure to fit into typical in-person social norms.
 
-Remote work can also help reduce mental strain by letting everyone create the most comfortable and productive work environment for themselves. Music? No music? Working at your desk vs the kitchen table? Each worker is free to decide the best work environment for them and change things up if it's not working.
+![Young man takes notes at a desk next to his laptop, smiling and holding a glass of water](../images/blog/remote-worker-at-desk.jpg)
 
-## Cons
+Remote work can also reduce mental strain by letting everyone create the most comfortable and productive work environment for themselves. Music? No music? Working at your desk vs the kitchen table? Each worker is free to decide their best work environment for and change things up if it's not working.
 
-### Isolation
+## Best strategies for mental health and remote work
 
-In an office job, you'll typically share a workspace with coworkers or at least interact with them regularly. But with a remote job, some days, it's just you and your laptop against the world. That can get lonely, and according to U.S. Surgeon General Dr. Vivek H. Murthy, it can even get dangerous:
-
-> "Loneliness is far more than just a bad feeling—it harms both individual and societal health. It is associated with a greater risk of cardiovascular disease, dementia, stroke, depression, anxiety, and premature death."
-
-This doesn't mean that remote work is an automatic recipe for bad health, but remote workers often need to take extra care to meet their needs for connection in the absence of an office.
-
-![Man sits with a laptop on a couch with a phone up to his ear and looking tired and frustrated](../images/blog/frustrated-man-on-phone.jpg)
-
-### Work-life balance
-
-A two-second commute from your bed to your desk might sound like a dream, but working and living in the same space can blur the line between personal and work life.
-
-When home becomes work, remote workers might feel pressure to be "on" at all times: always available for meetings, answering messages, or getting ahead on tasks. Work can easily spill into personal time and put employees at risk of burnout from overworking.
-
-[A Forbes article](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health/?sh=2397ac772cf0) mentioned that remote employees might not take complete breaks during work, instead using "break" times for household tasks like chores or childcare responsibilities. These employees are still at risk of burnout because they're essentially always working.
-
-### Distractions
-
-With phones, chores, video games, family care, friends, and pets all within arms reach, home can come with a lot of distractions that a typical office wouldn't have. Remote workers might struggle to focus, risking frustration and self-doubt from feeling incapable to complete tasks.
-
-### Managing your mental health while working remote
-
-We at Hey Nova wouldn't trade the flexibility of remote work for anything, but any working situation can be tough on your mental health. As for what to do about it, both individual employees and organizations can take steps to manage remote-work-related mental health stressors.
+Remote work offers opportunities for mental health management that can be harder to come by in offices. Both workers and employers can benefit greatly from a happier, healthier team.
 
 Individual workers can try the following:
 
-- If loneliness is creeping in, consider a co-working space with either a coworker or someone else you know who works remotely
-- Maintain connections with your friends and family
-- Take at least a 10-minute break every hour to refresh your mind. Make sure to do something that re-energizes you (ex. a short nap or a walk) rather than doing more work
-- Set boundaries between work and your personal life by providing set times where coworkers can contact you
+- Take at least a 10-minute break every hour to relax, re-energize, and come back to work refreshed.
+- Consider sticking to a schedule for your working hours. This way, you won't have to spend mental energy wondering when to squeeze in your work hours. Plus, any coworkers you pass your schedule onto will know the best times to get a hold of you. You can always adjust for any surprise commitments or change your schedule if it doesn't work.
+- If you prefer to work around people, consider co-working; you can rent an office space, meet up with a coworker or work with someone else in your life who works remotely
+- If you choose to work mostly from home and you have the means to customize your space, go for it! This could be anything from hanging your favourite pictures to ergonomic office furniture that reduces stiffness. Creating a space tailored to your physical and mental needs will create a space that feels comfortable to work in long-term.
+- Stay connected with family and friends during your free time.
 
 Remote employers can support their workers' mental health too:
 
-- Respect your employees' personal time by only contacting them during their working hours
-- Make sure employees know about mental health benefits available to them
+- Let your employees know about any mental health benefits available to them.
 - Encourage employees to use their breaks and vacation days to recharge
-- Set up opportunities for employees to talk to each other both about work and their lives outside of work. Small, manageable moments of connection can prevent social isolation, improve collaboration, and build team bonds without overburdening socially anxious or neurodivergent workers
-- If any of your workers live near other, the occasional in-person get-together can be a great way to connect.
+- Set up opportunities for employees to talk to each other both about work and their lives outside of work. Small, manageable moments of connection can combat loneliness, improve collaboration, and build team bonds without overburdening socially anxious or neurodivergent workers
 
-Remote work affects everyone's mental health differently. It will take a few tries to find what works, but the right strategies can completely revamp your relationship to your mental health.
+With the right strategies, remote work can be a powerful tool for maintaining your work/life balance and your mental health. You can find more tips for managing a remote position on Hey Nova's Instagram and Facebook pages.
 
 ## Sources and further reading
 
-- ["How Remote Work Can Impact Employees' Mental Health" from Forbes](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health/?sh=2397ac772cf0)
+- ["2023 Work in America Survey" from the American Psychological Association](https://www.apa.org/pubs/reports/work-in-america/2023-workplace-health-well-being)
+- ["How Remote Work Can Impact Employees' Mental Health" from Forbes](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health)
 - ["The Impact of Remote Work on Mental Health: An In-depth Analysis" from ConnexOntario](https://www.connexontario.ca/en-ca/resource-hub/entryid/39/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis)
 - ["State Of Remote Work 2023" from Buffer](https://buffer.com/state-of-remote-work/2023)
 - ["Our Epidemic of Loneliness and Isolation" from US Public Health Service](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf)
