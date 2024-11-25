@@ -194,14 +194,3 @@ function serializeWorks(w) {
 
   return buf
 }
-
-function getContentIndex(t) {
-  const buf = {}
-
-  t.forEach(({ node }, idx) => {
-    const { context } = node.data
-    buf[context] = idx
-  })
-
-  return buf
-}
