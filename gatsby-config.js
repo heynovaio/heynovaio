@@ -140,6 +140,11 @@ module.exports = {
             tableName: `aboutPageValues`,
             mapping: { images: "fileNode" },
           },
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASEID,
+            tableName: `ourWork`,
+            mapping: { background: "fileNode", image: "fileNode" },
+          },
         ],
       },
     },
