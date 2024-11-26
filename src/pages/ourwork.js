@@ -54,9 +54,10 @@ export default function OurWork({ data: { ourWork } }) {
     works.push(work)
   }
 
-  const worked_grouped_by_threes = serializeWorks(works)
+  const workedGroupedByThrees = serializeWorks(works)
 
-  const w = worked_grouped_by_threes.map(innerArray => {
+  // Ensures that the entry with the biggest image gets put to the front of the list
+  const orderedWorks = workedGroupedByThrees.map(innerArray => {
     const belowOne = innerArray.filter(item => item.aspectRatio < 1)
     const others = innerArray.filter(item => item.aspectRatio >= 1)
     return [...belowOne, ...others]
@@ -104,7 +105,7 @@ export default function OurWork({ data: { ourWork } }) {
 
         {/* WORK SECTION */}
         <Center className="works">
-          {w.map((a, i) => (
+          {orderedWorks.map((a, i) => (
             <Group key={i} reverse={i % 2 === 0 ? false : true}>
               {a.map((project, j) => (
                 <Work key={j + i} {...project} />
