@@ -48,7 +48,7 @@ export default function OurWork({ data: { ourWork } }) {
     }
 
     if (data.background !== null) {
-      work["background"] = data.background.localFiles[0].url
+      work["background"] = data.background.localFiles[0].publicURL
     }
 
     works.push(work)
@@ -175,7 +175,7 @@ export const pageQuery = graphql`
             }
             background {
               localFiles {
-                url
+                publicURL
               }
             }
           }
