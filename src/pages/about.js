@@ -119,7 +119,14 @@ function getContentIndex(t) {
 }
 
 export const Background = styled.div`
-  background: radial-gradient(751.95% 45.58% at 89.31% 52.02%, #63B2B9 0.96%, #C8F2F5 25.5%, rgba(150, 224, 229, 0.382722) 46.5%, #97E1E6 78%, rgba(151, 225, 230, 0.37) 100%);
+  background: radial-gradient(
+    751.95% 45.58% at 89.31% 52.02%,
+    #63b2b9 0.96%,
+    #c8f2f5 25.5%,
+    rgba(150, 224, 229, 0.382722) 46.5%,
+    #97e1e6 78%,
+    rgba(151, 225, 230, 0.37) 100%
+  );
   opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
@@ -150,7 +157,7 @@ export const pageQuery = graphql`
       }
     }
 
-    team: allAirtable {
+    team: allAirtable(filter: { table: { eq: "aboutPage" } }) {
       edges {
         node {
           id
