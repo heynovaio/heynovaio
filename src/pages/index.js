@@ -48,7 +48,7 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query OurWorkPageQuery {
+  query FeaturedWorkPageQuery {
     ourWork: allAirtable(
       filter: { table: { eq: "ourWork" }, data: { featured: { eq: true } } }
     ) {
