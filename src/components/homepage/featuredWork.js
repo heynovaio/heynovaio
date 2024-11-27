@@ -96,8 +96,6 @@ export default function FeaturedWork({ data }) {
     edges = edges.filter(edge => edge !== randomWorkWithTestimonial)
   }
 
-  console.log(randomWorkWithTestimonial)
-
   const randomWorks = getTwoRandomWorks(edges)
 
   return (

@@ -9,11 +9,11 @@ const TestimonialContainer = styled.div`
   background: #97e1e5;
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 5px;
+  position: relative;
 `
 
 const TestimonialSection = styled.div`
@@ -21,10 +21,10 @@ const TestimonialSection = styled.div`
 `
 
 const ImageSection = styled.div`
-  max-width: 100%; /* Make image responsive */
-  height: auto; /* Maintain aspect ratio */
-  width: 300px; /* Fixed width for the image */
-  border-radius: 10px; /* Optional: Rounded corners */
+  max-width: 500px;
+  height: auto;
+  width: 100%;
+  border-radius: 50px;
 `
 
 const Content = styled.div`
@@ -56,18 +56,22 @@ const Strong = styled.span`
   font-weight: bold;
 `
 
-const Title = styled.span`
+const A = styled.a`
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
   color: #0f002e;
-  font-size: 18px;
+  font-size: 19.5px;
   font-family: Stolzl;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
   text-align: right;
   background: #009daa;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 50px;
+  border-top-left-radius: 10px;
 `
 
 const Testimonial = ({
@@ -98,9 +102,7 @@ const Testimonial = ({
           fluid={image}
         />
       </ImageSection>
-      <a href={link}>
-        <Title>View {title}</Title>
-      </a>
+      <A href={link}>View {title}</A>
     </TestimonialContainer>
   )
 }
