@@ -1,19 +1,26 @@
 import styled from "@emotion/styled"
 import React from "react"
 import Img from "gatsby-image"
+import "./styles/styles.css"
 
 const TestimonialContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #97e1e5;
+  background: #00c7d4;
   gap: 20px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 200px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
+  padding: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack elements vertically for small screens */
+    align-items: flex-start; /* Align content to the start */
+  }
 `
 
 const TestimonialSection = styled.div`
@@ -21,7 +28,7 @@ const TestimonialSection = styled.div`
 `
 
 const ImageSection = styled.div`
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   width: 100%;
   border-radius: 50px;
@@ -38,7 +45,7 @@ const Content = styled.div`
 
 const P = styled.p`
   color: var(--HN-Indigo);
-  padding-bottom: 0px;
+  padding-bottom: 10px;
   font-size: 18px;
   line-height: 1.5;
   font-family: Ubuntu;
@@ -48,7 +55,7 @@ const Name = styled.p`
   color: var(--HN-Indigo);
   padding-bottom: 0px;
   font-size: 18px;
-  line-height: 0;
+  line-height: 0.5;
   font-family: Ubuntu;
 `
 
@@ -67,7 +74,7 @@ const A = styled.a`
   font-weight: 400;
   line-height: normal;
   text-align: right;
-  background: #009daa;
+  background: #1eaebc;
   text-decoration: none;
   padding: 10px;
   margin-top: 50px;
