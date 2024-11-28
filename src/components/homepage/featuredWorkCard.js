@@ -12,7 +12,7 @@ const WorkCard = ({ image, title }) => {
         title.replaceAll(" ", "-").toLowerCase(),
       ])}
     >
-      <div>
+      <div class="featured-work-card-image-container">
         <Img
           alt=""
           role="presentation"
