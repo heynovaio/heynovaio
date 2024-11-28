@@ -24,7 +24,7 @@ const FeaturedWorkGrid = styled.div`
   margin: 0 auto;
   margin-bottom: var(--gap);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `
@@ -121,7 +121,6 @@ export default function FeaturedWork({ data }) {
         </FeaturedWorkGrid>
         {randomWorkWithTestimonial && (
           <Testimonial
-            link={randomWorkWithTestimonial.node.data.link}
             image={
               randomWorkWithTestimonial.node.data.image.localFiles[0]
                 .childImageSharp.fluid
@@ -130,6 +129,7 @@ export default function FeaturedWork({ data }) {
             testimonial={randomWorkWithTestimonial.node.data.testimonial}
             testimonialBy={randomWorkWithTestimonial.node.data.testimonialBy}
             clientName={randomWorkWithTestimonial.node.data.clientName}
+            url={randomWorkWithTestimonial.node.data.link}
           />
         )}
       </ContentCenter>

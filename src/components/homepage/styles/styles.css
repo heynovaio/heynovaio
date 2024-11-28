@@ -1,7 +1,7 @@
 .featured-work-card {
   width: 100%;
   position: relative;
-  height: 40vh;
+  height: 448px;
   background: linear-gradient(
     136deg,
     rgba(255, 255, 255, 0.6) 0%,
@@ -12,7 +12,7 @@
   border-right: 2px solid rgba(255, 255, 255, 0.466);
   border-top: 2px solid #6dc9cf50;
   border-radius: 12.767px;
-  padding: 50px 45px 65px;
+  padding: 50px 45px 80px;
   isolation: isolate;
   overflow: hidden;
   display: grid;
@@ -39,8 +39,8 @@
 
 .title {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   color: #0f002e;
   font-size: 18px;
   font-family: Stolzl;
