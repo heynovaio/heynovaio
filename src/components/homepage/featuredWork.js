@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import React from "react"
+import { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import cx from "classnames"
 import Img from "gatsby-image"
@@ -87,16 +88,25 @@ const Button = styled(Link)`
 `
 
 export default function FeaturedWork({ data }) {
-  let edges = data.ourWork.edges
+  const [randomWorkWithTestimonial, setRandomWorkWithTestimonial] = useState(
+    null
+  )
+  const [randomWorks, setRandomWorks] = useState([])
 
-  const randomWorkWithTestimonial = getRandomWorkWithTestimonial(edges)
+  useEffect(() => {
+    let edges = [...data.ourWork.edges]
 
-  // If a valid work with testimonial was found, remove it from the edges list
-  if (randomWorkWithTestimonial) {
-    edges = edges.filter(edge => edge !== randomWorkWithTestimonial)
-  }
+    // Randomize and persist the selections
+    const selectedWorkWithTestimonial = getRandomWorkWithTestimonial(edges)
+    setRandomWorkWithTestimonial(selectedWorkWithTestimonial)
 
-  const randomWorks = getTwoRandomWorks(edges)
+    if (selectedWorkWithTestimonial) {
+      edges = edges.filter(edge => edge !== selectedWorkWithTestimonial)
+    }
+
+    const selectedRandomWorks = getTwoRandomWorks(edges)
+    setRandomWorks(selectedRandomWorks)
+  }, [data]) // Effect runs only when `data` changes
 
   return (
     <FeaturedWorkSection>
@@ -138,24 +148,15 @@ export default function FeaturedWork({ data }) {
 }
 
 function getRandomWorkWithTestimonial(edges) {
-  // Filter the edges to include only nodes where testimonial !== null
   const hasTestimonial = edges.filter(
     edge => edge.node.data.testimonial !== null
   )
-
-  // Return a random edge if available, or null if none exist
-  if (hasTestimonial.length === 0) {
-    return null
-  }
-
+  if (hasTestimonial.length === 0) return null
   const randomIndex = Math.floor(Math.random() * hasTestimonial.length)
   return hasTestimonial[randomIndex]
 }
 
 function getTwoRandomWorks(edges) {
-  // Shuffle the edges
   const shuffled = edges.sort(() => Math.random() - 0.5)
-
-  // Slice up to 2 objects, even if the array has less than 2 items
   return shuffled.slice(0, Math.min(2, shuffled.length))
 }
