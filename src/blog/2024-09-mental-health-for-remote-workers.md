@@ -63,12 +63,11 @@ Remote work offers opportunities for mental health management that can be harder
 
 With the right strategies, remote work can be a powerful tool for maintaining your work/life balance and your mental health. You can find more tips for managing a remote position on Hey Nova's Instagram and Facebook pages.
 
-## Sources and further reading
+## Sources and Further Reading
 
-- ["How Remote Work Can Impact Employees' Mental Health" from Forbes](https://www.forbes.com/sites/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health)
-- ["The Impact of Remote Work on Mental Health: An In-depth Analysis" from ConnexOntario](https://www.connexontario.ca/en-ca/resource-hub/entryid/39/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis)
-- ["State Of Remote Work 2023" from Buffer](https://buffer.com/state-of-remote-work/2023)
-- ["Our Epidemic of Loneliness and Isolation" from US Public Health Service](https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf)
-- ["The workers keeping their disabilities secret" from BBC](https://www.bbc.com/worklife/article/20211101-the-workers-keeping-their-disabilities-secret)
-- ["The parents who don't want to go back to the office" from BBC](https://www.bbc.com/worklife/article/20211007-the-parents-who-dont-want-to-go-back-to-the-office)
-- ["Is remote work worse for wellbeing than people think?" from BBC](https://www.bbc.com/worklife/article/20220616-is-remote-work-worse-for-wellbeing-than-people-think)
+- [2023 Work in America Survey: Workplaces as engines of psychological health and well-being](https://www.apa.org/pubs/reports/work-in-america/2023-workplace-health-well-being) - American Psychological Association
+- [20 Advantages of Remote Working for Employees and Employers](https://www.lumapps.com/digital-workplace/benefits-of-working-remotely) - LumApps
+- [State of Remote Work 2023: How remote workers from around the world feel about remote work, the benefits and struggles that come along with it, and what it’s like to be a remote worker in 2023](https://buffer.com/state-of-remote-work/2023) - Buffer
+- [Benefits of Working From Home (Working Remotely)](https://www.flexjobs.com/blog/post/benefits-of-remote-work/) - FlexJobs
+- [The Impact of Remote Work on Mental Health: An In-Depth Analysis](https://connexontario.ca/blog/the-impact-of-remote-work-on-mental-health-an-in-depth-analysis/) - ConnexOntario
+- [How Remote Work Can Impact Employees' Mental Health](https://www.forbes.com/councils/forbeshumanresourcescouncil/2023/07/03/how-remote-work-can-impact-employees-mental-health/) - Forbes Human Resources Council
