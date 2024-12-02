@@ -12,7 +12,7 @@ const FeaturedWorkSection = styled.section`
   padding: 70px 0 40px;
   background-color: #d9f4f5;
   position: relative;
-  @media (max-width: 960px) {
+  @media (max-width: 1100px) {
     padding: 30px 0;
   }
 `
@@ -25,7 +25,7 @@ const FeaturedWorkGrid = styled.div`
   margin: 0 auto;
   margin-bottom: var(--gap);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     grid-template-columns: 1fr;
   }
 `
