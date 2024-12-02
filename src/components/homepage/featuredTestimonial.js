@@ -7,18 +7,18 @@ const TestimonialContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #00c7d4;
-  gap: 20px;
+  background: var(--HN-Testimonial-Teal);
+  gap: 1.25rem;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   position: relative;
-  padding: 55px;
+  padding: 3.5rem;
 
   @media (max-width: 1100px) {
-    flex-direction: column; /* Stack elements vertically for small screens */
-    align-items: flex-start; /* Align content to the start */
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
@@ -27,42 +27,42 @@ const TestimonialSection = styled.div`
 `
 
 const ImageSection = styled.div`
-  max-width: 615px;
-  max-height: 400px;
+  max-width: 38.5rem;
+  max-height: 25rem;
   height: auto;
   width: 100%;
-  overflow: hidden; /* Ensures the image stays within the container */
-  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 1.25rem;
 
   .img {
-    height: 100%; /* Ensure the image fills the height */
-    width: 100%; /* Ensure the image fills the width */
-    object-fit: cover; /* Crops the image to fit the container */
-    object-position: top; /* Focus on the top part of the image */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 `
 
 const Content = styled.div`
   text-align: left;
-  max-width: 615px;
+  max-width: 38.5rem;
   position: relative;
-  @media (max-width: 1026px) {
-    max-width: 515px;
+  @media (max-width: 64.125rem) {
+    max-width: 32rem;
   }
 `
 
 const P = styled.p`
   color: var(--HN-Indigo);
-  padding-bottom: 10px;
-  font-size: 18px;
+  padding-bottom: 0.625rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   font-family: Ubuntu;
 `
 
 const Name = styled.p`
   color: var(--HN-Indigo);
-  padding-bottom: 0px;
-  font-size: 18px;
+  padding-bottom: 0;
+  font-size: 1.125rem;
   line-height: 0.5;
   font-family: Ubuntu;
 `
@@ -73,10 +73,10 @@ const Strong = styled.span`
 
 const A = styled.a`
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   color: #0f002e;
-  font-size: 19.5px;
+  font-size: 1.21875rem;
   font-family: Stolzl;
   font-style: normal;
   font-weight: 400;
@@ -84,34 +84,34 @@ const A = styled.a`
   text-align: right;
   background: #1eaebc;
   text-decoration: none;
-  padding: 10px;
-  margin-top: 50px;
-  border-top-left-radius: 10px;
+  padding: 0.625rem;
+  margin-top: 3.125rem;
+  border-top-left-radius: 0.625rem;
 `
 
 const BlockQuote = styled.blockquote`
   color: var(--HN-Indigo);
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
   font-family: Ubuntu Mono, sans-serif;
   margin: 0;
-  margin-bottom: 30px;
-  quotes: "“" "”" "‘" "’"; /* Define custom quotes for blockquote */
+  margin-bottom: 1.875rem;
+  quotes: "“" "”" "‘" "’";
 
   &::before {
-    content: open-quote; /* Add the opening quote */
-    font-size: 3rem; /* Larger size for the quote mark */
-    line-height: 0; /* Prevent extra spacing */
-    vertical-align: text-top; /* Align quote with text */
-    margin-right: 8px; /* Space between quote and text */
-    color: var(--HN-Indigo); /* Optional: same color as text */
+    content: open-quote;
+    font-size: 3rem;
+    line-height: 0;
+    vertical-align: text-top;
+    margin-right: 0.5rem;
+    color: var(--HN-Indigo);
   }
 `
 
 const Quote = styled.span`
   color: var(--HN-Indigo);
-  padding-bottom: 0px;
-  font-size: 18px;
+  padding-bottom: 0;
+  font-size: 1.125rem;
   line-height: 0.5;
   font-family: Ubuntu;
 `
