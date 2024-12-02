@@ -16,7 +16,7 @@ const TestimonialContainer = styled.div`
   position: relative;
   padding: 55px;
 
-  @media (max-width: 850px) {
+  @media (max-width: 1100px) {
     flex-direction: column; /* Stack elements vertically for small screens */
     align-items: flex-start; /* Align content to the start */
   }
