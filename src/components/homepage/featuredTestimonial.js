@@ -114,6 +114,10 @@ const Quote = styled.span`
   font-size: 1.125rem;
   line-height: 0.5;
   font-family: Ubuntu;
+
+  @media (max-width: 64.125rem) {
+    font-size: 1rem;
+  }
 `
 
 const Testimonial = ({

@@ -9,43 +9,46 @@ import WorkCard from "./featuredWorkCard"
 import Testimonial from "./featuredTestimonial"
 
 const FeaturedWorkSection = styled.section`
-  padding: 70px 0 40px;
+  padding: 4.375rem 0 2.5rem;
   background-color: #d9f4f5;
   position: relative;
-  @media (max-width: 1100px) {
-    padding: 30px 0;
+  @media (max-width: 68.75rem) {
+    padding: 1.875rem 0;
   }
 `
+
 const FeaturedWorkGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  --gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  --gap: 1.875rem;
   gap: var(--gap);
   width: 100%;
   margin: 0 auto;
   margin-bottom: var(--gap);
 
-  @media (max-width: 1100px) {
+  @media (max-width: 68.75rem) {
     grid-template-columns: 1fr;
   }
 `
 
 const H2 = styled.h2`
-  font-size: 58px;
+  font-size: 3.625rem;
   font-weight: 500;
   line-height: 1.28;
-  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
   text-align: left;
   color: var(--HN-Indigo);
   font-family: Stolzl;
-  @media (max-width: 960px) {
-    font-size: 35px;
+  @media (max-width: 60rem) {
+    /* 960px */
+    font-size: 2.1875rem;
   }
 `
+
 const P = styled.p`
   color: var(--HN-Indigo);
-  padding-bottom: 0px;
-  font-size: 18px;
+  padding-bottom: 0;
+  font-size: 1.125rem;
   line-height: 1.5;
   font-family: Ubuntu;
 `
@@ -55,31 +58,33 @@ const Strong = styled.span`
 `
 
 const ContentCenter = styled.div`
-  max-width: 1288px;
+  max-width: 80.5rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   position: relative;
 `
+
 const Content = styled.div`
   text-align: left;
-  max-width: 555px;
+  max-width: 34.6875rem;
   position: relative;
-  @media (max-width: 1026px) {
-    max-width: 515px;
+  @media (max-width: 64.125rem) {
+    max-width: 32.1875rem;
   }
 `
+
 const Button = styled(Link)`
-  border-radius: 25px;
-  margin-bottom: 30px;
+  border-radius: 1.5625rem;
+  margin-bottom: 1.875rem;
   background-color: var(--HN-Fuchsia);
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
   color: #fff;
   font-family: Stolzl;
-  padding: 14px 32px;
-  max-width: 300px;
+  padding: 0.875rem 2rem;
+  max-width: 18.75rem;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   border: none;
   display: inline-block;
   &:hover {

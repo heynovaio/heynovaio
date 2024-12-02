@@ -6,12 +6,12 @@
     rgba(255, 255, 255, 0.6) 0%,
     rgba(255, 255, 255, 0.12) 100%
   );
-  border-left: 2px solid #6dc9cf69;
-  border-bottom: 2px solid #6dc9cf88;
-  border-right: 2px solid rgba(255, 255, 255, 0.466);
-  border-top: 2px solid #6dc9cf50;
-  border-radius: 12.767px;
-  padding: 50px 45px 50px;
+  border-left: 0.125rem solid #6dc9cf69;
+  border-bottom: 0.125rem solid #6dc9cf88;
+  border-right: 0.125rem solid rgba(255, 255, 255, 0.466);
+  border-top: 0.125rem solid #6dc9cf50;
+  border-radius: 0.798rem;
+  padding: 3.125rem 2.8125rem 3.125rem;
   isolation: isolate;
   overflow: hidden;
   display: grid;
@@ -19,8 +19,8 @@
 }
 
 .featured-work-card-image-container {
-  max-height: 400px;
-  border-radius: 12px;
+  max-height: 25rem;
+  border-radius: 0.75rem;
   transition: transform 1.5s ease;
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -41,10 +41,10 @@
 
 .title {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 1rem;
+  right: 1rem;
   color: #0f002e;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: Stolzl;
   font-style: normal;
   font-weight: 500;
