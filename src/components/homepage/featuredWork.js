@@ -119,11 +119,11 @@ export default function FeaturedWork({ data }) {
         <Content>
           <H2>Featured Work</H2>
           <P>
-            <Strong>TO CHANGE</Strong> Where creativity meets accessibility; see
+            Where creativity meets accessibility; see
             examples of how we've transformed our clients' ideas into beautiful
             and inclusive digital spaces.
           </P>
-          <Button to="/ourwork">All Our Work > </Button>
+          <Button to="/ourwork">All Our Work &#8702; </Button>
         </Content>
         <FeaturedWorkGrid>
           {randomWorks.map((work, index) => (
