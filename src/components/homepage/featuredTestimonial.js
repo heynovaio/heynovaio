@@ -33,6 +33,7 @@ const ImageSection = styled.div`
   width: 100%;
   overflow: hidden;
   border-radius: 1.25rem;
+  margin-left: 2rem;
 
   .img {
     height: 100%;
