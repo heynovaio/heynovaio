@@ -94,8 +94,9 @@ export default function OurWork({ data: { ourWork } }) {
               <HeroHeading>Our Work</HeroHeading>
 
               <HeroText>
-                Where creativity meets accessibility; see how we’ve transformed
-                our client’s ideas into beautiful and inclusive digital spaces.
+                When our clients talk about their vision, we listen. See how
+                we've brought their ideas to life with our empathetic and
+                data-driven approach.
               </HeroText>
 
               <ButtonLink to="/contact">Get in Touch</ButtonLink>
