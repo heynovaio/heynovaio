@@ -18,7 +18,7 @@ const FeaturedWorkSection = styled.section`
 `
 
 const FeaturedWorkBox = styled.div`
-  max-width: 1290px;
+  max-width: 1288px;
   margin: auto;
   padding: 0;
 `
@@ -130,7 +130,7 @@ export default function FeaturedWork({ data }) {
               see examples of how we've transformed our clients' ideas into
               beautiful and inclusive digital spaces.
             </P>
-            <Button to="/ourwork">All Our Work > </Button>
+            <Button to="/ourwork">All Our Work ⇾ </Button>
           </Content>
           <FeaturedWorkGrid>
             {randomWorks.map((work, index) => (
