@@ -8,7 +8,7 @@ const TestimonialContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background: var(--HN-Testimonial-Teal);
-  gap: 1.25rem;
+  gap: 3.25rem;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
@@ -27,13 +27,12 @@ const TestimonialSection = styled.div`
 `
 
 const ImageSection = styled.div`
-  max-width: 38.5rem;
+  max-width: 39rem;
   max-height: 25rem;
   height: auto;
   width: 100%;
   overflow: hidden;
   border-radius: 1.25rem;
-  margin-left: 2rem;
 
   .img {
     height: 100%;
