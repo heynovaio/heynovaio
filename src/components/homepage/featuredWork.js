@@ -17,6 +17,12 @@ const FeaturedWorkSection = styled.section`
   }
 `
 
+const FeaturedWorkBox = styled.div`
+  max-width: 1288px;
+  margin: auto;
+  padding: 0;
+`
+
 const FeaturedWorkGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
@@ -115,39 +121,41 @@ export default function FeaturedWork({ data }) {
 
   return (
     <FeaturedWorkSection>
-      <ContentCenter>
-        <Content>
-          <H2>Featured Work</H2>
-          <P>
-            Where creativity meets accessibility; see
-            examples of how we've transformed our clients' ideas into beautiful
-            and inclusive digital spaces.
-          </P>
-          <Button to="/ourwork">All Our Work &#8702; </Button>
-        </Content>
-        <FeaturedWorkGrid>
-          {randomWorks.map((work, index) => (
-            <WorkCard
-              key={index}
-              image={work.node.data.image.localFiles[0].childImageSharp.fluid}
-              title={work.node.data.title}
+      <FeaturedWorkBox>
+        <ContentCenter>
+          <Content>
+            <H2>Featured Work</H2>
+            <P>
+              <Strong>TO CHANGE</Strong> Where creativity meets accessibility;
+              see examples of how we've transformed our clients' ideas into
+              beautiful and inclusive digital spaces.
+            </P>
+            <Button to="/ourwork">All Our Work ⇾ </Button>
+          </Content>
+          <FeaturedWorkGrid>
+            {randomWorks.map((work, index) => (
+              <WorkCard
+                key={index}
+                image={work.node.data.image.localFiles[0].childImageSharp.fluid}
+                title={work.node.data.title}
+              />
+            ))}
+          </FeaturedWorkGrid>
+          {randomWorkWithTestimonial && (
+            <Testimonial
+              image={
+                randomWorkWithTestimonial.node.data.image.localFiles[0]
+                  .childImageSharp.fluid
+              }
+              title={randomWorkWithTestimonial.node.data.title}
+              testimonial={randomWorkWithTestimonial.node.data.testimonial}
+              testimonialBy={randomWorkWithTestimonial.node.data.testimonialBy}
+              clientName={randomWorkWithTestimonial.node.data.clientName}
+              url={randomWorkWithTestimonial.node.data.link}
             />
-          ))}
-        </FeaturedWorkGrid>
-        {randomWorkWithTestimonial && (
-          <Testimonial
-            image={
-              randomWorkWithTestimonial.node.data.image.localFiles[0]
-                .childImageSharp.fluid
-            }
-            title={randomWorkWithTestimonial.node.data.title}
-            testimonial={randomWorkWithTestimonial.node.data.testimonial}
-            testimonialBy={randomWorkWithTestimonial.node.data.testimonialBy}
-            clientName={randomWorkWithTestimonial.node.data.clientName}
-            url={randomWorkWithTestimonial.node.data.link}
-          />
-        )}
-      </ContentCenter>
+          )}
+        </ContentCenter>
+      </FeaturedWorkBox>
     </FeaturedWorkSection>
   )
 }

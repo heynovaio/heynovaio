@@ -20,8 +20,8 @@ const WorkCard = ({ image, title }) => {
           className="img"
           fluid={image}
         />
-        <span className="title">{title}</span>
       </div>
+      <span className="title">{title}</span>
     </a>
   )
 }
