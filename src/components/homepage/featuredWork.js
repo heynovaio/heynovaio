@@ -126,7 +126,7 @@ export default function FeaturedWork({ data }) {
           <Content>
             <H2>Featured Work</H2>
             <P>
-              <Strong>TO CHANGE</Strong> Where creativity meets accessibility;
+              Where creativity meets accessibility;
               see examples of how we've transformed our clients' ideas into
               beautiful and inclusive digital spaces.
             </P>

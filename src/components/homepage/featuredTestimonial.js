@@ -27,7 +27,7 @@ const TestimonialSection = styled.div`
 `
 
 const ImageSection = styled.div`
-  max-width: 39rem;
+  max-width: 29rem;
   max-height: 25rem;
   height: auto;
   width: 100%;
