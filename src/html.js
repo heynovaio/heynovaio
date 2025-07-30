@@ -11,9 +11,12 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="stylesheet" href="https://use.typekit.net/sty6ouh.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/bwb6dfq.css" />
         {props.headComponents}
-        <meta name="facebook-domain-verification" content="dh3l0i08nvrv1ezen3zagqqlnex5w8" />
+        <meta
+          name="facebook-domain-verification"
+          content="dh3l0i08nvrv1ezen3zagqqlnex5w8"
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
